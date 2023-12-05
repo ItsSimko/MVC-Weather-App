@@ -1,4 +1,5 @@
 using Net6_Controller_And_VIte;
+using SQ.TermProject.myWeather.Services;
 using System.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
