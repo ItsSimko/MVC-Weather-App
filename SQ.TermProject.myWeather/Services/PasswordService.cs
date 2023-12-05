@@ -8,12 +8,10 @@ namespace SQ.TermProject.myWeather.Services
     {
         private const int SaltLength = 16;
 
-        public static byte[] SaltHashBytes(string passwordBytes, string salt)
+        public static string SaltHashBytes(string passwordBytes, string salt)
         {
-            byte[] combinedBytes = new byte[passwordBytes.Length + salt.Length];
-            Buffer.BlockCopy(passwordBytes, 0, combinedBytes, 0, passwordBytes.Length);
-            Buffer.BlockCopy(salt, 0, combinedBytes, passwordBytes.Length, salt.Length);
-            return combinedBytes;
+            string combined = passwordBytes + salt;
+            return combined;
         }
 
         public static string GenerateSalt(int length)
@@ -38,9 +36,10 @@ namespace SQ.TermProject.myWeather.Services
 
         public static string GetSha256Hash(string input)
         {
+            string canonicalized = input.Trim();
             using (SHA256 sha256Hash = SHA256.Create())
             {
-                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(canonicalized));
 
                 StringBuilder builder = new StringBuilder();
                 for (int i = 0; i < bytes.Length; i++)
