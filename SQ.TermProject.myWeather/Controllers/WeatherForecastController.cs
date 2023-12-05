@@ -1,9 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
+using SQ.TermProject.myWeather.Models;
 
 namespace Net6_Controller_And_VIte.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

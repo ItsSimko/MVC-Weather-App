@@ -1,5 +1,5 @@
 <template>
-  <v-container class="bg-setup h-100">
+  <v-container class="bg-setup h-100 v-container v-container--fluid">
     <SearchBar class="w-25 mx-auto my-10 bg-blue-grey-darken-4
           pa-3 rounded-xl " style="position: absoulte;"></SearchBar>
     <WeatherContainer />
@@ -16,4 +16,5 @@
     background: url('../assets/bg/cloudy.jpg') no-repeat center center fixed !important;
     background-size: cover;
   }
+ 
 </style>
