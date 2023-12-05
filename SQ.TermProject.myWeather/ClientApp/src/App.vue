@@ -6,11 +6,9 @@
 <template>
   <v-app>
     <v-main>
-      <v-row>
-        <v-col>
+
           <RouterView />
-        </v-col>
-      </v-row>
+
     </v-main>
   </v-app>
 </template>
