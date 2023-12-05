@@ -2,9 +2,9 @@
   <v-card>
     <v-tabs v-model="tab"
             bg-color="primary">
-      <v-tab value="one">Item One</v-tab>
-      <v-tab value="two">Item Two</v-tab>
-      <v-tab value="three">Item Three</v-tab>
+      <v-tab value="one">User Settings</v-tab>
+      <v-tab value="two">Admin Settings</v-tab>
+      <v-tab value="three">Superadmin Settings</v-tab>
     </v-tabs>
 
     <v-card-text>
@@ -14,11 +14,11 @@
         </v-window-item>
 
         <v-window-item value="two">
-          Two
+          <ClientSettings ></ClientSettings>
         </v-window-item>
 
         <v-window-item value="three">
-          Three
+          <SuperAdminSettings></SuperAdminSettings>
         </v-window-item>
       </v-window>
     </v-card-text>
@@ -30,6 +30,7 @@
 
   import SearchBar from '../components/SearchBar.vue';
   import ClientSettings from '../components/UserSettings.vue';
+  import SuperAdminSettings from '../components/SuperAdminSetttings.vue'
 </script>
 
 <script lang="ts">
