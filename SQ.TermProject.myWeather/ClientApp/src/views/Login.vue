@@ -10,6 +10,4 @@
 
 </template>
 
-<script lang="ts" setup>
-  import LoginBox from '@/components/LoginBox.vue'
-</script>
+<script lang="ts" setup>import LoginBox from '@/components/LoginBox.vue'</script>
