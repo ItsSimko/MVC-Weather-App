@@ -13,7 +13,7 @@ namespace SQ.TermProject.myWeather.Controllers.UserAuth
     {
         private UserService userService = new UserService();
 
-        [HttpGet(Name = "LoginUser")]
+        [HttpPost(Name = "LoginUser")]
         public IActionResult LoginUser(string username, string password)
         {
             if (userService.IsValidUser(username, password))
