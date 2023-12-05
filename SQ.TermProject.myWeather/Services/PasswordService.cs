@@ -8,7 +8,7 @@ namespace SQ.TermProject.myWeather.Services
     {
         private const int SaltLength = 16;
 
-        public static byte[] SaltHashBytes(byte[] passwordBytes, byte[] salt)
+        public static byte[] SaltHashBytes(string passwordBytes, string salt)
         {
             byte[] combinedBytes = new byte[passwordBytes.Length + salt.Length];
             Buffer.BlockCopy(passwordBytes, 0, combinedBytes, 0, passwordBytes.Length);
@@ -16,14 +16,24 @@ namespace SQ.TermProject.myWeather.Services
             return combinedBytes;
         }
 
-        public static byte[] GenerateSalt(int length)
+        public static string GenerateSalt(int length)
         {
             byte[] salt = new byte[length];
             using (var rng = new RNGCryptoServiceProvider())
             {
+
                 rng.GetNonZeroBytes(salt);
+
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < salt.Length; i++)
+                {
+                    builder.Append(salt[i].ToString("x2"));
+                }
+
+                return builder.ToString();
             }
-            return salt;
+
+
         }
 
         public static string GetSha256Hash(string input)
