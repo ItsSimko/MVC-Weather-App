@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\SQ.TermProject.myWeather.props" />
+</Project>
