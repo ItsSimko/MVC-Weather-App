@@ -14,7 +14,7 @@ namespace SQ.TermProject.myWeather.Controllers.UserAuth
     {
         private UserService userService = new UserService();
 
-        [HttpGet(Name = "RegisterUser")]
+        [HttpPost(Name = "RegisterUser")]
         public IActionResult RegisterUser(string username, string password, string email)
         {
             string passwordHash = PasswordService.GetSha256Hash(password);
