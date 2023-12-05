@@ -1,6 +1,9 @@
 using Net6_Controller_And_VIte;
 using SQ.TermProject.myWeather.Services;
+using System;
 using System.Diagnostics;
+
+var ret = PasswordService.GetSha256Hash("apple");
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -9,7 +9,7 @@ using System.Text.Json;
 namespace SQ.TermProject.myWeather.Controllers.UserAuth
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/auth/[controller]")]
     public class Register : ControllerBase
     {
         private UserService userService = new UserService();

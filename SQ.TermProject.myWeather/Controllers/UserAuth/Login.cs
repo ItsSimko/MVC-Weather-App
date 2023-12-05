@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using SQ.TermProject.myWeather.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using SQ.TermProject.myWeather.Services;
 using System.Text.Json;
 
@@ -8,7 +6,7 @@ using System.Text.Json;
 namespace SQ.TermProject.myWeather.Controllers.UserAuth
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/auth/[controller]")]
     public class Login : ControllerBase
     {
         private UserService userService = new UserService();
