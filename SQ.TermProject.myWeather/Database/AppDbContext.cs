@@ -11,7 +11,7 @@ namespace SQ.TermProject.myWeather.Database
         public AppDbContext() { }
 
         public DbSet<User>? Users {get; set;}
-        public DbSet<UserRole>? UserRoles {get; set;}
+        public DbSet<UserRole> UserRoles {get; set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
