@@ -30,6 +30,12 @@ namespace SQ.TermProject.myWeather.Controllers.UserAuth
                 return Content(JsonSerializer.Serialize(response), "application/json");
             }
 
+            if (userService.DbContext.Users.Any(u => u.Email == email))
+            {
+                var response = new { success = false, msg = "Email is in use." };
+                return Content(JsonSerializer.Serialize(response), "application/json");
+            }
+
             // Create and save the user
 
             var newUser = new User
