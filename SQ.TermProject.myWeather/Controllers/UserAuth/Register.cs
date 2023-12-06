@@ -26,7 +26,8 @@ namespace SQ.TermProject.myWeather.Controllers.UserAuth
             // Check if the username already exists in the database
             if (userService.DbContext.Users.Any(u => u.UserName == username))
             {
-                return BadRequest("Username already exists.");
+                var response = new { success = false, msg = "Username already exists." };
+                return Content(JsonSerializer.Serialize(response), "application/json");
             }
 
             // Create and save the user
@@ -43,7 +44,8 @@ namespace SQ.TermProject.myWeather.Controllers.UserAuth
             userService.DbContext.Users.Add(newUser);
             userService.DbContext.SaveChanges();
 
-            return Ok("Registration successful");
+            var resp = new { success = true, msg = "Registration successful" };
+            return Content(JsonSerializer.Serialize(resp), "application/json");
         }
 
 
