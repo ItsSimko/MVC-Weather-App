@@ -16,11 +16,11 @@
         <v-list>
           <v-list-item v-for="(user, index) in searchResults" :key="index">
             <v-list-item-content>
-              <v-list-item-title>{{ user.username }}</v-list-item-title>
+              <v-list-item-title>{{ user.userName }}</v-list-item-title>
               <v-list-item-subtitle>{{ user.email }}</v-list-item-subtitle>
             </v-list-item-content>
             <v-list-item-action>
-              <v-select v-model="user.role" :items="roleOptions" label="Select Role"></v-select>
+              <v-select v-model="user.name" :items="roleOptions" label="Select Role"></v-select>
               <v-btn @click="setUserRole(user)">Set Role</v-btn>
             </v-list-item-action>
           </v-list-item>
@@ -31,6 +31,8 @@
 </template>
 
 <script>
+  import axios from 'axios';
+
 export default {
   data() {
     return {
@@ -41,12 +43,14 @@ export default {
   },
   methods: {
     searchUsers() {
-      // make api call to data base
-      
-      this.searchResults = [
-        { id: 1, username: 'test', email: 'test@test.com', role: 'test' },
-        { id: 2, username: 'User2', email: 'user2@test.com', role: 'test' },
-      ];
+      axios.post('api/settings/GetUsers?username=' + this.searchQuery).then( resp => {
+        console.log(resp)
+        this.searchResults = resp.data
+        console.log(this.searchResults)
+      })
+     
+
+      console.log(this.searchResults)
     },
     setUserRole(user) {
        // api call to set user role
