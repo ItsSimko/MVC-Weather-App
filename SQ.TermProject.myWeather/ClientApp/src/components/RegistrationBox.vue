@@ -22,17 +22,19 @@
                     required
                     :rules="confirmPasswordRules"></v-text-field>
 
-      <v-text-field v-model="validationCode"
-                    label="Please enter your the code provided by the superadmin."
-                    type="password"
-                    required></v-text-field>
-
       <v-btn type="submit" color="primary">Register</v-btn>
     </v-form>
+
+    <v-alert v-if="this.err === true" type="error"
+             color="error"
+             title="Login Failed"
+             :text="errMsg" class="my-2"></v-alert>
   </v-container>
 </template>
 
 <script>
+  import axios from 'axios'
+
 export default {
   data() {
     return {
@@ -41,6 +43,8 @@ export default {
       password: '',
       confirmPassword: '',
       validationCode: '',
+      err: false,
+      errMsg: '',
       emailRules: [
         v => !!v || 'Email is required',
         v => /.+@.+\..+/.test(v) || 'Email must be valid',
@@ -57,7 +61,20 @@ export default {
   },
   methods: {
     registerUser() {
-      // send to server logic
+      axios.post('api/auth/Register?username=' + this.username + '&password=' + this.password + '&email=' + this.email).then(resp => {
+        console.log(resp)
+        if (resp.data.success === true) {
+          console.log("yup")
+          this.$router.push('/panel')
+        }
+        else
+        {
+          console.log("nope")
+          this.err = true
+          this.errMsg = resp.data.msg
+        }
+      })
+      { }
     },
   },
 };
