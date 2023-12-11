@@ -1,23 +1,80 @@
 <script setup lang="ts">
-    import {ref} from "vue";
-    import  {myLoc}  from "./SearchBar.vue";
+  import { ref, watch, reactive, toRefs } from "vue";
+  import { myLoc } from "./SearchBar.vue";
+  import axios from "axios";
 
-    let temp = ref(23);
+  let temp = ref(23);
+
+  let location = myLoc;
+
+  let weatherData = reactive({
+    "coord": {
+      "lon": null,
+      "lat": null
+    },
+    "weather": [
+      {
+        "id": null,
+        "main": null,
+        "description": null,
+        "icon": null
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": null,
+      "feels_like": null,
+      "temp_min": null,
+      "temp_max": null,
+      "pressure": null,
+      "humidity": null,
+    },
+    "visibility": null,
+    "wind": {
+      "speed": null,
+      "deg": null,
+    },
+    "clouds": {
+      "all": null,
+    },
+    "dt": null,
+    "sys": {
+      "type": null,
+      "id": null,
+      "country": null,
+      "sunrise": null,
+      "sunset": null,
+    },
+    "timezone": null,
+    "id": null,
+    "name": null,
+    "cod": null,
+  });
+
+
+
+  const myValue = ref(myLoc)
+
+  watch(() => myValue, (newValue, oldValue) => {
+    console.log(myLoc)
+    axios.post("/api/WeatherForecast/GetWeather?cityName=" + newValue.myLocationT.name).then(resp => {
+      weatherData = resp.data;
+      console.log(resp)
+    });
+  });
+
+
 </script>
 
 <script lang="ts">
-    export default {
-        data(){
-            return{
-                location: myLoc,
-                unitOfMeasure: "F"
-            }
-        },
-    }
+
+
+
+
 </script>
 
 <template>
-    <v-container class="bg-blue-grey-darken-4 rounded-lg w-70 p-6">
+    <v-container class="bg-blue-grey-darken-4 rounded-lg w-70 p-6" >
         <v-row class="bg-transparent ma-3">
             <p class="text-h3 mx-auto">{{ location.myLocationT.name }}, {{location.myLocationT.country}}</p>
         </v-row>
@@ -37,7 +94,7 @@
                         </v-col>
                     </v-row>
                     <v-row >
-                        <p class="text-h1 mx-auto my-2">{{temp}}° {{ unitOfMeasure }}</p>
+                      <p class="text-h1 mx-auto my-2">{{weatherData}}° C</p>
                     </v-row>
                 </v-sheet>
             </v-col>
