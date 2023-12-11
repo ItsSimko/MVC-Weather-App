@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import SearchBar from './components/SearchBar.vue' ;
+  import Footer from './components/Footer.vue' ;
 
 </script>
 
@@ -8,7 +8,7 @@
     <v-main>
 
           <RouterView />
-
+        <Footer />
     </v-main>
   </v-app>
 </template>

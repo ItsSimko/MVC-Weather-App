@@ -38,7 +38,7 @@
           if (response.data.success == true) {
             this.badCredential = false;
 
-            this.$router.push("/panel")
+            //this.$router.push("/panel")
           }
           else
           {
@@ -54,7 +54,7 @@
       },
 
       goToReg() {
-        this.$router.push('/register');
+        //this.$router.push('/register');
       }
     }
   };
