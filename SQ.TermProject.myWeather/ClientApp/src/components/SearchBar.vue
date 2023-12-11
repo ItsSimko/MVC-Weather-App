@@ -1,28 +1,38 @@
 <script setup lang="ts">
     import cities from "../assets/cities.json"
-    import {ref, reactive} from "vue";
+    import axios from "axios"
+    import {ref, reactive, watch} from "vue";
     
-    let myLocation = ref([]);
     let options = ref(cities);
 
     function getItemText(item) {
         return item.name + ', ' + item.country;
-    }
+  }
+
+
 
 </script>
 
 <script lang="ts">
-export default {
-    data() {
-        return {
-            
-        }
-    },
+function updateWeatherData() {
+  console.log("test")
+  axios.post("/api/WeatherForecast/GetWeather?cityName=" + myLoc.myLocationT.name).then(resp => {
+    weatherData.data = resp.data;
+    console.log(weatherData.data)
+  });
 }
-
-export const myLoc = reactive({
+  export const myLoc = reactive({
     myLocationT: [],
-})
+  })
+
+  export const weatherData = reactive({
+    data: null
+  });
+
+  watch(() => myLoc.myLocationT, (newValue, oldValue) => {
+    updateWeatherData()
+  })
+
 </script>
 
 <template>
