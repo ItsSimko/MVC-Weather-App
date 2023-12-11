@@ -9,35 +9,35 @@
           <span>&copy; 2023 myWeather</span>
         </v-col>
         <v-col cols="4" class="text-right bg-transparent">
-          <v-dialog width="500">
-                <template v-slot:activator="{ props }">
-                  <v-btn class="mx-1" color="primary" v-bind="props" text="Open Dialog"> </v-btn>
-                </template>
+          <v-dialog width="500" v-if="token == null">
+            <template v-slot:activator="{ props }">
+              <v-btn class="mx-1" color="primary" v-bind="props" text="Login"> </v-btn>
+            </template>
 
-                <template v-slot:default="{ isActive }">
-                  <v-card>
-                    <v-toolbar dark
-                               color="primary">
-                      <v-toolbar-title>Login</v-toolbar-title>
-                      <v-spacer></v-spacer>
-                      <v-toolbar-items>
-                        <v-btn icon
-                               dark
-                               @click="dialog = false">
-                          <v-icon>mdi-close</v-icon>
-                        </v-btn>
-                      </v-toolbar-items>
-                    </v-toolbar>
-                    <v-card-text>
-                      <Login />
-                    </v-card-text>
-                  </v-card>
-                </template>
+            <template v-slot:default="{ isActive }">
+              <v-card>
+                <v-toolbar dark
+                           color="primary">
+                  <v-toolbar-title>Login</v-toolbar-title>
+                  <v-spacer></v-spacer>
+                  <v-toolbar-items>
+                    <v-btn icon
+                           dark
+                           @click="dialog = false">
+                      <v-icon>mdi-close</v-icon>
+                    </v-btn>
+                  </v-toolbar-items>
+                </v-toolbar>
+                <v-card-text>
+                  <Login />
+                </v-card-text>
+              </v-card>
+            </template>
           </v-dialog>
 
-          <v-dialog width="500">
+          <v-dialog width="500" v-if="token == null">
             <template v-slot:activator="{ props }">
-              <v-btn class="mx-1" color="secondary" v-bind="props" text="Open Dialog"> </v-btn>
+              <v-btn class="mx-1" color="secondary" v-bind="props" text="Register"> </v-btn>
             </template>
 
             <template v-slot:default="{ isActive }">
@@ -55,6 +55,12 @@
               </v-card>
             </template>
           </v-dialog>
+
+          <p v-if="userName != null || token != null">
+            Hello, {{ userName }} <v-btn text="Sign Out" color="secondary"
+                                       @click="signOut"></v-btn>
+          </p>
+          
         </v-col>
       </v-row>
     </v-footer>
@@ -74,5 +80,28 @@
 
 <script setup lang="ts">
   import Login from '../components/LoginBox.vue'
+  import Icon from '@mdi/react';
+  import { mdiLogout } from '@mdi/js';
 
+</script>
+
+<script lang="ts">
+  export default {
+    data() {
+      return {
+        token: localStorage.getItem('token'),
+        userName: localStorage.getItem('userName')
+      }
+    },
+    methods: {
+      signOut() {
+        localStorage.removeItem('token');
+        localStorage.removeItem('userName');
+        localStorage.removeItem('role');
+        this.userName = null;
+        this.token = null;
+        //window.location.reload();
+      }
+    }
+  }
 </script>

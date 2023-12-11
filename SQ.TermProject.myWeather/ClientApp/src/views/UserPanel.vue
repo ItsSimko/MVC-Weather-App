@@ -3,8 +3,8 @@
     <v-tabs v-model="tab"
             bg-color="primary">
       <v-tab value="one">User Settings</v-tab>
-      <v-tab value="two">Admin Settings</v-tab>
-      <v-tab value="three">Superadmin Settings</v-tab>
+      <v-tab value="two" v-if="role === 'Admin' || role === 'Superadmin'">Admin Settings</v-tab>
+      <v-tab value="three" v-if="role === 'Superadmin'">Superadmin Settings</v-tab>
     </v-tabs>
 
     <v-card-text>
@@ -40,22 +40,9 @@
       return {
         newUsername: '',
         favoriteLocation: '',
-        tab: null
+        tab: null,
+        role: localStorage.getItem('role')
       };
     },
-    methods: {
-      updateUsername() {
-        // Implement logic to update the username (e.g., API call)
-        console.log('New Username:', this.newUsername);
-        // Reset the input field after updating
-        this.newUsername = '';
-      },
-      setFavoriteLocation() {
-        // Implement logic to set the favorite location (e.g., API call)
-        console.log('Favorite Location:', this.favoriteLocation);
-        // Reset the input field after setting the location
-        this.favoriteLocation = '';
-      }
-    }
   };
 </script>
