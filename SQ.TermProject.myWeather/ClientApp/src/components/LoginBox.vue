@@ -3,7 +3,7 @@
     <v-form @submit.prevent="login">
       <v-text-field v-model="username" label="Username" outlined></v-text-field>
       <v-text-field v-model="password" label="Password" type="password" outlined></v-text-field>
-      <v-btn color="primary" type="submit">Login</v-btn>
+      <v-btn color="primary" @child-event="loginHandler" type="submit">Login</v-btn>
       <v-btn color="primary" @click="goToReg" class="mx-1">Register</v-btn>
       <v-alert v-if="this.badCredential===true" type="error"
                color="error"
@@ -15,6 +15,7 @@
 
 <script setup lang="ts">
   import axios from 'axios';
+  import jwt_decode from 'jwt-decode';
 </script>
 
 <script lang="ts">
@@ -31,14 +32,18 @@
       login() {
         axios.post('api/auth/Login?username=' + this.username + '&password=' + this.password)
           .then(response => {
-
-
-
-            (response)
+            console.log(response)
           if (response.data.success == true) {
             this.badCredential = false;
 
-            //this.$router.push("/panel")
+            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('userName', this.username);
+
+            axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
+
+            const jwt_decoded = jwt_decode(response.data.token);
+
+            localStorage.setItem('role', jwt_decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"]);
           }
           else
           {

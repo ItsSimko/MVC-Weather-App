@@ -61,7 +61,9 @@ export default {
   },
   methods: {
     registerUser() {
-      axios.post('api/auth/Register?username=' + this.username + '&password=' + this.password + '&email=' + this.email).then(resp => {
+      axios.post('api/auth/Register?username=' + this.username + '&password=' + this.password + '&email=' + this.email, null, {
+        "Authorization": localStorage.getItem("token")
+      }).then(resp => {
         console.log(resp)
         if (resp.data.success === true) {
           console.log("yup")

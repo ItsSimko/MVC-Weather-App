@@ -7,15 +7,31 @@ namespace SQ.TermProject.myWeather.Services
 {
     public class UserService : BaseService
     {
+
+        public string getUserRole(string username)
+        {
+            string role;
+
+
+            var roleId = base.DbContext.Users
+                .Where(model => model.UserName == username)
+                .Select(model => model.RoleId)
+                .FirstOrDefault();
+
+
+            role = base.DbContext.UserRoles.Where(model => model.Id == roleId).Select(model => model.Name).FirstOrDefault();
+
+
+            return role;
+        }
+
         public bool IsValidUser(string user, string pass)
         {
 
             string username = string.Empty, password = string.Empty;
 
-            using (var context = base.DbContext)
-            {
-               
-                var passResult = context.Users
+
+                var passResult = base.DbContext.Users
                     .Where(model => model.UserName == user) 
                     .Select(model => model.Password) 
                     .FirstOrDefault(); 
@@ -24,7 +40,7 @@ namespace SQ.TermProject.myWeather.Services
 
                 if (passResult != null)
                 {
-                    var saltResult = context.Users
+                    var saltResult = base.DbContext.Users
                     .Where(model => model.UserName == user) 
                     .Select(model => model.Salt) 
                     .FirstOrDefault(); 
@@ -39,7 +55,6 @@ namespace SQ.TermProject.myWeather.Services
                 return user == username && passResult == password;
             }
 
-        }
 
         
     }

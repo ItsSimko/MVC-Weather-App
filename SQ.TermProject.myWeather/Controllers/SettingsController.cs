@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SQ.TermProject.myWeather.Models;
 using SQ.TermProject.myWeather.Services;
 
 namespace SQ.TermProject.myWeather.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class SettingsController : ControllerBase
