@@ -10,16 +10,29 @@
 
   function changeMetric() {
     if (currentMetric === 'C') {
-      weather.data.main.temp = (weather.data.main.temp * (9 / 5)) + 32
+      weather.data.main.temp = cToF(weather.data.main.temp)
+      weather.data.main.feels_like = cToF(weather.data.main.feels_like)
+      weather.data.main.temp_max = cToF(weather.data.main.temp_max)
+      weather.data.main.temp_min = cToF(weather.data.main.temp_min)
       currentMetric = "F"
     }
     else if (currentMetric === 'F') {
       currentMetric = "C"
-      weather.data.main.temp = (weather.data.main.temp - 32) * (5 / 9);
+      weather.data.main.temp = fToC(weather.data.main.temp)
+      weather.data.main.feels_like = fToC(weather.data.main.feels_like)
+      weather.data.main.temp_max = fToC(weather.data.main.temp_max)
+      weather.data.main.temp_min = fToC(weather.data.main.temp_min)
 
     }
   }
 
+  function cToF(val) {
+    return (val * (9 / 5)) + 32
+  }
+
+  function fToC(val) {
+    return (val - 32) * (5 / 9)
+  }
 </script>
 
 
@@ -66,7 +79,7 @@
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p class="text-h4"> {{ weather.data.main.feels_like }}</p>
+                      <p class="text-h4"> {{ weather.data.main.feels_like.toFixed(2) }}°{{currentMetric}}</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
@@ -84,7 +97,7 @@
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p class="text-h4"> {{ weather.data.main.humidity }}</p>
+                      <p class="text-h4"> {{ weather.data.main.humidity }}%</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
@@ -123,7 +136,7 @@
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p class="text-h4"> {{ weather.data.main.temp_max }}</p>
+                      <p class="text-h4"> {{ weather.data.main.temp_max.toFixed(2) }}° {{currentMetric}}</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
@@ -141,7 +154,7 @@
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p class="text-h4"> {{ weather.data.main.temp_min }}</p>
+                      <p class="text-h4"> {{ weather.data.main.temp_min.toFixed(2) }}° {{currentMetric}}</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
@@ -159,7 +172,7 @@
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p class="text-h4"> {{ weather.data.main.pressure }}</p>
+                      <p class="text-h4"> {{ weather.data.main.pressure }} hPa</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
