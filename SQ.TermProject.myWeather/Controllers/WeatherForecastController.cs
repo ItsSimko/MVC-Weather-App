@@ -1,22 +1,23 @@
 using Microsoft.AspNetCore.Mvc;
 using SQ.TermProject.myWeather.Models;
+using SQ.TermProject.myWeather.Services;
 
-namespace Net6_Controller_And_VIte.Controllers
+namespace SQ.TermProject.myWeather.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private readonly OpenWeatherService _weatherService;
-        private readonly ILogger<WeatherForecastController> _logger;
+        //private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(OpenWeatherService weatherService, ILogger<WeatherForecastController> logger)
+        public WeatherForecastController()
         {
-            _weatherService = weatherService;
-            _logger = logger;
+            _weatherService = new OpenWeatherService();
+            //_logger = logger;
         }
 
-        [HttpGet("{cityName}")]
+        [HttpPost("GetWeather")]
         public async Task<IActionResult> GetWeatherByCity(string cityName)
         {
             try
@@ -26,7 +27,7 @@ namespace Net6_Controller_And_VIte.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Error fetching weather data");
+                //_logger.LogError(e, "Error fetching weather data");
                 return StatusCode(500, "Internal Server Error");
             }
         }
