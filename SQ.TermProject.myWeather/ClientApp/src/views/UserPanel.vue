@@ -14,7 +14,7 @@
         </v-window-item>
 
         <v-window-item value="two">
-          <ClientSettings ></ClientSettings>
+          
         </v-window-item>
 
         <v-window-item value="three">

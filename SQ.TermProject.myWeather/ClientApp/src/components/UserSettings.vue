@@ -11,14 +11,14 @@
   <v-card>
     <v-card-title>Set Favorite Location</v-card-title>
     <v-card-text>
-      <SearchBar></SearchBar>
+      <Searh></Searh>
       <v-btn @click="setFavoriteLocation">Set</v-btn>
     </v-card-text>
   </v-card>
 </template>
 
 <script lang="ts">
-
+  import Searh from '../components/SearchBar.vue'
   export default {
     data() {
       return {

@@ -13,7 +13,7 @@
     <v-card>
       <v-card-title>Set Favorite Location</v-card-title>
       <v-card-text>
-        <v-text-field v-model="favoriteLocation" label="Favorite Location"></v-text-field>
+        <SearchBar v-model="favoriteLocation" label="Favorite Location"></SearchBar>
         <v-btn @click="setFavoriteLocation">Set</v-btn>
       </v-card-text>
     </v-card>
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+  import SearchBar from '../components/SearchBar.vue'
 export default {
   data() {
     return {
