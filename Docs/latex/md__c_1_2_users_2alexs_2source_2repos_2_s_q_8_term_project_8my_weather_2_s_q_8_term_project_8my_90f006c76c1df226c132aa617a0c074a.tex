@@ -1,0 +1,67 @@
+\chapter{README}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_90f006c76c1df226c132aa617a0c074a}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_90f006c76c1df226c132aa617a0c074a}\index{README@{README}}
+\href{https://www.npmjs.com/package/eslint-scope}{\texttt{ }} \href{https://www.npmjs.com/package/eslint-scope}{\texttt{ }} \href{https://github.com/eslint/eslint-scope/actions}{\texttt{ }}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_90f006c76c1df226c132aa617a0c074a_autotoc_md2631}{}\doxysection{\texorpdfstring{ESLint Scope}{ESLint Scope}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_90f006c76c1df226c132aa617a0c074a_autotoc_md2631}
+ESLint Scope is the \href{http://www.ecma-international.org/publications/standards/Ecma-262.htm}{\texttt{ ECMAScript}} scope analyzer used in ESLint. It is a fork of \href{http://github.com/estools/escope}{\texttt{ escope}}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_90f006c76c1df226c132aa617a0c074a_autotoc_md2632}{}\doxysubsection{\texorpdfstring{Install}{Install}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_90f006c76c1df226c132aa617a0c074a_autotoc_md2632}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ i\ eslint-\/scope\ -\/-\/save}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_90f006c76c1df226c132aa617a0c074a_autotoc_md2633}{}\doxysubsection{\texorpdfstring{📖 Usage}{📖 Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_90f006c76c1df226c132aa617a0c074a_autotoc_md2633}
+To use in an ESM file\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ *\ as\ eslintScope\ from\ 'eslint-\/scope';}
+
+\end{DoxyCode}
+
+
+To use in a Common\+JS file\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ eslintScope\ =\ require('eslint-\/scope');}
+
+\end{DoxyCode}
+
+
+Example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ *\ as\ eslintScope\ from\ 'eslint-\/scope';}
+\DoxyCodeLine{import\ *\ as\ espree\ from\ 'espree';}
+\DoxyCodeLine{import\ estraverse\ from\ 'estraverse';}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ ast\ =\ espree.parse(code,\ \{\ range:\ true\ \});}
+\DoxyCodeLine{const\ scopeManager\ =\ eslintScope.analyze(ast);}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ currentScope\ =\ scopeManager.acquire(ast);\ \ \ //\ global\ scope}
+\DoxyCodeLine{}
+\DoxyCodeLine{estraverse.traverse(ast,\ \{}
+\DoxyCodeLine{\ \ \ \ enter\ (node,\ parent)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ do\ stuff}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (/Function/.test(node.type))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ currentScope\ =\ scopeManager.acquire(node);\ \ //\ get\ current\ function\ scope}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ leave(node,\ parent)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (/Function/.test(node.type))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ currentScope\ =\ currentScope.upper;\ \ //\ set\ to\ parent\ scope}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ do\ stuff}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_90f006c76c1df226c132aa617a0c074a_autotoc_md2634}{}\doxysubsection{\texorpdfstring{Contributing}{Contributing}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_90f006c76c1df226c132aa617a0c074a_autotoc_md2634}
+Issues and pull requests will be triaged and responded to as quickly as possible. We operate under the \href{http://eslint.org/docs/developer-guide/contributing}{\texttt{ ESLint Contributor Guidelines}}, so please be sure to read them before contributing. If you\textquotesingle{}re not sure where to dig in, check out the \href{https://github.com/eslint/eslint-scope/issues}{\texttt{ issues}}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_90f006c76c1df226c132aa617a0c074a_autotoc_md2635}{}\doxysubsection{\texorpdfstring{Build Commands}{Build Commands}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_90f006c76c1df226c132aa617a0c074a_autotoc_md2635}
+
+\begin{DoxyItemize}
+\item {\ttfamily npm test} -\/ run all linting and tests
+\item {\ttfamily npm run lint} -\/ run all linting
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_90f006c76c1df226c132aa617a0c074a_autotoc_md2636}{}\doxysubsection{\texorpdfstring{License}{License}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_90f006c76c1df226c132aa617a0c074a_autotoc_md2636}
+ESLint Scope is licensed under a permissive BSD 2-\/clause license. 

@@ -1,0 +1,47 @@
+\chapter{path-\/type \texorpdfstring{$<$}{<}a href="{}https\+://travis-\/ci.\+org/sindresorhus/path-\/type"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://travis-\/ci.\+org/sindresorhus/path-\/type.\+svg?branch=master"{} alt="{}\+Build Status"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228}\index{path-\/type $<$a href="{}https://travis-\/ci.org/sindresorhus/path-\/type"{} $>$$<$img src="{}https://travis-\/ci.org/sindresorhus/path-\/type.svg?branch=master"{} alt="{}Build Status"{}/$>$$<$/a$>$@{path-\/type $<$a href=""https://travis-\/ci.org/sindresorhus/path-\/type"" $>$$<$img src=""https://travis-\/ci.org/sindresorhus/path-\/type.svg?branch=master"" alt=""Build Status""/$>$$<$/a$>$}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3931}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3931}%
+ \begin{quote}
+Check if a path is a file, directory, or symlink \end{quote}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3932}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3932}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ path-\/type}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3933}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3933}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ \{isFile\}\ =\ require('path-\/type');}
+\DoxyCodeLine{}
+\DoxyCodeLine{(async\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ console.log(await\ isFile('package.json'));}
+\DoxyCodeLine{\ \ \ \ //=>\ true}
+\DoxyCodeLine{\})();}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3934}{}\doxysection{\texorpdfstring{API}{API}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3934}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3935}{}\doxysubsection{\texorpdfstring{is\+File(path)}{isFile(path)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3935}
+Check whether the passed {\ttfamily path} is a file.
+
+Returns a {\ttfamily Promise\texorpdfstring{$<$}{<}boolean\texorpdfstring{$>$}{>}}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3936}{}\doxysubsubsection{\texorpdfstring{path}{path}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3936}
+Type\+: {\ttfamily string}
+
+The path to check.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3937}{}\doxysubsection{\texorpdfstring{is\+Directory(path)}{isDirectory(path)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3937}
+Check whether the passed {\ttfamily path} is a directory.
+
+Returns a {\ttfamily Promise\texorpdfstring{$<$}{<}boolean\texorpdfstring{$>$}{>}}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3938}{}\doxysubsection{\texorpdfstring{is\+Symlink(path)}{isSymlink(path)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3938}
+Check whether the passed {\ttfamily path} is a symlink.
+
+Returns a {\ttfamily Promise\texorpdfstring{$<$}{<}boolean\texorpdfstring{$>$}{>}}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3939}{}\doxysubsection{\texorpdfstring{is\+File\+Sync(path)}{isFileSync(path)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3939}
+Synchronously check whether the passed {\ttfamily path} is a file.
+
+Returns a {\ttfamily boolean}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3940}{}\doxysubsection{\texorpdfstring{is\+Directory\+Sync(path)}{isDirectorySync(path)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3940}
+Synchronously check whether the passed {\ttfamily path} is a directory.
+
+Returns a {\ttfamily boolean}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3941}{}\doxysubsection{\texorpdfstring{is\+Symlink\+Sync(path)}{isSymlinkSync(path)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3941}
+Synchronously check whether the passed {\ttfamily path} is a symlink.
+
+Returns a {\ttfamily boolean}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3942}{}\doxysection{\texorpdfstring{License}{License}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e84ea08e16645646a6822bfe47e68228_autotoc_md3942}
+MIT © \href{https://sindresorhus.com}{\texttt{ Sindre Sorhus}} 

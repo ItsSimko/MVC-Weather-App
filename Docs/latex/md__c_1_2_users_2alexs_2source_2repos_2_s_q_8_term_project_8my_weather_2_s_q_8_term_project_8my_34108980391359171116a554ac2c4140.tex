@@ -1,0 +1,38 @@
+\chapter{wrappy}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_34108980391359171116a554ac2c4140}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_34108980391359171116a554ac2c4140}\index{wrappy@{wrappy}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_34108980391359171116a554ac2c4140_autotoc_md5269}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_34108980391359171116a554ac2c4140_autotoc_md5269}%
+ Callback wrapping utility\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_34108980391359171116a554ac2c4140_autotoc_md5270}{}\doxysection{\texorpdfstring{USAGE}{USAGE}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_34108980391359171116a554ac2c4140_autotoc_md5270}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ wrappy\ =\ require("{}wrappy"{})}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ var\ wrapper\ =\ wrappy(wrapperFunction)}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ make\ sure\ a\ cb\ is\ called\ only\ once}
+\DoxyCodeLine{//\ See\ also:\ http://npm.im/once\ for\ this\ specific\ use\ case}
+\DoxyCodeLine{var\ once\ =\ wrappy(function\ (cb)\ \{}
+\DoxyCodeLine{\ \ var\ called\ =\ false}
+\DoxyCodeLine{\ \ return\ function\ ()\ \{}
+\DoxyCodeLine{\ \ \ \ if\ (called)\ return}
+\DoxyCodeLine{\ \ \ \ called\ =\ true}
+\DoxyCodeLine{\ \ \ \ return\ cb.apply(this,\ arguments)}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{function\ printBoo\ ()\ \{}
+\DoxyCodeLine{\ \ console.log('boo')}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{//\ has\ some\ rando\ property}
+\DoxyCodeLine{printBoo.iAmBooPrinter\ =\ true}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ onlyPrintOnce\ =\ once(printBoo)}
+\DoxyCodeLine{}
+\DoxyCodeLine{onlyPrintOnce()\ //\ prints\ 'boo'}
+\DoxyCodeLine{onlyPrintOnce()\ //\ does\ nothing}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ random\ property\ is\ retained!}
+\DoxyCodeLine{assert.equal(onlyPrintOnce.iAmBooPrinter,\ true)}
+
+\end{DoxyCode}
+ 

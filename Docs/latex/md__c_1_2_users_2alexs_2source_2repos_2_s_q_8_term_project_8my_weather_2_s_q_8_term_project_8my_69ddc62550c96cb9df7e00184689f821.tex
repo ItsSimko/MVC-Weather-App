@@ -1,0 +1,143 @@
+\chapter{globby}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821}\index{globby@{globby}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3087}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3087}%
+ \begin{quote}
+User-\/friendly glob matching \end{quote}
+Based on \href{https://github.com/mrmlnc/fast-glob}{\texttt{ {\ttfamily fast-\/glob}}} but adds a bunch of useful features.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3088}{}\doxysection{\texorpdfstring{Features}{Features}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3088}
+
+\begin{DoxyItemize}
+\item Promise API
+\item Multiple patterns
+\item Negated patterns\+: `\mbox{[}\textquotesingle{}foo\texorpdfstring{$\ast$}{*}', \textquotesingle{}!foobar\textquotesingle{}\mbox{]}{\ttfamily }
+\item {\ttfamily Expands directories\+:}foo{\ttfamily →}foo/\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}/\texorpdfstring{$\ast$}{*}{\ttfamily }
+\item {\ttfamily Supports}.gitignore\`{}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3089}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3089}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ globby}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3090}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3090}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{├──\ unicorn}
+\DoxyCodeLine{├──\ cake}
+\DoxyCodeLine{└──\ rainbow}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ globby\ =\ require('globby');}
+\DoxyCodeLine{}
+\DoxyCodeLine{(async\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ const\ paths\ =\ await\ globby(['*',\ '!cake']);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ console.log(paths);}
+\DoxyCodeLine{\ \ \ \ //=>\ ['unicorn',\ 'rainbow']}
+\DoxyCodeLine{\})();}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3091}{}\doxysection{\texorpdfstring{API}{API}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3091}
+Note that glob patterns can only contain forward-\/slashes, not backward-\/slashes, so if you want to construct a glob pattern from path components, you need to use {\ttfamily path.\+posix.\+join()} instead of {\ttfamily path.\+join()}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3092}{}\doxysubsection{\texorpdfstring{globby(patterns, options?)}{globby(patterns, options?)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3092}
+Returns a {\ttfamily Promise\texorpdfstring{$<$}{<}string\mbox{[}\mbox{]}\texorpdfstring{$>$}{>}} of matching paths.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3093}{}\doxysubsubsection{\texorpdfstring{patterns}{patterns}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3093}
+Type\+: {\ttfamily string \texorpdfstring{$\vert$}{|} string\mbox{[}\mbox{]}}
+
+See supported {\ttfamily minimatch} \href{https://github.com/isaacs/minimatch\#usage}{\texttt{ patterns}}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3094}{}\doxysubsubsection{\texorpdfstring{options}{options}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3094}
+Type\+: {\ttfamily object}
+
+See the \href{https://github.com/mrmlnc/fast-glob\#options-3}{\texttt{ {\ttfamily fast-\/glob} options}} in addition to the ones below.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3095}{}\doxyparagraph{\texorpdfstring{expand\+Directories}{expandDirectories}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3095}
+Type\+: {\ttfamily boolean \texorpdfstring{$\vert$}{|} string\mbox{[}\mbox{]} \texorpdfstring{$\vert$}{|} object}\textbackslash{} Default\+: {\ttfamily true}
+
+If set to {\ttfamily true}, {\ttfamily globby} will automatically glob directories for you. If you define an {\ttfamily Array} it will only glob files that matches the patterns inside the {\ttfamily Array}. You can also define an {\ttfamily object} with {\ttfamily files} and {\ttfamily extensions} like below\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ globby\ =\ require('globby');}
+\DoxyCodeLine{}
+\DoxyCodeLine{(async\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ const\ paths\ =\ await\ globby('images',\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ expandDirectories:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ files:\ ['cat',\ 'unicorn',\ '*.jpg'],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ extensions:\ ['png']}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ console.log(paths);}
+\DoxyCodeLine{\ \ \ \ //=>\ ['cat.png',\ 'unicorn.png',\ 'cow.jpg',\ 'rainbow.jpg']}
+\DoxyCodeLine{\})();}
+
+\end{DoxyCode}
+
+
+Note that if you set this option to {\ttfamily false}, you won\textquotesingle{}t get back matched directories unless you set {\ttfamily only\+Files\+: false}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3096}{}\doxyparagraph{\texorpdfstring{gitignore}{gitignore}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3096}
+Type\+: {\ttfamily boolean}\textbackslash{} Default\+: {\ttfamily false}
+
+Respect ignore patterns in {\ttfamily .gitignore} files that apply to the globbed files.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3097}{}\doxysubsection{\texorpdfstring{globby.\+sync(patterns, options?)}{globby.sync(patterns, options?)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3097}
+Returns {\ttfamily string\mbox{[}\mbox{]}} of matching paths.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3098}{}\doxysubsection{\texorpdfstring{globby.\+stream(patterns, options?)}{globby.stream(patterns, options?)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3098}
+Returns a \href{https://nodejs.org/api/stream.html\#stream_readable_streams}{\texttt{ {\ttfamily stream.\+Readable}}} of matching paths.
+
+Since Node.\+js 10, \href{https://nodejs.org/api/stream.html\#stream_readable_symbol_asynciterator}{\texttt{ readable streams are iterable}}, so you can loop over glob matches in a \href{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of}{\texttt{ {\ttfamily for await...of} loop}} like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ globby\ =\ require('globby');}
+\DoxyCodeLine{}
+\DoxyCodeLine{(async\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ for\ await\ (const\ path\ of\ globby.stream('*.tmp'))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ console.log(path);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\})();}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3099}{}\doxysubsection{\texorpdfstring{globby.\+generate\+Glob\+Tasks(patterns, options?)}{globby.generateGlobTasks(patterns, options?)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3099}
+Returns an {\ttfamily object\mbox{[}\mbox{]}} in the format {\ttfamily \{pattern\+: string, options\+: Object\}}, which can be passed as arguments to \href{https://github.com/mrmlnc/fast-glob}{\texttt{ {\ttfamily fast-\/glob}}}. This is useful for other globbing-\/related packages.
+
+Note that you should avoid running the same tasks multiple times as they contain a file system cache. Instead, run this method each time to ensure file system changes are taken into consideration.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3100}{}\doxysubsection{\texorpdfstring{globby.\+has\+Magic(patterns, options?)}{globby.hasMagic(patterns, options?)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3100}
+Returns a {\ttfamily boolean} of whether there are any special glob characters in the {\ttfamily patterns}.
+
+Note that the options affect the results.
+
+This function is backed by \href{https://github.com/mrmlnc/fast-glob\#isdynamicpatternpattern-options}{\texttt{ {\ttfamily fast-\/glob}}}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3101}{}\doxysubsection{\texorpdfstring{globby.\+gitignore(options?)}{globby.gitignore(options?)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3101}
+Returns a {\ttfamily Promise\texorpdfstring{$<$}{<}(path\+: string) =\texorpdfstring{$>$}{>} boolean\texorpdfstring{$>$}{>}} indicating whether a given path is ignored via a {\ttfamily .gitignore} file.
+
+Takes {\ttfamily cwd?\+: string} and {\ttfamily ignore?\+: string\mbox{[}\mbox{]}} as options. {\ttfamily .gitignore} files matched by the ignore config are not used for the resulting filter function.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ \{gitignore\}\ =\ require('globby');}
+\DoxyCodeLine{}
+\DoxyCodeLine{(async\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ const\ isIgnored\ =\ await\ gitignore();}
+\DoxyCodeLine{\ \ \ \ console.log(isIgnored('some/file'));}
+\DoxyCodeLine{\})();}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3102}{}\doxysubsection{\texorpdfstring{globby.\+gitignore.\+sync(options?)}{globby.gitignore.sync(options?)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3102}
+Returns a {\ttfamily (path\+: string) =\texorpdfstring{$>$}{>} boolean} indicating whether a given path is ignored via a {\ttfamily .gitignore} file.
+
+Takes the same options as {\ttfamily globby.\+gitignore}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3103}{}\doxysection{\texorpdfstring{Globbing patterns}{Globbing patterns}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3103}
+Just a quick overview.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \texorpdfstring{$\ast$}{*}} matches any number of characters, but not {\ttfamily /}
+\item {\ttfamily ?} matches a single character, but not {\ttfamily /}
+\item {\ttfamily \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}} matches any number of characters, including {\ttfamily /}, as long as it\textquotesingle{}s the only thing in a path part
+\item {\ttfamily \{\}} allows for a comma-\/separated list of "{}or"{} expressions
+\item {\ttfamily !} at the beginning of a pattern will negate the match
+\end{DoxyItemize}
+
+\href{https://github.com/sindresorhus/multimatch/blob/main/test/test.js}{\texttt{ Various patterns and expected matches.}}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3104}{}\doxysection{\texorpdfstring{globby for enterprise}{globby for enterprise}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3104}
+Available as part of the Tidelift Subscription.
+
+The maintainers of globby and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. \href{https://tidelift.com/subscription/pkg/npm-globby?utm_source=npm-globby&utm_medium=referral&utm_campaign=enterprise&utm_term=repo}{\texttt{ Learn more.}}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3105}{}\doxysection{\texorpdfstring{Related}{Related}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_69ddc62550c96cb9df7e00184689f821_autotoc_md3105}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sindresorhus/multimatch}{\texttt{ multimatch}} -\/ Match against a list instead of the filesystem
+\item \href{https://github.com/sindresorhus/matcher}{\texttt{ matcher}} -\/ Simple wildcard matching
+\item \href{https://github.com/sindresorhus/del}{\texttt{ del}} -\/ Delete files and directories
+\item \href{https://github.com/sindresorhus/make-dir}{\texttt{ make-\/dir}} -\/ Make a directory and its parents if needed 
+\end{DoxyItemize}

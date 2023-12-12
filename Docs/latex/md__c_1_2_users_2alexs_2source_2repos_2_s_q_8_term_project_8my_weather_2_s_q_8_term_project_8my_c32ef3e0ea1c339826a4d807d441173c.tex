@@ -1,0 +1,54 @@
+\chapter{resolve-\/from \texorpdfstring{$<$}{<}a href="{}https\+://travis-\/ci.\+org/sindresorhus/resolve-\/from"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://travis-\/ci.\+org/sindresorhus/resolve-\/from.\+svg?branch=master"{} alt="{}\+Build Status"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c}\index{resolve-\/from $<$a href="{}https://travis-\/ci.org/sindresorhus/resolve-\/from"{} $>$$<$img src="{}https://travis-\/ci.org/sindresorhus/resolve-\/from.svg?branch=master"{} alt="{}Build Status"{}/$>$$<$/a$>$@{resolve-\/from $<$a href=""https://travis-\/ci.org/sindresorhus/resolve-\/from"" $>$$<$img src=""https://travis-\/ci.org/sindresorhus/resolve-\/from.svg?branch=master"" alt=""Build Status""/$>$$<$/a$>$}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4276}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4276}%
+ \begin{quote}
+Resolve the path of a module like \href{https://nodejs.org/api/globals.html\#globals_require_resolve}{\texttt{ {\ttfamily require.\+resolve()}}} but from a given path \end{quote}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4277}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4277}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ resolve-\/from}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4278}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4278}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ resolveFrom\ =\ require('resolve-\/from');}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ There\ is\ a\ file\ at\ \`{}./foo/bar.js`}
+\DoxyCodeLine{}
+\DoxyCodeLine{resolveFrom('foo',\ './bar');}
+\DoxyCodeLine{//=>\ '/Users/sindresorhus/dev/test/foo/bar.js'}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4279}{}\doxysection{\texorpdfstring{API}{API}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4279}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4280}{}\doxysubsection{\texorpdfstring{resolve\+From(from\+Dir, module\+Id)}{resolveFrom(fromDir, moduleId)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4280}
+Like {\ttfamily require()}, throws when the module can\textquotesingle{}t be found.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4281}{}\doxysubsection{\texorpdfstring{resolve\+From.\+silent(from\+Dir, module\+Id)}{resolveFrom.silent(fromDir, moduleId)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4281}
+Returns {\ttfamily null} instead of throwing when the module can\textquotesingle{}t be found.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4282}{}\doxysubsubsection{\texorpdfstring{from\+Dir}{fromDir}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4282}
+Type\+: {\ttfamily string}
+
+Directory to resolve from.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4283}{}\doxysubsubsection{\texorpdfstring{module\+Id}{moduleId}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4283}
+Type\+: {\ttfamily string}
+
+What you would use in {\ttfamily require()}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4284}{}\doxysection{\texorpdfstring{Tip}{Tip}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4284}
+Create a partial using a bound function if you want to resolve from the same {\ttfamily from\+Dir} multiple times\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ resolveFromFoo\ =\ resolveFrom.bind(null,\ 'foo');}
+\DoxyCodeLine{}
+\DoxyCodeLine{resolveFromFoo('./bar');}
+\DoxyCodeLine{resolveFromFoo('./baz');}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4285}{}\doxysection{\texorpdfstring{Related}{Related}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4285}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sindresorhus/resolve-cwd}{\texttt{ resolve-\/cwd}} -\/ Resolve the path of a module from the current working directory
+\item \href{https://github.com/sindresorhus/import-from}{\texttt{ import-\/from}} -\/ Import a module from a given path
+\item \href{https://github.com/sindresorhus/import-cwd}{\texttt{ import-\/cwd}} -\/ Import a module from the current working directory
+\item \href{https://github.com/sindresorhus/resolve-pkg}{\texttt{ resolve-\/pkg}} -\/ Resolve the path of a package regardless of it having an entry point
+\item \href{https://github.com/sindresorhus/import-lazy}{\texttt{ import-\/lazy}} -\/ Import a module lazily
+\item \href{https://github.com/sindresorhus/resolve-global}{\texttt{ resolve-\/global}} -\/ Resolve the path of a globally installed module
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4286}{}\doxysection{\texorpdfstring{License}{License}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c32ef3e0ea1c339826a4d807d441173c_autotoc_md4286}
+MIT © \href{https://sindresorhus.com}{\texttt{ Sindre Sorhus}} 

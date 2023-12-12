@@ -1,0 +1,63 @@
+\chapter{@vue/eslint-\/config-\/typescript}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_5a4d3879e6e161447bef475e6569794d}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_5a4d3879e6e161447bef475e6569794d}\index{"@vue/eslint-\/config-\/typescript@{"@vue/eslint-\/config-\/typescript}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_5a4d3879e6e161447bef475e6569794d_autotoc_md1595}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_5a4d3879e6e161447bef475e6569794d_autotoc_md1595}%
+ \begin{quote}
+eslint-\/config-\/typescript for Vue \end{quote}
+See \href{https://typescript-eslint.io/rules/}{\texttt{ @typescript-\/eslint/eslint-\/plugin}} for available rules.
+
+This config is specifically designed to be used by {\ttfamily @vue/cli} \& {\ttfamily create-\/vue} setups and is not meant for outside use (it can be used but some adaptations on the user side might be needed -\/ for details see the config file).
+
+A part of its design is that this config may implicitly depend on other parts of {\ttfamily @vue/cli}/{\ttfamily create-\/vue} setups, such as {\ttfamily eslint-\/plugin-\/vue} being extended in the same resulting config.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_5a4d3879e6e161447bef475e6569794d_autotoc_md1596}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_5a4d3879e6e161447bef475e6569794d_autotoc_md1596}
+In order to work around \href{https://github.com/eslint/eslint/issues/3458}{\texttt{ a known limitation in ESLint}}, we recommend you to use this package alongside {\ttfamily @rushstack/eslint-\/patch}, so that you don\textquotesingle{}t have to install too many dependencies\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ add\ -\/-\/dev\ @vue/eslint-\/config-\/typescript\ @rushstack/eslint-\/patch}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_5a4d3879e6e161447bef475e6569794d_autotoc_md1597}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_5a4d3879e6e161447bef475e6569794d_autotoc_md1597}
+This package comes with 2 rulesets.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_5a4d3879e6e161447bef475e6569794d_autotoc_md1598}{}\doxysubsection{\texorpdfstring{$<$tt$>$@vue/eslint-\/config-\/typescript$<$/tt$>$}{<tt>@vue/eslint-config-typescript</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_5a4d3879e6e161447bef475e6569794d_autotoc_md1598}
+This ruleset is the base configuration for Vue-\/\+Type\+Script projects. Besides setting the parser and plugin options, it also turns off several conflicting rules in the {\ttfamily eslint\+:recommended} ruleset. So when used alongside other sharable configs, this config should be placed at the end of the {\ttfamily extends} array.
+
+An example {\ttfamily .eslintrc.\+cjs}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{/*\ eslint-\/env\ node\ */}
+\DoxyCodeLine{require("{}@rushstack/eslint-\/patch/modern-\/module-\/resolution"{})}
+\DoxyCodeLine{}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ extends:\ [}
+\DoxyCodeLine{\ \ \ \ 'eslint:recommended',}
+\DoxyCodeLine{\ \ \ \ 'plugin:vue/vue3-\/essential',}
+\DoxyCodeLine{\ \ \ \ '@vue/eslint-\/config-\/typescript'}
+\DoxyCodeLine{\ \ ]}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_5a4d3879e6e161447bef475e6569794d_autotoc_md1599}{}\doxysubsection{\texorpdfstring{$<$tt$>$@vue/eslint-\/config-\/typescript/recommended$<$/tt$>$}{<tt>@vue/eslint-config-typescript/recommended</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_5a4d3879e6e161447bef475e6569794d_autotoc_md1599}
+This is extended from the {\ttfamily @typescript-\/eslint/recommended} ruleset, which is an \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+\_\+opinionated\+\_\+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} ruleset. See the \href{https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin/src/configs\#recommended}{\texttt{ original documentation}} for more information.
+
+Some of its rules, however, might conflict with {\ttfamily prettier}. So when used alongside other sharable configs, this config should be placed after all other configs except for the one from {\ttfamily @vue/eslint-\/config-\/prettier} or {\ttfamily eslint-\/plugin-\/prettier} in the {\ttfamily extends} array.
+
+An example {\ttfamily .eslintrc.\+cjs}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{/*\ eslint-\/env\ node\ */}
+\DoxyCodeLine{require("{}@rushstack/eslint-\/patch/modern-\/module-\/resolution"{})}
+\DoxyCodeLine{}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ extends:\ [}
+\DoxyCodeLine{\ \ \ \ 'plugin:vue/vue3-\/essential',}
+\DoxyCodeLine{\ \ \ \ '@vue/eslint-\/config-\/typescript/recommended',}
+\DoxyCodeLine{\ \ \ \ '@vue/eslint-\/config-\/prettier'}
+\DoxyCodeLine{\ \ ]}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_5a4d3879e6e161447bef475e6569794d_autotoc_md1600}{}\doxysubsection{\texorpdfstring{With Other Community Configs}{With Other Community Configs}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_5a4d3879e6e161447bef475e6569794d_autotoc_md1600}
+Work-\/\+In-\/\+Progress.
+
+\sout{If you are following the \href{https://standardjs.com/}{\texttt{ {\ttfamily standard}}} or \href{https://github.com/airbnb/javascript/}{\texttt{ {\ttfamily airbnb}}} style guides, don\textquotesingle{}t manually extend from this package. Please use {\ttfamily @vue/eslint-\/config-\/standard-\/with-\/typescript} or {\ttfamily @vue/eslint-\/config-\/airbnb-\/with-\/typescript} instead.} 

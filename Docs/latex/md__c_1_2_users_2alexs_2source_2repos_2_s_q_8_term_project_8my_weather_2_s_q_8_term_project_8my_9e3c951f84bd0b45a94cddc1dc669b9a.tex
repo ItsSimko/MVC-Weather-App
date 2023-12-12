@@ -1,0 +1,31 @@
+\chapter{shebang-\/regex \texorpdfstring{$<$}{<}a href="{}https\+://travis-\/ci.\+org/sindresorhus/shebang-\/regex"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://travis-\/ci.\+org/sindresorhus/shebang-\/regex.\+svg?branch=master"{} alt="{}\+Build Status"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9e3c951f84bd0b45a94cddc1dc669b9a}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9e3c951f84bd0b45a94cddc1dc669b9a}\index{shebang-\/regex $<$a href="{}https://travis-\/ci.org/sindresorhus/shebang-\/regex"{} $>$$<$img src="{}https://travis-\/ci.org/sindresorhus/shebang-\/regex.svg?branch=master"{} alt="{}Build Status"{}/$>$$<$/a$>$@{shebang-\/regex $<$a href=""https://travis-\/ci.org/sindresorhus/shebang-\/regex"" $>$$<$img src=""https://travis-\/ci.org/sindresorhus/shebang-\/regex.svg?branch=master"" alt=""Build Status""/$>$$<$/a$>$}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9e3c951f84bd0b45a94cddc1dc669b9a_autotoc_md4436}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9e3c951f84bd0b45a94cddc1dc669b9a_autotoc_md4436}%
+ \begin{quote}
+Regular expression for matching a \href{https://en.wikipedia.org/wiki/Shebang_(Unix)}{\texttt{ shebang}} line \end{quote}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9e3c951f84bd0b45a94cddc1dc669b9a_autotoc_md4437}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9e3c951f84bd0b45a94cddc1dc669b9a_autotoc_md4437}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ shebang-\/regex}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9e3c951f84bd0b45a94cddc1dc669b9a_autotoc_md4438}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9e3c951f84bd0b45a94cddc1dc669b9a_autotoc_md4438}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ shebangRegex\ =\ require('shebang-\/regex');}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ string\ =\ '\#!/usr/bin/env\ node\(\backslash\)nconsole.log("{}unicorns"{});';}
+\DoxyCodeLine{}
+\DoxyCodeLine{shebangRegex.test(string);}
+\DoxyCodeLine{//=>\ true}
+\DoxyCodeLine{}
+\DoxyCodeLine{shebangRegex.exec(string)[0];}
+\DoxyCodeLine{//=>\ '\#!/usr/bin/env\ node'}
+\DoxyCodeLine{}
+\DoxyCodeLine{shebangRegex.exec(string)[1];}
+\DoxyCodeLine{//=>\ '/usr/bin/env\ node'}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9e3c951f84bd0b45a94cddc1dc669b9a_autotoc_md4439}{}\doxysection{\texorpdfstring{License}{License}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9e3c951f84bd0b45a94cddc1dc669b9a_autotoc_md4439}
+MIT © \href{https://sindresorhus.com}{\texttt{ Sindre Sorhus}} 

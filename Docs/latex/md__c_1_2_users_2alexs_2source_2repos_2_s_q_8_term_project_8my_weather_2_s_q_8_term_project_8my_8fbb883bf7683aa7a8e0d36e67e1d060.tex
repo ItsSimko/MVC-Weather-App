@@ -1,0 +1,140 @@
+\chapter{text-\/table}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060}\index{text-\/table@{text-\/table}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4564}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4564}%
+ generate borderless text table strings suitable for printing to stdout
+
+\href{http://travis-ci.org/substack/text-table}{\texttt{ }}
+
+\href{http://ci.testling.com/substack/text-table}{\texttt{ }}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4565}{}\doxysection{\texorpdfstring{example}{example}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4565}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4566}{}\doxysubsection{\texorpdfstring{default align}{default align}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4566}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ js}
+\DoxyCodeLine{var\ table\ =\ require('text-\/table');}
+\DoxyCodeLine{var\ t\ =\ table([}
+\DoxyCodeLine{\ \ \ \ [\ 'master',\ '0123456789abcdef'\ ],}
+\DoxyCodeLine{\ \ \ \ [\ 'staging',\ 'fedcba9876543210'\ ]}
+\DoxyCodeLine{]);}
+\DoxyCodeLine{console.log(t);}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{master\ \ \ 0123456789abcdef}
+\DoxyCodeLine{staging\ \ fedcba9876543210}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4567}{}\doxysubsection{\texorpdfstring{left-\/right align}{left-right align}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4567}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ js}
+\DoxyCodeLine{var\ table\ =\ require('text-\/table');}
+\DoxyCodeLine{var\ t\ =\ table([}
+\DoxyCodeLine{\ \ \ \ [\ 'beep',\ '1024'\ ],}
+\DoxyCodeLine{\ \ \ \ [\ 'boop',\ '33450'\ ],}
+\DoxyCodeLine{\ \ \ \ [\ 'foo',\ '1006'\ ],}
+\DoxyCodeLine{\ \ \ \ [\ 'bar',\ '45'\ ]}
+\DoxyCodeLine{],\ \{\ align:\ [\ 'l',\ 'r'\ ]\ \});}
+\DoxyCodeLine{console.log(t);}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{beep\ \ \ 1024}
+\DoxyCodeLine{boop\ \ 33450}
+\DoxyCodeLine{foo\ \ \ \ 1006}
+\DoxyCodeLine{bar\ \ \ \ \ \ 45}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4568}{}\doxysubsection{\texorpdfstring{dotted align}{dotted align}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4568}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ js}
+\DoxyCodeLine{var\ table\ =\ require('text-\/table');}
+\DoxyCodeLine{var\ t\ =\ table([}
+\DoxyCodeLine{\ \ \ \ [\ 'beep',\ '1024'\ ],}
+\DoxyCodeLine{\ \ \ \ [\ 'boop',\ '334.212'\ ],}
+\DoxyCodeLine{\ \ \ \ [\ 'foo',\ '1006'\ ],}
+\DoxyCodeLine{\ \ \ \ [\ 'bar',\ '45.6'\ ],}
+\DoxyCodeLine{\ \ \ \ [\ 'baz',\ '123.'\ ]}
+\DoxyCodeLine{],\ \{\ align:\ [\ 'l',\ '.'\ ]\ \});}
+\DoxyCodeLine{console.log(t);}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{beep\ \ 1024}
+\DoxyCodeLine{boop\ \ \ 334.212}
+\DoxyCodeLine{foo\ \ \ 1006}
+\DoxyCodeLine{bar\ \ \ \ \ 45.6}
+\DoxyCodeLine{baz\ \ \ \ 123.}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4569}{}\doxysubsection{\texorpdfstring{centered}{centered}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4569}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ js}
+\DoxyCodeLine{var\ table\ =\ require('text-\/table');}
+\DoxyCodeLine{var\ t\ =\ table([}
+\DoxyCodeLine{\ \ \ \ [\ 'beep',\ '1024',\ 'xyz'\ ],}
+\DoxyCodeLine{\ \ \ \ [\ 'boop',\ '3388450',\ 'tuv'\ ],}
+\DoxyCodeLine{\ \ \ \ [\ 'foo',\ '10106',\ 'qrstuv'\ ],}
+\DoxyCodeLine{\ \ \ \ [\ 'bar',\ '45',\ 'lmno'\ ]}
+\DoxyCodeLine{],\ \{\ align:\ [\ 'l',\ 'c',\ 'l'\ ]\ \});}
+\DoxyCodeLine{console.log(t);}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{beep\ \ \ \ 1024\ \ \ xyz}
+\DoxyCodeLine{boop\ \ 3388450\ \ tuv}
+\DoxyCodeLine{foo\ \ \ \ 10106\ \ \ qrstuv}
+\DoxyCodeLine{bar\ \ \ \ \ \ 45\ \ \ \ lmno}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4570}{}\doxysection{\texorpdfstring{methods}{methods}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4570}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ js}
+\DoxyCodeLine{var\ table\ =\ require('text-\/table')}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4571}{}\doxysubsection{\texorpdfstring{var s = table(rows, opts=\{\})}{var s = table(rows, opts=\{\})}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4571}
+Return a formatted table string {\ttfamily s} from an array of {\ttfamily rows} and some options {\ttfamily opts}.
+
+{\ttfamily rows} should be an array of arrays containing strings, numbers, or other printable values.
+
+options can be\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily opts.\+hsep} -\/ separator to use between columns, default `' \textquotesingle{}{\ttfamily  \texorpdfstring{$\ast$}{*}}opts.\+align{\ttfamily -\/ array of alignment types for each column, default}\mbox{[}\textquotesingle{}l\textquotesingle{},\textquotesingle{}l\textquotesingle{},...\mbox{]}{\ttfamily  \texorpdfstring{$\ast$}{*}}opts.\+string\+Length\`{} -\/ callback function to use when calculating the string length
+\end{DoxyItemize}
+
+alignment types are\+:
+
+
+\begin{DoxyItemize}
+\item `\textquotesingle{}l'{\ttfamily -\/ left \texorpdfstring{$\ast$}{*}}\textquotesingle{}r\textquotesingle{}{\ttfamily -\/ right \texorpdfstring{$\ast$}{*}}\textquotesingle{}c\textquotesingle{}{\ttfamily -\/ center \texorpdfstring{$\ast$}{*}}\textquotesingle{}.\textquotesingle{}\`{} -\/ decimal
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4572}{}\doxysection{\texorpdfstring{install}{install}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4572}
+With \href{https://npmjs.org}{\texttt{ npm}} do\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ text-\/table}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4573}{}\doxysection{\texorpdfstring{Use with ANSI-\/colors}{Use with ANSI-colors}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4573}
+Since the string length of ANSI color schemes does not equal the length Java\+Script sees internally it is necessary to pass the a custom string length calculator during the main function call.
+
+See the {\ttfamily test/ansi-\/colors.\+js} file for an example.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4574}{}\doxysection{\texorpdfstring{license}{license}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8fbb883bf7683aa7a8e0d36e67e1d060_autotoc_md4574}
+MIT 

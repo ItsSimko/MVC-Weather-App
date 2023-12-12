@@ -1,0 +1,231 @@
+\chapter{@vitejs/plugin-\/vue \texorpdfstring{$<$}{<}a href="{}https\+://npmjs.\+com/package/@vitejs/plugin-\/vue"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://img.\+shields.\+io/npm/v/@vitejs/plugin-\/vue.\+svg"{} alt="{}npm"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_f856a28c208852a0c2d9eb8a288adee0}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_f856a28c208852a0c2d9eb8a288adee0}\index{"@vitejs/plugin-\/vue $<$a href="{}https://npmjs.com/package/"@vitejs/plugin-\/vue"{} $>$$<$img src="{}https://img.shields.io/npm/v/"@vitejs/plugin-\/vue.svg"{} alt="{}npm"{}/$>$$<$/a$>$@{"@vitejs/plugin-\/vue $<$a href=""https://npmjs.com/package/"@vitejs/plugin-\/vue"" $>$$<$img src=""https://img.shields.io/npm/v/"@vitejs/plugin-\/vue.svg"" alt=""npm""/$>$$<$/a$>$}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_f856a28c208852a0c2d9eb8a288adee0_autotoc_md1582}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_f856a28c208852a0c2d9eb8a288adee0_autotoc_md1582}%
+ \begin{quote}
+Note\+: as of {\ttfamily vue} 3.\+2.\+13+ and {\ttfamily @vitejs/plugin-\/vue} 1.\+9.\+0+, {\ttfamily @vue/compiler-\/sfc} is no longer required as a peer dependency. \end{quote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//\ vite.config.js}
+\DoxyCodeLine{import\ vue\ from\ '@vitejs/plugin-\/vue'}
+\DoxyCodeLine{}
+\DoxyCodeLine{export\ default\ \{}
+\DoxyCodeLine{\ \ plugins:\ [vue()],}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+For JSX / TSX support, \href{https://github.com/vitejs/vite-plugin-vue/tree/main/packages/plugin-vue-jsx}{\texttt{ {\ttfamily @vitejs/plugin-\/vue-\/jsx}}} is also needed.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_f856a28c208852a0c2d9eb8a288adee0_autotoc_md1583}{}\doxysection{\texorpdfstring{Options}{Options}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_f856a28c208852a0c2d9eb8a288adee0_autotoc_md1583}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{export\ interface\ Options\ \{}
+\DoxyCodeLine{\ \ include?:\ string\ |\ RegExp\ |\ (string\ |\ RegExp)[]}
+\DoxyCodeLine{\ \ exclude?:\ string\ |\ RegExp\ |\ (string\ |\ RegExp)[]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ isProduction?:\ boolean}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ //\ options\ to\ pass\ on\ to\ vue/compiler-\/sfc}
+\DoxyCodeLine{\ \ script?:\ Partial<}
+\DoxyCodeLine{\ \ \ \ Pick<}
+\DoxyCodeLine{\ \ \ \ \ \ SFCScriptCompileOptions,}
+\DoxyCodeLine{\ \ \ \ \ \ |\ 'babelParserPlugins'}
+\DoxyCodeLine{\ \ \ \ \ \ |\ 'globalTypeFiles'}
+\DoxyCodeLine{\ \ \ \ \ \ |\ 'defineModel'}
+\DoxyCodeLine{\ \ \ \ \ \ |\ 'propsDestructure'}
+\DoxyCodeLine{\ \ \ \ \ \ |\ 'fs'}
+\DoxyCodeLine{\ \ \ \ \ \ |\ 'reactivityTransform'}
+\DoxyCodeLine{\ \ \ \ >}
+\DoxyCodeLine{\ \ >}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ template?:\ Partial<}
+\DoxyCodeLine{\ \ \ \ Pick<}
+\DoxyCodeLine{\ \ \ \ \ \ SFCTemplateCompileOptions,}
+\DoxyCodeLine{\ \ \ \ \ \ |\ 'compiler'}
+\DoxyCodeLine{\ \ \ \ \ \ |\ 'compilerOptions'}
+\DoxyCodeLine{\ \ \ \ \ \ |\ 'preprocessOptions'}
+\DoxyCodeLine{\ \ \ \ \ \ |\ 'preprocessCustomRequire'}
+\DoxyCodeLine{\ \ \ \ \ \ |\ 'transformAssetUrls'}
+\DoxyCodeLine{\ \ \ \ >}
+\DoxyCodeLine{\ \ >}
+\DoxyCodeLine{\ \ style?:\ Partial<Pick<SFCStyleCompileOptions,\ 'trim'>>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ /**}
+\DoxyCodeLine{\ \ \ *\ Transform\ Vue\ SFCs\ into\ custom\ elements.}
+\DoxyCodeLine{\ \ \ *\ -\/\ \`{}true`:\ all\ \`{}*.vue`\ imports\ are\ converted\ into\ custom\ elements}
+\DoxyCodeLine{\ \ \ *\ -\/\ \`{}string\ |\ RegExp`:\ matched\ files\ are\ converted\ into\ custom\ elements}
+\DoxyCodeLine{\ \ \ *}
+\DoxyCodeLine{\ \ \ *\ @default\ /\(\backslash\).ce\(\backslash\).vue\$/}
+\DoxyCodeLine{\ \ \ */}
+\DoxyCodeLine{\ \ customElement?:\ boolean\ |\ string\ |\ RegExp\ |\ (string\ |\ RegExp)[]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ /**}
+\DoxyCodeLine{\ \ \ *\ Enable\ Vue\ reactivity\ transform\ (experimental).}
+\DoxyCodeLine{\ \ \ *\ https://vuejs.org/guide/extras/reactivity-\/transform.html}
+\DoxyCodeLine{\ \ \ *\ -\/\ \`{}true`:\ transform\ will\ be\ enabled\ for\ all\ vue,js(x),ts(x)\ files\ except}
+\DoxyCodeLine{\ \ \ *\ \ \ \ \ \ \ \ \ \ \ those\ inside\ node\_modules}
+\DoxyCodeLine{\ \ \ *\ -\/\ \`{}string\ |\ RegExp`:\ apply\ to\ vue\ +\ only\ matched\ files\ (will\ include}
+\DoxyCodeLine{\ \ \ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ node\_modules,\ so\ specify\ directories\ if\ necessary)}
+\DoxyCodeLine{\ \ \ *\ -\/\ \`{}false`:\ disable\ in\ all\ cases}
+\DoxyCodeLine{\ \ \ *}
+\DoxyCodeLine{\ \ \ *\ @default\ false}
+\DoxyCodeLine{\ \ \ */}
+\DoxyCodeLine{\ \ reactivityTransform?:\ boolean\ |\ string\ |\ RegExp\ |\ (string\ |\ RegExp)[]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ /**}
+\DoxyCodeLine{\ \ \ *\ Use\ custom\ compiler-\/sfc\ instance.\ Can\ be\ used\ to\ force\ a\ specific\ version.}
+\DoxyCodeLine{\ \ \ */}
+\DoxyCodeLine{\ \ compiler?:\ typeof\ \_compiler}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_f856a28c208852a0c2d9eb8a288adee0_autotoc_md1584}{}\doxysection{\texorpdfstring{Asset URL handling}{Asset URL handling}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_f856a28c208852a0c2d9eb8a288adee0_autotoc_md1584}
+When {\ttfamily @vitejs/plugin-\/vue} compiles the {\ttfamily \texorpdfstring{$<$}{<}template\texorpdfstring{$>$}{>}} blocks in SFCs, it also converts any encountered asset URLs into ESM imports.
+
+For example, the following template snippet\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<img\ src="{}../image.png"{}\ />}
+
+\end{DoxyCode}
+
+
+Is the same as\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<script\ setup>}
+\DoxyCodeLine{import\ \_imports\_0\ from\ '../image.png'}
+\DoxyCodeLine{</script>}
+\DoxyCodeLine{}
+\DoxyCodeLine{<img\ :src="{}\_imports\_0"{}\ />}
+
+\end{DoxyCode}
+
+
+By default the following tag/attribute combinations are transformed, and can be configured using the {\ttfamily template.\+transform\+Asset\+Urls} option.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ video:\ ['src',\ 'poster'],}
+\DoxyCodeLine{\ \ source:\ ['src'],}
+\DoxyCodeLine{\ \ img:\ ['src'],}
+\DoxyCodeLine{\ \ image:\ ['xlink:href',\ 'href'],}
+\DoxyCodeLine{\ \ use:\ ['xlink:href',\ 'href']}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Note that only attribute values that are static strings are transformed. Otherwise, you\textquotesingle{}d need to import the asset manually, e.\+g. `import img\+Url from '../image.png\textquotesingle{}\`{}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_f856a28c208852a0c2d9eb8a288adee0_autotoc_md1585}{}\doxysection{\texorpdfstring{Example for passing options to $<$tt$>$vue/compiler-\/sfc$<$/tt$>$\+:}{Example for passing options to <tt>vue/compiler-sfc</tt>:}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_f856a28c208852a0c2d9eb8a288adee0_autotoc_md1585}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ vue\ from\ '@vitejs/plugin-\/vue'}
+\DoxyCodeLine{}
+\DoxyCodeLine{export\ default\ \{}
+\DoxyCodeLine{\ \ plugins:\ [}
+\DoxyCodeLine{\ \ \ \ vue(\{}
+\DoxyCodeLine{\ \ \ \ \ \ template:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ compilerOptions:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ //\ ...}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ transformAssetUrls:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ //\ ...}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \}),}
+\DoxyCodeLine{\ \ ],}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_f856a28c208852a0c2d9eb8a288adee0_autotoc_md1586}{}\doxysection{\texorpdfstring{Example for transforming custom blocks}{Example for transforming custom blocks}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_f856a28c208852a0c2d9eb8a288adee0_autotoc_md1586}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ vue\ from\ '@vitejs/plugin-\/vue'}
+\DoxyCodeLine{import\ yaml\ from\ 'js-\/yaml'}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ vueI18nPlugin\ =\ \{}
+\DoxyCodeLine{\ \ name:\ 'vue-\/i18n',}
+\DoxyCodeLine{\ \ transform(code,\ id)\ \{}
+\DoxyCodeLine{\ \ \ \ //\ if\ .vue\ file\ don't\ have\ <i18n>\ block,\ just\ return}
+\DoxyCodeLine{\ \ \ \ if\ (!/vue\&type=i18n/.test(id))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ return}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ //\ parse\ yaml}
+\DoxyCodeLine{\ \ \ \ if\ (/\(\backslash\).ya?ml\$/.test(id))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ code\ =\ JSON.stringify(yaml.load(code.trim()))}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ //\ mount\ the\ value\ on\ the\ i18n\ property\ of\ the\ component\ instance}
+\DoxyCodeLine{\ \ \ \ return\ \`{}export\ default\ Comp\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ Comp.i18n\ =\ \$\{code\}}
+\DoxyCodeLine{\ \ \ \ \}`}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{export\ default\ \{}
+\DoxyCodeLine{\ \ plugins:\ [vue(),\ vueI18nPlugin],}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Create a file named {\ttfamily Demo.\+vue}, add {\ttfamily lang="{}yaml"{}} to the {\ttfamily \texorpdfstring{$<$}{<}i18n\texorpdfstring{$>$}{>}} blocks, then you can use the syntax of {\ttfamily YAML}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<template>Hello</template>}
+\DoxyCodeLine{}
+\DoxyCodeLine{<i18n\ lang="{}yaml"{}>}
+\DoxyCodeLine{message:\ 'world'}
+\DoxyCodeLine{fullWord:\ 'hello\ world'}
+\DoxyCodeLine{</i18n>}
+
+\end{DoxyCode}
+
+
+{\ttfamily message} is mounted on the i18n property of the component instance, you can use like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<script\ setup\ lang="{}ts"{}>}
+\DoxyCodeLine{import\ Demo\ from\ 'components/Demo.vue'}
+\DoxyCodeLine{</script>}
+\DoxyCodeLine{}
+\DoxyCodeLine{<template>}
+\DoxyCodeLine{\ \ <Demo\ />\ \{\{\ Demo.i18n.message\ \}\}}
+\DoxyCodeLine{\ \ <div>\{\{\ Demo.i18n.fullWord\ \}\}</div>}
+\DoxyCodeLine{</template>}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_f856a28c208852a0c2d9eb8a288adee0_autotoc_md1587}{}\doxysection{\texorpdfstring{Using Vue SFCs as Custom Elements}{Using Vue SFCs as Custom Elements}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_f856a28c208852a0c2d9eb8a288adee0_autotoc_md1587}
+\begin{quote}
+Requires {\ttfamily vue@\texorpdfstring{$^\wedge$}{\string^}3.2.\+0} \& {\ttfamily @vitejs/plugin-\/vue@\texorpdfstring{$^\wedge$}{\string^}1.4.\+0} \end{quote}
+Vue 3.\+2 introduces the {\ttfamily define\+Custom\+Element} method, which works with SFCs. By default, {\ttfamily \texorpdfstring{$<$}{<}style\texorpdfstring{$>$}{>}} tags inside SFCs are extracted and merged into CSS files during build. However when shipping a library of custom elements, it may be desirable to inline the styles as Java\+Script strings and inject them into the custom elements\textquotesingle{} shadow root instead.
+
+Starting in 1.\+4.\+0, files ending with {\ttfamily \texorpdfstring{$\ast$}{*}.ce.\+vue} will be compiled in "{}custom elements"{} mode\+: its {\ttfamily \texorpdfstring{$<$}{<}style\texorpdfstring{$>$}{>}} tags are compiled into inlined CSS strings and attached to the component as its {\ttfamily styles} property\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ \{\ defineCustomElement\ \}\ from\ 'vue'}
+\DoxyCodeLine{import\ Example\ from\ './Example.ce.vue'}
+\DoxyCodeLine{}
+\DoxyCodeLine{console.log(Example.styles)\ //\ ['/*\ css\ content\ */']}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ register}
+\DoxyCodeLine{customElements.define('my-\/example',\ defineCustomElement(Example))}
+
+\end{DoxyCode}
+
+
+Note in custom elements mode there is no need to use {\ttfamily \texorpdfstring{$<$}{<}style scoped\texorpdfstring{$>$}{>}} since the CSS is already scoped inside the shadow DOM.
+
+The {\ttfamily custom\+Element} plugin option can be used to configure the behavior\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \{ custom\+Element\+: true \}} will import all {\ttfamily \texorpdfstring{$\ast$}{*}.vue} files in custom element mode.
+\item Use a string or regex pattern to change how files should be loaded as Custom Elements (this check is applied after {\ttfamily include} and {\ttfamily exclude} matches).
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_f856a28c208852a0c2d9eb8a288adee0_autotoc_md1588}{}\doxysection{\texorpdfstring{License}{License}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_f856a28c208852a0c2d9eb8a288adee0_autotoc_md1588}
+MIT 

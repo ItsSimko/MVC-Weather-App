@@ -1,0 +1,37 @@
+\chapter{Validate XML Names and Qualified Names}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1bc2082e4c5174dda3bcfacc01ba865c}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1bc2082e4c5174dda3bcfacc01ba865c}\index{Validate XML Names and Qualified Names@{Validate XML Names and Qualified Names}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1bc2082e4c5174dda3bcfacc01ba865c_autotoc_md5271}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1bc2082e4c5174dda3bcfacc01ba865c_autotoc_md5271}%
+ This package simply tells you whether or not a string matches the \href{http://www.w3.org/TR/xml/\#NT-Name}{\texttt{ {\ttfamily Name}}} or \href{http://www.w3.org/TR/xml-names/\#NT-QName}{\texttt{ {\ttfamily QName}}} productions in the XML Namespaces specification. We use it for implementing the \href{https://dom.spec.whatwg.org/\#validate}{\texttt{ validate}} algorithm in jsdom, but you can use it for whatever you want.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1bc2082e4c5174dda3bcfacc01ba865c_autotoc_md5272}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1bc2082e4c5174dda3bcfacc01ba865c_autotoc_md5272}
+This package\textquotesingle{}s main module exports two functions, {\ttfamily name()} and {\ttfamily qname()}. Both take a string and return a boolean indicating whether or not the string matches the relevant production.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{"{}use\ strict"{}:}
+\DoxyCodeLine{const\ xnv\ =\ require("{}xml-\/name-\/validator"{});}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ Will\ return\ true}
+\DoxyCodeLine{xnv.name("{}x"{});}
+\DoxyCodeLine{xnv.name("{}:"{});}
+\DoxyCodeLine{xnv.name("{}a:0"{});}
+\DoxyCodeLine{xnv.name("{}a:b:c"{});}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ Will\ return\ false}
+\DoxyCodeLine{xnv.name("{}\(\backslash\)\(\backslash\)"{});}
+\DoxyCodeLine{xnv.name("{}'"{});}
+\DoxyCodeLine{xnv.name("{}0"{});}
+\DoxyCodeLine{xnv.name("{}a!"{});}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ Will\ return\ true}
+\DoxyCodeLine{xnv.qname("{}x"{});}
+\DoxyCodeLine{xnv.qname("{}a0"{});}
+\DoxyCodeLine{xnv.qname("{}a:b"{});}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ Will\ return\ false}
+\DoxyCodeLine{xnv.qname("{}:a"{});}
+\DoxyCodeLine{xnv.qname("{}:b"{});}
+\DoxyCodeLine{xnv.qname("{}a:b:c"{});}
+\DoxyCodeLine{xnv.qname("{}a:0"{});}
+
+\end{DoxyCode}
+ 

@@ -1,0 +1,135 @@
+\chapter{nth-\/check \texorpdfstring{$<$}{<}a href="{}https\+://travis-\/ci.\+org/fb55/nth-\/check"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://travis-\/ci.\+org/fb55/nth-\/check.\+svg"{} alt="{}\+Build Status"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e}\index{nth-\/check $<$a href="{}https://travis-\/ci.org/fb55/nth-\/check"{} $>$$<$img src="{}https://travis-\/ci.org/fb55/nth-\/check.svg"{} alt="{}Build Status"{}/$>$$<$/a$>$@{nth-\/check $<$a href=""https://travis-\/ci.org/fb55/nth-\/check"" $>$$<$img src=""https://travis-\/ci.org/fb55/nth-\/check.svg"" alt=""Build Status""/$>$$<$/a$>$}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3804}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3804}%
+ Parses and compiles CSS nth-\/checks to highly optimized functions.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3805}{}\doxysubsection{\texorpdfstring{About}{About}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3805}
+This module can be used to parse \& compile nth-\/checks, as they are found in CSS 3\textquotesingle{}s {\ttfamily nth-\/child()} and {\ttfamily nth-\/last-\/of-\/type()}. It can be used to check if a given index matches a given nth-\/rule, or to generate a sequence of indices matching a given nth-\/rule.
+
+{\ttfamily nth-\/check} focusses on speed, providing optimized functions for different kinds of nth-\/child formulas, while still following the \href{http://www.w3.org/TR/css3-selectors/\#nth-child-pseudo}{\texttt{ spec}}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3806}{}\doxysubsection{\texorpdfstring{API}{API}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3806}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ nthCheck,\ \{\ parse,\ compile\ \}\ from\ "{}nth-\/check"{};}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3807}{}\doxyparagraph{\texorpdfstring{$<$tt$>$nth\+Check(formula)$<$/tt$>$}{<tt>nthCheck(formula)</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3807}
+Parses and compiles a formula to a highly optimized function. Combination of {\ttfamily parse} and {\ttfamily compile}.
+
+If the formula doesn\textquotesingle{}t match any elements, it returns \href{https://github.com/fb55/boolbase}{\texttt{ {\ttfamily boolbase}}}\textquotesingle{}s {\ttfamily false\+Func}. Otherwise, a function accepting an {\itshape index} is returned, which returns whether or not the passed {\itshape index} matches the formula.
+
+{\bfseries{Note}}\+: The nth-\/rule starts counting at {\ttfamily 1}, the returned function at {\ttfamily 0}.
+
+{\bfseries{Example\+:}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ check\ =\ nthCheck("{}2n+3"{});}
+\DoxyCodeLine{}
+\DoxyCodeLine{check(0);\ //\ \`{}false`}
+\DoxyCodeLine{check(1);\ //\ \`{}false`}
+\DoxyCodeLine{check(2);\ //\ \`{}true`}
+\DoxyCodeLine{check(3);\ //\ \`{}false`}
+\DoxyCodeLine{check(4);\ //\ \`{}true`}
+\DoxyCodeLine{check(5);\ //\ \`{}false`}
+\DoxyCodeLine{check(6);\ //\ \`{}true`}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3808}{}\doxyparagraph{\texorpdfstring{$<$tt$>$parse(formula)$<$/tt$>$}{<tt>parse(formula)</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3808}
+Parses the expression, throws an {\ttfamily Error} if it fails. Otherwise, returns an array containing the integer step size and the integer offset of the nth rule.
+
+{\bfseries{Example\+:}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{parse("{}2n+3"{});\ //\ [2,\ 3]}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3809}{}\doxyparagraph{\texorpdfstring{$<$tt$>$compile(\mbox{[}a, b\mbox{]})$<$/tt$>$}{<tt>compile([a, b])</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3809}
+Takes an array with two elements (as returned by {\ttfamily .parse}) and returns a highly optimized function.
+
+{\bfseries{Example\+:}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ check\ =\ compile([2,\ 3]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{check(0);\ //\ \`{}false`}
+\DoxyCodeLine{check(1);\ //\ \`{}false`}
+\DoxyCodeLine{check(2);\ //\ \`{}true`}
+\DoxyCodeLine{check(3);\ //\ \`{}false`}
+\DoxyCodeLine{check(4);\ //\ \`{}true`}
+\DoxyCodeLine{check(5);\ //\ \`{}false`}
+\DoxyCodeLine{check(6);\ //\ \`{}true`}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3810}{}\doxyparagraph{\texorpdfstring{$<$tt$>$generate(\mbox{[}a, b\mbox{]})$<$/tt$>$}{<tt>generate([a, b])</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3810}
+Returns a function that produces a monotonously increasing sequence of indices.
+
+If the sequence has an end, the returned function will return {\ttfamily null} after the last index in the sequence.
+
+{\bfseries{Example\+:}} An always increasing sequence
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ gen\ =\ nthCheck.generate([2,\ 3]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{gen();\ //\ \`{}1`}
+\DoxyCodeLine{gen();\ //\ \`{}3`}
+\DoxyCodeLine{gen();\ //\ \`{}5`}
+\DoxyCodeLine{gen();\ //\ \`{}8`}
+\DoxyCodeLine{gen();\ //\ \`{}11`}
+
+\end{DoxyCode}
+
+
+{\bfseries{Example\+:}} With an end value
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ gen\ =\ nthCheck.generate([-\/2,\ 5]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{gen();\ //\ 0}
+\DoxyCodeLine{gen();\ //\ 2}
+\DoxyCodeLine{gen();\ //\ 4}
+\DoxyCodeLine{gen();\ //\ null}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3811}{}\doxyparagraph{\texorpdfstring{$<$tt$>$sequence(formula)$<$/tt$>$}{<tt>sequence(formula)</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3811}
+Parses and compiles a formula to a generator that produces a sequence of indices. Combination of {\ttfamily parse} and {\ttfamily generate}.
+
+{\bfseries{Example\+:}} An always increasing sequence
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ gen\ =\ nthCheck.sequence("{}2n+3"{});}
+\DoxyCodeLine{}
+\DoxyCodeLine{gen();\ //\ \`{}1`}
+\DoxyCodeLine{gen();\ //\ \`{}3`}
+\DoxyCodeLine{gen();\ //\ \`{}5`}
+\DoxyCodeLine{gen();\ //\ \`{}8`}
+\DoxyCodeLine{gen();\ //\ \`{}11`}
+
+\end{DoxyCode}
+
+
+{\bfseries{Example\+:}} With an end value
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ gen\ =\ nthCheck.sequence("{}-\/2n+5"{});}
+\DoxyCodeLine{}
+\DoxyCodeLine{gen();\ //\ 0}
+\DoxyCodeLine{gen();\ //\ 2}
+\DoxyCodeLine{gen();\ //\ 4}
+\DoxyCodeLine{gen();\ //\ null}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+
+
+License\+: BSD-\/2-\/\+Clause\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3813}{}\doxysection{\texorpdfstring{Security contact information}{Security contact information}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3813}
+To report a security vulnerability, please use the \href{https://tidelift.com/security}{\texttt{ Tidelift security contact}}. Tidelift will coordinate the fix and disclosure.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3814}{}\doxysection{\texorpdfstring{$<$tt$>$nth-\/check$<$/tt$>$ for enterprise}{<tt>nth-check</tt> for enterprise}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_14817aeca285dada75ce679f401de86e_autotoc_md3814}
+Available as part of the Tidelift Subscription
+
+The maintainers of {\ttfamily nth-\/check} and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. \href{https://tidelift.com/subscription/pkg/npm-nth-check?utm_source=npm-nth-check&utm_medium=referral&utm_campaign=enterprise&utm_term=repo}{\texttt{ Learn more.}} 

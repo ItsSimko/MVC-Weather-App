@@ -1,0 +1,52 @@
+\chapter{yocto-\/queue \texorpdfstring{$<$}{<}a href="{}https\+://bundlephobia.\+com/result?p=yocto-\/queue"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://badgen.\+net/bundlephobia/minzip/yocto-\/queue"{} alt="{}"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297}\index{yocto-\/queue $<$a href="{}https://bundlephobia.com/result?p=yocto-\/queue"{} $>$$<$img src="{}https://badgen.net/bundlephobia/minzip/yocto-\/queue"{} alt="{}"{}/$>$$<$/a$>$@{yocto-\/queue $<$a href=""https://bundlephobia.com/result?p=yocto-\/queue"" $>$$<$img src=""https://badgen.net/bundlephobia/minzip/yocto-\/queue"" alt=""""/$>$$<$/a$>$}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5307}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5307}%
+ \begin{quote}
+Tiny queue data structure \end{quote}
+You should use this package instead of an array if you do a lot of {\ttfamily Array\#push()} and {\ttfamily Array\#shift()} on large arrays, since {\ttfamily Array\#shift()} has \href{https://medium.com/@ariel.salem1989/an-easy-to-use-guide-to-big-o-time-complexity-5dcf4be8a444\#:~:text=O(N)\%E2\%80\%94Linear\%20Time}{\texttt{ linear time complexity}} {\itshape O(n)} while {\ttfamily Queue\#dequeue()} has \href{https://medium.com/@ariel.salem1989/an-easy-to-use-guide-to-big-o-time-complexity-5dcf4be8a444\#:~:text=O(1)\%20\%E2\%80\%94\%20Constant\%20Time}{\texttt{ constant time complexity}} {\itshape O(1)}. That makes a huge difference for large arrays.
+
+\begin{quote}
+A \href{https://en.wikipedia.org/wiki/Queue_(abstract_data_type)}{\texttt{ queue}} is an ordered list of elements where an element is inserted at the end of the queue and is removed from the front of the queue. A queue works based on the first-\/in, first-\/out (\href{https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)}{\texttt{ FIFO}}) principle. \end{quote}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5308}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5308}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ yocto-\/queue}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5309}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5309}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ Queue\ =\ require('yocto-\/queue');}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ queue\ =\ new\ Queue();}
+\DoxyCodeLine{}
+\DoxyCodeLine{queue.enqueue('🦄');}
+\DoxyCodeLine{queue.enqueue('🌈');}
+\DoxyCodeLine{}
+\DoxyCodeLine{console.log(queue.size);}
+\DoxyCodeLine{//=>\ 2}
+\DoxyCodeLine{}
+\DoxyCodeLine{console.log(...queue);}
+\DoxyCodeLine{//=>\ '🦄\ 🌈'}
+\DoxyCodeLine{}
+\DoxyCodeLine{console.log(queue.dequeue());}
+\DoxyCodeLine{//=>\ '🦄'}
+\DoxyCodeLine{}
+\DoxyCodeLine{console.log(queue.dequeue());}
+\DoxyCodeLine{//=>\ '🌈'}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5310}{}\doxysection{\texorpdfstring{API}{API}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5310}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5311}{}\doxysubsection{\texorpdfstring{$<$tt$>$queue = new Queue()$<$/tt$>$}{<tt>queue = new Queue()</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5311}
+The instance is an \href{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols}{\texttt{ {\ttfamily Iterable}}}, which means you can iterate over the queue front to back with a “for…of” loop, or use spreading to convert the queue to an array. Don\textquotesingle{}t do this unless you really need to though, since it\textquotesingle{}s slow.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5312}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$.\+enqueue(value)$<$/tt$>$}{<tt>.enqueue(value)</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5312}
+Add a value to the queue.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5313}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$.\+dequeue()$<$/tt$>$}{<tt>.dequeue()</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5313}
+Remove the next value in the queue.
+
+Returns the removed value or {\ttfamily undefined} if the queue is empty.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5314}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$.\+clear()$<$/tt$>$}{<tt>.clear()</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5314}
+Clear the queue.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5315}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$.\+size$<$/tt$>$}{<tt>.size</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5315}
+The size of the queue.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5316}{}\doxysection{\texorpdfstring{Related}{Related}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_76c00aa4a8c74e1e8d8a982107001297_autotoc_md5316}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sindresorhus/quick-lru}{\texttt{ quick-\/lru}} -\/ Simple “\+Least Recently Used” (LRU) cache 
+\end{DoxyItemize}

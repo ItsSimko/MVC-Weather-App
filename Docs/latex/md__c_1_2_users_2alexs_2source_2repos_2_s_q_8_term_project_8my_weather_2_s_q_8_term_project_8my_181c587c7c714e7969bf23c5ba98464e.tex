@@ -1,0 +1,55 @@
+\chapter{pkg-\/dir \texorpdfstring{$<$}{<}a href="{}https\+://travis-\/ci.\+org/sindresorhus/pkg-\/dir"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://travis-\/ci.\+org/sindresorhus/pkg-\/dir.\+svg?branch=master"{} alt="{}\+Build Status"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e}\index{pkg-\/dir $<$a href="{}https://travis-\/ci.org/sindresorhus/pkg-\/dir"{} $>$$<$img src="{}https://travis-\/ci.org/sindresorhus/pkg-\/dir.svg?branch=master"{} alt="{}Build Status"{}/$>$$<$/a$>$@{pkg-\/dir $<$a href=""https://travis-\/ci.org/sindresorhus/pkg-\/dir"" $>$$<$img src=""https://travis-\/ci.org/sindresorhus/pkg-\/dir.svg?branch=master"" alt=""Build Status""/$>$$<$/a$>$}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e_autotoc_md4093}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e_autotoc_md4093}%
+ \begin{quote}
+Find the root directory of a Node.\+js project or npm package \end{quote}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e_autotoc_md4094}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e_autotoc_md4094}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ pkg-\/dir}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e_autotoc_md4095}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e_autotoc_md4095}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{/}
+\DoxyCodeLine{└──\ Users}
+\DoxyCodeLine{\ \ \ \ └──\ sindresorhus}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ └──\ foo}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ├──\ package.json}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ └──\ bar}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ├──\ baz}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ └──\ example.js}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//\ example.js}
+\DoxyCodeLine{const\ pkgDir\ =\ require('pkg-\/dir');}
+\DoxyCodeLine{}
+\DoxyCodeLine{(async\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ const\ rootDir\ =\ await\ pkgDir(\_\_dirname);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ console.log(rootDir);}
+\DoxyCodeLine{\ \ \ \ //=>\ '/Users/sindresorhus/foo'}
+\DoxyCodeLine{\})();}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e_autotoc_md4096}{}\doxysection{\texorpdfstring{API}{API}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e_autotoc_md4096}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e_autotoc_md4097}{}\doxysubsection{\texorpdfstring{pkg\+Dir(\mbox{[}cwd\mbox{]})}{pkgDir([cwd])}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e_autotoc_md4097}
+Returns a {\ttfamily Promise} for either the project root path or {\ttfamily undefined} if it couldn\textquotesingle{}t be found.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e_autotoc_md4098}{}\doxysubsection{\texorpdfstring{pkg\+Dir.\+sync(\mbox{[}cwd\mbox{]})}{pkgDir.sync([cwd])}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e_autotoc_md4098}
+Returns the project root path or {\ttfamily undefined} if it couldn\textquotesingle{}t be found.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e_autotoc_md4099}{}\doxysubsubsection{\texorpdfstring{cwd}{cwd}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e_autotoc_md4099}
+Type\+: {\ttfamily string}~\newline
+ Default\+: {\ttfamily process.\+cwd()}
+
+Directory to start from.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e_autotoc_md4100}{}\doxysection{\texorpdfstring{Related}{Related}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e_autotoc_md4100}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sindresorhus/pkg-dir-cli}{\texttt{ pkg-\/dir-\/cli}} -\/ CLI for this module
+\item \href{https://github.com/sindresorhus/pkg-up}{\texttt{ pkg-\/up}} -\/ Find the closest package.\+json file
+\item \href{https://github.com/sindresorhus/find-up}{\texttt{ find-\/up}} -\/ Find a file by walking up parent directories
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e_autotoc_md4101}{}\doxysection{\texorpdfstring{License}{License}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_181c587c7c714e7969bf23c5ba98464e_autotoc_md4101}
+MIT © \href{https://sindresorhus.com}{\texttt{ Sindre Sorhus}} 

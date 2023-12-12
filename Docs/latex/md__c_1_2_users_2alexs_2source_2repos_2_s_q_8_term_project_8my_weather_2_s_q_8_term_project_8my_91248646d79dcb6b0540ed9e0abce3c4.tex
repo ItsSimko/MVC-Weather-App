@@ -1,0 +1,222 @@
+\chapter{node-\/jws \texorpdfstring{$<$}{<}a href="{}http\+://travis-\/ci.\+org/brianloveswords/node-\/jws"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://secure.\+travis-\/ci.\+org/brianloveswords/node-\/jws.\+png"{} alt="{}\+Build Status"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4}\index{node-\/jws $<$a href="{}http://travis-\/ci.org/brianloveswords/node-\/jws"{} $>$$<$img src="{}https://secure.travis-\/ci.org/brianloveswords/node-\/jws.png"{} alt="{}Build Status"{}/$>$$<$/a$>$@{node-\/jws $<$a href=""http://travis-\/ci.org/brianloveswords/node-\/jws"" $>$$<$img src=""https://secure.travis-\/ci.org/brianloveswords/node-\/jws.png"" alt=""Build Status""/$>$$<$/a$>$}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3479}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3479}%
+ An implementation of \href{http://self-issued.info/docs/draft-ietf-jose-json-web-signature.html}{\texttt{ JSON Web Signatures}}.
+
+This was developed against {\ttfamily draft-\/ietf-\/jose-\/json-\/web-\/signature-\/08} and implements the entire spec {\bfseries{except}} X.\+509 Certificate Chain signing/verifying (patches welcome).
+
+There are both synchronous ({\ttfamily jws.\+sign}, {\ttfamily jws.\+verify}) and streaming ({\ttfamily jws.\+create\+Sign}, {\ttfamily jws.\+create\+Verify}) APIs.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3480}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3480}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ jws}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3481}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3481}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3482}{}\doxysubsection{\texorpdfstring{jws.\+ALGORITHMS}{jws.ALGORITHMS}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3482}
+Array of supported algorithms. The following algorithms are currently supported.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ alg Parameter Value   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Digital Signature or MAC Algorithm    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ alg Parameter Value   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Digital Signature or MAC Algorithm    }\\\cline{1-2}
+\endhead
+HS256   &HMAC using SHA-\/256 hash algorithm    \\\cline{1-2}
+HS384   &HMAC using SHA-\/384 hash algorithm    \\\cline{1-2}
+HS512   &HMAC using SHA-\/512 hash algorithm    \\\cline{1-2}
+RS256   &RSASSA using SHA-\/256 hash algorithm    \\\cline{1-2}
+RS384   &RSASSA using SHA-\/384 hash algorithm    \\\cline{1-2}
+RS512   &RSASSA using SHA-\/512 hash algorithm    \\\cline{1-2}
+PS256   &RSASSA-\/\+PSS using SHA-\/256 hash algorithm    \\\cline{1-2}
+PS384   &RSASSA-\/\+PSS using SHA-\/384 hash algorithm    \\\cline{1-2}
+PS512   &RSASSA-\/\+PSS using SHA-\/512 hash algorithm    \\\cline{1-2}
+ES256   &ECDSA using P-\/256 curve and SHA-\/256 hash algorithm    \\\cline{1-2}
+ES384   &ECDSA using P-\/384 curve and SHA-\/384 hash algorithm    \\\cline{1-2}
+ES512   &ECDSA using P-\/521 curve and SHA-\/512 hash algorithm    \\\cline{1-2}
+none   &No digital signature or MAC value included   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3483}{}\doxysubsection{\texorpdfstring{jws.\+sign(options)}{jws.sign(options)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3483}
+(Synchronous) Return a JSON Web Signature for a header and a payload.
+
+Options\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily header}
+\item {\ttfamily payload}
+\item {\ttfamily secret} or {\ttfamily private\+Key}
+\item {\ttfamily encoding} (Optional, defaults to \textquotesingle{}utf8\textquotesingle{})
+\end{DoxyItemize}
+
+{\ttfamily header} must be an object with an {\ttfamily alg} property. {\ttfamily header.\+alg} must be one a value found in {\ttfamily jws.\+ALGORITHMS}. See above for a table of supported algorithms.
+
+If {\ttfamily payload} is not a buffer or a string, it will be coerced into a string using {\ttfamily JSON.\+stringify}.
+
+Example
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ signature\ =\ jws.sign(\{}
+\DoxyCodeLine{\ \ header:\ \{\ alg:\ 'HS256'\ \},}
+\DoxyCodeLine{\ \ payload:\ 'h.\ jon\ benjamin',}
+\DoxyCodeLine{\ \ secret:\ 'has\ a\ van',}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3484}{}\doxysubsection{\texorpdfstring{jws.\+verify(signature, algorithm, secret\+Or\+Key)}{jws.verify(signature, algorithm, secretOrKey)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3484}
+(Synchronous) Returns {\ttfamily true} or {\ttfamily false} for whether a signature matches a secret or key.
+
+{\ttfamily signature} is a JWS Signature. {\ttfamily header.\+alg} must be a value found in {\ttfamily jws.\+ALGORITHMS}. See above for a table of supported algorithms. {\ttfamily secret\+Or\+Key} is a string or buffer containing either the secret for HMAC algorithms, or the PEM encoded public key for RSA and ECDSA.
+
+Note that the {\ttfamily "{}alg"{}} value from the signature header is ignored.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3485}{}\doxysubsection{\texorpdfstring{jws.\+decode(signature)}{jws.decode(signature)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3485}
+(Synchronous) Returns the decoded header, decoded payload, and signature parts of the JWS Signature.
+
+Returns an object with three properties, e.\+g. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{\ header:\ \{\ alg:\ 'HS256'\ \},}
+\DoxyCodeLine{\ \ payload:\ 'h.\ jon\ benjamin',}
+\DoxyCodeLine{\ \ signature:\ 'YOWPewyGHKu4Y\_0M\_vtlEnNlqmFOclqp4Hy6hVHfFT4'}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3486}{}\doxysubsection{\texorpdfstring{jws.\+create\+Sign(options)}{jws.createSign(options)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3486}
+Returns a new Sign\+Stream object.
+
+Options\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily header} (required)
+\item {\ttfamily payload}
+\item {\ttfamily key} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} {\ttfamily private\+Key} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} {\ttfamily secret}
+\item {\ttfamily encoding} (Optional, defaults to \textquotesingle{}utf8\textquotesingle{})
+\end{DoxyItemize}
+
+Other than {\ttfamily header}, all options expect a string or a buffer when the value is known ahead of time, or a stream for convenience. {\ttfamily key}/{\ttfamily private\+Key}/{\ttfamily secret} may also be an object when using an encrypted private key, see the \href{https://nodejs.org/api/crypto.html\#crypto_sign_sign_private_key_output_format}{\texttt{ crypto documentation}}.
+
+Example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//\ This...}
+\DoxyCodeLine{jws.createSign(\{}
+\DoxyCodeLine{\ \ header:\ \{\ alg:\ 'RS256'\ \},}
+\DoxyCodeLine{\ \ privateKey:\ privateKeyStream,}
+\DoxyCodeLine{\ \ payload:\ payloadStream,}
+\DoxyCodeLine{\}).on('done',\ function(signature)\ \{}
+\DoxyCodeLine{\ \ //\ ...}
+\DoxyCodeLine{\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ is\ equivalent\ to\ this:}
+\DoxyCodeLine{const\ signer\ =\ jws.createSign(\{}
+\DoxyCodeLine{\ \ header:\ \{\ alg:\ 'RS256'\ \},}
+\DoxyCodeLine{\});}
+\DoxyCodeLine{privateKeyStream.pipe(signer.privateKey);}
+\DoxyCodeLine{payloadStream.pipe(signer.payload);}
+\DoxyCodeLine{signer.on('done',\ function(signature)\ \{}
+\DoxyCodeLine{\ \ //\ ...}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3487}{}\doxysubsection{\texorpdfstring{jws.\+create\+Verify(options)}{jws.createVerify(options)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3487}
+Returns a new Verify\+Stream object.
+
+Options\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily signature}
+\item {\ttfamily algorithm}
+\item {\ttfamily key} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} {\ttfamily public\+Key} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} {\ttfamily secret}
+\item {\ttfamily encoding} (Optional, defaults to \textquotesingle{}utf8\textquotesingle{})
+\end{DoxyItemize}
+
+All options expect a string or a buffer when the value is known ahead of time, or a stream for convenience.
+
+Example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//\ This...}
+\DoxyCodeLine{jws.createVerify(\{}
+\DoxyCodeLine{\ \ publicKey:\ pubKeyStream,}
+\DoxyCodeLine{\ \ signature:\ sigStream,}
+\DoxyCodeLine{\}).on('done',\ function(verified,\ obj)\ \{}
+\DoxyCodeLine{\ \ //\ ...}
+\DoxyCodeLine{\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ is\ equivilant\ to\ this:}
+\DoxyCodeLine{const\ verifier\ =\ jws.createVerify();}
+\DoxyCodeLine{pubKeyStream.pipe(verifier.publicKey);}
+\DoxyCodeLine{sigStream.pipe(verifier.signature);}
+\DoxyCodeLine{verifier.on('done',\ function(verified,\ obj)\ \{}
+\DoxyCodeLine{\ \ //\ ...}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3488}{}\doxysubsection{\texorpdfstring{Class\+: Sign\+Stream}{Class: SignStream}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3488}
+A {\ttfamily Readable Stream} that emits a single data event (the calculated signature) when done.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3489}{}\doxysubsubsection{\texorpdfstring{Event\+: \textquotesingle{}done\textquotesingle{}}{Event: 'done'}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3489}
+{\ttfamily function (signature) \{ \}}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3490}{}\doxysubsubsection{\texorpdfstring{signer.\+payload}{signer.payload}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3490}
+A {\ttfamily Writable Stream} that expects the JWS payload. Do {\itshape not} use if you passed a {\ttfamily payload} option to the constructor.
+
+Example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{payloadStream.pipe(signer.payload);}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3491}{}\doxysubsubsection{\texorpdfstring{signer.\+secret$<$br$>$signer.\+key$<$br$>$signer.\+private\+Key}{signer.secret<br>signer.key<br>signer.privateKey}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3491}
+A {\ttfamily Writable Stream}. Expects the JWS secret for HMAC, or the private\+Key for ECDSA and RSA. Do {\itshape not} use if you passed a {\ttfamily secret} or {\ttfamily key} option to the constructor.
+
+Example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{privateKeyStream.pipe(signer.privateKey);}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3492}{}\doxysubsection{\texorpdfstring{Class\+: Verify\+Stream}{Class: VerifyStream}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3492}
+This is a {\ttfamily Readable Stream} that emits a single data event, the result of whether or not that signature was valid.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3493}{}\doxysubsubsection{\texorpdfstring{Event\+: \textquotesingle{}done\textquotesingle{}}{Event: 'done'}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3493}
+{\ttfamily function (valid, obj) \{ \}}
+
+{\ttfamily valid} is a boolean for whether or not the signature is valid.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3494}{}\doxysubsubsection{\texorpdfstring{verifier.\+signature}{verifier.signature}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3494}
+A {\ttfamily Writable Stream} that expects a JWS Signature. Do {\itshape not} use if you passed a {\ttfamily signature} option to the constructor.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3495}{}\doxysubsubsection{\texorpdfstring{verifier.\+secret$<$br$>$verifier.\+key$<$br$>$verifier.\+public\+Key}{verifier.secret<br>verifier.key<br>verifier.publicKey}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3495}
+A {\ttfamily Writable Stream} that expects a public key or secret. Do {\itshape not} use if you passed a {\ttfamily key} or {\ttfamily secret} option to the constructor.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3496}{}\doxysection{\texorpdfstring{TODO}{TODO}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3496}
+
+\begin{DoxyItemize}
+\item It feels like there should be some convenience options/\+APIs for defining the algorithm rather than having to define a header object with `\{ alg\+: \textquotesingle{}ES512' \}\`{} or whatever every time.
+\item X.\+509 support, ugh
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3497}{}\doxysection{\texorpdfstring{License}{License}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_91248646d79dcb6b0540ed9e0abce3c4_autotoc_md3497}
+MIT
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Copyright\ (c)\ 2013-\/2015\ Brian\ J.\ Brennan}
+\DoxyCodeLine{}
+\DoxyCodeLine{Permission\ is\ hereby\ granted,\ free\ of\ charge,\ to\ any\ person\ obtaining\ a}
+\DoxyCodeLine{copy\ of\ this\ software\ and\ associated\ documentation\ files\ (the}
+\DoxyCodeLine{"{}Software"{}),\ to\ deal\ in\ the\ Software\ without\ restriction,\ including}
+\DoxyCodeLine{without\ limitation\ the\ rights\ to\ use,\ copy,\ modify,\ merge,\ publish,}
+\DoxyCodeLine{distribute,\ sublicense,\ and/or\ sell\ copies\ of\ the\ Software,\ and\ to}
+\DoxyCodeLine{permit\ persons\ to\ whom\ the\ Software\ is\ furnished\ to\ do\ so,\ subject\ to}
+\DoxyCodeLine{the\ following\ conditions:}
+\DoxyCodeLine{}
+\DoxyCodeLine{The\ above\ copyright\ notice\ and\ this\ permission\ notice\ shall\ be\ included}
+\DoxyCodeLine{in\ all\ copies\ or\ substantial\ portions\ of\ the\ Software.}
+\DoxyCodeLine{}
+\DoxyCodeLine{THE\ SOFTWARE\ IS\ PROVIDED\ "{}AS\ IS"{},\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ EXPRESS}
+\DoxyCodeLine{OR\ IMPLIED,\ INCLUDING\ BUT\ NOT\ LIMITED\ TO\ THE\ WARRANTIES\ OF}
+\DoxyCodeLine{MERCHANTABILITY,\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE\ AND}
+\DoxyCodeLine{NONINFRINGEMENT.\ IN\ NO\ EVENT\ SHALL\ THE\ AUTHORS\ OR\ COPYRIGHT\ HOLDERS\ BE}
+\DoxyCodeLine{LIABLE\ FOR\ ANY\ CLAIM,\ DAMAGES\ OR\ OTHER\ LIABILITY,\ WHETHER\ IN\ AN\ ACTION}
+\DoxyCodeLine{OF\ CONTRACT,\ TORT\ OR\ OTHERWISE,\ ARISING\ FROM,\ OUT\ OF\ OR\ IN\ CONNECTION}
+\DoxyCodeLine{WITH\ THE\ SOFTWARE\ OR\ THE\ USE\ OR\ OTHER\ DEALINGS\ IN\ THE\ SOFTWARE.}
+
+\end{DoxyCode}
+ 

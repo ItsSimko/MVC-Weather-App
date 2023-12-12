@@ -1,0 +1,232 @@
+\chapter{@nodelib/fs.walk}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c}\index{"@nodelib/fs.walk@{"@nodelib/fs.walk}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md327}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md327}%
+ \begin{quote}
+A library for efficiently walking a directory recursively. \end{quote}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md328}{}\doxysection{\texorpdfstring{\+:bulb\+: Highlights}{:bulb: Highlights}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md328}
+
+\begin{DoxyItemize}
+\item \+:moneybag\+: Returns useful information\+: {\ttfamily name}, {\ttfamily path}, {\ttfamily dirent} and {\ttfamily stats} (optional).
+\item \+:rocket\+: On Node.\+js 10.\+10+ uses the mechanism without additional calls to determine the entry type for performance reasons. See \href{https://github.com/nodelib/nodelib/blob/master/packages/fs/fs.scandir/README.md\#old-and-modern-mode}{\texttt{ {\ttfamily old} and {\ttfamily modern} mode}}.
+\item \+:gear\+: Built-\/in directories/files and error filtering system.
+\item \+:link\+: Can safely work with broken symbolic links.
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md329}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md329}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ @nodelib/fs.walk}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md330}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md330}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ *\ as\ fsWalk\ from\ '@nodelib/fs.walk';}
+\DoxyCodeLine{}
+\DoxyCodeLine{fsWalk.walk('path',\ (error,\ entries)\ =>\ \{\ /*\ …\ */\ \});}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md331}{}\doxysection{\texorpdfstring{API}{API}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md331}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md332}{}\doxysubsection{\texorpdfstring{.\+walk(path, \mbox{[}options\+Or\+Settings\mbox{]}, callback)}{.walk(path, [optionsOrSettings], callback)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md332}
+Reads the directory recursively and asynchronously. Requires a callback function.
+
+\begin{quote}
+\+:book\+: If you want to use the Promise API, use {\ttfamily util.\+promisify}. \end{quote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{fsWalk.walk('path',\ (error,\ entries)\ =>\ \{\ /*\ …\ */\ \});}
+\DoxyCodeLine{fsWalk.walk('path',\ \{\},\ (error,\ entries)\ =>\ \{\ /*\ …\ */\ \});}
+\DoxyCodeLine{fsWalk.walk('path',\ new\ fsWalk.Settings(),\ (error,\ entries)\ =>\ \{\ /*\ …\ */\ \});}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md333}{}\doxysubsection{\texorpdfstring{.\+walk\+Stream(path, \mbox{[}options\+Or\+Settings\mbox{]})}{.walkStream(path, [optionsOrSettings])}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md333}
+Reads the directory recursively and asynchronously. \href{https://nodejs.org/dist/latest-v12.x/docs/api/stream.html\#stream_readable_streams}{\texttt{ Readable Stream}} is used as a provider.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ stream\ =\ fsWalk.walkStream('path');}
+\DoxyCodeLine{const\ stream\ =\ fsWalk.walkStream('path',\ \{\});}
+\DoxyCodeLine{const\ stream\ =\ fsWalk.walkStream('path',\ new\ fsWalk.Settings());}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md334}{}\doxysubsection{\texorpdfstring{.\+walk\+Sync(path, \mbox{[}options\+Or\+Settings\mbox{]})}{.walkSync(path, [optionsOrSettings])}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md334}
+Reads the directory recursively and synchronously. Returns an array of entries.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ entries\ =\ fsWalk.walkSync('path');}
+\DoxyCodeLine{const\ entries\ =\ fsWalk.walkSync('path',\ \{\});}
+\DoxyCodeLine{const\ entries\ =\ fsWalk.walkSync('path',\ new\ fsWalk.Settings());}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md335}{}\doxysubsubsection{\texorpdfstring{path}{path}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md335}
+
+\begin{DoxyItemize}
+\item Required\+: {\ttfamily true}
+\item Type\+: {\ttfamily string \texorpdfstring{$\vert$}{|} Buffer \texorpdfstring{$\vert$}{|} URL}
+\end{DoxyItemize}
+
+A path to a file. If a URL is provided, it must use the {\ttfamily file\+:} protocol.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md336}{}\doxysubsubsection{\texorpdfstring{options\+Or\+Settings}{optionsOrSettings}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md336}
+
+\begin{DoxyItemize}
+\item Required\+: {\ttfamily false}
+\item Type\+: {\ttfamily Options \texorpdfstring{$\vert$}{|} Settings}
+\item Default\+: An instance of {\ttfamily Settings} class
+\end{DoxyItemize}
+
+An \`{}\+Options\`{} object or an instance of \`{}\+Settings\`{} class.
+
+\begin{quote}
+\+:book\+: When you pass a plain object, an instance of the {\ttfamily Settings} class will be created automatically. If you plan to call the method frequently, use a pre-\/created instance of the {\ttfamily Settings} class. \end{quote}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md337}{}\doxysubsection{\texorpdfstring{Settings(\mbox{[}options\mbox{]})}{Settings([options])}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md337}
+A class of full settings of the package.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ settings\ =\ new\ fsWalk.Settings(\{\ followSymbolicLinks:\ true\ \});}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ entries\ =\ fsWalk.walkSync('path',\ settings);}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md338}{}\doxysection{\texorpdfstring{Entry}{Entry}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md338}
+
+\begin{DoxyItemize}
+\item {\ttfamily name} — The name of the entry ({\ttfamily unknown.\+txt}).
+\item {\ttfamily path} — The path of the entry relative to call directory ({\ttfamily root/unknown.\+txt}).
+\item {\ttfamily dirent} — An instance of \href{./src/types/index.ts}{\texttt{ {\ttfamily fs.\+Dirent}}} class.
+\item \mbox{[}{\ttfamily stats}\mbox{]} — An instance of {\ttfamily fs.\+Stats} class.
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md339}{}\doxysection{\texorpdfstring{Options}{Options}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md339}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md340}{}\doxysubsection{\texorpdfstring{base\+Path}{basePath}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md340}
+
+\begin{DoxyItemize}
+\item Type\+: {\ttfamily string}
+\item Default\+: {\ttfamily undefined}
+\end{DoxyItemize}
+
+By default, all paths are built relative to the root path. You can use this option to set custom root path.
+
+In the example below we read the files from the {\ttfamily root} directory, but in the results the root path will be {\ttfamily custom}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{fsWalk.walkSync('root');\ //\ →\ ['root/file.txt']}
+\DoxyCodeLine{fsWalk.walkSync('root',\ \{\ basePath:\ 'custom'\ \});\ //\ →\ ['custom/file.txt']}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md341}{}\doxysubsection{\texorpdfstring{concurrency}{concurrency}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md341}
+
+\begin{DoxyItemize}
+\item Type\+: {\ttfamily number}
+\item Default\+: {\ttfamily Infinity}
+\end{DoxyItemize}
+
+The maximum number of concurrent calls to {\ttfamily fs.\+readdir}.
+
+\begin{quote}
+\+:book\+: The higher the number, the higher performance and the load on the File System. If you want to read in quiet mode, set the value to {\ttfamily 4 \texorpdfstring{$\ast$}{*} os.\+cpus().length} (4 is default size of \href{http://docs.libuv.org/en/v1.x/threadpool.html\#thread-pool-work-scheduling}{\texttt{ thread pool work scheduling}}). \end{quote}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md342}{}\doxysubsection{\texorpdfstring{deep\+Filter}{deepFilter}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md342}
+
+\begin{DoxyItemize}
+\item Type\+: \href{./src/settings.ts}{\texttt{ {\ttfamily Deep\+Filter\+Function}}}
+\item Default\+: {\ttfamily undefined}
+\end{DoxyItemize}
+
+A function that indicates whether the directory will be read deep or not.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//\ Skip\ all\ directories\ that\ starts\ with\ \`{}node\_modules`}
+\DoxyCodeLine{const\ filter:\ DeepFilterFunction\ =\ (entry)\ =>\ !entry.path.startsWith('node\_modules');}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md343}{}\doxysubsection{\texorpdfstring{entry\+Filter}{entryFilter}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md343}
+
+\begin{DoxyItemize}
+\item Type\+: \href{./src/settings.ts}{\texttt{ {\ttfamily Entry\+Filter\+Function}}}
+\item Default\+: {\ttfamily undefined}
+\end{DoxyItemize}
+
+A function that indicates whether the entry will be included to results or not.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//\ Exclude\ all\ \`{}.js`\ files\ from\ results}
+\DoxyCodeLine{const\ filter:\ EntryFilterFunction\ =\ (entry)\ =>\ !entry.name.endsWith('.js');}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md344}{}\doxysubsection{\texorpdfstring{error\+Filter}{errorFilter}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md344}
+
+\begin{DoxyItemize}
+\item Type\+: \href{./src/settings.ts}{\texttt{ {\ttfamily Error\+Filter\+Function}}}
+\item Default\+: {\ttfamily undefined}
+\end{DoxyItemize}
+
+A function that allows you to skip errors that occur when reading directories.
+
+For example, you can skip {\ttfamily ENOENT} errors if required\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//\ Skip\ all\ ENOENT\ errors}
+\DoxyCodeLine{const\ filter:\ ErrorFilterFunction\ =\ (error)\ =>\ error.code\ ==\ 'ENOENT';}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md345}{}\doxysubsection{\texorpdfstring{stats}{stats}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md345}
+
+\begin{DoxyItemize}
+\item Type\+: {\ttfamily boolean}
+\item Default\+: {\ttfamily false}
+\end{DoxyItemize}
+
+Adds an instance of {\ttfamily fs.\+Stats} class to the \`{}\+Entry\`{}.
+
+\begin{quote}
+\+:book\+: Always use {\ttfamily fs.\+readdir} with additional {\ttfamily fs.\+lstat/fs.stat} calls to determine the entry type. \end{quote}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md346}{}\doxysubsection{\texorpdfstring{follow\+Symbolic\+Links}{followSymbolicLinks}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md346}
+
+\begin{DoxyItemize}
+\item Type\+: {\ttfamily boolean}
+\item Default\+: {\ttfamily false}
+\end{DoxyItemize}
+
+Follow symbolic links or not. Call {\ttfamily fs.\+stat} on symbolic link if {\ttfamily true}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md347}{}\doxysubsection{\texorpdfstring{$<$tt$>$throw\+Error\+On\+Broken\+Symbolic\+Link$<$/tt$>$}{<tt>throwErrorOnBrokenSymbolicLink</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md347}
+
+\begin{DoxyItemize}
+\item Type\+: {\ttfamily boolean}
+\item Default\+: {\ttfamily true}
+\end{DoxyItemize}
+
+Throw an error when symbolic link is broken if {\ttfamily true} or safely return {\ttfamily lstat} call if {\ttfamily false}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md348}{}\doxysubsection{\texorpdfstring{$<$tt$>$path\+Segment\+Separator$<$/tt$>$}{<tt>pathSegmentSeparator</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md348}
+
+\begin{DoxyItemize}
+\item Type\+: {\ttfamily string}
+\item Default\+: {\ttfamily path.\+sep}
+\end{DoxyItemize}
+
+By default, this package uses the correct path separator for your OS ({\ttfamily \textbackslash{}} on Windows, {\ttfamily /} on Unix-\/like systems). But you can set this option to any separator character(s) that you want to use instead.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md349}{}\doxysubsection{\texorpdfstring{$<$tt$>$fs$<$/tt$>$}{<tt>fs</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md349}
+
+\begin{DoxyItemize}
+\item Type\+: {\ttfamily File\+System\+Adapter}
+\item Default\+: A default FS methods
+\end{DoxyItemize}
+
+By default, the built-\/in Node.\+js module ({\ttfamily fs}) is used to work with the file system. You can replace any method with your own.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{interface\ FileSystemAdapter\ \{}
+\DoxyCodeLine{\ \ \ \ lstat:\ typeof\ fs.lstat;}
+\DoxyCodeLine{\ \ \ \ stat:\ typeof\ fs.stat;}
+\DoxyCodeLine{\ \ \ \ lstatSync:\ typeof\ fs.lstatSync;}
+\DoxyCodeLine{\ \ \ \ statSync:\ typeof\ fs.statSync;}
+\DoxyCodeLine{\ \ \ \ readdir:\ typeof\ fs.readdir;}
+\DoxyCodeLine{\ \ \ \ readdirSync:\ typeof\ fs.readdirSync;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ settings\ =\ new\ fsWalk.Settings(\{}
+\DoxyCodeLine{\ \ \ \ fs:\ \{\ lstat:\ fakeLstat\ \}}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md350}{}\doxysection{\texorpdfstring{Changelog}{Changelog}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md350}
+See the \href{https://github.com/nodelib/nodelib/releases}{\texttt{ Releases section of our Git\+Hub project}} for changelog for each release version.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md351}{}\doxysection{\texorpdfstring{License}{License}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dbed57661ae3acf2528844011f3714c_autotoc_md351}
+This software is released under the terms of the MIT license. 

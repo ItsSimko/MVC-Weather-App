@@ -1,0 +1,57 @@
+\chapter{parent-\/module \texorpdfstring{$<$}{<}a href="{}https\+://travis-\/ci.\+org/sindresorhus/parent-\/module"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://travis-\/ci.\+org/sindresorhus/parent-\/module.\+svg?branch=master"{} alt="{}\+Build Status"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_64d4a31e3c5cd030ef787e1341ea60a0}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_64d4a31e3c5cd030ef787e1341ea60a0}\index{parent-\/module $<$a href="{}https://travis-\/ci.org/sindresorhus/parent-\/module"{} $>$$<$img src="{}https://travis-\/ci.org/sindresorhus/parent-\/module.svg?branch=master"{} alt="{}Build Status"{}/$>$$<$/a$>$@{parent-\/module $<$a href=""https://travis-\/ci.org/sindresorhus/parent-\/module"" $>$$<$img src=""https://travis-\/ci.org/sindresorhus/parent-\/module.svg?branch=master"" alt=""Build Status""/$>$$<$/a$>$}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_64d4a31e3c5cd030ef787e1341ea60a0_autotoc_md3898}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_64d4a31e3c5cd030ef787e1341ea60a0_autotoc_md3898}%
+ \begin{quote}
+Get the path of the parent module \end{quote}
+Node.\+js exposes {\ttfamily module.\+parent}, but it only gives you the first cached parent, which is not necessarily the actual parent.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_64d4a31e3c5cd030ef787e1341ea60a0_autotoc_md3899}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_64d4a31e3c5cd030ef787e1341ea60a0_autotoc_md3899}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ parent-\/module}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_64d4a31e3c5cd030ef787e1341ea60a0_autotoc_md3900}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_64d4a31e3c5cd030ef787e1341ea60a0_autotoc_md3900}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//\ bar.js}
+\DoxyCodeLine{const\ parentModule\ =\ require('parent-\/module');}
+\DoxyCodeLine{}
+\DoxyCodeLine{module.exports\ =\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ console.log(parentModule());}
+\DoxyCodeLine{\ \ \ \ //=>\ '/Users/sindresorhus/dev/unicorn/foo.js'}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//\ foo.js}
+\DoxyCodeLine{const\ bar\ =\ require('./bar');}
+\DoxyCodeLine{}
+\DoxyCodeLine{bar();}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_64d4a31e3c5cd030ef787e1341ea60a0_autotoc_md3901}{}\doxysection{\texorpdfstring{API}{API}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_64d4a31e3c5cd030ef787e1341ea60a0_autotoc_md3901}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_64d4a31e3c5cd030ef787e1341ea60a0_autotoc_md3902}{}\doxysubsection{\texorpdfstring{parent\+Module(\mbox{[}filepath\mbox{]})}{parentModule([filepath])}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_64d4a31e3c5cd030ef787e1341ea60a0_autotoc_md3902}
+By default, it will return the path of the immediate parent.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_64d4a31e3c5cd030ef787e1341ea60a0_autotoc_md3903}{}\doxysubsubsection{\texorpdfstring{filepath}{filepath}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_64d4a31e3c5cd030ef787e1341ea60a0_autotoc_md3903}
+Type\+: {\ttfamily string}~\newline
+ Default\+: \href{https://nodejs.org/api/globals.html\#globals_filename}{\texttt{ {\ttfamily \+\_\+\+\_\+filename}}}
+
+Filepath of the module of which to get the parent path.
+
+Useful if you want it to work \href{https://github.com/sindresorhus/parent-module/tree/master/fixtures/filepath}{\texttt{ multiple module levels down}}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_64d4a31e3c5cd030ef787e1341ea60a0_autotoc_md3904}{}\doxysection{\texorpdfstring{Tip}{Tip}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_64d4a31e3c5cd030ef787e1341ea60a0_autotoc_md3904}
+Combine it with \href{https://github.com/sindresorhus/read-pkg-up}{\texttt{ {\ttfamily read-\/pkg-\/up}}} to read the package.\+json of the parent module.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ path\ =\ require('path');}
+\DoxyCodeLine{const\ readPkgUp\ =\ require('read-\/pkg-\/up');}
+\DoxyCodeLine{const\ parentModule\ =\ require('parent-\/module');}
+\DoxyCodeLine{}
+\DoxyCodeLine{console.log(readPkgUp.sync(\{cwd:\ path.dirname(parentModule())\}).pkg);}
+\DoxyCodeLine{//=>\ \{name:\ 'chalk',\ version:\ '1.0.0',\ …\}}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_64d4a31e3c5cd030ef787e1341ea60a0_autotoc_md3905}{}\doxysection{\texorpdfstring{License}{License}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_64d4a31e3c5cd030ef787e1341ea60a0_autotoc_md3905}
+MIT © \href{https://sindresorhus.com}{\texttt{ Sindre Sorhus}} 

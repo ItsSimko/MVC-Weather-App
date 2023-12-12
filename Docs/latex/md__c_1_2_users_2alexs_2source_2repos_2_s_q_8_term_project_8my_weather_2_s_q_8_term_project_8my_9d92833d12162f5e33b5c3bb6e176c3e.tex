@@ -1,0 +1,72 @@
+\chapter{vue}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9d92833d12162f5e33b5c3bb6e176c3e}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9d92833d12162f5e33b5c3bb6e176c3e}\index{vue@{vue}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9d92833d12162f5e33b5c3bb6e176c3e_autotoc_md5188}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9d92833d12162f5e33b5c3bb6e176c3e_autotoc_md5188}%
+ \hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9d92833d12162f5e33b5c3bb6e176c3e_autotoc_md5189}{}\doxysection{\texorpdfstring{Which dist file to use?}{Which dist file to use?}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9d92833d12162f5e33b5c3bb6e176c3e_autotoc_md5189}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9d92833d12162f5e33b5c3bb6e176c3e_autotoc_md5190}{}\doxysubsection{\texorpdfstring{From CDN or without a Bundler}{From CDN or without a Bundler}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9d92833d12162f5e33b5c3bb6e176c3e_autotoc_md5190}
+
+\begin{DoxyItemize}
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}{\ttfamily vue(.runtime).global(.prod).js}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+:
+\begin{DoxyItemize}
+\item For direct use via {\ttfamily \texorpdfstring{$<$}{<}script src="{}..."{}\texorpdfstring{$>$}{>}} in the browser. Exposes the {\ttfamily Vue} global.
+\item Note that global builds are not \href{https://github.com/umdjs/umd}{\texttt{ UMD}} builds. They are built as \href{https://developer.mozilla.org/en-US/docs/Glossary/IIFE}{\texttt{ IIFEs}} and is only meant for direct use via {\ttfamily \texorpdfstring{$<$}{<}script src="{}..."{}\texorpdfstring{$>$}{>}}.
+\item In-\/browser template compilation\+:
+\begin{DoxyItemize}
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}{\ttfamily vue.\+global.\+js}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} is the "{}full"{} build that includes both the compiler and the runtime so it supports compiling templates on the fly.
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}{\ttfamily vue.\+runtime.\+global.\+js}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} contains only the runtime and requires templates to be pre-\/compiled during a build step.
+\end{DoxyItemize}
+\item Inlines all Vue core internal packages -\/ i.\+e. it\textquotesingle{}s a single file with no dependencies on other files. This means you {\bfseries{must}} import everything from this file and this file only to ensure you are getting the same instance of code.
+\item Contains hard-\/coded prod/dev branches, and the prod build is pre-\/minified. Use the {\ttfamily \texorpdfstring{$\ast$}{*}.prod.\+js} files for production.
+\end{DoxyItemize}
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}{\ttfamily vue(.runtime).esm-\/browser(.prod).js}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+:
+\begin{DoxyItemize}
+\item For usage via native ES modules imports (in browser via {\ttfamily \texorpdfstring{$<$}{<}script type="{}module"{}\texorpdfstring{$>$}{>}}.
+\item Shares the same runtime compilation, dependency inlining and hard-\/coded prod/dev behavior with the global build.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9d92833d12162f5e33b5c3bb6e176c3e_autotoc_md5191}{}\doxysubsection{\texorpdfstring{With a Bundler}{With a Bundler}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9d92833d12162f5e33b5c3bb6e176c3e_autotoc_md5191}
+
+\begin{DoxyItemize}
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}{\ttfamily vue(.runtime).esm-\/bundler.\+js}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+:
+\begin{DoxyItemize}
+\item For use with bundlers like {\ttfamily webpack}, {\ttfamily rollup} and {\ttfamily parcel}.
+\item Leaves prod/dev branches with {\ttfamily process.\+env.\+NODE\+\_\+\+ENV} guards (must be replaced by bundler)
+\item Does not ship minified builds (to be done together with the rest of the code after bundling)
+\item Imports dependencies (e.\+g. {\ttfamily @vue/runtime-\/core}, {\ttfamily @vue/runtime-\/compiler})
+\begin{DoxyItemize}
+\item Imported dependencies are also {\ttfamily esm-\/bundler} builds and will in turn import their dependencies (e.\+g. {\ttfamily @vue/runtime-\/core} imports {\ttfamily @vue/reactivity})
+\item This means you {\bfseries{can}} install/import these deps individually without ending up with different instances of these dependencies, but you must make sure they all resolve to the same version.
+\end{DoxyItemize}
+\item In-\/browser template compilation\+:
+\begin{DoxyItemize}
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}{\ttfamily vue.\+runtime.\+esm-\/bundler.\+js} (default)\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} is runtime only, and requires all templates to be pre-\/compiled. This is the default entry for bundlers (via {\ttfamily module} field in {\ttfamily package.\+json}) because when using a bundler templates are typically pre-\/compiled (e.\+g. in {\ttfamily \texorpdfstring{$\ast$}{*}.vue} files).
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}{\ttfamily vue.\+esm-\/bundler.\+js}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+: includes the runtime compiler. Use this if you are using a bundler but still want runtime template compilation (e.\+g. in-\/\+DOM templates or templates via inline Java\+Script strings). You will need to configure your bundler to alias {\ttfamily vue} to this file.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9d92833d12162f5e33b5c3bb6e176c3e_autotoc_md5192}{}\doxysubsubsection{\texorpdfstring{Bundler Build Feature Flags}{Bundler Build Feature Flags}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9d92833d12162f5e33b5c3bb6e176c3e_autotoc_md5192}
+Starting with 3.\+0.\+0-\/rc.\+3, {\ttfamily esm-\/bundler} builds now exposes global feature flags that can be overwritten at compile time\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \+\_\+\+\_\+\+VUE\+\_\+\+OPTIONS\+\_\+\+API\+\_\+\+\_\+} (enable/disable Options API support, default\+: {\ttfamily true})
+\item {\ttfamily \+\_\+\+\_\+\+VUE\+\_\+\+PROD\+\_\+\+DEVTOOLS\+\_\+\+\_\+} (enable/disable devtools support in production, default\+: {\ttfamily false})
+\end{DoxyItemize}
+
+The build will work without configuring these flags, however it is {\bfseries{strongly recommended}} to properly configure them in order to get proper tree-\/shaking in the final bundle. To configure these flags\+:
+
+
+\begin{DoxyItemize}
+\item webpack\+: use \href{https://webpack.js.org/plugins/define-plugin/}{\texttt{ Define\+Plugin}}
+\item Rollup\+: use \href{https://github.com/rollup/plugins/tree/master/packages/replace}{\texttt{ @rollup/plugin-\/replace}}
+\item Vite\+: configured by default, but can be overwritten using the \href{https://github.com/vitejs/vite/blob/a4133c073e640b17276b2de6e91a6857bdf382e1/src/node/config.ts\#L72-L76}{\texttt{ {\ttfamily define} option}}
+\end{DoxyItemize}
+
+Note\+: the replacement value {\bfseries{must be boolean literals}} and cannot be strings, otherwise the bundler/minifier will not be able to properly evaluate the conditions.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9d92833d12162f5e33b5c3bb6e176c3e_autotoc_md5193}{}\doxysubsection{\texorpdfstring{For Server-\/\+Side Rendering}{For Server-Side Rendering}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9d92833d12162f5e33b5c3bb6e176c3e_autotoc_md5193}
+
+\begin{DoxyItemize}
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}{\ttfamily vue.\+cjs(.prod).js}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+:
+\begin{DoxyItemize}
+\item For use in Node.\+js server-\/side rendering via {\ttfamily require()}.
+\item If you bundle your app with webpack with `target\+: \textquotesingle{}node'{\ttfamily and properly externalize}vue{\ttfamily , this is the build that will be loaded.}
+\item {\ttfamily The dev/prod files are pre-\/built, but the appropriate file is automatically required based on}process.\+env.\+NODE\+\_\+\+ENV\`{}. 
+\end{DoxyItemize}
+\end{DoxyItemize}

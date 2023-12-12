@@ -1,0 +1,48 @@
+\chapter{is-\/path-\/inside}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dc094a3213848b376a660b47b1ace1d}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dc094a3213848b376a660b47b1ace1d}\index{is-\/path-\/inside@{is-\/path-\/inside}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dc094a3213848b376a660b47b1ace1d_autotoc_md3238}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dc094a3213848b376a660b47b1ace1d_autotoc_md3238}%
+ \begin{quote}
+Check if a path is inside another path \end{quote}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dc094a3213848b376a660b47b1ace1d_autotoc_md3239}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dc094a3213848b376a660b47b1ace1d_autotoc_md3239}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ is-\/path-\/inside}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dc094a3213848b376a660b47b1ace1d_autotoc_md3240}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dc094a3213848b376a660b47b1ace1d_autotoc_md3240}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ isPathInside\ =\ require('is-\/path-\/inside');}
+\DoxyCodeLine{}
+\DoxyCodeLine{isPathInside('a/b/c',\ 'a/b');}
+\DoxyCodeLine{//=>\ true}
+\DoxyCodeLine{}
+\DoxyCodeLine{isPathInside('a/b/c',\ 'x/y');}
+\DoxyCodeLine{//=>\ false}
+\DoxyCodeLine{}
+\DoxyCodeLine{isPathInside('a/b/c',\ 'a/b/c');}
+\DoxyCodeLine{//=>\ false}
+\DoxyCodeLine{}
+\DoxyCodeLine{isPathInside('/Users/sindresorhus/dev/unicorn',\ '/Users/sindresorhus');}
+\DoxyCodeLine{//=>\ true}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dc094a3213848b376a660b47b1ace1d_autotoc_md3241}{}\doxysection{\texorpdfstring{API}{API}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dc094a3213848b376a660b47b1ace1d_autotoc_md3241}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dc094a3213848b376a660b47b1ace1d_autotoc_md3242}{}\doxysubsection{\texorpdfstring{is\+Path\+Inside(child\+Path, parent\+Path)}{isPathInside(childPath, parentPath)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dc094a3213848b376a660b47b1ace1d_autotoc_md3242}
+Note that relative paths are resolved against {\ttfamily process.\+cwd()} to make them absolute.
+
+{\bfseries{Important\+:}} This package is meant for use with path manipulation. It does not check if the paths exist nor does it resolve symlinks. You should not use this as a security mechanism to guard against access to certain places on the file system.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dc094a3213848b376a660b47b1ace1d_autotoc_md3243}{}\doxysubsubsection{\texorpdfstring{child\+Path}{childPath}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dc094a3213848b376a660b47b1ace1d_autotoc_md3243}
+Type\+: {\ttfamily string}
+
+The path that should be inside {\ttfamily parent\+Path}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dc094a3213848b376a660b47b1ace1d_autotoc_md3244}{}\doxysubsubsection{\texorpdfstring{parent\+Path}{parentPath}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_8dc094a3213848b376a660b47b1ace1d_autotoc_md3244}
+Type\+: {\ttfamily string}
+
+The path that should contain {\ttfamily child\+Path}.
+
+\DoxyHorRuler{0}
+
+
+ {\bfseries{ \href{https://tidelift.com/subscription/pkg/npm-is-path-inside?utm_source=npm-is-path-inside&utm_medium=referral&utm_campaign=readme}{\texttt{ Get professional support for this package with a Tidelift subscription}} }} ~\newline
+ \textsubscript{ Tidelift helps make open source sustainable for maintainers while giving companies~\newline
+assurances about security, maintenance, and licensing for their dependencies. }  

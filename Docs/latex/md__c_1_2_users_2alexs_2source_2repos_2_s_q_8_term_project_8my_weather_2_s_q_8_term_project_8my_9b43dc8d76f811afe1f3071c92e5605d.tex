@@ -1,0 +1,133 @@
+\chapter{@vue/reactivity-\/transform}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9b43dc8d76f811afe1f3071c92e5605d}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9b43dc8d76f811afe1f3071c92e5605d}\index{"@vue/reactivity-\/transform@{"@vue/reactivity-\/transform}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9b43dc8d76f811afe1f3071c92e5605d_autotoc_md1645}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9b43dc8d76f811afe1f3071c92e5605d_autotoc_md1645}%
+ \begin{quote}
+⚠️ This is experimental and the proposal has been dropped. The feature is now marked as deprecated and will be removed from Vue core in 3.\+4.
+
+See reason for deprecation \href{https://github.com/vuejs/rfcs/discussions/369\#discussioncomment-5059028}{\texttt{ here}}. \end{quote}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9b43dc8d76f811afe1f3071c92e5605d_autotoc_md1646}{}\doxysection{\texorpdfstring{Basic Rules}{Basic Rules}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9b43dc8d76f811afe1f3071c92e5605d_autotoc_md1646}
+
+\begin{DoxyItemize}
+\item Ref-\/creating APIs have {\ttfamily \$}-\/prefixed versions that create reactive variables instead. They also do not need to be explicitly imported. These include\+:
+\begin{DoxyItemize}
+\item {\ttfamily ref}
+\item {\ttfamily computed}
+\item {\ttfamily shallow\+Ref}
+\item {\ttfamily custom\+Ref}
+\item {\ttfamily to\+Ref}
+\end{DoxyItemize}
+\item {\ttfamily \$()} can be used to destructure an object into reactive variables, or turn existing refs into reactive variables
+\item {\ttfamily \$\$()} to "{}escape"{} the transform, which allows access to underlying refs
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ \{\ watchEffect\ \}\ from\ 'vue'}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ bind\ ref\ as\ a\ variable}
+\DoxyCodeLine{let\ count\ =\ \$ref(0)}
+\DoxyCodeLine{}
+\DoxyCodeLine{watchEffect(()\ =>\ \{}
+\DoxyCodeLine{\ \ //\ no\ need\ for\ .value}
+\DoxyCodeLine{\ \ console.log(count)}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ assignments\ are\ reactive}
+\DoxyCodeLine{count++}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ get\ the\ actual\ ref}
+\DoxyCodeLine{console.log(\$\$(count))\ //\ \{\ value:\ 1\ \}}
+
+\end{DoxyCode}
+
+
+Macros can be optionally imported to make it more explicit\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//\ not\ necessary,\ but\ also\ works}
+\DoxyCodeLine{import\ \{\ \$,\ \$ref\ \}\ from\ 'vue/macros'}
+\DoxyCodeLine{}
+\DoxyCodeLine{let\ count\ =\ \$ref(0)}
+\DoxyCodeLine{const\ \{\ x,\ y\ \}\ =\ \$(useMouse())}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9b43dc8d76f811afe1f3071c92e5605d_autotoc_md1647}{}\doxysubsection{\texorpdfstring{Global Types}{Global Types}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9b43dc8d76f811afe1f3071c92e5605d_autotoc_md1647}
+To enable types for the macros globally, include the following in a {\ttfamily .d.\+ts} file\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{///\ <reference\ types="{}vue/macros-\/global"{}\ />}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9b43dc8d76f811afe1f3071c92e5605d_autotoc_md1648}{}\doxysection{\texorpdfstring{API}{API}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9b43dc8d76f811afe1f3071c92e5605d_autotoc_md1648}
+This package is the lower-\/level transform that can be used standalone. Higher-\/level tooling (e.\+g. {\ttfamily @vitejs/plugin-\/vue} and {\ttfamily vue-\/loader}) will provide integration via options.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9b43dc8d76f811afe1f3071c92e5605d_autotoc_md1649}{}\doxysubsection{\texorpdfstring{$<$tt$>$should\+Transform$<$/tt$>$}{<tt>shouldTransform</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9b43dc8d76f811afe1f3071c92e5605d_autotoc_md1649}
+Can be used to do a cheap check to determine whether full transform should be performed.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ \{\ shouldTransform\ \}\ from\ '@vue/reactivity-\/transform'}
+\DoxyCodeLine{}
+\DoxyCodeLine{shouldTransform(`let\ a\ =\ ref(0)`)\ //\ false}
+\DoxyCodeLine{shouldTransform(`let\ a\ =\ \$ref(0)`)\ //\ true}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9b43dc8d76f811afe1f3071c92e5605d_autotoc_md1650}{}\doxysubsection{\texorpdfstring{$<$tt$>$transform$<$/tt$>$}{<tt>transform</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9b43dc8d76f811afe1f3071c92e5605d_autotoc_md1650}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ \{\ transform\ \}\ from\ '@vue/reactivity-\/transform'}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ src\ =\ \`{}let\ a\ =\ \$ref(0);\ a++`}
+\DoxyCodeLine{const\ \{}
+\DoxyCodeLine{\ \ code,\ //\ import\ \{\ ref\ as\ \_ref\ \}\ from\ 'vue';\ let\ a\ =\ (ref(0));\ a.value++"{}}
+\DoxyCodeLine{\ \ map}
+\DoxyCodeLine{\}\ =\ transform(src,\ \{}
+\DoxyCodeLine{\ \ filename:\ 'foo.ts',}
+\DoxyCodeLine{\ \ sourceMap:\ true,}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ //\ @babel/parser\ plugins\ to\ enable.}
+\DoxyCodeLine{\ \ //\ 'typescript'\ and\ 'jsx'\ will\ be\ auto-\/inferred\ from\ filename\ if\ provided,}
+\DoxyCodeLine{\ \ //\ so\ in\ most\ cases\ explicit\ parserPlugins\ are\ not\ necessary}
+\DoxyCodeLine{\ \ parserPlugins:\ [}
+\DoxyCodeLine{\ \ \ \ /*\ ...\ */}
+\DoxyCodeLine{\ \ ]}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+
+
+{\bfseries{Options}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{interface\ RefTransformOptions\ \{}
+\DoxyCodeLine{\ \ filename?:\ string}
+\DoxyCodeLine{\ \ sourceMap?:\ boolean\ //\ default:\ false}
+\DoxyCodeLine{\ \ parserPlugins?:\ ParserPlugin[]}
+\DoxyCodeLine{\ \ importHelpersFrom?:\ string\ //\ default:\ "{}vue"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9b43dc8d76f811afe1f3071c92e5605d_autotoc_md1651}{}\doxysubsection{\texorpdfstring{$<$tt$>$transform\+AST$<$/tt$>$}{<tt>transformAST</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_9b43dc8d76f811afe1f3071c92e5605d_autotoc_md1651}
+Transform with an existing Babel AST + Magic\+String instance. This is used internally by {\ttfamily @vue/compiler-\/sfc} to avoid double parse/transform cost.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ \{\ transformAST\ \}\ from\ '@vue/reactivity-\/transform'}
+\DoxyCodeLine{import\ \{\ parse\ \}\ from\ '@babel/parser'}
+\DoxyCodeLine{import\ MagicString\ from\ 'magic-\/string'}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ src\ =\ \`{}let\ a\ =\ \$ref(0);\ a++`}
+\DoxyCodeLine{const\ ast\ =\ parse(src,\ \{\ sourceType:\ 'module'\ \})}
+\DoxyCodeLine{const\ s\ =\ new\ MagicString(src)}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ \{}
+\DoxyCodeLine{\ \ rootRefs,\ //\ ['a']}
+\DoxyCodeLine{\ \ importedHelpers\ //\ ['ref']}
+\DoxyCodeLine{\}\ =\ transformAST(ast,\ s)}
+\DoxyCodeLine{}
+\DoxyCodeLine{console.log(s.toString())\ //\ let\ a\ =\ \_ref(0);\ a.value++}
+
+\end{DoxyCode}
+ 

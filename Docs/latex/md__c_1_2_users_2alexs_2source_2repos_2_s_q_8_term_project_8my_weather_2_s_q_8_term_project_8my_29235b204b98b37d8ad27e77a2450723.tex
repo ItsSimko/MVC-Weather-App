@@ -1,0 +1,107 @@
+\chapter{Webpack Virtual Modules}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723}\index{Webpack Virtual Modules@{Webpack Virtual Modules}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723_autotoc_md5223}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723_autotoc_md5223}%
+ \href{https://travis-ci.org/sysgears/webpack-virtual-modules}{\texttt{ }} \href{https://twitter.com/sysgears}{\texttt{ }}
+
+{\bfseries{Webpack Virtual Modules}} is a plugin that allows for dynamical generation of in-\/memory virtual modules for Java\+Script builds created with webpack. When virtual module is created all the parent virtual dirs that lead to the module filename are created too. This plugin supports watch mode meaning any write to a virtual module is seen by webpack as if a real file stored on disk has changed.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723_autotoc_md5224}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723_autotoc_md5224}
+Use NPM or Yarn to install Webpack Virtual Modules as a development dependency\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ with\ NPM}
+\DoxyCodeLine{npm\ install\ webpack-\/virtual-\/modules\ -\/-\/save-\/dev}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ with\ Yarn}
+\DoxyCodeLine{yarn\ add\ webpack-\/virtual-\/modules\ -\/-\/dev}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723_autotoc_md5225}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723_autotoc_md5225}
+You can use Webpack Virtual Modules with webpack 5, 4 and 3. The examples below show the usage with webpack 5 or 4. If you want to use our plugin with webpack 3, check out a dedicated doc\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sysgears/webpack-virtual-modules/tree/master/docs/webpack3.md}{\texttt{ Webpack Virtual Modules with Webpack 3}}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723_autotoc_md5226}{}\doxysubsection{\texorpdfstring{Generating static virtual modules}{Generating static virtual modules}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723_autotoc_md5226}
+Require the plugin in the webpack configuration file, then create and add virtual modules in the {\ttfamily plugins} array in the webpack configuration object\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ VirtualModulesPlugin\ =\ require('webpack-\/virtual-\/modules');}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ virtualModules\ =\ new\ VirtualModulesPlugin(\{}
+\DoxyCodeLine{\ \ 'node\_modules/module-\/foo.js':\ 'module.exports\ =\ \{\ foo:\ "{}foo"{}\ \};',}
+\DoxyCodeLine{\ \ 'node\_modules/module-\/bar.js':\ 'module.exports\ =\ \{\ bar:\ "{}bar"{}\ \};'}
+\DoxyCodeLine{\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ //\ ...}
+\DoxyCodeLine{\ \ plugins:\ [}
+\DoxyCodeLine{\ \ \ \ virtualModules}
+\DoxyCodeLine{\ \ ]}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+You can now import your virtual modules anywhere in the application and use them\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ moduleFoo\ =\ require('module-\/foo');}
+\DoxyCodeLine{//\ You\ can\ now\ use\ moduleFoo}
+\DoxyCodeLine{console.log(moduleFoo.foo);}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723_autotoc_md5227}{}\doxysubsection{\texorpdfstring{Generating dynamic virtual modules}{Generating dynamic virtual modules}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723_autotoc_md5227}
+You can generate virtual modules \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+\_\+dynamically\+\_\+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} with Webpack Virtual Modules.
+
+Here\textquotesingle{}s an example of dynamic generation of a module. All you need to do is create new virtual modules using the plugin and add them to the {\ttfamily plugins} array. After that, you need to add a webpack hook. For using hooks, consult \mbox{[}webpack compiler hook documentation\mbox{]}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ webpack\ =\ require('webpack');}
+\DoxyCodeLine{var\ VirtualModulesPlugin\ =\ require('webpack-\/virtual-\/modules');}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ Create\ an\ empty\ set\ of\ virtual\ modules}
+\DoxyCodeLine{const\ virtualModules\ =\ new\ VirtualModulesPlugin();}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ compiler\ =\ webpack(\{}
+\DoxyCodeLine{\ \ //\ ...}
+\DoxyCodeLine{\ \ plugins:\ [}
+\DoxyCodeLine{\ \ \ \ virtualModules}
+\DoxyCodeLine{\ \ ]}
+\DoxyCodeLine{\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{compiler.hooks.compilation.tap('MyPlugin',\ function(compilation)\ \{}
+\DoxyCodeLine{\ \ virtualModules.writeModule('node\_modules/module-\/foo.js',\ '');}
+\DoxyCodeLine{\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{compiler.watch();}
+
+\end{DoxyCode}
+
+
+In other module or a Webpack plugin, you can write to the module {\ttfamily module-\/foo} whatever you need. After this write, webpack will "{}see"{} that {\ttfamily module-\/foo.\+js} has changed and will restart compilation.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{virtualModules.writeModule(}
+\DoxyCodeLine{\ \ 'node\_modules/module-\/foo.js',}
+\DoxyCodeLine{\ \ 'module.exports\ =\ \{\ foo:\ "{}foo"{}\ \};'}
+\DoxyCodeLine{);}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723_autotoc_md5228}{}\doxysection{\texorpdfstring{More Examples}{More Examples}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723_autotoc_md5228}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sysgears/webpack-virtual-modules/tree/master/examples/swagger-webpack5}{\texttt{ Swagger and JSDoc Example with Webpack 5}}
+\item \href{https://github.com/sysgears/webpack-virtual-modules/tree/master/examples/swagger-webpack4}{\texttt{ Swagger and JSDoc Example with Webpack 4}}
+\item \href{https://github.com/sysgears/webpack-virtual-modules/tree/master/examples/swagger-webpack3}{\texttt{ Swagger and JSDoc Example with Webpack 3}}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723_autotoc_md5229}{}\doxysection{\texorpdfstring{API Reference}{API Reference}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723_autotoc_md5229}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sysgears/webpack-virtual-modules/tree/master/docs/API\%20Reference.md}{\texttt{ API Reference}}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723_autotoc_md5230}{}\doxysection{\texorpdfstring{Inspiration}{Inspiration}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723_autotoc_md5230}
+This project is inspired by \href{https://github.com/rmarscher/virtual-module-webpack-plugin}{\texttt{ virtual-\/module-\/webpack-\/plugin}}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723_autotoc_md5231}{}\doxysection{\texorpdfstring{License}{License}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_29235b204b98b37d8ad27e77a2450723_autotoc_md5231}
+Copyright © 2017 \href{http://sysgears.com}{\texttt{ Sys\+Gears INC}}. This source code is licensed under the \mbox{[}MIT\mbox{]} license. 

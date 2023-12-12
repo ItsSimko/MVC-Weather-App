@@ -1,0 +1,202 @@
+\chapter{@eslint-\/community/regexpp}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5}\index{"@eslint-\/community/regexpp@{"@eslint-\/community/regexpp}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md141}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md141}%
+ \href{https://www.npmjs.com/package/@eslint-community/regexpp}{\texttt{ }} \href{http://www.npmtrends.com/@eslint-community/regexpp}{\texttt{ }} \href{https://github.com/eslint-community/regexpp/actions}{\texttt{ }} \href{https://codecov.io/gh/eslint-community/regexpp}{\texttt{ }}
+
+A regular expression parser for ECMAScript.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md142}{}\doxysection{\texorpdfstring{💿 Installation}{💿 Installation}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md142}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ @eslint-\/community/regexpp}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item require Node@\texorpdfstring{$^\wedge$}{\string^}12.0.\+0 \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \texorpdfstring{$^\wedge$}{\string^}14.0.\+0 \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \texorpdfstring{$>$}{>}=16.\+0.\+0.
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md143}{}\doxysection{\texorpdfstring{📖 Usage}{📖 Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md143}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ \{}
+\DoxyCodeLine{\ \ \ \ AST,}
+\DoxyCodeLine{\ \ \ \ RegExpParser,}
+\DoxyCodeLine{\ \ \ \ RegExpValidator,}
+\DoxyCodeLine{\ \ \ \ RegExpVisitor,}
+\DoxyCodeLine{\ \ \ \ parseRegExpLiteral,}
+\DoxyCodeLine{\ \ \ \ validateRegExpLiteral,}
+\DoxyCodeLine{\ \ \ \ visitRegExpAST}
+\DoxyCodeLine{\}\ from\ "{}@eslint-\/community/regexpp"{}}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md144}{}\doxysubsection{\texorpdfstring{parse\+Reg\+Exp\+Literal(source, options?)}{parseRegExpLiteral(source, options?)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md144}
+Parse a given regular expression literal then make AST object.
+
+This is equivalent to {\ttfamily new Reg\+Exp\+Parser(options).parse\+Literal(source)}.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Parameters\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily source} ({\ttfamily string \texorpdfstring{$\vert$}{|} Reg\+Exp}) The source code to parse.
+\item {\ttfamily options?} (\href{src/parser.ts\#L743}{\texttt{ {\ttfamily Reg\+Exp\+Parser.\+Options}}}) The options to parse.
+\end{DoxyItemize}
+\item {\bfseries{Return\+:}}
+\begin{DoxyItemize}
+\item The AST of the regular expression.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md145}{}\doxysubsection{\texorpdfstring{validate\+Reg\+Exp\+Literal(source, options?)}{validateRegExpLiteral(source, options?)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md145}
+Validate a given regular expression literal.
+
+This is equivalent to {\ttfamily new Reg\+Exp\+Validator(options).validate\+Literal(source)}.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Parameters\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily source} ({\ttfamily string}) The source code to validate.
+\item {\ttfamily options?} (\href{src/validator.ts\#L220}{\texttt{ {\ttfamily Reg\+Exp\+Validator.\+Options}}}) The options to validate.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md146}{}\doxysubsection{\texorpdfstring{visit\+Reg\+Exp\+AST(ast, handlers)}{visitRegExpAST(ast, handlers)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md146}
+Visit each node of a given AST.
+
+This is equivalent to {\ttfamily new Reg\+Exp\+Visitor(handlers).visit(ast)}.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Parameters\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily ast} (\href{src/ast.ts\#L4}{\texttt{ {\ttfamily AST.\+Node}}}) The AST to visit.
+\item {\ttfamily handlers} (\href{src/visitor.ts\#L291}{\texttt{ {\ttfamily Reg\+Exp\+Visitor.\+Handlers}}}) The callbacks.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md147}{}\doxysubsection{\texorpdfstring{Reg\+Exp\+Parser}{RegExpParser}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md147}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md148}{}\doxysubsubsection{\texorpdfstring{new Reg\+Exp\+Parser(options?)}{new RegExpParser(options?)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md148}
+
+\begin{DoxyItemize}
+\item {\bfseries{Parameters\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily options?} (\href{src/parser.ts\#L743}{\texttt{ {\ttfamily Reg\+Exp\+Parser.\+Options}}}) The options to parse.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md149}{}\doxysubsubsection{\texorpdfstring{parser.\+parse\+Literal(source, start?, end?)}{parser.parseLiteral(source, start?, end?)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md149}
+Parse a regular expression literal.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Parameters\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily source} ({\ttfamily string}) The source code to parse. E.\+g. {\ttfamily "{}/abc/g"{}}.
+\item {\ttfamily start?} ({\ttfamily number}) The start index in the source code. Default is {\ttfamily 0}.
+\item {\ttfamily end?} ({\ttfamily number}) The end index in the source code. Default is {\ttfamily source.\+length}.
+\end{DoxyItemize}
+\item {\bfseries{Return\+:}}
+\begin{DoxyItemize}
+\item The AST of the regular expression.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md150}{}\doxysubsubsection{\texorpdfstring{parser.\+parse\+Pattern(source, start?, end?, flags?)}{parser.parsePattern(source, start?, end?, flags?)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md150}
+Parse a regular expression pattern.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Parameters\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily source} ({\ttfamily string}) The source code to parse. E.\+g. {\ttfamily "{}abc"{}}.
+\item {\ttfamily start?} ({\ttfamily number}) The start index in the source code. Default is {\ttfamily 0}.
+\item {\ttfamily end?} ({\ttfamily number}) The end index in the source code. Default is {\ttfamily source.\+length}.
+\item {\ttfamily flags?} ({\ttfamily \{ unicode?\+: boolean, unicode\+Sets?\+: boolean \}}) The flags to enable Unicode mode, and Unicode Set mode.
+\end{DoxyItemize}
+\item {\bfseries{Return\+:}}
+\begin{DoxyItemize}
+\item The AST of the regular expression pattern.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md151}{}\doxysubsubsection{\texorpdfstring{parser.\+parse\+Flags(source, start?, end?)}{parser.parseFlags(source, start?, end?)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md151}
+Parse a regular expression flags.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Parameters\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily source} ({\ttfamily string}) The source code to parse. E.\+g. {\ttfamily "{}gim"{}}.
+\item {\ttfamily start?} ({\ttfamily number}) The start index in the source code. Default is {\ttfamily 0}.
+\item {\ttfamily end?} ({\ttfamily number}) The end index in the source code. Default is {\ttfamily source.\+length}.
+\end{DoxyItemize}
+\item {\bfseries{Return\+:}}
+\begin{DoxyItemize}
+\item The AST of the regular expression flags.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md152}{}\doxysubsection{\texorpdfstring{Reg\+Exp\+Validator}{RegExpValidator}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md152}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md153}{}\doxysubsubsection{\texorpdfstring{new Reg\+Exp\+Validator(options)}{new RegExpValidator(options)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md153}
+
+\begin{DoxyItemize}
+\item {\bfseries{Parameters\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily options} (\href{src/validator.ts\#L220}{\texttt{ {\ttfamily Reg\+Exp\+Validator.\+Options}}}) The options to validate.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md154}{}\doxysubsubsection{\texorpdfstring{validator.\+validate\+Literal(source, start, end)}{validator.validateLiteral(source, start, end)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md154}
+Validate a regular expression literal.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Parameters\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily source} ({\ttfamily string}) The source code to validate.
+\item {\ttfamily start?} ({\ttfamily number}) The start index in the source code. Default is {\ttfamily 0}.
+\item {\ttfamily end?} ({\ttfamily number}) The end index in the source code. Default is {\ttfamily source.\+length}.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md155}{}\doxysubsubsection{\texorpdfstring{validator.\+validate\+Pattern(source, start, end, flags)}{validator.validatePattern(source, start, end, flags)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md155}
+Validate a regular expression pattern.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Parameters\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily source} ({\ttfamily string}) The source code to validate.
+\item {\ttfamily start?} ({\ttfamily number}) The start index in the source code. Default is {\ttfamily 0}.
+\item {\ttfamily end?} ({\ttfamily number}) The end index in the source code. Default is {\ttfamily source.\+length}.
+\item {\ttfamily flags?} ({\ttfamily \{ unicode?\+: boolean, unicode\+Sets?\+: boolean \}}) The flags to enable Unicode mode, and Unicode Set mode.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md156}{}\doxysubsubsection{\texorpdfstring{validator.\+validate\+Flags(source, start, end)}{validator.validateFlags(source, start, end)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md156}
+Validate a regular expression flags.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Parameters\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily source} ({\ttfamily string}) The source code to validate.
+\item {\ttfamily start?} ({\ttfamily number}) The start index in the source code. Default is {\ttfamily 0}.
+\item {\ttfamily end?} ({\ttfamily number}) The end index in the source code. Default is {\ttfamily source.\+length}.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md157}{}\doxysubsection{\texorpdfstring{Reg\+Exp\+Visitor}{RegExpVisitor}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md157}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md158}{}\doxysubsubsection{\texorpdfstring{new Reg\+Exp\+Visitor(handlers)}{new RegExpVisitor(handlers)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md158}
+
+\begin{DoxyItemize}
+\item {\bfseries{Parameters\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily handlers} (\href{src/visitor.ts\#L291}{\texttt{ {\ttfamily Reg\+Exp\+Visitor.\+Handlers}}}) The callbacks.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md159}{}\doxysubsubsection{\texorpdfstring{visitor.\+visit(ast)}{visitor.visit(ast)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md159}
+Validate a regular expression literal.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Parameters\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily ast} (\href{src/ast.ts\#L4}{\texttt{ {\ttfamily AST.\+Node}}}) The AST to visit.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md160}{}\doxysection{\texorpdfstring{📰 Changelog}{📰 Changelog}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md160}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/eslint-community/regexpp/releases}{\texttt{ Git\+Hub Releases}}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md161}{}\doxysection{\texorpdfstring{🍻 Contributing}{🍻 Contributing}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md161}
+Welcome contributing!
+
+Please use Git\+Hub\textquotesingle{}s Issues/\+PRs.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md162}{}\doxysubsection{\texorpdfstring{Development Tools}{Development Tools}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1e2aef099dfa55a55e814031c19f0bf5_autotoc_md162}
+
+\begin{DoxyItemize}
+\item {\ttfamily npm test} runs tests and measures coverage.
+\item {\ttfamily npm run build} compiles Type\+Script source code to {\ttfamily index.\+js}, {\ttfamily index.\+js.\+map}, and {\ttfamily index.\+d.\+ts}.
+\item {\ttfamily npm run clean} removes the temporary files which are created by {\ttfamily npm test} and {\ttfamily npm run build}.
+\item {\ttfamily npm run lint} runs ESLint.
+\item {\ttfamily npm run update\+:test} updates test fixtures.
+\item {\ttfamily npm run update\+:ids} updates {\ttfamily src/unicode/ids.\+ts}.
+\item {\ttfamily npm run watch} runs tests with {\ttfamily -\/-\/watch} option. 
+\end{DoxyItemize}

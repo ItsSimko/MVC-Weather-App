@@ -1,0 +1,70 @@
+\chapter{ESLint\+RC Library}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_beca6515498ee12dd782d2311374a91e}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_beca6515498ee12dd782d2311374a91e}\index{ESLintRC Library@{ESLintRC Library}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_beca6515498ee12dd782d2311374a91e_autotoc_md163}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_beca6515498ee12dd782d2311374a91e_autotoc_md163}%
+ This repository contains the legacy ESLint\+RC configuration file format for ESLint. This package is not intended for use outside of the ESLint ecosystem. It is ESLint-\/specific and not intended for use in other programs.
+
+{\bfseries{Note\+:}} This package is frozen except for critical bug fixes as ESLint moves to a new config system.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_beca6515498ee12dd782d2311374a91e_autotoc_md164}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_beca6515498ee12dd782d2311374a91e_autotoc_md164}
+You can install the package as follows\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ @eslint/eslintrc\ -\/-\/save-\/dev}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ or}
+\DoxyCodeLine{}
+\DoxyCodeLine{yarn\ add\ @eslint/eslintrc\ -\/D}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_beca6515498ee12dd782d2311374a91e_autotoc_md165}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_beca6515498ee12dd782d2311374a91e_autotoc_md165}
+The primary class in this package is {\ttfamily Flat\+Compat}, which is a utility to translate ESLint\+RC-\/style configs into flat configs. Here\textquotesingle{}s how you use it inside of your {\ttfamily eslint.\+config.\+js} file\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ \{\ FlatCompat\ \}\ from\ "{}@eslint/eslintrc"{};}
+\DoxyCodeLine{import\ js\ from\ "{}@eslint/js"{};}
+\DoxyCodeLine{import\ path\ from\ "{}path"{};}
+\DoxyCodeLine{import\ \{\ fileURLToPath\ \}\ from\ "{}url"{};}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ mimic\ CommonJS\ variables\ -\/-\/\ not\ needed\ if\ using\ CommonJS}
+\DoxyCodeLine{const\ \_\_filename\ =\ fileURLToPath(import.meta.url);}
+\DoxyCodeLine{const\ \_\_dirname\ =\ path.dirname(\_\_filename);}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ compat\ =\ new\ FlatCompat(\{}
+\DoxyCodeLine{\ \ \ \ baseDirectory:\ \_\_dirname,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ optional;\ default:\ process.cwd()}
+\DoxyCodeLine{\ \ \ \ resolvePluginsRelativeTo:\ \_\_dirname,\ \ \ \ \ \ \ //\ optional}
+\DoxyCodeLine{\ \ \ \ recommendedConfig:\ js.configs.recommended,\ //\ optional}
+\DoxyCodeLine{\ \ \ \ allConfig:\ js.configs.all,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ optional}
+\DoxyCodeLine{\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{export\ default\ [}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //\ mimic\ ESLintRC-\/style\ extends}
+\DoxyCodeLine{\ \ \ \ ...compat.extends("{}standard"{},\ "{}example"{}),}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //\ mimic\ environments}
+\DoxyCodeLine{\ \ \ \ ...compat.env(\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ es2020:\ true,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ node:\ true}
+\DoxyCodeLine{\ \ \ \ \}),}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //\ mimic\ plugins}
+\DoxyCodeLine{\ \ \ \ ...compat.plugins("{}airbnb"{},\ "{}react"{}),}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //\ translate\ an\ entire\ config}
+\DoxyCodeLine{\ \ \ \ ...compat.config(\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ plugins:\ ["{}airbnb"{},\ "{}react"{}],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ extends:\ "{}standard"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ env:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ es2020:\ true,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ node:\ true}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ rules:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ semi:\ "{}error"{}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \})}
+\DoxyCodeLine{];}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_beca6515498ee12dd782d2311374a91e_autotoc_md166}{}\doxysection{\texorpdfstring{License}{License}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_beca6515498ee12dd782d2311374a91e_autotoc_md166}
+MIT License 
