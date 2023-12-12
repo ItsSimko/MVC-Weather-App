@@ -6,7 +6,6 @@ using System;
 using System.Text;
 using System.Diagnostics;
 
-var ret = PasswordService.GetSha256Hash("apple");
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +15,25 @@ var builder = WebApplication.CreateBuilder(args);
 var jwtIssuer = builder.Configuration.GetSection("Jwt:Issuer").Get<string>();
 var jwtKey = builder.Configuration.GetSection("Jwt:Key").Get<string>();
 
+builder.Services.AddAuthentication(options =>
+ {
+     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+ }).AddJwtBearer(options =>
+ {
+     options.TokenValidationParameters = new TokenValidationParameters
+     {
+         ValidateIssuer = true,
+         ValidateAudience = false,
+         ValidateLifetime = true,
+         ValidateIssuerSigningKey = true,
+         ValidIssuer = jwtIssuer, // Replace with your issuer
+         ValidAudience = jwtIssuer, // Replace with your audience
+         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)) // Replace with your secret key
+     };
+ });
+
+/*
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
  .AddJwtBearer(options =>
  {
@@ -29,7 +47,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
          ValidAudience = jwtIssuer,
          IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
      };
- });
+ });*/
 //Jwt configuration ends here
 
 // Add services to the container.
@@ -63,8 +81,8 @@ app.UseSpaStaticFiles();
 
 
 app.UseRouting();
-app.UseAuthorization();
 app.UseAuthentication();
+app.UseAuthorization();
 app.UseEndpoints(endpoints => endpoints.MapControllers());
 
 app.UseSpa(spa =>

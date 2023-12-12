@@ -3,7 +3,7 @@
     <v-form @submit.prevent="login">
       <v-text-field v-model="username" label="Username" outlined></v-text-field>
       <v-text-field v-model="password" label="Password" type="password" outlined></v-text-field>
-      <v-btn color="primary" @child-event="loginHandler" type="submit">Login</v-btn>
+      <v-btn color="primary" type="submit">Login</v-btn>
       <v-btn color="primary" @click="goToReg" class="mx-1">Register</v-btn>
       <v-alert v-if="this.badCredential===true" type="error"
                color="error"
@@ -14,12 +14,13 @@
 </template>
 
 <script setup lang="ts">
+  import { defineComponent } from 'vue';
   import axios from 'axios';
   import jwt_decode from 'jwt-decode';
 </script>
 
 <script lang="ts">
-  export default {
+  export default defineComponent({
     data() {
       return {
         email: '',
@@ -44,6 +45,8 @@
             const jwt_decoded = jwt_decode(response.data.token);
 
             localStorage.setItem('role', jwt_decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"]);
+
+            this.$emit('loginHappened');
           }
           else
           {
@@ -62,7 +65,7 @@
         //this.$router.push('/register');
       }
     }
-  };
+  });
 </script>
 
 <style>
