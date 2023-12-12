@@ -6,9 +6,10 @@ using SQ.TermProject.myWeather.Services;
 
 namespace SQ.TermProject.myWeather.Controllers
 {
-    [Authorize]
+
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class SettingsController : ControllerBase
     {
         private SettingsService settingsService = new SettingsService();

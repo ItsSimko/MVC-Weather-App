@@ -9,7 +9,7 @@
           <span>&copy; 2023 myWeather</span>
         </v-col>
         <v-col cols="4" class="text-right bg-transparent">
-          <v-dialog width="500" v-if="token == null">
+          <v-dialog width="500" v-if="token == null && this.$route.path != '/login' && this.$route.path != '/register'">
             <template v-slot:activator="{ props }">
               <v-btn class="mx-1" color="primary" v-bind="props" text="Login"> </v-btn>
             </template>
@@ -29,13 +29,13 @@
                   </v-toolbar-items>
                 </v-toolbar>
                 <v-card-text>
-                  <Login />
+                  <Login @loginHappened="loginHandler"/>
                 </v-card-text>
               </v-card>
             </template>
           </v-dialog>
 
-          <v-dialog width="500" v-if="token == null">
+          <v-dialog width="500" v-if="token == null && this.$route.path != '/login' && this.$route.path != '/register'">
             <template v-slot:activator="{ props }">
               <v-btn class="mx-1" color="secondary" v-bind="props" text="Register"> </v-btn>
             </template>
@@ -43,7 +43,7 @@
             <template v-slot:default="{ isActive }">
               <v-card title="Dialog">
                 <v-card-text>
-                  <LoginBox />
+                  
                 </v-card-text>
 
                 <v-card-actions>
@@ -57,8 +57,9 @@
           </v-dialog>
 
           <p v-if="userName != null || token != null">
-            Hello, {{ userName }} <v-btn text="Sign Out" color="secondary"
-                                       @click="signOut"></v-btn>
+            Hello, {{ userName }}
+            <v-btn text="Settings" color="secondary" @click="goToSettings" class="mx-1"></v-btn>
+            <v-btn text="Sign Out" color="secondary" @click="signOut" class="mx-1"></v-btn>
           </p>
           
         </v-col>
@@ -93,6 +94,9 @@
         userName: localStorage.getItem('userName')
       }
     },
+    components: {
+      Login,
+    },
     methods: {
       signOut() {
         localStorage.removeItem('token');
@@ -100,7 +104,23 @@
         localStorage.removeItem('role');
         this.userName = null;
         this.token = null;
-        //window.location.reload();
+        console.log(this.$route.path);
+        if (this.$route.path == "/panel") {
+          this.$router.push('/login');
+        }
+      },
+      loginHandler() {
+        if (localStorage.getItem('token') != null) {
+          this.userName = localStorage.getItem('userName');
+          this.token = localStorage.getItem('token');
+        }
+        else {
+          this.userName = null;
+          this.token = null;
+        }
+      },
+      goToSettings() {
+        this.$router.push("/panel");
       }
     }
   }

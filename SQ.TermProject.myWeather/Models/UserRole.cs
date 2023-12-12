@@ -9,8 +9,9 @@
 
         public UserRole ()
         {
+            Id = 1;
             Name = "User";
-            PermissionLevel = 0;
+            PermissionLevel = 1;
         }
     }   
 }

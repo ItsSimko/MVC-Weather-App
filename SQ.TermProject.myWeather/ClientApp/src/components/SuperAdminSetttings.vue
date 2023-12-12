@@ -43,14 +43,15 @@ export default {
   },
   methods: {
     searchUsers() {
-      axios.post('api/settings/GetUsers?username=' + this.searchQuery).then( resp => {
-        console.log(resp)
-        this.searchResults = resp.data
-        console.log(this.searchResults)
-      })
-     
+      const config = {
+        headers: { Authorization: `Bearer ${localStorage.getItem("token") }` }
+      };
 
-      console.log(this.searchResults)
+      console.log(config)
+
+      axios.post('api/settings/GetUsers?username=' + this.searchQuery, {}, config).then(resp => {
+        this.searchResults = resp.data
+      });
     },
     setUserRole(user) {
        // api call to set user role

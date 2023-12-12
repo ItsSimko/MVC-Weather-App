@@ -47,6 +47,7 @@ namespace SQ.TermProject.myWeather.Controllers.UserAuth
         }
 
 
+        [HttpGet("helper")]
 
         public string GenerateAuthToken(string username, string role)
         {
