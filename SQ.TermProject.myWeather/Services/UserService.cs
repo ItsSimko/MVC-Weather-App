@@ -5,9 +5,16 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace SQ.TermProject.myWeather.Services
 {
+    /// <summary>
+    /// Service class for user-related tasks.
+    /// </summary>
     public class UserService : BaseService
     {
-
+        /// <summary>
+        /// Retrieves the role of a user based on their username.
+        /// </summary>
+        /// <param name="username">The username of the user.</param>
+        /// <returns>The role of the user.</returns>
         public string getUserRole(string username)
         {
             string role;
@@ -25,6 +32,12 @@ namespace SQ.TermProject.myWeather.Services
             return role;
         }
 
+        /// <summary>
+        /// Checks if the provided user credentials are valid.
+        /// </summary>
+        /// <param name="user">The username to validate.</param>
+        /// <param name="pass">The password to validate.</param>
+        /// <returns>True if the user is valid, otherwise false.</returns>
         public bool IsValidUser(string user, string pass)
         {
 
