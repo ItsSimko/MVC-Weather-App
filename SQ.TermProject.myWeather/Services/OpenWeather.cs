@@ -14,6 +14,9 @@ namespace SQ.TermProject.myWeather.Services
         private readonly HttpClient _httpClient;
         private readonly string _apiKey = "d381eff9c0d0b6a2cc5418ab4a09e2e6";
 
+        private static Dictionary<string, Tuple<WeatherForecast, DateTime>> cache = new Dictionary<string, Tuple<WeatherForecast, DateTime>>();
+        private TimeSpan expirationTime = TimeSpan.FromSeconds(600); // Expiration time (e.g., 60 seconds)
+
         /// <summary>
         /// Initializes a new instance of the OpenWeatherService class with an HttpClient.
         /// </summary>
@@ -29,11 +32,29 @@ namespace SQ.TermProject.myWeather.Services
         /// <returns>A task representing the asynchronous operation that yields weather forecast data.</returns>
         public async Task<WeatherForecast> GetWeatherDataAsync(string cityName)
         {
-            string url = $"https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid="+_apiKey+"&units=metric";
+
+            if (cache.ContainsKey(cityName))
+            {
+                var (cachedData, timestamp) = cache[cityName];
+                if (DateTime.Now - timestamp < expirationTime)
+                {
+                    return cachedData;
+                }
+                else
+                {
+                    cache.Remove(cityName); // Remove expired cache entry
+                }
+            }
+
+            string url = $"https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + _apiKey + "&units=metric";
             var response = await _httpClient.GetAsync(url);
             response.EnsureSuccessStatusCode();
 
             var content = await response.Content.ReadFromJsonAsync<WeatherForecast>();
+
+            // Update the cache with the new data
+            cache[cityName] = Tuple.Create(content, DateTime.Now);
+
             return content;
         }
     }

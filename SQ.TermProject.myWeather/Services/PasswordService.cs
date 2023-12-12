@@ -30,22 +30,28 @@ namespace SQ.TermProject.myWeather.Services
         /// <returns>A string representing the generated salt.</returns>
         public static string GenerateSalt(int length)
         {
-            byte[] salt = new byte[length];
-            using (var rng = new RNGCryptoServiceProvider())
+            try 
             {
-
-                rng.GetNonZeroBytes(salt);
-
-                StringBuilder builder = new StringBuilder();
-                for (int i = 0; i < salt.Length; i++)
+                byte[] salt = new byte[length];
+                using (var rng = new RNGCryptoServiceProvider())
                 {
-                    builder.Append(salt[i].ToString("x2"));
+
+                    rng.GetNonZeroBytes(salt);
+
+                    StringBuilder builder = new StringBuilder();
+                    for (int i = 0; i < salt.Length; i++)
+                    {
+                        builder.Append(salt[i].ToString("x2"));
+                    }
+
+                    return builder.ToString();
                 }
-
-                return builder.ToString();
             }
-
-
+            catch (Exception ex)
+            {
+                LoggerService.Log("Exception thrown: " + ex);
+                return null;
+            }
         }
 
         /// <summary>
@@ -55,18 +61,27 @@ namespace SQ.TermProject.myWeather.Services
         /// <returns>The SHA256 hash of the input string.</returns>
         public static string GetSha256Hash(string input)
         {
-            string canonicalized = input.Trim();
-            using (SHA256 sha256Hash = SHA256.Create())
+            try
             {
-                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(canonicalized));
-
-                StringBuilder builder = new StringBuilder();
-                for (int i = 0; i < bytes.Length; i++)
+                string canonicalized = input.Trim();
+                using (SHA256 sha256Hash = SHA256.Create())
                 {
-                    builder.Append(bytes[i].ToString("x2")); 
+                    byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(canonicalized));
+
+                    StringBuilder builder = new StringBuilder();
+                    for (int i = 0; i < bytes.Length; i++)
+                    {
+                        builder.Append(bytes[i].ToString("x2"));
+                    }
+                    return builder.ToString();
                 }
-                return builder.ToString();
             }
+            catch (Exception ex)
+            {
+                LoggerService.Log("Exception thrown: " + ex);
+                return null;
+            }
+
         }
     }
 }

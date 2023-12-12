@@ -2,7 +2,10 @@
 {
     public class SettingsService : BaseService
     {
-        public SettingsService() { }
+        public void UpdateSiteHeader(string message, string type)
+        {
+
+        }
 
         
     }

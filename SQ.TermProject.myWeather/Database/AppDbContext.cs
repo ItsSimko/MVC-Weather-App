@@ -15,7 +15,7 @@ namespace SQ.TermProject.myWeather.Database
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            const string connectionString = "server=localhost;port=3306;database=WeatherApp;user=root;password=2025";
+            const string connectionString = "server=myweatherapp.mysql.database.azure.com;port=3306;database=WeatherApp;user=app;password=root;";
 
             optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
         }
