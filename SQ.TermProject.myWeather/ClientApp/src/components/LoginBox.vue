@@ -1,6 +1,6 @@
 ﻿<template>
   <v-container>
-    <v-form @submit.prevent="login">
+    <v-form @submit.prevent="login" v-if="this.isLoading == false">
       <v-text-field v-model="username" label="Username" outlined></v-text-field>
       <v-text-field v-model="password" label="Password" type="password" outlined></v-text-field>
       <v-btn color="primary" type="submit">Login</v-btn>
@@ -9,7 +9,12 @@
                color="error"
                title="Login Failed"
                text="Invalid username or password." class="my-2"></v-alert>
+      <v-alert v-if="this.servErr===true" type="error"
+               color="error"
+               title="Server Error Occurred"
+               text="Try again in a few moments" class="my-2"></v-alert>
     </v-form>
+    <LoadingSpinner v-if="this.isLoading == true"></LoadingSpinner>
   </v-container>
 </template>
 
@@ -17,6 +22,7 @@
   import { defineComponent } from 'vue';
   import axios from 'axios';
   import jwt_decode from 'jwt-decode';
+  import LoadingSpinner from './Loading.vue'
 </script>
 
 <script lang="ts">
@@ -26,16 +32,20 @@
         email: '',
         username: '',
         password: '',
-        badCredential: false
+        badCredential: false,
+        servErr: false,
+        isLoading: false
       };
     },
     methods: {
       login() {
+        this.isLoading = true;
+        this.servErr = false
         axios.post('api/auth/Login?username=' + this.username + '&password=' + this.password)
           .then(response => {
-            console.log(response)
           if (response.data.success == true) {
             this.badCredential = false;
+
 
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('userName', this.username);
@@ -51,12 +61,19 @@
           else
           {
             this.badCredential = true;
-            
           }
+            setInterval(() => {
+
+              this.isLoading = false;
+            }, 1500);
 
         })
           .catch(error => {
-            console.error('Login failed:', error);
+            this.servErr = true;
+            setInterval(() => {
+
+              this.isLoading = false;
+            }, 1500);
 
           });
       },
