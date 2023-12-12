@@ -35,5 +35,20 @@ namespace SQ.TermProject.myWeather.Controllers
 
             return Ok(usersWithRoles);
         }
+
+        [HttpPost("SetUser")]
+        public ActionResult<IEnumerable<object>> SetUser(string username, string role)
+        {
+
+            var entityToUpdate = settingsService.DbContext.Users.FirstOrDefault(e => e.UserName == username);
+            var roleDb = settingsService.DbContext.UserRoles.Where(e => e.Name == role).Select(e => e.Id).FirstOrDefault();
+
+            entityToUpdate.RoleId = roleDb;
+
+            settingsService.DbContext.SaveChanges();
+
+
+            return Ok();
+        }
     }
 }
