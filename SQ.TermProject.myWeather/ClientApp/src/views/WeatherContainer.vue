@@ -9,6 +9,8 @@
 <script lang="ts" setup>
   import WeatherContainer from '@/components/WeatherInformation.vue'
   import SearchBar from '@/components/SearchBar.vue'
+  import { WeatherData } from "./SearchBar.vue";
+
 </script>
 
 <style>

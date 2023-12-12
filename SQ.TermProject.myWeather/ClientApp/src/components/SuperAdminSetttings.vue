@@ -1,15 +1,14 @@
 ﻿<template>
   <v-container>
-    <!-- Search Users Section -->
     <v-card>
       <v-card-title>Search Users</v-card-title>
       <v-card-text>
         <v-text-field v-model="searchQuery" label="Search Query"></v-text-field>
-        <v-btn @click="searchUsers">Search</v-btn>
+        <v-btn @click="searchUsers" v-if="isLoading == false">Search</v-btn>
+        <LoadingSpinner v-if="isLoading == true"></LoadingSpinner>
       </v-card-text>
     </v-card>
 
-    <!-- Display Search Results and Set Roles -->
     <v-card v-if="searchResults.length > 0">
       <v-card-title>Search Results</v-card-title>
       <v-card-text>
@@ -27,15 +26,47 @@
         </v-list>
       </v-card-text>
     </v-card>
+    <v-snackbar v-model="snackbar_good"
+                timeout="2000">
+      User role updated
+
+      <template v-slot:actions>
+        <v-btn color="blue"
+               variant="text"
+               @click="snackbar_good = false">
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
+    <v-snackbar v-model="snackbar_bad"
+                timeout="2000">
+      Server error occured.
+
+      <template v-slot:actions>
+        <v-btn color="blue"
+               variant="text"
+               @click="snackbar_bad = false">
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
   </v-container>
 </template>
+
+<script setup>
+  import LoadingSpinner from './Loading.vue';
+</script>
 
 <script>
   import axios from 'axios';
 
+
 export default {
   data() {
     return {
+      snackbar_good: false,
+      snackbar_bad: false,
+      isLoading: false,
       searchQuery: '',
       searchResults: [],
       roleOptions: ['User', 'Admin', 'Superadmin']
@@ -43,18 +74,32 @@ export default {
   },
   methods: {
     searchUsers() {
+      this.isLoading = true;
       const config = {
         headers: { Authorization: `Bearer ${localStorage.getItem("token") }` }
       };
 
-      console.log(config)
-
       axios.post('api/settings/GetUsers?username=' + this.searchQuery, {}, config).then(resp => {
-        this.searchResults = resp.data
+        setTimeout(() => {
+          this.isLoading = false;
+          this.searchResults = resp.data;
+        }, 750);
+      }).catch((err) => {
+        setTimeout(() => {
+          this.snackbar_bad = true;
+        },750)
       });
     },
     setUserRole(user) {
-       // api call to set user role
+      const config = {
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+      };
+
+      axios.post("api/settings/SetUser?username="+user.userName+"&role="+user.name, {}, config).then(resp => {
+        this.snackbar_good = true
+      }).catch((r) => {
+        this.snackbar_bad= true;
+      });
     }
   }
 };
