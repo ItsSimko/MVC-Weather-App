@@ -11,6 +11,7 @@ namespace SQ.TermProject.myWeather.Database
     {
         public DbSet<User>? Users {get; set;}
         public DbSet<UserRole> UserRoles {get; set;}
+        public DbSet<SearchStat> SearchStat {get; set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -39,9 +40,12 @@ namespace SQ.TermProject.myWeather.Database
                 entity.Property(e => e.PermissionLevel).IsRequired();
             });
 
-
-
-
+            modelBuilder.Entity<SearchStat>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Location).IsRequired();
+                entity.Property(e => e.SearchCount).IsRequired();
+            });
         }
     }
 }
