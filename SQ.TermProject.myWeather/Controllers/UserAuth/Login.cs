@@ -15,15 +15,11 @@ namespace SQ.TermProject.myWeather.Controllers.UserAuth
     {
         private static readonly string secretKey = secretKey = PasswordService.GetSha256Hash(PasswordService.GenerateSalt(32));
         private UserService userService;
-        private IConfiguration configuration;
 
         public Login()
         {
 
             userService = new UserService();
-            configuration = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-            .Build();
         }
 
         [HttpPost(Name = "LoginUser")]
@@ -52,7 +48,7 @@ namespace SQ.TermProject.myWeather.Controllers.UserAuth
         public string GenerateAuthToken(string username, string role)
         {
             // https://medium.com/@vndpal/how-to-implement-jwt-token-authentication-in-net-core-6-ab7f48470f5c refrenced
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]));
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(ConfigService.Configuration["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var claim = new[]
@@ -62,8 +58,8 @@ namespace SQ.TermProject.myWeather.Controllers.UserAuth
                 // Add more claims if needed
             };
 
-            var Sectoken = new JwtSecurityToken(configuration["Jwt:Issuer"],
-              configuration["Jwt:Issuer"],
+            var Sectoken = new JwtSecurityToken(ConfigService.Configuration["Jwt:Issuer"],
+              ConfigService.Configuration["Jwt:Issuer"],
               claims: claim,
               expires: DateTime.Now.AddMinutes(120),
               signingCredentials: credentials);
