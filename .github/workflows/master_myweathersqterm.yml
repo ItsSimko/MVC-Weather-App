@@ -59,4 +59,4 @@ jobs:
           app-name: 'myWeatherSqTerm'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F894ECEA512A42E9A37E455D8A54BC51 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7A4B50BB54964D78804E5E0CF8912A1B }}
