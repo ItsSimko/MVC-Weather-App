@@ -18,17 +18,13 @@ namespace SQ.TermProject.myWeather.Services
 
         private static Dictionary<string, Tuple<WeatherForecast, DateTime>> cache = new Dictionary<string, Tuple<WeatherForecast, DateTime>>();
         private TimeSpan expirationTime = TimeSpan.FromSeconds(600); // Expiration time (e.g., 60 seconds)
-        private IConfiguration configuration;
 
         /// <summary>
         /// Initializes a new instance of the OpenWeatherService class with an HttpClient.
         /// </summary>
         public OpenWeatherService()
         {
-            configuration = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .Build();
-            _apiKey = configuration["OpenWeatherApiKey"]
+            _apiKey = ConfigService.Configuration["OpenWeatherApiKey"];
             _httpClient = new HttpClient();
         }
 

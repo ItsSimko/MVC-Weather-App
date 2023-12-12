@@ -11,18 +11,10 @@ namespace SQ.TermProject.myWeather.Database
     {
         public DbSet<User>? Users {get; set;}
         public DbSet<UserRole> UserRoles {get; set;}
-        private IConfiguration configuration;
-
-        public AppDbContext()
-        {
-            configuration = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .Build();
-        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = configuration["DbConnection"];
+            string connectionString = ConfigService.Configuration["DbConnection"];
 
             optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
         }
