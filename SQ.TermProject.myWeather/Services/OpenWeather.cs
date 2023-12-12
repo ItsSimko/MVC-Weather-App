@@ -35,30 +35,38 @@ namespace SQ.TermProject.myWeather.Services
         /// <returns>A task representing the asynchronous operation that yields weather forecast data.</returns>
         public async Task<WeatherForecast> GetWeatherDataAsync(string cityName)
         {
-
-            if (cache.ContainsKey(cityName))
+            try
             {
-                var (cachedData, timestamp) = cache[cityName];
-                if (DateTime.Now - timestamp < expirationTime)
+                if (cache.ContainsKey(cityName))
                 {
-                    return cachedData;
+                    var (cachedData, timestamp) = cache[cityName];
+                    if (DateTime.Now - timestamp < expirationTime)
+                    {
+                        return cachedData;
+                    }
+                    else
+                    {
+                        cache.Remove(cityName); // Remove expired cache entry
+                    }
                 }
-                else
-                {
-                    cache.Remove(cityName); // Remove expired cache entry
-                }
+
+                string url = $"https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + _apiKey + "&units=metric";
+                var response = await _httpClient.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+
+                var content = await response.Content.ReadFromJsonAsync<WeatherForecast>();
+
+                // Update the cache with the new data
+                cache[cityName] = Tuple.Create(content, DateTime.Now);
+
+                return content;
+            }
+            catch(Exception ex)
+            {
+                LoggerService.Log("Exception Thrown: " + ex.Message);
+                return null;
             }
 
-            string url = $"https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + _apiKey + "&units=metric";
-            var response = await _httpClient.GetAsync(url);
-            response.EnsureSuccessStatusCode();
-
-            var content = await response.Content.ReadFromJsonAsync<WeatherForecast>();
-
-            // Update the cache with the new data
-            cache[cityName] = Tuple.Create(content, DateTime.Now);
-
-            return content;
         }
     }
 

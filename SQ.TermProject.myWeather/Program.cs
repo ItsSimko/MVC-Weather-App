@@ -1,5 +1,6 @@
 using Net6_Controller_And_VIte;
 using SQ.TermProject.myWeather.Services;
+using SQ.TermProject.myWeather.Database;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -90,5 +91,11 @@ app.UseSpa(spa =>
     if (app.Environment.IsDevelopment())
         spa.UseViteDevelopmentServer(sourcePath: "ClientApp");
 });
+
+
+var DbContext = new AppDbContext();
+DbContext.Database.EnsureCreated();
+
+LoggerService.Log("Web API Started.");
 
 app.Run();

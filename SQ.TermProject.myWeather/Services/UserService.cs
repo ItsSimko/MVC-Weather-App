@@ -17,19 +17,28 @@ namespace SQ.TermProject.myWeather.Services
         /// <returns>The role of the user.</returns>
         public string getUserRole(string username)
         {
-            string role;
+            try 
+            {
+                string role;
 
 
-            var roleId = base.DbContext.Users
-                .Where(model => model.UserName == username)
-                .Select(model => model.RoleId)
-                .FirstOrDefault();
+                var roleId = base.DbContext.Users
+                    .Where(model => model.UserName == username)
+                    .Select(model => model.RoleId)
+                    .FirstOrDefault();
 
 
-            role = base.DbContext.UserRoles.Where(model => model.Id == roleId).Select(model => model.Name).FirstOrDefault();
+                role = base.DbContext.UserRoles.Where(model => model.Id == roleId).Select(model => model.Name).FirstOrDefault();
 
 
-            return role;
+                return role;
+            }
+            catch (Exception ex)
+            {
+                LoggerService.Log("Exception Message: "+ ex.Message);
+                return null;
+            }
+            
         }
 
         /// <summary>
@@ -40,24 +49,25 @@ namespace SQ.TermProject.myWeather.Services
         /// <returns>True if the user is valid, otherwise false.</returns>
         public bool IsValidUser(string user, string pass)
         {
-
-            string username = string.Empty, password = string.Empty;
+            try
+            {
+                string username = string.Empty, password = string.Empty;
 
 
                 var passResult = base.DbContext.Users
-                    .Where(model => model.UserName == user) 
-                    .Select(model => model.Password) 
-                    .FirstOrDefault(); 
+                    .Where(model => model.UserName == user)
+                    .Select(model => model.Password)
+                    .FirstOrDefault();
 
 
 
                 if (passResult != null)
                 {
                     var saltResult = base.DbContext.Users
-                    .Where(model => model.UserName == user) 
-                    .Select(model => model.Salt) 
-                    .FirstOrDefault(); 
-                    
+                    .Where(model => model.UserName == user)
+                    .Select(model => model.Salt)
+                    .FirstOrDefault();
+
                     username = user;
 
                     string hashedSample = PasswordService.GetSha256Hash(pass);
@@ -67,8 +77,15 @@ namespace SQ.TermProject.myWeather.Services
 
                 return user == username && passResult == password;
             }
+            catch (Exception ex)
+            {
+                LoggerService.Log("Exception Message: " + ex.Message);
+                return false;
+            }
 
 
-        
+
+        }
+
     }
 }
