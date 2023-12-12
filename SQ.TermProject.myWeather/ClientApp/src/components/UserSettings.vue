@@ -6,8 +6,6 @@
       <v-btn @click="updateUsername">Update</v-btn>
     </v-card-text>
   </v-card>
-
-  <!-- Set Favorite Location Section -->
   <v-card>
     <v-card-title>Set Favorite Location</v-card-title>
     <v-card-text>
@@ -28,9 +26,6 @@
       updateUsername() {
 
       },
-      setFavoriteLocation() {
-
-      }
     }
   };
 </script>
