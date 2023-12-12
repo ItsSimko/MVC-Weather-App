@@ -1,0 +1,75 @@
+\chapter{locate-\/path \texorpdfstring{$<$}{<}a href="{}https\+://travis-\/ci.\+org/sindresorhus/locate-\/path"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://travis-\/ci.\+org/sindresorhus/locate-\/path.\+svg?branch=master"{} alt="{}\+Build Status"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8}\index{locate-\/path $<$a href="{}https://travis-\/ci.org/sindresorhus/locate-\/path"{} $>$$<$img src="{}https://travis-\/ci.org/sindresorhus/locate-\/path.svg?branch=master"{} alt="{}Build Status"{}/$>$$<$/a$>$@{locate-\/path $<$a href=""https://travis-\/ci.org/sindresorhus/locate-\/path"" $>$$<$img src=""https://travis-\/ci.org/sindresorhus/locate-\/path.svg?branch=master"" alt=""Build Status""/$>$$<$/a$>$}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4045}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4045}%
+ \begin{quote}
+Get the first path that exists on disk of multiple paths \end{quote}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4046}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4046}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ locate-\/path}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4047}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4047}
+Here we find the first file that exists on disk, in array order.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ locatePath\ =\ require('locate-\/path');}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ files\ =\ [}
+\DoxyCodeLine{\ \ \ \ 'unicorn.png',}
+\DoxyCodeLine{\ \ \ \ 'rainbow.png',\ //\ Only\ this\ one\ actually\ exists\ on\ disk}
+\DoxyCodeLine{\ \ \ \ 'pony.png'}
+\DoxyCodeLine{];}
+\DoxyCodeLine{}
+\DoxyCodeLine{(async\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ console(await\ locatePath(files));}
+\DoxyCodeLine{\ \ \ \ //=>\ 'rainbow'}
+\DoxyCodeLine{\})();}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4048}{}\doxysection{\texorpdfstring{API}{API}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4048}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4049}{}\doxysubsection{\texorpdfstring{locate\+Path(paths, \mbox{[}options\mbox{]})}{locatePath(paths, [options])}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4049}
+Returns a {\ttfamily Promise\texorpdfstring{$<$}{<}string\texorpdfstring{$>$}{>}} for the first path that exists or {\ttfamily undefined} if none exists.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4050}{}\doxysubsubsection{\texorpdfstring{paths}{paths}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4050}
+Type\+: {\ttfamily Iterable\texorpdfstring{$<$}{<}string\texorpdfstring{$>$}{>}}
+
+Paths to check.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4051}{}\doxysubsubsection{\texorpdfstring{options}{options}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4051}
+Type\+: {\ttfamily Object}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4052}{}\doxyparagraph{\texorpdfstring{concurrency}{concurrency}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4052}
+Type\+: {\ttfamily number}~\newline
+ Default\+: {\ttfamily Infinity}~\newline
+ Minimum\+: {\ttfamily 1}
+
+Number of concurrently pending promises.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4053}{}\doxyparagraph{\texorpdfstring{preserve\+Order}{preserveOrder}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4053}
+Type\+: {\ttfamily boolean}~\newline
+ Default\+: {\ttfamily true}
+
+Preserve {\ttfamily paths} order when searching.
+
+Disable this to improve performance if you don\textquotesingle{}t care about the order.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4054}{}\doxyparagraph{\texorpdfstring{cwd}{cwd}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4054}
+Type\+: {\ttfamily string}~\newline
+ Default\+: {\ttfamily process.\+cwd()}
+
+Current working directory.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4055}{}\doxyparagraph{\texorpdfstring{type}{type}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4055}
+Type\+: {\ttfamily string}~\newline
+ Default\+: {\ttfamily file}~\newline
+ Values\+: {\ttfamily file} {\ttfamily directory}
+
+The type of paths that can match.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4056}{}\doxyparagraph{\texorpdfstring{allow\+Symlinks}{allowSymlinks}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4056}
+Type\+: {\ttfamily boolean}~\newline
+ Default\+: {\ttfamily true}
+
+Allow symbolic links to match if they point to the chosen path type.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4057}{}\doxysubsection{\texorpdfstring{locate\+Path.\+sync(paths, \mbox{[}options\mbox{]})}{locatePath.sync(paths, [options])}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4057}
+Returns the first path that exists or {\ttfamily undefined} if none exists.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4058}{}\doxysubsubsection{\texorpdfstring{paths}{paths}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4058}
+Type\+: {\ttfamily Iterable\texorpdfstring{$<$}{<}string\texorpdfstring{$>$}{>}}
+
+Paths to check.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4059}{}\doxysubsubsection{\texorpdfstring{options}{options}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4059}
+Type\+: {\ttfamily Object}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4060}{}\doxyparagraph{\texorpdfstring{cwd}{cwd}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4060}
+Same as above.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4061}{}\doxyparagraph{\texorpdfstring{type}{type}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4061}
+Same as above.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4062}{}\doxyparagraph{\texorpdfstring{allow\+Symlinks}{allowSymlinks}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4062}
+Same as above.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4063}{}\doxysection{\texorpdfstring{Related}{Related}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4063}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sindresorhus/path-exists}{\texttt{ path-\/exists}} -\/ Check if a path exists
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4064}{}\doxysection{\texorpdfstring{License}{License}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_4d376e7ae5c7c2c471cc8d88f87f2ed8_autotoc_md4064}
+MIT © \href{https://sindresorhus.com}{\texttt{ Sindre Sorhus}} 

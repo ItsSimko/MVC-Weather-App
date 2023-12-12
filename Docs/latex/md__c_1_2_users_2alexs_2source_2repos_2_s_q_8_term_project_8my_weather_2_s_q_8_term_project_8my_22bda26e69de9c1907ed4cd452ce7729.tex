@@ -1,0 +1,39 @@
+\chapter{inflight}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_22bda26e69de9c1907ed4cd452ce7729}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_22bda26e69de9c1907ed4cd452ce7729}\index{inflight@{inflight}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_22bda26e69de9c1907ed4cd452ce7729_autotoc_md3192}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_22bda26e69de9c1907ed4cd452ce7729_autotoc_md3192}%
+ Add callbacks to requests in flight to avoid async duplication\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_22bda26e69de9c1907ed4cd452ce7729_autotoc_md3193}{}\doxysection{\texorpdfstring{USAGE}{USAGE}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_22bda26e69de9c1907ed4cd452ce7729_autotoc_md3193}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ inflight\ =\ require('inflight')}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ some\ request\ that\ does\ some\ stuff}
+\DoxyCodeLine{function\ req(key,\ callback)\ \{}
+\DoxyCodeLine{\ \ //\ key\ is\ any\ random\ string.\ \ like\ a\ url\ or\ filename\ or\ whatever.}
+\DoxyCodeLine{\ \ //}
+\DoxyCodeLine{\ \ //\ will\ return\ either\ a\ falsey\ value,\ indicating\ that\ the}
+\DoxyCodeLine{\ \ //\ request\ for\ this\ key\ is\ already\ in\ flight,\ or\ a\ new\ callback}
+\DoxyCodeLine{\ \ //\ which\ when\ called\ will\ call\ all\ callbacks\ passed\ to\ inflightk}
+\DoxyCodeLine{\ \ //\ with\ the\ same\ key}
+\DoxyCodeLine{\ \ callback\ =\ inflight(key,\ callback)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ //\ If\ we\ got\ a\ falsey\ value\ back,\ then\ there's\ already\ a\ req\ going}
+\DoxyCodeLine{\ \ if\ (!callback)\ return}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ //\ this\ is\ where\ you'd\ fetch\ the\ url\ or\ whatever}
+\DoxyCodeLine{\ \ //\ callback\ is\ also\ once()-\/ified,\ so\ it\ can\ safely\ be\ assigned}
+\DoxyCodeLine{\ \ //\ to\ multiple\ events\ etc.\ \ First\ call\ wins.}
+\DoxyCodeLine{\ \ setTimeout(function()\ \{}
+\DoxyCodeLine{\ \ \ \ callback(null,\ key)}
+\DoxyCodeLine{\ \ \},\ 100)}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ only\ assigns\ a\ single\ setTimeout}
+\DoxyCodeLine{//\ when\ it\ dings,\ all\ cbs\ get\ called}
+\DoxyCodeLine{req('foo',\ cb1)}
+\DoxyCodeLine{req('foo',\ cb2)}
+\DoxyCodeLine{req('foo',\ cb3)}
+\DoxyCodeLine{req('foo',\ cb4)}
+
+\end{DoxyCode}
+ 

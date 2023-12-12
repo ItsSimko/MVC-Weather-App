@@ -1,0 +1,68 @@
+\chapter{\texorpdfstring{$<$}{<}strong\texorpdfstring{$>$}{>}jwt-\/decode\texorpdfstring{$<$}{<}/strong\texorpdfstring{$>$}{>} is a small browser library that helps decoding JWTs token which are Base64\+Url encoded.}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84}\index{$<$strong$>$jwt-\/decode$<$/strong$>$ is a small browser library that helps decoding JWTs token which are Base64Url encoded.@{$<$strong$>$jwt-\/decode$<$/strong$>$ is a small browser library that helps decoding JWTs token which are Base64Url encoded.}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3502}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3502}%
+ {\bfseries{IMPORTANT\+:}} This library doesn\textquotesingle{}t validate the token, any well formed JWT can be decoded. You should validate the token in your server-\/side logic by using something like \href{https://github.com/auth0/express-jwt}{\texttt{ express-\/jwt}}, \href{https://github.com/stiang/koa-jwt}{\texttt{ koa-\/jwt}}, \href{https://github.com/michaelnoonan/Auth0-Owin-JwtBearerAuthentication}{\texttt{ Owin Bearer JWT}}, etc.
+
+\DoxyHorRuler{0}
+
+
+{\bfseries{Warning\+: When upgrading from version {\ttfamily 2} to {\ttfamily 3}, there\textquotesingle{}s a potentially breaking change}}
+
+If you\textquotesingle{}ve previously imported the library as `import \texorpdfstring{$\ast$}{*} as jwt\+\_\+decode from \textquotesingle{}jwt-\/decode'{\ttfamily , you\textquotesingle{}ll have to change your import to}import jwt\+\_\+decode from \textquotesingle{}jwt-\/decode\textquotesingle{};\`{}.
+
+\DoxyHorRuler{0}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3505}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3505}
+\href{https://app.fossa.com/projects/git\%2Bgithub.com\%2Fauth0\%2Fjwt-decode?ref=badge_shield}{\texttt{ }}
+
+Install with NPM or Yarn.
+
+Run {\ttfamily npm install jwt-\/decode} or {\ttfamily yarn add jwt-\/decode} to install the library.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3506}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3506}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ jwt\_decode\ from\ "{}jwt-\/decode"{};}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ token\ =\ "{}eyJ0eXAiO...///\ jwt\ token"{};}
+\DoxyCodeLine{var\ decoded\ =\ jwt\_decode(token);}
+\DoxyCodeLine{}
+\DoxyCodeLine{console.log(decoded);}
+\DoxyCodeLine{}
+\DoxyCodeLine{/*\ prints:}
+\DoxyCodeLine{\ *\ \{\ foo:\ "{}bar"{},}
+\DoxyCodeLine{\ *\ \ \ exp:\ 1393286893,}
+\DoxyCodeLine{\ *\ \ \ iat:\ 1393268893\ \ \}}
+\DoxyCodeLine{\ */}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ decode\ header\ by\ passing\ in\ options\ (useful\ for\ when\ you\ need\ \`{}kid`\ to\ verify\ a\ JWT):}
+\DoxyCodeLine{var\ decodedHeader\ =\ jwt\_decode(token,\ \{\ header:\ true\ \});}
+\DoxyCodeLine{console.log(decodedHeader);}
+\DoxyCodeLine{}
+\DoxyCodeLine{/*\ prints:}
+\DoxyCodeLine{\ *\ \{\ typ:\ "{}JWT"{},}
+\DoxyCodeLine{\ *\ \ \ alg:\ "{}HS256"{}\ \}}
+\DoxyCodeLine{\ */}
+
+\end{DoxyCode}
+
+
+{\bfseries{Note\+:}} A falsy or malformed token will throw an {\ttfamily Invalid\+Token\+Error} error.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3507}{}\doxysection{\texorpdfstring{Use as a Common\+JS package}{Use as a CommonJS package}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3507}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ jwt\_decode\ =\ require('jwt-\/decode');}
+\DoxyCodeLine{...}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3508}{}\doxysection{\texorpdfstring{Include with a script tag}{Include with a script tag}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3508}
+Copy the file {\ttfamily jwt-\/decode.\+js} from the {\ttfamily build/} folder to your project somewhere, then include like so\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<script\ src="{}jwt-\/decode.js"{}></script>}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3509}{}\doxysection{\texorpdfstring{Older versions}{Older versions}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3509}
+If you want to use the library trough Bower, an HTML import, use \href{https://github.com/auth0/jwt-decode/tree/v2.2.0}{\texttt{ version {\ttfamily v2.\+2.\+0}}}. It has the same functionality.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3510}{}\doxysection{\texorpdfstring{Develop}{Develop}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3510}
+Run {\ttfamily npm run dev}, this will fire up a browser and watch the {\ttfamily /lib} folder.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3511}{}\doxysection{\texorpdfstring{Issue Reporting}{Issue Reporting}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3511}
+If you have found a bug or if you have a feature request, please report them at this repository issues section. Please do not report security vulnerabilities on the public Git\+Hub issue tracker. The \href{https://auth0.com/whitehat}{\texttt{ Responsible Disclosure Program}} details the procedure for disclosing security issues.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3512}{}\doxysection{\texorpdfstring{Author}{Author}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3512}
+\href{https://auth0.com}{\texttt{ Auth0}}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3513}{}\doxysection{\texorpdfstring{License}{License}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3513}
+This project is licensed under the MIT license. See the \mbox{[}LICENSE\mbox{]}(LICENSE) file for more info.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3514}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://app.\+fossa.\+com/projects/git\%2\+Bgithub.\+com\%2\+Fauth0\%2\+Fjwt-\/decode?ref=badge\+\_\+large"{} $>$$<$img src="{}https\+://app.\+fossa.\+com/api/projects/git\%2\+Bgithub.\+com\%2\+Fauth0\%2\+Fjwt-\/decode.\+svg?type=large"{} alt="{}\+FOSSA Status"{}/$>$$<$/a$>$}{<a href="https://app.fossa.com/projects/git\%2Bgithub.com\%2Fauth0\%2Fjwt-decode?ref=badge\_large" ><img src="https://app.fossa.com/api/projects/git\%2Bgithub.com\%2Fauth0\%2Fjwt-decode.svg?type=large" alt="FOSSA Status"/></a>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_c97355c10bf675138d339b35441bff84_autotoc_md3514}

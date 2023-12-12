@@ -1,0 +1,124 @@
+\chapter{Upgrading Guide}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_acff34a0c33573b0e00b0947f9b2f007}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_acff34a0c33573b0e00b0947f9b2f007}\index{Upgrading Guide@{Upgrading Guide}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_acff34a0c33573b0e00b0947f9b2f007_autotoc_md232}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_acff34a0c33573b0e00b0947f9b2f007_autotoc_md232}%
+ See the \doxysectlink{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_83f58c776fa825f1f79ce2b52a1efcd7}{CHANGELOG.md}{0} for detailed information about what has changed between versions.
+
+This guide is useful to figure out what you need to do between breaking changes.
+
+As always, \href{https://github.com/FortAwesome/vue-fontawesome/issues/new}{\texttt{ submit issues}} that you run into with this guide or with these upgrades to us.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_acff34a0c33573b0e00b0947f9b2f007_autotoc_md233}{}\doxysection{\texorpdfstring{0.\+0.\+x to 0.\+1.\+0}{0.0.x to 0.1.0}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_acff34a0c33573b0e00b0947f9b2f007_autotoc_md233}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_acff34a0c33573b0e00b0947f9b2f007_autotoc_md234}{}\doxysubsection{\texorpdfstring{Renamed packages}{Renamed packages}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_acff34a0c33573b0e00b0947f9b2f007_autotoc_md234}
+The following packages have been renamed as part of 5.\+1.\+0 of Font Awesome.
+
+{\itshape All packages are in the \href{https://www.npmjs.com/search?q=scope:fortawesome&page=1&ranking=optimal}{\texttt{ @fortawesome NPM scope}}}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Old package(1)   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ New package    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Old package(1)   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ New package    }\\\cline{1-2}
+\endhead
+fontawesome   &fontawesome-\/svg-\/core    \\\cline{1-2}
+fontawesome-\/free-\/solid   &free-\/solid-\/svg-\/icons    \\\cline{1-2}
+fontawesome-\/free-\/regular   &free-\/regular-\/svg-\/icons    \\\cline{1-2}
+fontawesome-\/free-\/brands   &free-\/brands-\/svg-\/icons    \\\cline{1-2}
+fontawesome-\/pro-\/solid   &pro-\/solid-\/svg-\/icons    \\\cline{1-2}
+fontawesome-\/pro-\/regular   &pro-\/regular-\/svg-\/icons    \\\cline{1-2}
+fontawesome-\/pro-\/light   &pro-\/light-\/svg-\/icons   \\\cline{1-2}
+\end{longtabu}
+
+
+(1) Old packages have now been deprecated. They are still available but will only receive high priority patch release fixes.
+
+{\bfseries{You\textquotesingle{}ll need to update your package.\+json file with the renamed packages and new versions.}}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_acff34a0c33573b0e00b0947f9b2f007_autotoc_md235}{}\doxysubsection{\texorpdfstring{No more default imports}{No more default imports}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_acff34a0c33573b0e00b0947f9b2f007_autotoc_md235}
+Recently we spent a good deal of time supporting Type\+Script to enable us to create the Angular Font Awesome component. During that adventure we \href{https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html}{\texttt{ were}} \href{https://blog.neufund.org/why-we-have-banned-default-exports-and-you-should-do-the-same-d51fdc2cf2ad}{\texttt{ convinced}} that we were going to remove default exports from all of our components, libraries, and packages. This is complete with the umbrella release of {\ttfamily 5.\+1.\+0} of Font Awesome.
+
+What does that mean?
+
+\sout{Old way\+:}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ fontawesome\ from\ '@fortawesome/fontawesome'}
+\DoxyCodeLine{import\ solid\ from\ '@fortawesome/fontawesome-\/free-\/solid'}
+\DoxyCodeLine{import\ faTwitter\ from\ '@fortawesome/fontawesome-\/free-\/brands/faTwitter'}
+\DoxyCodeLine{import\ FontAwesomeIcon\ from\ '@fortawesome/vue-\/fontawesome'}
+\DoxyCodeLine{}
+\DoxyCodeLine{fontawesome.library.add(solid,\ faTwitter)}
+
+\end{DoxyCode}
+
+
+New way\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ \{\ library\ \}\ from\ '@fortawesome/fontawesome-\/svg-\/core'}
+\DoxyCodeLine{import\ \{\ fas\ \}\ from\ '@fortawesome/free-\/solid-\/svg-\/icons'}
+\DoxyCodeLine{import\ \{\ faTwitter\ \}\ from\ '@fortawesome/free-\/brands-\/svg-\/icons'}
+\DoxyCodeLine{import\ \{\ FontAwesomeIcon\ \}\ from\ '@fortawesome/vue-\/fontawesome'}
+\DoxyCodeLine{}
+\DoxyCodeLine{library.add(fas,\ faTwitter)}
+
+\end{DoxyCode}
+
+
+This is also a valid way to import icons that works if your tool does not support tree shaking\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ \{\ faTwitter\ \}\ from\ '@fortawesome/free-\/brands-\/svg-\/icons/faTwitter'}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_acff34a0c33573b0e00b0947f9b2f007_autotoc_md236}{}\doxysubsection{\texorpdfstring{Improved support for tree shaking}{Improved support for tree shaking}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_acff34a0c33573b0e00b0947f9b2f007_autotoc_md236}
+Tree shaking is now functional by default and no additional configuration is required to make it work.
+
+The {\ttfamily shakable.\+es.\+js} module has been removed and is no longer needed.
+
+If you\textquotesingle{}ve previously configured tree shaking by modifying your webpack or rollup you can safely remove these.
+
+{\bfseries{We recommend that you check your bundle size after upgrading an ensure that file sizes are as you would expect.}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ //\ ...}
+\DoxyCodeLine{\ \ resolve:\ \{}
+\DoxyCodeLine{\ \ \ \ alias:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ '@fortawesome/fontawesome-\/free-\/solid\$':\ '@fortawesome/fontawesome-\/free-\/solid/shakable.es.js'}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ alias\ =\ require('rollup-\/plugin-\/alias')}
+\DoxyCodeLine{}
+\DoxyCodeLine{rollup(\{}
+\DoxyCodeLine{\ \ //\ ...}
+\DoxyCodeLine{\ \ plugins:\ [}
+\DoxyCodeLine{\ \ \ \ alias(\{}
+\DoxyCodeLine{\ \ \ \ \ \ '@fortawesome/fontawesome-\/free-\/solid':\ 'node\_modules/@fortawesome/fontawesome-\/free-\/solid/shakable.es.js'}
+\DoxyCodeLine{\ \ \ \ \})}
+\DoxyCodeLine{\ \ ]}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_acff34a0c33573b0e00b0947f9b2f007_autotoc_md237}{}\doxysubsection{\texorpdfstring{Mixed modes with automatic replacement of $<$tt$>$$<$i$>$$<$/tt$>$ tags to $<$tt$>$$<$svg$>$$<$/tt$>$}{Mixed modes with automatic replacement of <tt><i></tt> tags to <tt><svg></tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_acff34a0c33573b0e00b0947f9b2f007_autotoc_md237}
+If you were previously relying on Font Awesome to replace any {\ttfamily \texorpdfstring{$<$}{<}i\texorpdfstring{$>$}{>}} tags in your page or app with {\ttfamily \texorpdfstring{$<$}{<}svg\texorpdfstring{$>$}{>}} you\textquotesingle{}ll need to explicitly control that now.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ \{\ dom\ \}\ from\ '@fortawesome/fontawesome-\/svg-\/core'}
+\DoxyCodeLine{}
+\DoxyCodeLine{dom.watch()\ //\ This\ will\ kick\ of\ the\ replacement\ of\ i\ tags\ and\ configure\ a\ MutationObserver}
+
+\end{DoxyCode}
+ 

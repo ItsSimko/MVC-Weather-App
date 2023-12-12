@@ -1,0 +1,56 @@
+\chapter{README}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e3791ef08fda25112accfd11d46f2149}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e3791ef08fda25112accfd11d46f2149}\index{README@{README}}
+\href{https://www.npmjs.com/package/@eslint/js}{\texttt{ }}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e3791ef08fda25112accfd11d46f2149_autotoc_md167}{}\doxysection{\texorpdfstring{ESLint Java\+Script Plugin}{ESLint JavaScript Plugin}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e3791ef08fda25112accfd11d46f2149_autotoc_md167}
+\href{https://eslint.org}{\texttt{ Website}} \texorpdfstring{$\vert$}{|} \href{https://eslint.org/docs/latest/use/configure}{\texttt{ Configure ESLint}} \texorpdfstring{$\vert$}{|} \href{https://eslint.org/docs/rules/}{\texttt{ Rules}} \texorpdfstring{$\vert$}{|} \href{https://eslint.org/docs/latest/contribute}{\texttt{ Contributing}} \texorpdfstring{$\vert$}{|} \href{https://twitter.com/geteslint}{\texttt{ Twitter}} \texorpdfstring{$\vert$}{|} \href{https://eslint.org/chat}{\texttt{ Chatroom}}
+
+The beginnings of separating out Java\+Script-\/specific functionality from ESLint.
+
+Right now, this plugin contains two configurations\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily recommended} -\/ enables the rules recommended by the ESLint team (the replacement for {\ttfamily "{}eslint\+:recommended"{}})
+\item {\ttfamily all} -\/ enables all ESLint rules (the replacement for {\ttfamily "{}eslint\+:all"{}})
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e3791ef08fda25112accfd11d46f2149_autotoc_md168}{}\doxysubsection{\texorpdfstring{Installation}{Installation}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e3791ef08fda25112accfd11d46f2149_autotoc_md168}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ @eslint/js\ -\/D}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e3791ef08fda25112accfd11d46f2149_autotoc_md169}{}\doxysubsection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e3791ef08fda25112accfd11d46f2149_autotoc_md169}
+Use in your {\ttfamily eslint.\+config.\+js} file anytime you want to extend one of the configs\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ js\ from\ "{}@eslint/js"{};}
+\DoxyCodeLine{}
+\DoxyCodeLine{export\ default\ [}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //\ apply\ recommended\ rules\ to\ JS\ files}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ files:\ ["{}**/*.js"{}],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ rules:\ js.configs.recommended.rules}
+\DoxyCodeLine{\ \ \ \ \},}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //\ apply\ recommended\ rules\ to\ JS\ files\ with\ an\ override}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ files:\ ["{}**/*.js"{}],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ rules:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ...js.configs.recommended.rules,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}no-\/unused-\/vars"{}:\ "{}warn"{}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\ \ \ \ \},}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //\ apply\ all\ rules\ to\ JS\ files}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ files:\ ["{}**/*.js"{}],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ rules:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ...js.configs.all.rules,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}no-\/unused-\/vars"{}:\ "{}warn"{}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{]}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e3791ef08fda25112accfd11d46f2149_autotoc_md170}{}\doxysubsection{\texorpdfstring{License}{License}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_e3791ef08fda25112accfd11d46f2149_autotoc_md170}
+MIT 

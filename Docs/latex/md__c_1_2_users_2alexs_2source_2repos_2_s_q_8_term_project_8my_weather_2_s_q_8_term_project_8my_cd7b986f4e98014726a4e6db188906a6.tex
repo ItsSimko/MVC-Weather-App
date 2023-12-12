@@ -1,0 +1,35 @@
+\chapter{slash \texorpdfstring{$<$}{<}a href="{}https\+://travis-\/ci.\+org/sindresorhus/slash"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://travis-\/ci.\+org/sindresorhus/slash.\+svg?branch=master"{} alt="{}\+Build Status"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_cd7b986f4e98014726a4e6db188906a6}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_cd7b986f4e98014726a4e6db188906a6}\index{slash $<$a href="{}https://travis-\/ci.org/sindresorhus/slash"{} $>$$<$img src="{}https://travis-\/ci.org/sindresorhus/slash.svg?branch=master"{} alt="{}Build Status"{}/$>$$<$/a$>$@{slash $<$a href=""https://travis-\/ci.org/sindresorhus/slash"" $>$$<$img src=""https://travis-\/ci.org/sindresorhus/slash.svg?branch=master"" alt=""Build Status""/$>$$<$/a$>$}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_cd7b986f4e98014726a4e6db188906a6_autotoc_md4440}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_cd7b986f4e98014726a4e6db188906a6_autotoc_md4440}%
+ \begin{quote}
+Convert Windows backslash paths to slash paths\+: {\ttfamily foo\textbackslash{}\textbackslash{}bar} ➔ {\ttfamily foo/bar} \end{quote}
+\href{http://superuser.com/a/176395/6877}{\texttt{ Forward-\/slash paths can be used in Windows}} as long as they\textquotesingle{}re not extended-\/length paths and don\textquotesingle{}t contain any non-\/ascii characters.
+
+This was created since the {\ttfamily path} methods in Node.\+js outputs {\ttfamily \textbackslash{}\textbackslash{}} paths on Windows.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_cd7b986f4e98014726a4e6db188906a6_autotoc_md4441}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_cd7b986f4e98014726a4e6db188906a6_autotoc_md4441}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ slash}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_cd7b986f4e98014726a4e6db188906a6_autotoc_md4442}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_cd7b986f4e98014726a4e6db188906a6_autotoc_md4442}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ path\ =\ require('path');}
+\DoxyCodeLine{const\ slash\ =\ require('slash');}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ string\ =\ path.join('foo',\ 'bar');}
+\DoxyCodeLine{//\ Unix\ \ \ \ =>\ foo/bar}
+\DoxyCodeLine{//\ Windows\ =>\ foo\(\backslash\)\(\backslash\)bar}
+\DoxyCodeLine{}
+\DoxyCodeLine{slash(string);}
+\DoxyCodeLine{//\ Unix\ \ \ \ =>\ foo/bar}
+\DoxyCodeLine{//\ Windows\ =>\ foo/bar}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_cd7b986f4e98014726a4e6db188906a6_autotoc_md4443}{}\doxysection{\texorpdfstring{API}{API}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_cd7b986f4e98014726a4e6db188906a6_autotoc_md4443}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_cd7b986f4e98014726a4e6db188906a6_autotoc_md4444}{}\doxysubsection{\texorpdfstring{slash(path)}{slash(path)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_cd7b986f4e98014726a4e6db188906a6_autotoc_md4444}
+Type\+: {\ttfamily string}
+
+Accepts a Windows backslash path and returns a path with forward slashes.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_cd7b986f4e98014726a4e6db188906a6_autotoc_md4445}{}\doxysection{\texorpdfstring{License}{License}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_cd7b986f4e98014726a4e6db188906a6_autotoc_md4445}
+MIT © \href{https://sindresorhus.com}{\texttt{ Sindre Sorhus}} 

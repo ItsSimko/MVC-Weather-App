@@ -1,0 +1,57 @@
+\chapter{buffer-\/equal-\/constant-\/time}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1431213f79592df585194c03a465affa}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1431213f79592df585194c03a465affa}\index{buffer-\/equal-\/constant-\/time@{buffer-\/equal-\/constant-\/time}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1431213f79592df585194c03a465affa_autotoc_md2163}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1431213f79592df585194c03a465affa_autotoc_md2163}%
+ Constant-\/time {\ttfamily Buffer} comparison for node.\+js. Should work with browserify too.
+
+\href{https://travis-ci.org/goinstant/buffer-equal-constant-time}{\texttt{ }}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ buffer-\/equal-\/constant-\/time}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1431213f79592df585194c03a465affa_autotoc_md2164}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1431213f79592df585194c03a465affa_autotoc_md2164}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ bufferEq\ =\ require('buffer-\/equal-\/constant-\/time');}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ a\ =\ new\ Buffer('asdf');}
+\DoxyCodeLine{var\ b\ =\ new\ Buffer('asdf');}
+\DoxyCodeLine{if\ (bufferEq(a,b))\ \{}
+\DoxyCodeLine{\ \ //\ the\ same!}
+\DoxyCodeLine{\}\ else\ \{}
+\DoxyCodeLine{\ \ //\ different\ in\ at\ least\ one\ byte!}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+If you\textquotesingle{}d like to install an {\ttfamily .equal()} method onto the node.\+js {\ttfamily Buffer} and {\ttfamily Slow\+Buffer} prototypes\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{require('buffer-\/equal-\/constant-\/time').install();}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ a\ =\ new\ Buffer('asdf');}
+\DoxyCodeLine{var\ b\ =\ new\ Buffer('asdf');}
+\DoxyCodeLine{if\ (a.equal(b))\ \{}
+\DoxyCodeLine{\ \ //\ the\ same!}
+\DoxyCodeLine{\}\ else\ \{}
+\DoxyCodeLine{\ \ //\ different\ in\ at\ least\ one\ byte!}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+To get rid of the installed {\ttfamily .equal()} method, call {\ttfamily .restore()}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{require('buffer-\/equal-\/constant-\/time').restore();}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1431213f79592df585194c03a465affa_autotoc_md2165}{}\doxysection{\texorpdfstring{Legal}{Legal}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_1431213f79592df585194c03a465affa_autotoc_md2165}
+\copyright{} 2013 Go\+Instant Inc., a salesforce.\+com company
+
+Licensed under the BSD 3-\/clause license. 

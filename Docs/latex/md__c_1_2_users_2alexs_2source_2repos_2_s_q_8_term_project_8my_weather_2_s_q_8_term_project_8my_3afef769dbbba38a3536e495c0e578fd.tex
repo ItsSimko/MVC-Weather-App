@@ -1,0 +1,99 @@
+\chapter{eslint-\/visitor-\/keys}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd}\index{eslint-\/visitor-\/keys@{eslint-\/visitor-\/keys}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2621}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2621}%
+ \href{https://www.npmjs.com/package/eslint-visitor-keys}{\texttt{ }} \href{http://www.npmtrends.com/eslint-visitor-keys}{\texttt{ }} \href{https://github.com/eslint/eslint-visitor-keys/actions}{\texttt{ }}
+
+Constants and utilities about visitor keys to traverse AST.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2622}{}\doxysection{\texorpdfstring{💿 Installation}{💿 Installation}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2622}
+Use \href{https://www.npmjs.com/}{\texttt{ npm}} to install.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ eslint-\/visitor-\/keys}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2623}{}\doxysubsection{\texorpdfstring{Requirements}{Requirements}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2623}
+
+\begin{DoxyItemize}
+\item \href{https://nodejs.org/}{\texttt{ Node.\+js}} {\ttfamily \texorpdfstring{$^\wedge$}{\string^}12.22.\+0}, {\ttfamily \texorpdfstring{$^\wedge$}{\string^}14.17.\+0}, or {\ttfamily \texorpdfstring{$>$}{>}=16.\+0.\+0}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2624}{}\doxysection{\texorpdfstring{📖 Usage}{📖 Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2624}
+To use in an ESM file\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ *\ as\ evk\ from\ "{}eslint-\/visitor-\/keys"{}}
+
+\end{DoxyCode}
+
+
+To use in a Common\+JS file\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ evk\ =\ require("{}eslint-\/visitor-\/keys"{})}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2625}{}\doxysubsection{\texorpdfstring{evk.\+KEYS}{evk.KEYS}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2625}
+\begin{quote}
+type\+: {\ttfamily \{ \mbox{[}type\+: string\mbox{]}\+: string\mbox{[}\mbox{]} \texorpdfstring{$\vert$}{|} undefined \}} \end{quote}
+Visitor keys. This keys are frozen.
+
+This is an object. Keys are the type of \href{https://github.com/estree/estree}{\texttt{ ESTree}} nodes. Their values are an array of property names which have child nodes.
+
+For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{console.log(evk.KEYS.AssignmentExpression)\ //\ →\ ["{}left"{},\ "{}right"{}]}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2626}{}\doxysubsection{\texorpdfstring{evk.\+get\+Keys(node)}{evk.getKeys(node)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2626}
+\begin{quote}
+type\+: {\ttfamily (node\+: object) =\texorpdfstring{$>$}{>} string\mbox{[}\mbox{]}} \end{quote}
+Get the visitor keys of a given AST node.
+
+This is similar to {\ttfamily Object.\+keys(node)} of ES Standard, but some keys are excluded\+: {\ttfamily parent}, {\ttfamily leading\+Comments}, {\ttfamily trailing\+Comments}, and names which start with {\ttfamily \+\_\+}.
+
+This will be used to traverse unknown nodes.
+
+For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ node\ =\ \{}
+\DoxyCodeLine{\ \ \ \ type:\ "{}AssignmentExpression"{},}
+\DoxyCodeLine{\ \ \ \ left:\ \{\ type:\ "{}Identifier"{},\ name:\ "{}foo"{}\ \},}
+\DoxyCodeLine{\ \ \ \ right:\ \{\ type:\ "{}Literal"{},\ value:\ 0\ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{console.log(evk.getKeys(node))\ //\ →\ ["{}type"{},\ "{}left"{},\ "{}right"{}]}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2627}{}\doxysubsection{\texorpdfstring{evk.\+union\+With(additional\+Keys)}{evk.unionWith(additionalKeys)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2627}
+\begin{quote}
+type\+: {\ttfamily (additional\+Keys\+: object) =\texorpdfstring{$>$}{>} \{ \mbox{[}type\+: string\mbox{]}\+: string\mbox{[}\mbox{]} \texorpdfstring{$\vert$}{|} undefined \}} \end{quote}
+Make the union set with {\ttfamily evk.\+KEYS} and the given keys.
+
+
+\begin{DoxyItemize}
+\item The order of keys is, {\ttfamily additional\+Keys} is at first, then {\ttfamily evk.\+KEYS} is concatenated after that.
+\item It removes duplicated keys as keeping the first one.
+\end{DoxyItemize}
+
+For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{console.log(evk.unionWith(\{}
+\DoxyCodeLine{\ \ \ \ MethodDefinition:\ ["{}decorators"{}]}
+\DoxyCodeLine{\}))\ //\ →\ \{\ ...,\ MethodDefinition:\ ["{}decorators"{},\ "{}key"{},\ "{}value"{}],\ ...\ \}}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2628}{}\doxysection{\texorpdfstring{📰 Change log}{📰 Change log}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2628}
+See \href{https://github.com/eslint/eslint-visitor-keys/releases}{\texttt{ Git\+Hub releases}}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2629}{}\doxysection{\texorpdfstring{🍻 Contributing}{🍻 Contributing}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2629}
+Welcome. See \href{https://eslint.org/docs/developer-guide/contributing/}{\texttt{ ESLint contribution guidelines}}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2630}{}\doxysubsection{\texorpdfstring{Development commands}{Development commands}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_3afef769dbbba38a3536e495c0e578fd_autotoc_md2630}
+
+\begin{DoxyItemize}
+\item {\ttfamily npm test} runs tests and measures code coverage.
+\item {\ttfamily npm run lint} checks source codes with ESLint.
+\item {\ttfamily npm run test\+:open-\/coverage} opens the code coverage report of the previous test with your default browser. 
+\end{DoxyItemize}

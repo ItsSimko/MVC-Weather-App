@@ -1,0 +1,174 @@
+\chapter{vue-\/template-\/compiler}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da}\index{vue-\/template-\/compiler@{vue-\/template-\/compiler}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5168}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5168}%
+ \begin{quote}
+This package is auto-\/generated. For pull requests please see \href{https://github.com/vuejs/vue/tree/dev/src/platforms/web/entry-compiler.js}{\texttt{ src/platforms/web/entry-\/compiler.\+js}}. \end{quote}
+This package can be used to pre-\/compile Vue 2.\+0 templates into render functions to avoid runtime-\/compilation overhead and CSP restrictions. In most cases you should be using it with \href{https://github.com/vuejs/vue-loader}{\texttt{ {\ttfamily vue-\/loader}}}, you will only need it separately if you are writing build tools with very specific needs.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5169}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5169}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ bash}
+\DoxyCodeLine{npm\ install\ vue-\/template-\/compiler}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ js}
+\DoxyCodeLine{const\ compiler\ =\ require('vue-\/template-\/compiler')}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5170}{}\doxysection{\texorpdfstring{API}{API}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5170}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5171}{}\doxysubsection{\texorpdfstring{compiler.\+compile(template, \mbox{[}options\mbox{]})}{compiler.compile(template, [options])}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5171}
+Compiles a template string and returns compiled Java\+Script code. The returned result is an object of the following format\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ js}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ ast:\ ?ASTElement,\ //\ parsed\ template\ elements\ to\ AST}
+\DoxyCodeLine{\ \ render:\ string,\ //\ main\ render\ function\ code}
+\DoxyCodeLine{\ \ staticRenderFns:\ Array<string>,\ //\ render\ code\ for\ static\ sub\ trees,\ if\ any}
+\DoxyCodeLine{\ \ errors:\ Array<string>\ //\ template\ syntax\ errors,\ if\ any}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Note the returned function code uses {\ttfamily with} and thus cannot be used in strict mode code.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5172}{}\doxysubsubsection{\texorpdfstring{Options}{Options}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5172}
+
+\begin{DoxyItemize}
+\item {\ttfamily output\+Source\+Range} {\itshape new in 2.\+6}
+\begin{DoxyItemize}
+\item Type\+: {\ttfamily boolean}
+\item Default\+: {\ttfamily false}
+\end{DoxyItemize}
+
+Set this to true will cause the {\ttfamily errors} returned in the compiled result become objects in the form of {\ttfamily \{ msg, start, end \}}. The {\ttfamily start} and {\ttfamily end} properties are numbers that mark the code range of the error source in the template. This can be passed on to the {\ttfamily compiler.\+generate\+Code\+Frame} API to generate a code frame for the error.
+\item {\ttfamily whitespace}
+\begin{DoxyItemize}
+\item Type\+: {\ttfamily string}
+\item Valid values\+: `\textquotesingle{}preserve' \texorpdfstring{$\vert$}{|} \textquotesingle{}condense\textquotesingle{}{\ttfamily }
+\item {\ttfamily Default\+:}\textquotesingle{}preserve\textquotesingle{}\`{}
+\end{DoxyItemize}
+
+The default value `\textquotesingle{}preserve'\`{} handles whitespaces as follows\+:
+\begin{DoxyItemize}
+\item A whitespace-\/only text node between element tags is condensed into a single space.
+\item All other whitespaces are preserved as-\/is.
+\end{DoxyItemize}
+
+If set to `\textquotesingle{}condense'\`{}\+:
+\begin{DoxyItemize}
+\item A whitespace-\/only text node between element tags is removed if it contains new lines. Otherwise, it is condensed into a single space.
+\item Consecutive whitespaces inside a non-\/whitespace-\/only text node are condensed into a single space.
+\end{DoxyItemize}
+
+Using condense mode will result in smaller compiled code size and slightly improved performance. However, it will produce minor visual layout differences compared to plain HTML in certain cases.
+
+{\bfseries{This option does not affect the {\ttfamily \texorpdfstring{$<$}{<}pre\texorpdfstring{$>$}{>}} tag.}}
+
+Example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{html}
+\DoxyCodeLine{\ <!-\/-\/\ source\ -\/-\/>}
+\DoxyCodeLine{\ <div>}
+\DoxyCodeLine{\ \ \ <span>}
+\DoxyCodeLine{\ \ \ \ \ foo}
+\DoxyCodeLine{\ \ \ </span>\ \ \ <span>bar</span>}
+\DoxyCodeLine{\ </div>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ <!-\/-\/\ whitespace:\ 'preserve'\ -\/-\/>}
+\DoxyCodeLine{\ <div>\ <span>}
+\DoxyCodeLine{\ \ \ foo}
+\DoxyCodeLine{\ \ \ </span>\ <span>bar</span>\ </div>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ <!-\/-\/\ whitespace:\ 'condense'\ -\/-\/>}
+\DoxyCodeLine{\ <div><span>\ foo\ </span>\ <span>bar</span></div>}
+
+\end{DoxyCode}
+
+\item {\ttfamily modules}
+
+It\textquotesingle{}s possible to hook into the compilation process to support custom template features. {\bfseries{However, beware that by injecting custom compile-\/time modules, your templates will not work with other build tools built on standard built-\/in modules, e.\+g {\ttfamily vue-\/loader} and {\ttfamily vueify}.}}
+
+An array of compiler modules. For details on compiler modules, refer to the {\ttfamily Module\+Options} type in \href{https://github.com/vuejs/vue/blob/dev/flow/compiler.js\#L47-L59}{\texttt{ flow declarations}} and the \href{https://github.com/vuejs/vue/tree/dev/src/platforms/web/compiler/modules}{\texttt{ built-\/in modules}}.
+\item {\ttfamily directives}
+
+An object where the key is the directive name and the value is a function that transforms an template AST node. For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{js}
+\DoxyCodeLine{\ compiler.compile('<div\ v-\/test></div>',\ \{}
+\DoxyCodeLine{\ \ \ directives:\ \{}
+\DoxyCodeLine{\ \ \ \ \ test\ (node,\ directiveMeta)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ //\ transform\ node\ based\ on\ directiveMeta}
+\DoxyCodeLine{\ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\ \})}
+
+\end{DoxyCode}
+
+
+By default, a compile-\/time directive will extract the directive and the directive will not be present at runtime. If you want the directive to also be handled by a runtime definition, return {\ttfamily true} in the transform function.
+
+Refer to the implementation of some \href{https://github.com/vuejs/vue/tree/dev/src/platforms/web/compiler/directives}{\texttt{ built-\/in compile-\/time directives}}.
+\item {\ttfamily preserve\+Whitespace} {\bfseries{Deprecated since 2.\+6}}
+\begin{DoxyItemize}
+\item Type\+: {\ttfamily boolean}
+\item Default\+: {\ttfamily true}
+\end{DoxyItemize}
+
+By default, the compiled render function preserves all whitespace characters between HTML tags. If set to {\ttfamily false}, whitespace between tags will be ignored. This can result in slightly better performance but may affect layout for inline elements.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5174}{}\doxysubsection{\texorpdfstring{compiler.\+compile\+To\+Functions(template)}{compiler.compileToFunctions(template)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5174}
+Similar to {\ttfamily compiler.\+compile}, but directly returns instantiated functions\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ js}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ render:\ Function,}
+\DoxyCodeLine{\ \ staticRenderFns:\ Array<Function>}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+This is only useful at runtime with pre-\/configured builds, so it doesn\textquotesingle{}t accept any compile-\/time options. In addition, this method uses {\ttfamily new Function()} so it is not CSP-\/compliant.
+
+\DoxyHorRuler{0}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5176}{}\doxysubsection{\texorpdfstring{compiler.\+ssr\+Compile(template, \mbox{[}options\mbox{]})}{compiler.ssrCompile(template, [options])}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5176}
+\begin{quote}
+2.\+4.\+0+ \end{quote}
+Same as {\ttfamily compiler.\+compile} but generates SSR-\/specific render function code by optimizing parts of the template into string concatenation in order to improve SSR performance.
+
+This is used by default in {\ttfamily vue-\/loader@\texorpdfstring{$>$}{>}=12} and can be disabled using the \href{https://vue-loader.vuejs.org/en/options.html\#optimizessr}{\texttt{ {\ttfamily optimize\+SSR}}} option.
+
+\DoxyHorRuler{0}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5178}{}\doxysubsection{\texorpdfstring{compiler.\+ssr\+Compile\+To\+Functions(template)}{compiler.ssrCompileToFunctions(template)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5178}
+\begin{quote}
+2.\+4.\+0+ \end{quote}
+Same as {\ttfamily compiler.\+compile\+To\+Function} but generates SSR-\/specific render function code by optimizing parts of the template into string concatenation in order to improve SSR performance.
+
+\DoxyHorRuler{0}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5180}{}\doxysubsection{\texorpdfstring{compiler.\+parse\+Component(file, \mbox{[}options\mbox{]})}{compiler.parseComponent(file, [options])}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5180}
+Parse a SFC (single-\/file component, or {\ttfamily \texorpdfstring{$\ast$}{*}.vue} file) into a descriptor (refer to the {\ttfamily SFCDescriptor} type in \href{https://github.com/vuejs/vue/blob/dev/flow/compiler.js}{\texttt{ flow declarations}}). This is used in SFC build tools like {\ttfamily vue-\/loader} and {\ttfamily vueify}.
+
+\DoxyHorRuler{0}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5182}{}\doxysubsection{\texorpdfstring{compiler.\+generate\+Code\+Frame(template, start, end)}{compiler.generateCodeFrame(template, start, end)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5182}
+Generate a code frame that highlights the part in {\ttfamily template} defined by {\ttfamily start} and {\ttfamily end}. Useful for error reporting in higher-\/level tooling.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5183}{}\doxysubsubsection{\texorpdfstring{Options}{Options}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5183}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5184}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$pad$<$/tt$>$}{<tt>pad</tt>}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_291239123dacc04b20eb1d57091099da_autotoc_md5184}
+{\ttfamily pad} is useful when you are piping the extracted content into other pre-\/processors, as you will get correct line numbers or character indices if there are any syntax errors.
+
+
+\begin{DoxyItemize}
+\item with {\ttfamily \{ pad\+: "{}line"{} \}}, the extracted content for each block will be prefixed with one newline for each line in the leading content from the original file to ensure that the line numbers align with the original file.
+\item with {\ttfamily \{ pad\+: "{}space"{} \}}, the extracted content for each block will be prefixed with one space for each character in the leading content from the original file to ensure that the character count remains the same as the original file. 
+\end{DoxyItemize}

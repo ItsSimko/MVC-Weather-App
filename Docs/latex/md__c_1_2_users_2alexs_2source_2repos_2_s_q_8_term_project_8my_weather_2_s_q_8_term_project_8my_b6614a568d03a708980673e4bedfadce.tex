@@ -1,0 +1,30 @@
+\chapter{@vue/runtime-\/core}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_b6614a568d03a708980673e4bedfadce}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_b6614a568d03a708980673e4bedfadce}\index{"@vue/runtime-\/core@{"@vue/runtime-\/core}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_b6614a568d03a708980673e4bedfadce_autotoc_md1656}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_b6614a568d03a708980673e4bedfadce_autotoc_md1656}%
+ \begin{quote}
+This package is published only for typing and building custom renderers. It is NOT meant to be used in applications. \end{quote}
+For full exposed APIs, see {\ttfamily src/index.\+ts}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_b6614a568d03a708980673e4bedfadce_autotoc_md1657}{}\doxysection{\texorpdfstring{Building a Custom Renderer}{Building a Custom Renderer}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_b6614a568d03a708980673e4bedfadce_autotoc_md1657}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ \{\ createRenderer\ \}\ from\ '@vue/runtime-\/core'}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ \{\ render,\ createApp\ \}\ =\ createRenderer(\{}
+\DoxyCodeLine{\ \ patchProp,}
+\DoxyCodeLine{\ \ insert,}
+\DoxyCodeLine{\ \ remove,}
+\DoxyCodeLine{\ \ createElement}
+\DoxyCodeLine{\ \ //\ ...}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ \`{}render`\ is\ the\ low-\/level\ API}
+\DoxyCodeLine{//\ \`{}createApp`\ returns\ an\ app\ instance\ with\ configurable\ context\ shared}
+\DoxyCodeLine{//\ by\ the\ entire\ app\ tree.}
+\DoxyCodeLine{export\ \{\ render,\ createApp\ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{export\ *\ from\ '@vue/runtime-\/core'}
+
+\end{DoxyCode}
+
+
+See {\ttfamily @vue/runtime-\/dom} for how a DOM-\/targeting renderer is implemented. 

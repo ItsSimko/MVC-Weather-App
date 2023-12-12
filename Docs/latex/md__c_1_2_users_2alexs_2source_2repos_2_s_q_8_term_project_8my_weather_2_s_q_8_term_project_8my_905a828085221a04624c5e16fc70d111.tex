@@ -1,0 +1,20 @@
+\chapter{@vue/reactivity}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_905a828085221a04624c5e16fc70d111}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_905a828085221a04624c5e16fc70d111}\index{"@vue/reactivity@{"@vue/reactivity}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_905a828085221a04624c5e16fc70d111_autotoc_md1652}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_905a828085221a04624c5e16fc70d111_autotoc_md1652}%
+ \hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_905a828085221a04624c5e16fc70d111_autotoc_md1653}{}\doxysection{\texorpdfstring{Usage Note}{Usage Note}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_905a828085221a04624c5e16fc70d111_autotoc_md1653}
+This package is inlined into Global \& Browser ESM builds of user-\/facing renderers (e.\+g. {\ttfamily @vue/runtime-\/dom}), but also published as a package that can be used standalone. The standalone build should not be used alongside a pre-\/bundled build of a user-\/facing renderer, as they will have different internal storage for reactivity connections. A user-\/facing renderer should re-\/export all APIs from this package.
+
+For full exposed APIs, see {\ttfamily src/index.\+ts}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_905a828085221a04624c5e16fc70d111_autotoc_md1654}{}\doxysection{\texorpdfstring{Credits}{Credits}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_905a828085221a04624c5e16fc70d111_autotoc_md1654}
+The implementation of this module is inspired by the following prior art in the Java\+Script ecosystem\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://docs.meteor.com/api/tracker.html}{\texttt{ Meteor Tracker}}
+\item \href{https://github.com/nx-js/observer-util}{\texttt{ nx-\/js/observer-\/util}}
+\item \href{https://github.com/salesforce/observable-membrane}{\texttt{ salesforce/observable-\/membrane}}
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_905a828085221a04624c5e16fc70d111_autotoc_md1655}{}\doxysection{\texorpdfstring{Caveats}{Caveats}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_905a828085221a04624c5e16fc70d111_autotoc_md1655}
+
+\begin{DoxyItemize}
+\item Built-\/in objects are not observed except for {\ttfamily Array}, {\ttfamily Map}, {\ttfamily Weak\+Map}, {\ttfamily Set} and {\ttfamily Weak\+Set}. 
+\end{DoxyItemize}

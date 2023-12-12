@@ -1,0 +1,69 @@
+\chapter{p-\/limit}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550}{}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550}\index{p-\/limit@{p-\/limit}}
+\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3861}%
+\Hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3861}%
+ \begin{quote}
+Run multiple promise-\/returning \& async functions with limited concurrency \end{quote}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3862}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3862}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ p-\/limit}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3863}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3863}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ pLimit\ =\ require('p-\/limit');}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ limit\ =\ pLimit(1);}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ input\ =\ [}
+\DoxyCodeLine{\ \ \ \ limit(()\ =>\ fetchSomething('foo')),}
+\DoxyCodeLine{\ \ \ \ limit(()\ =>\ fetchSomething('bar')),}
+\DoxyCodeLine{\ \ \ \ limit(()\ =>\ doSomething())}
+\DoxyCodeLine{];}
+\DoxyCodeLine{}
+\DoxyCodeLine{(async\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ //\ Only\ one\ promise\ is\ run\ at\ once}
+\DoxyCodeLine{\ \ \ \ const\ result\ =\ await\ Promise.all(input);}
+\DoxyCodeLine{\ \ \ \ console.log(result);}
+\DoxyCodeLine{\})();}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3864}{}\doxysection{\texorpdfstring{API}{API}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3864}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3865}{}\doxysubsection{\texorpdfstring{p\+Limit(concurrency)}{pLimit(concurrency)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3865}
+Returns a {\ttfamily limit} function.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3866}{}\doxysubsubsection{\texorpdfstring{concurrency}{concurrency}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3866}
+Type\+: {\ttfamily number}\textbackslash{} Minimum\+: {\ttfamily 1}\textbackslash{} Default\+: {\ttfamily Infinity}
+
+Concurrency limit.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3867}{}\doxysubsection{\texorpdfstring{limit(fn, ...\+args)}{limit(fn, ...args)}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3867}
+Returns the promise returned by calling {\ttfamily fn(...\+args)}.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3868}{}\doxysubsubsection{\texorpdfstring{fn}{fn}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3868}
+Type\+: {\ttfamily Function}
+
+Promise-\/returning/async function.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3869}{}\doxysubsubsection{\texorpdfstring{args}{args}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3869}
+Any arguments to pass through to {\ttfamily fn}.
+
+Support for passing arguments on to the {\ttfamily fn} is provided in order to be able to avoid creating unnecessary closures. You probably don\textquotesingle{}t need this optimization unless you\textquotesingle{}re pushing a {\itshape lot} of functions.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3870}{}\doxysubsection{\texorpdfstring{limit.\+active\+Count}{limit.activeCount}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3870}
+The number of promises that are currently running.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3871}{}\doxysubsection{\texorpdfstring{limit.\+pending\+Count}{limit.pendingCount}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3871}
+The number of promises that are waiting to run (i.\+e. their internal {\ttfamily fn} was not called yet).\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3872}{}\doxysubsection{\texorpdfstring{limit.\+clear\+Queue()}{limit.clearQueue()}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3872}
+Discard pending promises that are waiting to run.
+
+This might be useful if you want to teardown the queue at the end of your program\textquotesingle{}s lifecycle or discard any function calls referencing an intermediary state of your app.
+
+Note\+: This does not cancel promises that are already running.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3873}{}\doxysection{\texorpdfstring{FAQ}{FAQ}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3873}
+\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3874}{}\doxysubsection{\texorpdfstring{How is this different from the $<$a href="{}https\+://github.\+com/sindresorhus/p-\/queue"{} $>$$<$tt$>$p-\/queue$<$/tt$>$$<$/a$>$ package?}{How is this different from the <a href="https://github.com/sindresorhus/p-queue" ><tt>p-queue</tt></a> package?}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3874}
+This package is only about limiting the number of concurrent executions, while {\ttfamily p-\/queue} is a fully featured queue implementation with lots of different options, introspection, and ability to pause the queue.\hypertarget{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3875}{}\doxysection{\texorpdfstring{Related}{Related}}\label{md__c_1_2_users_2alexs_2source_2repos_2_s_q_8_term_project_8my_weather_2_s_q_8_term_project_8my_621701ad12ea31d17a974bf84ff26550_autotoc_md3875}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sindresorhus/p-queue}{\texttt{ p-\/queue}} -\/ Promise queue with concurrency control
+\item \href{https://github.com/sindresorhus/p-throttle}{\texttt{ p-\/throttle}} -\/ Throttle promise-\/returning \& async functions
+\item \href{https://github.com/sindresorhus/p-debounce}{\texttt{ p-\/debounce}} -\/ Debounce promise-\/returning \& async functions
+\item \href{https://github.com/sindresorhus/p-all}{\texttt{ p-\/all}} -\/ Run promise-\/returning \& async functions concurrently with optional limited concurrency
+\item \href{https://github.com/sindresorhus/promise-fun}{\texttt{ More…}}
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+
+
+ {\bfseries{ \href{https://tidelift.com/subscription/pkg/npm-p-limit?utm_source=npm-p-limit&utm_medium=referral&utm_campaign=readme}{\texttt{ Get professional support for this package with a Tidelift subscription}} }} ~\newline
+ \textsubscript{ Tidelift helps make open source sustainable for maintainers while giving companies~\newline
+assurances about security, maintenance, and licensing for their dependencies. }  
