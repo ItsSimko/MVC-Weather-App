@@ -1,5 +1,7 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
+using System.Xml.Xsl;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using SQ.TermProject.myWeather.Models;
 using SQ.TermProject.myWeather.Models.WeatherData;
@@ -12,16 +14,21 @@ namespace SQ.TermProject.myWeather.Services
     public class OpenWeatherService
     {
         private readonly HttpClient _httpClient;
-        private readonly string _apiKey = "d381eff9c0d0b6a2cc5418ab4a09e2e6";
+        private readonly string _apiKey;
 
         private static Dictionary<string, Tuple<WeatherForecast, DateTime>> cache = new Dictionary<string, Tuple<WeatherForecast, DateTime>>();
         private TimeSpan expirationTime = TimeSpan.FromSeconds(600); // Expiration time (e.g., 60 seconds)
+        private IConfiguration configuration;
 
         /// <summary>
         /// Initializes a new instance of the OpenWeatherService class with an HttpClient.
         /// </summary>
         public OpenWeatherService()
         {
+            configuration = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .Build();
+            _apiKey = configuration["OpenWeatherApiKey"]
             _httpClient = new HttpClient();
         }
 

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Pomelo.EntityFrameworkCore.MySql;
 using SQ.TermProject.myWeather.Models;
 using SQ.TermProject.myWeather.Services;
@@ -8,14 +9,20 @@ namespace SQ.TermProject.myWeather.Database
 {
     public class AppDbContext : DbContext
     {
-        public AppDbContext() { }
-
         public DbSet<User>? Users {get; set;}
         public DbSet<UserRole> UserRoles {get; set;}
+        private IConfiguration configuration;
+
+        public AppDbContext()
+        {
+            configuration = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .Build();
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            const string connectionString = "server=myweatherapp.mysql.database.azure.com;port=3306;database=WeatherApp;user=app;password=root;";
+            string connectionString = configuration["DbConnection"];
 
             optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
         }
