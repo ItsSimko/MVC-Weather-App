@@ -1,20 +1,20 @@
 ﻿<template>
   <v-container>
-    <v-form @submit.prevent="login" v-if="this.isLoading == false && this.success == false">
+    <v-form @submit.prevent="login" v-if="isLoading == false && success == false">
       <v-text-field v-model="username" label="Username" outlined></v-text-field>
       <v-text-field v-model="password" label="Password" type="password" outlined></v-text-field>
       <v-btn color="primary" type="submit">Login</v-btn>
       <v-btn color="primary" @click="goToReg" class="mx-1">Register</v-btn>
-      <v-alert v-if="this.badCredential===true" type="error"
+      <v-alert v-if="badCredential===true" type="error"
                color="error"
                title="Login Failed"
                text="Invalid username or password." class="my-2"></v-alert>
-      <v-alert v-if="this.servErr===true" type="error"
+      <v-alert v-if="servErr===true" type="error"
                color="error"
                title="Server Error Occurred"
                text="Try again in a few moments" class="my-2"></v-alert>
     </v-form>
-    <LoadingSpinner v-if="this.isLoading == true"></LoadingSpinner>
+    <LoadingSpinner v-if="isLoading == true"></LoadingSpinner>
 
     <v-alert v-if="success == true"
              type="success"
