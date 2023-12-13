@@ -12,25 +12,23 @@
 
   function changeMetric() {
     if (currentMetric === 'C') {
-      weatherData.data.current.temp = cToF(weatherData.data.current.temp)
-      weatherData.data.current.feels_like = cToF(weatherData.data.current.feels_like)
+      weatherData.data.current!.temp = cToF(weatherData.data.current!.temp)
+      weatherData.data.current!.feels_like = cToF(weatherData.data.current!.feels_like)
       currentMetric = "F"
     }
     else if (currentMetric === 'F') {
       currentMetric = "C"
-      weatherData.data.current.temp = fToC(weatherData.data.current.temp)
-      weatherData.data.current.feels_like = fToC(weatherData.data.current.feels_like)
+      weatherData.data.current!.temp = fToC(weatherData.data.current!.temp)
+      weatherData.data.current!.feels_like = fToC(weatherData.data.current!.feels_like)
 
     }
-
-    console.log(currentMetric)
   }
 
-  function cToF(val: typeof weather.data.main.temp) {
+  function cToF(val: number) {
     return (val * (9 / 5)) + 32
   }
 
-  function fToC(val: typeof weather.data.main.temp) {
+  function fToC(val: number) {
     return (val - 32) * (5 / 9)
   }
 </script>
@@ -64,7 +62,7 @@
             </v-col>
           </v-row>
           <v-row>
-            <p class="text-h1 mx-auto my-2">{{weather.data.current.temp.toFixed(2)}}° {{currentMetric}}</p>
+            <p class="text-h1 mx-auto my-2">{{weather.data.current.temp!.toFixed(2)}}° {{currentMetric}}</p>
           </v-row>
         </v-sheet>
       </v-col>
@@ -83,7 +81,7 @@
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p class="text-h4"> {{ weather.data.current.feels_like.toFixed(2) }}°{{currentMetric}}</p>
+                      <p class="text-h4"> {{ weather.data.current.feels_like!.toFixed(2) }}°{{currentMetric}}</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
@@ -101,7 +99,7 @@
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p class="text-h4"> {{ weather.data.current.humidity }}%</p>
+                      <p class="text-h4"> {{ weather.data.current!.humidity }}%</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
@@ -119,7 +117,7 @@
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p class="text-h4"> {{ weather.data.current.clouds}}%</p>
+                      <p class="text-h4"> {{ weather.data.current!.clouds}}%</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
@@ -133,14 +131,14 @@
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p> Rain:</p>
+                      <p> Wind Speed:</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p class="text-h4"> {{ weather.data.current.rain || 0}} mm/h</p>
+                      <p class="text-h4"> {{ weather.data.current!.wind_speed }} km/h</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
@@ -158,7 +156,7 @@
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p class="text-h4"> {{ weather.data.current.visibility }} m</p>
+                      <p class="text-h4"> {{ weather.data.current!.visibility }} m</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
@@ -176,7 +174,7 @@
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p class="text-h4"> {{ weather.data.current.pressure }} hPa</p>
+                      <p class="text-h4"> {{ weather.data.current!.pressure }} hPa</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
