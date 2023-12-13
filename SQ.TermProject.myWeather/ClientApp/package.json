@@ -14,6 +14,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/vue-fontawesome": "^3.0.5",
     "@mdi/font": "7.0.96",
+    "axios": "^1.6.2",
     "dotenv": "^16.3.1",
     "jsonwebtoken": "^9.0.2",
     "jwt-decode": "^3.1.2",

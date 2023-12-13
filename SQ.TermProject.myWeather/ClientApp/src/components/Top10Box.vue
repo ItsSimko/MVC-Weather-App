@@ -12,7 +12,7 @@
     </thead>
     <tbody>
       <tr v-for="item in listData" :key="item.location" class="text-h5">
-        <td>{{ item.Location }}</td>
+        <td>{{ item.location }}</td>
         <td>{{ item.SearchCount }}</td>
       </tr>
     </tbody>
@@ -28,10 +28,16 @@
 <script lang="ts">
   import axios from 'axios';
 
+  declare interface listData {
+    location: string,
+    SearchCount: string
+  }
+
+
   export default {
     data() {
       return {
-        listData: { location: "t", SearchCount: "t" },
+        listData: [] as listData[],
         loading: false
       };
     },
