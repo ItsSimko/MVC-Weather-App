@@ -13,8 +13,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 //https://medium.com/@vndpal/how-to-implement-jwt-token-authentication-in-net-core-6-ab7f48470f5c most auth code refrenced from here
 //Jwt configuration starts here
-var jwtIssuer = builder.Configuration.GetSection("Jwt:Issuer").Get<string>();
-var jwtKey = builder.Configuration.GetSection("Jwt:Key").Get<string>();
+var jwtIssuer = ConfigService.Configuration["Jwt:Issuer"];
+var jwtKey = ConfigService.Configuration["Jwt:Key"];
 
 builder.Services.AddAuthentication(options =>
  {

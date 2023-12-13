@@ -11,8 +11,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="item in listData" :key="item.location" class="text-h5">
-        <td>{{ item.location }}</td>
+      <tr v-for="item in listData" :key="item.Location" class="text-h5">
+        <td>{{ item.Location }}</td>
         <td>{{ item.SearchCount }}</td>
       </tr>
     </tbody>
@@ -29,7 +29,7 @@
   import axios from 'axios';
 
   declare interface listData {
-    location: string,
+    Location: string,
     SearchCount: string
   }
 

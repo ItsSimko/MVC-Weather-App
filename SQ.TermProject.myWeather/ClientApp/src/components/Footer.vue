@@ -3,10 +3,10 @@
     <v-footer class="bg-transparent m-0">
       <v-row class="bg-transparent">
         <v-col cols="4" class="bg-transparent">
-          <a href="https://github.com/ItsSimko/MVC-Weather-App" target="_blank" class="white--text">GitHub</a>
+          <v-btn variant="plain" @click="window.location.href = 'https://github.com/ItsSimko/MVC-Weather-App'">Github</v-btn>
         </v-col>
-        <v-col cols="4" class="text-center bg-transparent">
-          <span>&copy; 2023 myWeather</span>
+        <v-col cols="4" class="text-center bg-transparent" >
+          <v-btn variant="plain" @click="$router.push('/')">&copy; 2023 myWeather</v-btn>
         </v-col>
         <v-col cols="4" class="text-right bg-transparent">
           <v-dialog width="500" v-if="token == null && $route.path != '/login' && $route.path != '/register'">

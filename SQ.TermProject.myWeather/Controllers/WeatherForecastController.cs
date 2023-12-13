@@ -18,7 +18,7 @@ namespace SQ.TermProject.myWeather.Controllers
         }
 
         [HttpPost("GetWeather")]
-        public async Task<IActionResult> GetWeatherByCity(string cityName)
+        public async Task<IActionResult> GetWeatherByCity(string cityName, string country, double lon, double lat)
         {
             try
             {
