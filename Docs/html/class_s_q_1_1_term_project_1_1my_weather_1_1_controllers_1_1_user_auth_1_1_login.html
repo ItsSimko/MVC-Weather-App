@@ -95,6 +95,9 @@ $(document).ready(function(){initNavTree('class_s_q_1_1_term_project_1_1my_weath
   <div class="headertitle"><div class="title">SQ.TermProject.myWeather.Controllers.UserAuth.Login Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controller responsible for user login and authentication.  
+ <a href="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for SQ.TermProject.myWeather.Controllers.UserAuth.Login:</div>
 <div class="dyncontent">
@@ -105,13 +108,18 @@ Inheritance diagram for SQ.TermProject.myWeather.Controllers.UserAuth.Login:</di
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5df311085a967a412ed05bcdcce1dc30" id="r_a5df311085a967a412ed05bcdcce1dc30"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login.html#a5df311085a967a412ed05bcdcce1dc30">Login</a> ()</td></tr>
+<tr class="memdesc:a5df311085a967a412ed05bcdcce1dc30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the Login controller.  <br /></td></tr>
 <tr class="separator:a5df311085a967a412ed05bcdcce1dc30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee6ddc3cb87cdc30facf6e5431b0093e" id="r_aee6ddc3cb87cdc30facf6e5431b0093e"><td class="memItemLeft" align="right" valign="top">IActionResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login.html#aee6ddc3cb87cdc30facf6e5431b0093e">LoginUser</a> (string username, string password)</td></tr>
+<tr class="memdesc:aee6ddc3cb87cdc30facf6e5431b0093e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates user credentials and generates a JWT token upon successful authentication.  <br /></td></tr>
 <tr class="separator:aee6ddc3cb87cdc30facf6e5431b0093e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add67392ee05a125d5b5e3f1afa183df1" id="r_add67392ee05a125d5b5e3f1afa183df1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login.html#add67392ee05a125d5b5e3f1afa183df1">GenerateAuthToken</a> (string username, string role)</td></tr>
+<tr class="memdesc:add67392ee05a125d5b5e3f1afa183df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a JWT token based on the provided username and role.  <br /></td></tr>
 <tr class="separator:add67392ee05a125d5b5e3f1afa183df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Controller responsible for user login and authentication. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5df311085a967a412ed05bcdcce1dc30" name="a5df311085a967a412ed05bcdcce1dc30"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5df311085a967a412ed05bcdcce1dc30">&#9670;&#160;</a></span>Login()</h2>
 
@@ -126,6 +134,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Initializes a new instance of the Login controller. </p>
 
 </div>
 </div>
@@ -156,6 +166,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Generates a JWT token based on the provided username and role. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">username</td><td>The username of the user.</td></tr>
+    <tr><td class="paramname">role</td><td>The role of the user.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The generated JWT token.</dd></dl>
+
 </div>
 </div>
 <a id="aee6ddc3cb87cdc30facf6e5431b0093e" name="aee6ddc3cb87cdc30facf6e5431b0093e"></a>
@@ -183,6 +203,16 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Validates user credentials and generates a JWT token upon successful authentication. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">username</td><td>The username of the user.</td></tr>
+    <tr><td class="paramname">password</td><td>The password of the user.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An IActionResult containing a success message and JWT token if authentication succeeds; otherwise, returns an error message. </dd></dl>
 
 </div>
 </div>

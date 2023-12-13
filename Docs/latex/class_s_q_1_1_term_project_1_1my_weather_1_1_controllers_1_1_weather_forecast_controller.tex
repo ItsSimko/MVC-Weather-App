@@ -1,5 +1,10 @@
 \doxysection{SQ.\+Term\+Project.\+my\+Weather.\+Controllers.\+Weather\+Forecast\+Controller Class Reference}
 \hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller}{}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller}\index{SQ.TermProject.myWeather.Controllers.WeatherForecastController@{SQ.TermProject.myWeather.Controllers.WeatherForecastController}}
+
+
+Controller for retrieving weather forecast information.  
+
+
 Inheritance diagram for SQ.\+Term\+Project.\+my\+Weather.\+Controllers.\+Weather\+Forecast\+Controller\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,10 +15,13 @@ Inheritance diagram for SQ.\+Term\+Project.\+my\+Weather.\+Controllers.\+Weather
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller_ac8dd1503da64a592cc4cabc2e0553419}{Weather\+Forecast\+Controller}} (ILogger$<$ \mbox{\hyperlink{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller}{Weather\+Forecast\+Controller}} $>$ logger)
-\item 
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the Weather\+Forecast\+Controller class. \end{DoxyCompactList}\item 
 async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller_ad814a446e0845521373ac80a6802ac8b}{Get\+Weather\+By\+City}} (string city\+Name, string country, double lon, double lat)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retrieves weather data based on the provided city and country or coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Controller for retrieving weather forecast information. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller_ac8dd1503da64a592cc4cabc2e0553419}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller_ac8dd1503da64a592cc4cabc2e0553419} 
@@ -24,6 +32,15 @@ async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_s_q_1_1_term_project_1_
 
 
 
+Initializes a new instance of the Weather\+Forecast\+Controller class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logger} & The logger to use for logging.\\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller_ad814a446e0845521373ac80a6802ac8b}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller_ad814a446e0845521373ac80a6802ac8b} 
 \index{SQ.TermProject.myWeather.Controllers.WeatherForecastController@{SQ.TermProject.myWeather.Controllers.WeatherForecastController}!GetWeatherByCity@{GetWeatherByCity}}
@@ -31,6 +48,24 @@ async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_s_q_1_1_term_project_1_
 \doxysubsubsection{\texorpdfstring{GetWeatherByCity()}{GetWeatherByCity()}}
 {\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ SQ.\+Term\+Project.\+my\+Weather.\+Controllers.\+Weather\+Forecast\+Controller.\+Get\+Weather\+By\+City (\begin{DoxyParamCaption}\item[{string}]{city\+Name,  }\item[{string}]{country,  }\item[{double}]{lon,  }\item[{double}]{lat }\end{DoxyParamCaption})}
 
+
+
+Retrieves weather data based on the provided city and country or coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em city\+Name} & The name of the city.\\
+\hline
+{\em country} & The country code.\\
+\hline
+{\em lon} & Longitude coordinate.\\
+\hline
+{\em lat} & Latitude coordinate.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The IAction\+Result containing weather data if successful; otherwise, an error response.
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

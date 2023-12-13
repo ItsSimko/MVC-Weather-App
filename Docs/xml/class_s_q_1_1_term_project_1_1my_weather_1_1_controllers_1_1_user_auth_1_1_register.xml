@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Register.cs" line="15" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Register.cs" bodystart="15" bodyend="-1"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Register.cs" line="18" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Register.cs" bodystart="18" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -40,15 +40,45 @@
           <declname>email</declname>
         </param>
         <briefdescription>
+<para>Registers a new user. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The username of the new user.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The password of the new user.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>email</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The email of the new user.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The IActionResult indicating success or failure of registration.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Register.cs" line="18" column="30" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Register.cs" bodystart="18" bodyend="55"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Register.cs" line="28" column="30" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Register.cs" bodystart="28" bodyend="65"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Controller for user registration/authentication. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -74,7 +104,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Register.cs" line="13" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Register.cs" bodystart="14" bodyend="58"/>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Register.cs" line="16" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Register.cs" bodystart="17" bodyend="68"/>
     <listofallmembers>
       <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_register_1aedf6e8e05a3046d43a3ac2a6323fc421" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Controllers::UserAuth::Register</scope><name>RegisterUser</name></member>
       <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_register_1a1d9879f99c3cf102a1e2347d8ecfdc04" prot="private" virt="non-virtual"><scope>SQ::TermProject::myWeather::Controllers::UserAuth::Register</scope><name>userService</name></member>

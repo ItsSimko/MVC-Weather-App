@@ -95,6 +95,9 @@ $(document).ready(function(){initNavTree('class_s_q_1_1_term_project_1_1my_weath
   <div class="headertitle"><div class="title">SQ.TermProject.myWeather.Controllers.WeatherForecastController Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controller for retrieving weather forecast information.  
+ <a href="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for SQ.TermProject.myWeather.Controllers.WeatherForecastController:</div>
 <div class="dyncontent">
@@ -105,11 +108,15 @@ Inheritance diagram for SQ.TermProject.myWeather.Controllers.WeatherForecastCont
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac8dd1503da64a592cc4cabc2e0553419" id="r_ac8dd1503da64a592cc4cabc2e0553419"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller.html#ac8dd1503da64a592cc4cabc2e0553419">WeatherForecastController</a> (ILogger&lt; <a class="el" href="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller.html">WeatherForecastController</a> &gt; logger)</td></tr>
+<tr class="memdesc:ac8dd1503da64a592cc4cabc2e0553419"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the WeatherForecastController class.  <br /></td></tr>
 <tr class="separator:ac8dd1503da64a592cc4cabc2e0553419"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad814a446e0845521373ac80a6802ac8b" id="r_ad814a446e0845521373ac80a6802ac8b"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller.html#ad814a446e0845521373ac80a6802ac8b">GetWeatherByCity</a> (string cityName, string country, double lon, double lat)</td></tr>
+<tr class="memdesc:ad814a446e0845521373ac80a6802ac8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves weather data based on the provided city and country or coordinates.  <br /></td></tr>
 <tr class="separator:ad814a446e0845521373ac80a6802ac8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Controller for retrieving weather forecast information. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac8dd1503da64a592cc4cabc2e0553419" name="ac8dd1503da64a592cc4cabc2e0553419"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac8dd1503da64a592cc4cabc2e0553419">&#9670;&#160;</a></span>WeatherForecastController()</h2>
 
@@ -125,6 +132,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Initializes a new instance of the WeatherForecastController class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logger</td><td>The logger to use for logging.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -166,6 +181,18 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retrieves weather data based on the provided city and country or coordinates. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cityName</td><td>The name of the city.</td></tr>
+    <tr><td class="paramname">country</td><td>The country code.</td></tr>
+    <tr><td class="paramname">lon</td><td>Longitude coordinate.</td></tr>
+    <tr><td class="paramname">lat</td><td>Latitude coordinate.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The IActionResult containing weather data if successful; otherwise, an error response.</dd></dl>
 
 </div>
 </div>
