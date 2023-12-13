@@ -22,8 +22,8 @@ namespace SQ.TermProject.myWeather.Controllers
         {
             try
             {
-                var weatherData = await _weatherService.GetWeatherDataAsync(cityName);
-                stats.UpdateStat(cityName);
+                var weatherData = await _weatherService.GetWeatherDataAsync(cityName, country, lon, lat);
+                stats.UpdateStat($"{cityName}, {country}");
                 return Ok(weatherData);
             }
             catch (Exception e)

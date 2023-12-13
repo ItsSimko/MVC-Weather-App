@@ -33,7 +33,7 @@ namespace SQ.TermProject.myWeather.Services
         /// </summary>
         /// <param name="cityName">The name of the city for which weather data is requested.</param>
         /// <returns>A task representing the asynchronous operation that yields weather forecast data.</returns>
-        public async Task<WeatherForecast> GetWeatherDataAsync(string cityName)
+        public async Task<WeatherForecast> GetWeatherDataAsync(string cityName, string country, double lon, double lat)
         {
             try
             {
@@ -50,7 +50,7 @@ namespace SQ.TermProject.myWeather.Services
                     }
                 }
 
-                string url = $"https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + _apiKey + "&units=metric";
+                string url = $"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude=hourly,daily&appid={_apiKey}";
                 var response = await _httpClient.GetAsync(url);
                 response.EnsureSuccessStatusCode();
 
