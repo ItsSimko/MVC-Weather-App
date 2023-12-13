@@ -15,7 +15,7 @@ namespace SQ.TermProject.myWeather.Services
                 entity.SearchCount++;
                 DbContext.SaveChanges();
             }
-            //else
+            else
             {
                 var newSearchStat = new SearchStat
                 {
