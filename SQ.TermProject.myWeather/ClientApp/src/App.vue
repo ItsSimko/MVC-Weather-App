@@ -6,10 +6,11 @@
 
 <template>
   <v-app>
+
     <v-main>
-        <Header />
-          <RouterView />
-        <Footer />
+      <Header />
+      <RouterView />
+      <Footer />
     </v-main>
   </v-app>
 </template>

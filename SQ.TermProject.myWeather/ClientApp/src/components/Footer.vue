@@ -11,7 +11,8 @@
         <v-col cols="4" class="text-right bg-transparent">
           <v-dialog width="500" v-if="token == null && $route.path != '/login' && $route.path != '/register'">
             <template v-slot:activator="{ props }">
-              <v-btn class="mx-1" color="primary" v-bind="props" text="Login"> </v-btn>
+              <v-btn class="mx-1" color="primary" v-bind="props" @click="loginHandler" text="Login"> </v-btn>
+              <v-btn class="mx-1" color="primary" text="Register" @click="$router.push('/register')"> </v-btn>
             </template>
 
             <template v-slot:default="{ isActive }">
@@ -23,35 +24,14 @@
                   <v-toolbar-items>
                     <v-btn icon
                            dark
-                           @click="dialog = false">
+                           @click="isActive.value = false">
                       <v-icon>mdi-close</v-icon>
                     </v-btn>
                   </v-toolbar-items>
                 </v-toolbar>
                 <v-card-text>
-                  <Login @loginHappened="loginHandler"/>
+                  <Login @loginHappened="loginHandler" />
                 </v-card-text>
-              </v-card>
-            </template>
-          </v-dialog>
-
-          <v-dialog width="500" v-if="token == null && $route.path != '/login' && $route.path != '/register'">
-            <template v-slot:activator="{ props }">
-              <v-btn class="mx-1" color="secondary" v-bind="props" text="Register"> </v-btn>
-            </template>
-
-            <template v-slot:default="{ isActive }">
-              <v-card title="Dialog">
-                <v-card-text>
-                  
-                </v-card-text>
-
-                <v-card-actions>
-                  <v-spacer></v-spacer>
-
-                  <v-btn text="Close Dialog"
-                         @click="isActive.value = false"></v-btn>
-                </v-card-actions>
               </v-card>
             </template>
           </v-dialog>
@@ -61,7 +41,7 @@
             <v-btn text="Settings" color="secondary" @click="goToSettings" class="mx-1"></v-btn>
             <v-btn text="Sign Out" color="secondary" @click="signOut" class="mx-1"></v-btn>
           </p>
-          
+
         </v-col>
       </v-row>
     </v-footer>
@@ -81,6 +61,7 @@
 
 <script setup lang="ts">
   import Login from '../components/LoginBox.vue'
+  import Register from '../components/RegisterBox.vue'
 
 </script>
 

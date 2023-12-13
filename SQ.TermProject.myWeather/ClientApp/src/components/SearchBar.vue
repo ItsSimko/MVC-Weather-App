@@ -6,7 +6,7 @@
   let options = ref(cities);
 
   function getItemText(item: {name: string, country: string}) {
-        return item.name + ', ' + item.country;
+        return item.name + ", " + item.country;
   }
 
 
@@ -45,6 +45,10 @@
     ///
   }
 
+  declare interface LocData {
+    name?: string, country?: string, lat?: number, lng?: number,
+  }
+
 </script>
 
 <script lang="ts">
@@ -62,8 +66,11 @@ function updateWeatherData() {
   });
 }
   export const myLoc = reactive({
-    myLocationT: { name: "", country: "", lat: "", lng: "", },
+    myLocationT: { } as LocData,
   })
+
+  myLoc.myLocationT.name = "";
+  myLoc.myLocationT.country = "";
 
   export const weatherData = reactive({
     data: {} as WeatherData

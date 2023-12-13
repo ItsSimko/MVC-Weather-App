@@ -23,6 +23,7 @@
                     :rules="confirmPasswordRules"></v-text-field>
 
       <v-btn type="submit" color="primary">Register</v-btn>
+      <v-btn @click="$router.push('/login')" color="primary" class="mx-1">Login</v-btn>
     </v-form>
 
     <v-alert v-if="this.err === true" type="error"
