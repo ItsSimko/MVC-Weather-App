@@ -95,6 +95,9 @@ $(document).ready(function(){initNavTree('class_s_q_1_1_term_project_1_1my_weath
   <div class="headertitle"><div class="title">SQ.TermProject.myWeather.Controllers.SettingsController Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controller for managing application settings.  
+ <a href="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_settings_controller.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for SQ.TermProject.myWeather.Controllers.SettingsController:</div>
 <div class="dyncontent">
@@ -105,15 +108,21 @@ Inheritance diagram for SQ.TermProject.myWeather.Controllers.SettingsController:
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aae70a8554bf4e88bfcf28d3fa59ee153" id="r_aae70a8554bf4e88bfcf28d3fa59ee153"><td class="memItemLeft" align="right" valign="top">ActionResult&lt; IEnumerable&lt; object &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_settings_controller.html#aae70a8554bf4e88bfcf28d3fa59ee153">GetUsers</a> (string username)</td></tr>
+<tr class="memdesc:aae70a8554bf4e88bfcf28d3fa59ee153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves users based on the provided username.  <br /></td></tr>
 <tr class="separator:aae70a8554bf4e88bfcf28d3fa59ee153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef93021f898516eb3affd91fcd332fa8" id="r_aef93021f898516eb3affd91fcd332fa8"><td class="memItemLeft" align="right" valign="top">ActionResult&lt; IEnumerable&lt; object &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_settings_controller.html#aef93021f898516eb3affd91fcd332fa8">SetUser</a> (string username, string role)</td></tr>
+<tr class="memdesc:aef93021f898516eb3affd91fcd332fa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the role for a specific user.  <br /></td></tr>
 <tr class="separator:aef93021f898516eb3affd91fcd332fa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d7ca7cec394be9c4d6631f40af4e288" id="r_a2d7ca7cec394be9c4d6631f40af4e288"><td class="memItemLeft" align="right" valign="top">ActionResult&lt; IEnumerable&lt; object &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_settings_controller.html#a2d7ca7cec394be9c4d6631f40af4e288">GetHeader</a> ()</td></tr>
+<tr class="memdesc:a2d7ca7cec394be9c4d6631f40af4e288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the site header information.  <br /></td></tr>
 <tr class="separator:a2d7ca7cec394be9c4d6631f40af4e288"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2214b10ad30a092ddec7dbb7b5ae7bf7" id="r_a2214b10ad30a092ddec7dbb7b5ae7bf7"><td class="memItemLeft" align="right" valign="top">ActionResult&lt; IEnumerable&lt; object &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_settings_controller.html#a2214b10ad30a092ddec7dbb7b5ae7bf7">SetHeader</a> (string msg, string type)</td></tr>
+<tr class="memdesc:a2214b10ad30a092ddec7dbb7b5ae7bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the site header message and type.  <br /></td></tr>
 <tr class="separator:a2214b10ad30a092ddec7dbb7b5ae7bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Controller for managing application settings. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a2d7ca7cec394be9c4d6631f40af4e288" name="a2d7ca7cec394be9c4d6631f40af4e288"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d7ca7cec394be9c4d6631f40af4e288">&#9670;&#160;</a></span>GetHeader()</h2>
 
@@ -128,6 +137,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retrieves the site header information. </p>
+<dl class="section return"><dt>Returns</dt><dd>The ActionResult containing the site header if successful; otherwise, an error response.</dd></dl>
 
 </div>
 </div>
@@ -146,6 +158,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retrieves users based on the provided username. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">username</td><td>The username to search for.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The ActionResult containing user details with roles if successful; otherwise, an error response.</dd></dl>
 
 </div>
 </div>
@@ -175,6 +196,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets the site header message and type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>The message to set in the site header.</td></tr>
+    <tr><td class="paramname">type</td><td>The type of the message (e.g., informational, warning).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The ActionResult indicating success or failure.</dd></dl>
+
 </div>
 </div>
 <a id="aef93021f898516eb3affd91fcd332fa8" name="aef93021f898516eb3affd91fcd332fa8"></a>
@@ -202,6 +233,16 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Sets the role for a specific user. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">username</td><td>The username of the user.</td></tr>
+    <tr><td class="paramname">role</td><td>The role to assign to the user.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The ActionResult indicating success or failure.</dd></dl>
 
 </div>
 </div>

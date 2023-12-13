@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" line="16" column="40" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" bodystart="16" bodyend="-1"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" line="19" column="40" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" bodystart="19" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" line="17" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" bodystart="17" bodyend="-1"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" line="20" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" bodystart="20" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -44,12 +44,13 @@
         <name>Login</name>
         <qualifiedname>SQ.TermProject.myWeather.Controllers.UserAuth.Login.Login</qualifiedname>
         <briefdescription>
+<para>Initializes a new instance of the Login controller. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" line="19" column="16" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" bodystart="19" bodyend="23"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" line="25" column="16" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" bodystart="25" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_1aee6ddc3cb87cdc30facf6e5431b0093e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>IActionResult</type>
@@ -66,12 +67,33 @@
           <declname>password</declname>
         </param>
         <briefdescription>
+<para>Validates user credentials and generates a JWT token upon successful authentication. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The username of the user.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The password of the user.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An IActionResult containing a success message and JWT token if authentication succeeds; otherwise, returns an error message. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" line="26" column="30" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" bodystart="26" bodyend="43"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" line="41" column="30" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" bodystart="41" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_1add67392ee05a125d5b5e3f1afa183df1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>string</type>
@@ -88,15 +110,37 @@
           <declname>role</declname>
         </param>
         <briefdescription>
+<para>Generates a JWT token based on the provided username and role. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The username of the user.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>role</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The role of the user.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The generated JWT token.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" line="48" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" bodystart="48" bodyend="69"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" line="68" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" bodystart="68" bodyend="89"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Controller responsible for user login and authentication. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -122,7 +166,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" line="14" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" bodystart="15" bodyend="71"/>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" line="17" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs" bodystart="18" bodyend="91"/>
     <listofallmembers>
       <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_1add67392ee05a125d5b5e3f1afa183df1" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Controllers::UserAuth::Login</scope><name>GenerateAuthToken</name></member>
       <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_1a5df311085a967a412ed05bcdcce1dc30" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Controllers::UserAuth::Login</scope><name>Login</name></member>

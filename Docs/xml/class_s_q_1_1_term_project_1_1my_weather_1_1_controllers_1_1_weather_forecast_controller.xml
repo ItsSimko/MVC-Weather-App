@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" line="14" column="45" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" bodystart="14" bodyend="-1"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" line="17" column="45" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller_1a3804e5afb4a82ac32f410f514964f25c" prot="private" static="no" mutable="no">
         <type><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service" kindref="compound">StatisticService</ref></type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" line="15" column="34" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" bodystart="15" bodyend="-1"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" line="18" column="34" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller_1aa72928f7799308b5c58929a31c85d719" prot="private" static="no" mutable="no">
         <type>readonly ILogger&lt; <ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller" kindref="compound">WeatherForecastController</ref> &gt;</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" line="16" column="34" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" bodystart="16" bodyend="-1"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" line="19" column="34" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" bodystart="19" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -59,12 +59,23 @@
           <declname>logger</declname>
         </param>
         <briefdescription>
+<para>Initializes a new instance of the WeatherForecastController class. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>logger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The logger to use for logging.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" line="18" column="16" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" bodystart="18" bodyend="23"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" line="25" column="16" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" bodystart="25" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller_1ad814a446e0845521373ac80a6802ac8b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>async Task&lt; IActionResult &gt;</type>
@@ -89,15 +100,53 @@
           <declname>lat</declname>
         </param>
         <briefdescription>
+<para>Retrieves weather data based on the provided city and country or coordinates. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cityName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the city.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>country</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The country code.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Longitude coordinate.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Latitude coordinate.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The IActionResult containing weather data if successful; otherwise, an error response.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" line="26" column="27" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" bodystart="26" bodyend="45"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" line="41" column="27" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" bodystart="41" bodyend="60"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Controller for retrieving weather forecast information. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -123,7 +172,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" line="12" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" bodystart="13" bodyend="47"/>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" line="15" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/WeatherForecastController.cs" bodystart="16" bodyend="62"/>
     <listofallmembers>
       <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller_1aa72928f7799308b5c58929a31c85d719" prot="private" virt="non-virtual"><scope>SQ::TermProject::myWeather::Controllers::WeatherForecastController</scope><name>_logger</name></member>
       <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller_1ac76fea3f31d52ecccfc226cfeba30149" prot="private" virt="non-virtual"><scope>SQ::TermProject::myWeather::Controllers::WeatherForecastController</scope><name>_weatherService</name></member>

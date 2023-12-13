@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" line="11" column="34" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" bodystart="11" bodyend="-1"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" line="14" column="34" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" bodystart="14" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -27,12 +27,13 @@
         <name>StasticsController</name>
         <qualifiedname>SQ.TermProject.myWeather.Controllers.StasticsController.StasticsController</qualifiedname>
         <briefdescription>
+<para>Initializes a new instance of the StasticsController class. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" line="13" column="16" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" bodystart="13" bodyend="16"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" line="19" column="16" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" bodystart="19" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller_1ae348e09ba20288efaa37debeb9f69d6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>async Task&lt; IActionResult &gt;</type>
@@ -41,15 +42,20 @@
         <name>GetTop10</name>
         <qualifiedname>SQ.TermProject.myWeather.Controllers.StasticsController.GetTop10</qualifiedname>
         <briefdescription>
+<para>Retrieves the top 10 search statistics. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The IActionResult containing the top 10 search statistics if successful; otherwise, an error response.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" line="19" column="27" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" bodystart="19" bodyend="31"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" line="29" column="27" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" bodystart="29" bodyend="41"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Controller for retrieving statistics related to weather searches. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -75,7 +81,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" line="9" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" bodystart="10" bodyend="32"/>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" line="12" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" bodystart="13" bodyend="42"/>
     <listofallmembers>
       <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller_1ae348e09ba20288efaa37debeb9f69d6e" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Controllers::StasticsController</scope><name>GetTop10</name></member>
       <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller_1a326a01205f6534a0835df1fe8c5487d5" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Controllers::StasticsController</scope><name>StasticsController</name></member>

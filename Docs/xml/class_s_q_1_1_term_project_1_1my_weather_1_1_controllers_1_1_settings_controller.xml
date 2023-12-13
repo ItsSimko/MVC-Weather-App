@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" line="14" column="33" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" bodystart="14" bodyend="-1"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" line="16" column="33" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" bodystart="16" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -32,12 +32,25 @@
           <declname>username</declname>
         </param>
         <briefdescription>
+<para>Retrieves users based on the provided username. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The username to search for.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The ActionResult containing user details with roles if successful; otherwise, an error response.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" line="18" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" bodystart="18" bodyend="37"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" line="25" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" bodystart="25" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_settings_controller_1aef93021f898516eb3affd91fcd332fa8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>ActionResult&lt; IEnumerable&lt; object &gt; &gt;</type>
@@ -54,12 +67,33 @@
           <declname>role</declname>
         </param>
         <briefdescription>
+<para>Sets the role for a specific user. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The username of the user.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>role</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The role to assign to the user.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The ActionResult indicating success or failure.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" line="40" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" bodystart="40" bodyend="47"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" line="53" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" bodystart="53" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_settings_controller_1a2d7ca7cec394be9c4d6631f40af4e288" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>ActionResult&lt; IEnumerable&lt; object &gt; &gt;</type>
@@ -68,12 +102,16 @@
         <name>GetHeader</name>
         <qualifiedname>SQ.TermProject.myWeather.Controllers.SettingsController.GetHeader</qualifiedname>
         <briefdescription>
+<para>Retrieves the site header information. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The ActionResult containing the site header if successful; otherwise, an error response.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" line="50" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" bodystart="50" bodyend="53"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" line="67" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" bodystart="67" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_settings_controller_1a2214b10ad30a092ddec7dbb7b5ae7bf7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>ActionResult&lt; IEnumerable&lt; object &gt; &gt;</type>
@@ -90,15 +128,37 @@
           <declname>type</declname>
         </param>
         <briefdescription>
+<para>Sets the site header message and type. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to set in the site header.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the message (e.g., informational, warning).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The ActionResult indicating success or failure.</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" line="57" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" bodystart="57" bodyend="61"/>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" line="80" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" bodystart="80" bodyend="84"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Controller for managing application settings. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -124,7 +184,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" line="12" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" bodystart="13" bodyend="62"/>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" line="14" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/SettingsController.cs" bodystart="15" bodyend="85"/>
     <listofallmembers>
       <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_settings_controller_1a2d7ca7cec394be9c4d6631f40af4e288" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Controllers::SettingsController</scope><name>GetHeader</name></member>
       <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_settings_controller_1aae70a8554bf4e88bfcf28d3fa59ee153" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Controllers::SettingsController</scope><name>GetUsers</name></member>

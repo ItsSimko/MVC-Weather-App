@@ -11,7 +11,6 @@
     <v-card-text>
       <v-window v-model="tab" class="">
         <v-window-item value="one" class="">
-          <ClientSettings></ClientSettings>
         </v-window-item>
 
         <v-window-item value="two" class="">
@@ -34,7 +33,6 @@
 <script setup lang="ts">
 
   import SearchBar from '../components/SearchBar.vue';
-  import ClientSettings from '../components/UserSettings.vue';
   import SuperAdminSettings from '../components/SuperAdminSetttings.vue'
   import AdminSettings from '../components/AdminSettings.vue'
   import StatBox from '../components/Top10Box.vue'
