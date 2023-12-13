@@ -10,7 +10,7 @@ namespace SQ.TermProject.myWeather.Models
         public int pressure { get; set; }
         public int humidity { get; set; }
         public double dew_point { get; set; }
-        public int uvi { get; set; }
+        public double uvi { get; set; }
         public int clouds { get; set; }
         public int visibility { get; set; }
         public double wind_speed { get; set; }

@@ -90,7 +90,20 @@
     country: string, name: string, lat: string, lng: string,
   }
 
+  export const myLoc = reactive({
+    myLocationT: {} as LocData,
+  })
+
+  export const weatherData = reactive({
+    data: {} as WeatherData
+  });
+
+  watch(() => myLoc.myLocationT, () => {
+    updateWeatherData()
+  })
+
   function updateWeatherData() {
+    console.log(myLoc.myLocationT)
     axios.post("/api/WeatherForecast/GetWeather?cityName=" + myLoc.myLocationT.name + "&country=" + myLoc.myLocationT.country + "&lon=" + myLoc.myLocationT.lng + "&lat=" + myLoc.myLocationT.lat).then(resp => {
       if (resp.status == 200) {
         weatherData.data = resp.data;
@@ -99,24 +112,12 @@
       else {
         weatherData.data.found = false;
       }
+      console.log(resp)
 
+    }).catch((r) => {
+      console.log(r)
     });
   }
-
-  export const myLoc = reactive({
-    myLocationT: { } as LocData,
-  })
-
-  myLoc.myLocationT.name = "";
-  myLoc.myLocationT.country = "";
-
-  export const weatherData = reactive({
-    data: {} as WeatherData
-  });
-
-  watch(() => myLoc.myLocationT, (newValue, oldValue) => {
-    updateWeatherData()
-  })
 
 </script>
 
