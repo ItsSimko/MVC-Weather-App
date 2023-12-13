@@ -9,7 +9,7 @@
           <span>&copy; 2023 myWeather</span>
         </v-col>
         <v-col cols="4" class="text-right bg-transparent">
-          <v-dialog width="500" v-if="token == null && this.$route.path != '/login' && this.$route.path != '/register'">
+          <v-dialog width="500" v-if="token == null && $route.path != '/login' && $route.path != '/register'">
             <template v-slot:activator="{ props }">
               <v-btn class="mx-1" color="primary" v-bind="props" text="Login"> </v-btn>
             </template>
@@ -35,7 +35,7 @@
             </template>
           </v-dialog>
 
-          <v-dialog width="500" v-if="token == null && this.$route.path != '/login' && this.$route.path != '/register'">
+          <v-dialog width="500" v-if="token == null && $route.path != '/login' && $route.path != '/register'">
             <template v-slot:activator="{ props }">
               <v-btn class="mx-1" color="secondary" v-bind="props" text="Register"> </v-btn>
             </template>
@@ -81,8 +81,6 @@
 
 <script setup lang="ts">
   import Login from '../components/LoginBox.vue'
-  import Icon from '@mdi/react';
-  import { mdiLogout } from '@mdi/js';
 
 </script>
 
@@ -91,7 +89,8 @@
     data() {
       return {
         token: localStorage.getItem('token'),
-        userName: localStorage.getItem('userName')
+        userName: localStorage.getItem('userName'),
+        dialog: false
       }
     },
     components: {

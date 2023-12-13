@@ -11,7 +11,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="item in listData" :key="item.id" class="text-h5">
+      <tr v-for="item in listData" :key="item.location" class="text-h5">
         <td>{{ item.Location }}</td>
         <td>{{ item.SearchCount }}</td>
       </tr>
@@ -31,7 +31,7 @@
   export default {
     data() {
       return {
-        listData: [],
+        listData: { location: "t", SearchCount: "t" },
         loading: false
       };
     },

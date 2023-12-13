@@ -26,11 +26,11 @@
     }
   }
 
-  function cToF(val: weatherData) {
+  function cToF(val: typeof weather.data.main.temp) {
     return (val * (9 / 5)) + 32
   }
 
-  function fToC(val: weatherData) {
+  function fToC(val: typeof weather.data.main.temp) {
     return (val - 32) * (5 / 9)
   }
 </script>
