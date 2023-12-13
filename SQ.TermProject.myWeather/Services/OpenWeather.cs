@@ -54,7 +54,7 @@ namespace SQ.TermProject.myWeather.Services
                 var response = await _httpClient.GetAsync(url);
                 response.EnsureSuccessStatusCode();
 
-                var content = await response.Content.ReadFromJsonAsync<WeatherForecast>();
+                var content = await response.Content.ReadFromJsonAsync<dynamic>();
 
                 // Update the cache with the new data
                 cache[cityName] = Tuple.Create(content, DateTime.Now);

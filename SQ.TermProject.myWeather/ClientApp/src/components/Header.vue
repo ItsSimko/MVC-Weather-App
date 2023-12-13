@@ -31,11 +31,11 @@ export default {
   },
   methods: {
     setHeaderColor(msg) {
-      if (msg === 'good') {
+      if (msg === 'success') {
         this.headerColor = 'green';
       } else if (msg === 'warning') {
         this.headerColor = 'yellow';
-      } else if (msg === 'alert') {
+      } else if (msg === 'error') {
         this.headerColor = 'red';
       } else {
         this.headerColor = ''; 

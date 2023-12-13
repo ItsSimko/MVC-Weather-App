@@ -9,12 +9,12 @@ namespace SQ.TermProject.myWeather.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class SettingsController : ControllerBase
     {
         private SettingsService settingsService = new SettingsService();
 
         [HttpPost("GetUsers")]
+        [Authorize(Roles = "Admin,Superadmin")]
         public ActionResult<IEnumerable<object>> GetUsers(string username)
         {
 
@@ -40,15 +40,23 @@ namespace SQ.TermProject.myWeather.Controllers
         public ActionResult<IEnumerable<object>> SetUser(string username, string role)
         {
 
-            var entityToUpdate = settingsService.DbContext.Users.FirstOrDefault(e => e.UserName == username);
-            var roleDb = settingsService.DbContext.UserRoles.Where(e => e.Name == role).Select(e => e.Id).FirstOrDefault();
-
-            entityToUpdate.RoleId = roleDb;
-
-            settingsService.DbContext.SaveChanges();
+            settingsService.UpdateUser(username, role);
 
 
             return Ok();
+        }
+
+        [HttpPost("GetHeader")]
+        public ActionResult<IEnumerable<object>> GetHeader()
+        {
+            return Ok(settingsService.GetSiteHeader());
+        }
+
+        [HttpPost("SetHeader")]
+        [Authorize(Roles = "Admin,Superadmin")]
+        public ActionResult<IEnumerable<object>> GetHeader(string username, string role)
+        {
+            return Ok(settingsService.GetSiteHeader());
         }
     }
 }
