@@ -9,12 +9,12 @@ namespace SQ.TermProject.myWeather.Controllers
     public class WeatherForecastController : ControllerBase
     {
         private readonly OpenWeatherService _weatherService;
-        //private readonly ILogger<WeatherForecastController> _logger;
+        private StatisticService stats;
 
         public WeatherForecastController()
         {
+            stats = new StatisticService();
             _weatherService = new OpenWeatherService();
-            //_logger = logger;
         }
 
         [HttpPost("GetWeather")]
@@ -23,6 +23,7 @@ namespace SQ.TermProject.myWeather.Controllers
             try
             {
                 var weatherData = await _weatherService.GetWeatherDataAsync(cityName);
+                stats.UpdateStat(cityName);
                 return Ok(weatherData);
             }
             catch (Exception e)

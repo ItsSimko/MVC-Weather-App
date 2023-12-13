@@ -1,17 +1,11 @@
 ﻿<template>
-  <v-card>
+  <v-card class="bg-window">
     <v-card-title>Update Username</v-card-title>
     <v-card-text>
       <v-text-field v-model="newUsername" label="New Username"></v-text-field>
       <v-btn @click="updateUsername">Update</v-btn>
     </v-card-text>
-  </v-card>
-  <v-card>
-    <v-card-title>Set Favorite Location</v-card-title>
-    <v-card-text>
-      <v-btn @click="setFavoriteLocation">Set</v-btn>
-    </v-card-text>
-  </v-card>
+  </v-card> 
 </template>
 
 <script lang="ts">
@@ -29,3 +23,9 @@
     }
   };
 </script>
+
+<style>
+  .bg-window {
+    background-color: #E0E0E0 !important;
+  }
+</style>

@@ -5,7 +5,7 @@ namespace SQ.TermProject.myWeather.Services
 {
     public class StatisticService : BaseService
     {
-        public void UpdateSiteHeader(string city)
+        public void UpdateStat(string city)
         {
             // Retrieve the entity from the database
             var entity = DbContext.SearchStat.FirstOrDefault(e => e.Location == city);
@@ -25,6 +25,33 @@ namespace SQ.TermProject.myWeather.Services
 
                 // Add the new instance to the DbContext
                 DbContext.SearchStat.Add(newSearchStat);
+                DbContext.SaveChanges();
+            }
+        }
+
+
+        public int GetStat(string city)
+        {
+            var result = DbContext.SearchStat.FirstOrDefault(e => e.Location == city);
+            return result.SearchCount;
+        }
+
+        public List<SearchStat> GetTop10SearchStats()
+        {
+            try
+            {
+                var top10SearchStats = DbContext.SearchStat
+                    .OrderByDescending(s => s.SearchCount)
+                    .Take(10)
+                    .ToList();
+
+                return top10SearchStats;
+
+            }
+            catch (Exception ex)
+            {
+                LoggerService.Log($"Exception Thrown: {ex.Message}");
+                return null;
             }
         }
     }
