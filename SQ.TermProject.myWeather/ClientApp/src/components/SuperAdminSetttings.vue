@@ -1,6 +1,6 @@
 ﻿<template>
   <v-container>
-    <v-card>
+    <v-card class="bg-window"> 
       <v-card-title>Search Users</v-card-title>
       <v-card-text>
         <v-text-field v-model="searchQuery" label="Search Query"></v-text-field>
@@ -9,7 +9,7 @@
       </v-card-text>
     </v-card>
 
-    <v-card v-if="searchResults.length > 0">
+    <v-card v-if="searchResults.length > 0" class="bg-window">
       <v-card-title>Search Results</v-card-title>
       <v-card-text>
         <v-list>
@@ -61,46 +61,52 @@
   import axios from 'axios';
 
 
-export default {
-  data() {
-    return {
-      snackbar_good: false,
-      snackbar_bad: false,
-      isLoading: false,
-      searchQuery: '',
-      searchResults: [],
-      roleOptions: ['User', 'Admin', 'Superadmin']
-    };
-  },
-  methods: {
-    searchUsers() {
-      this.isLoading = true;
-      const config = {
-        headers: { Authorization: `Bearer ${localStorage.getItem("token") }` }
+  export default {
+    data() {
+      return {
+        snackbar_good: false,
+        snackbar_bad: false,
+        isLoading: false,
+        searchQuery: '',
+        searchResults: [],
+        roleOptions: ['User', 'Admin', 'Superadmin']
       };
-
-      axios.post('api/settings/GetUsers?username=' + this.searchQuery, {}, config).then(resp => {
-        setTimeout(() => {
-          this.isLoading = false;
-          this.searchResults = resp.data;
-        }, 750);
-      }).catch((err) => {
-        setTimeout(() => {
-          this.snackbar_bad = true;
-        },750)
-      });
     },
-    setUserRole(user) {
-      const config = {
-        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
-      };
+    methods: {
+      searchUsers() {
+        this.isLoading = true;
+        const config = {
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+        };
 
-      axios.post("api/settings/SetUser?username="+user.userName+"&role="+user.name, {}, config).then(resp => {
-        this.snackbar_good = true
-      }).catch((r) => {
-        this.snackbar_bad= true;
-      });
+        axios.post('api/settings/GetUsers?username=' + this.searchQuery, {}, config).then(resp => {
+          setTimeout(() => {
+            this.isLoading = false;
+            this.searchResults = resp.data;
+          }, 750);
+        }).catch((err) => {
+          setTimeout(() => {
+            this.snackbar_bad = true;
+          }, 750)
+        });
+      },
+      setUserRole(user) {
+        const config = {
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+        };
+
+        axios.post("api/settings/SetUser?username=" + user.userName + "&role=" + user.name, {}, config).then(resp => {
+          this.snackbar_good = true
+        }).catch((r) => {
+          this.snackbar_bad = true;
+        });
+      }
     }
-  }
-};
+  };
 </script>
+
+<style>
+  .bg-window {
+    background-color: #E0E0E0 !important;
+  }
+</style>

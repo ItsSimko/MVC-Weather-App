@@ -1,6 +1,6 @@
 ﻿<template>
   <v-container>
-    <v-form @submit.prevent="login" v-if="this.isLoading == false">
+    <v-form @submit.prevent="login" v-if="this.isLoading == false && this.success == false">
       <v-text-field v-model="username" label="Username" outlined></v-text-field>
       <v-text-field v-model="password" label="Password" type="password" outlined></v-text-field>
       <v-btn color="primary" type="submit">Login</v-btn>
@@ -15,6 +15,16 @@
                text="Try again in a few moments" class="my-2"></v-alert>
     </v-form>
     <LoadingSpinner v-if="this.isLoading == true"></LoadingSpinner>
+
+    <v-alert v-if="success == true"
+             type="success"
+             title="Alert title"
+             text="Login Successful">
+    </v-alert>
+    <div class="text-center my-2" v-if="success==true">
+      <v-btn color="primary" @click="goToMain">Go to Weather App</v-btn>
+      <v-btn color="primary" @click="goToPanel" class="mx-1">Continue to Panel</v-btn>
+    </div>
   </v-container>
 </template>
 
@@ -34,8 +44,15 @@
         password: '',
         badCredential: false,
         servErr: false,
-        isLoading: false
+        isLoading: false,
+        success: false
       };
+    },
+    created()
+    {
+      if (localStorage.getItem("token") != null) {
+        this.success = true
+      }
     },
     methods: {
       login() {
@@ -57,6 +74,8 @@
             localStorage.setItem('role', jwt_decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"]);
 
             this.$emit('loginHappened');
+
+            this.success = true;
           }
           else
           {
@@ -77,9 +96,14 @@
 
           });
       },
-
+      goToPanel() {
+        this.$router.push('/panel');
+      },
+      goToMain() {
+        this.$router.push('/');
+      },
       goToReg() {
-        //this.$router.push('/register');
+        this.$router.push('/register');
       }
     }
   });
