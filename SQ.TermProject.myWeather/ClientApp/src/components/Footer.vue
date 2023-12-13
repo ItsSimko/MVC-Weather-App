@@ -3,7 +3,7 @@
     <v-footer class="bg-transparent m-0">
       <v-row class="bg-transparent">
         <v-col cols="4" class="bg-transparent">
-          <v-btn variant="plain" @click="window.location.href = 'https://github.com/ItsSimko/MVC-Weather-App'">Github</v-btn>
+          <v-btn variant="plain" href='https://github.com/ItsSimko/MVC-Weather-App'>Github</v-btn>
         </v-col>
         <v-col cols="4" class="text-center bg-transparent" >
           <v-btn variant="plain" @click="$router.push('/')">&copy; 2023 myWeather</v-btn>
