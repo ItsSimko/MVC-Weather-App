@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service" kind="class" language="C#" prot="public">
+    <compoundname>SQ::TermProject::myWeather::Services::OpenWeatherService</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_1a335c4c81fce3100395fd9ee7067a2423" prot="private" static="no" mutable="no">
+        <type>readonly HttpClient</type>
+        <definition>readonly HttpClient SQ.TermProject.myWeather.Services.OpenWeatherService._httpClient</definition>
+        <argsstring></argsstring>
+        <name>_httpClient</name>
+        <qualifiedname>SQ.TermProject.myWeather.Services.OpenWeatherService._httpClient</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/OpenWeather.cs" line="15" column="37" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/OpenWeather.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_1a1ef3106386ebe17943a2d0b6bbf6b9ef" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string SQ.TermProject.myWeather.Services.OpenWeatherService._apiKey</definition>
+        <argsstring></argsstring>
+        <name>_apiKey</name>
+        <qualifiedname>SQ.TermProject.myWeather.Services.OpenWeatherService._apiKey</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/OpenWeather.cs" line="16" column="33" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/OpenWeather.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_1a8791b92d32532069d4c76f32900d45f3" prot="private" static="no" mutable="no">
+        <type>TimeSpan</type>
+        <definition>TimeSpan SQ.TermProject.myWeather.Services.OpenWeatherService.expirationTime</definition>
+        <argsstring></argsstring>
+        <name>expirationTime</name>
+        <qualifiedname>SQ.TermProject.myWeather.Services.OpenWeatherService.expirationTime</qualifiedname>
+        <initializer>= TimeSpan.FromSeconds(600)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/OpenWeather.cs" line="19" column="26" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/OpenWeather.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_1a6fc854de2c270fcca0e8e1c16737341f" prot="private" static="yes" mutable="no">
+        <type>Dictionary&lt; string, Tuple&lt; <ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast" kindref="compound">Forecast</ref>, DateTime &gt; &gt;</type>
+        <definition>Dictionary&lt;string, Tuple&lt;Forecast, DateTime&gt; &gt; SQ.TermProject.myWeather.Services.OpenWeatherService.cache</definition>
+        <argsstring></argsstring>
+        <name>cache</name>
+        <qualifiedname>SQ.TermProject.myWeather.Services.OpenWeatherService.cache</qualifiedname>
+        <initializer>= new Dictionary&lt;string, Tuple&lt;<ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast" kindref="compound">Forecast</ref>, DateTime&gt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/OpenWeather.cs" line="18" column="35" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/OpenWeather.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_1a92c717504ee18eb02650e47208f7b27c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SQ.TermProject.myWeather.Services.OpenWeatherService.OpenWeatherService</definition>
+        <argsstring>()</argsstring>
+        <name>OpenWeatherService</name>
+        <qualifiedname>SQ.TermProject.myWeather.Services.OpenWeatherService.OpenWeatherService</qualifiedname>
+        <briefdescription>
+<para>Initializes a new instance of the OpenWeatherService class with an HttpClient. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/OpenWeather.cs" line="24" column="16" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/OpenWeather.cs" bodystart="24" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_1a736a782a4e152f9b2afc896244f529a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast" kindref="compound">Forecast</ref> &gt;</type>
+        <definition>async Task&lt; Forecast &gt; SQ.TermProject.myWeather.Services.OpenWeatherService.GetWeatherDataAsync</definition>
+        <argsstring>(string cityName, string country, double lon, double lat)</argsstring>
+        <name>GetWeatherDataAsync</name>
+        <qualifiedname>SQ.TermProject.myWeather.Services.OpenWeatherService.GetWeatherDataAsync</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>cityName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>country</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>lon</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>lat</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves weather data asynchronously for a specified city. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cityName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the city for which weather data is requested.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A task representing the asynchronous operation that yields weather forecast data.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/OpenWeather.cs" line="35" column="27" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/OpenWeather.cs" bodystart="35" bodyend="68"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Service to interact with OpenWeather API for weather data retrieval. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/OpenWeather.cs" line="13" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/OpenWeather.cs" bodystart="14" bodyend="69"/>
+    <listofallmembers>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_1a1ef3106386ebe17943a2d0b6bbf6b9ef" prot="private" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::OpenWeatherService</scope><name>_apiKey</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_1a335c4c81fce3100395fd9ee7067a2423" prot="private" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::OpenWeatherService</scope><name>_httpClient</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_1a6fc854de2c270fcca0e8e1c16737341f" prot="private" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::OpenWeatherService</scope><name>cache</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_1a8791b92d32532069d4c76f32900d45f3" prot="private" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::OpenWeatherService</scope><name>expirationTime</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_1a736a782a4e152f9b2afc896244f529a7" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::OpenWeatherService</scope><name>GetWeatherDataAsync</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_1a92c717504ee18eb02650e47208f7b27c" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::OpenWeatherService</scope><name>OpenWeatherService</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

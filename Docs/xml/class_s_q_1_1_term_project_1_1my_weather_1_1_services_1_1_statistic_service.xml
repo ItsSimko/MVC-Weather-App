@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service" kind="class" language="C#" prot="public">
+    <compoundname>SQ::TermProject::myWeather::Services::StatisticService</compoundname>
+    <basecompoundref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service" prot="public" virt="non-virtual">SQ.TermProject.myWeather.Services.BaseService</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service_1ab8af4d5434e6e50c2f94afc9ebe41a2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SQ.TermProject.myWeather.Services.StatisticService.UpdateStat</definition>
+        <argsstring>(string city)</argsstring>
+        <name>UpdateStat</name>
+        <qualifiedname>SQ.TermProject.myWeather.Services.StatisticService.UpdateStat</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>city</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/StatisticService.cs" line="8" column="21" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/StatisticService.cs" bodystart="8" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service_1ac5e28def240436e444e18ee7b63356dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int SQ.TermProject.myWeather.Services.StatisticService.GetStat</definition>
+        <argsstring>(string city)</argsstring>
+        <name>GetStat</name>
+        <qualifiedname>SQ.TermProject.myWeather.Services.StatisticService.GetStat</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>city</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/StatisticService.cs" line="40" column="20" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/StatisticService.cs" bodystart="40" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service_1a8adb584a831686e607c34b1155f898ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_search_stat" kindref="compound">SearchStat</ref> &gt;</type>
+        <definition>List&lt; SearchStat &gt; SQ.TermProject.myWeather.Services.StatisticService.GetTop10SearchStats</definition>
+        <argsstring>()</argsstring>
+        <name>GetTop10SearchStats</name>
+        <qualifiedname>SQ.TermProject.myWeather.Services.StatisticService.GetTop10SearchStats</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/StatisticService.cs" line="54" column="21" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/StatisticService.cs" bodystart="54" bodyend="71"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BaseService</label>
+        <link refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service"/>
+      </node>
+      <node id="1">
+        <label>SQ.TermProject.myWeather.Services.StatisticService</label>
+        <link refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BaseService</label>
+        <link refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service"/>
+      </node>
+      <node id="1">
+        <label>SQ.TermProject.myWeather.Services.StatisticService</label>
+        <link refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/StatisticService.cs" line="6" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/StatisticService.cs" bodystart="7" bodyend="72"/>
+    <listofallmembers>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service_1a7f7e88d26bf48b4f3530347bf2b67222" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::StatisticService</scope><name>BaseService</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service_1a0396f5acafaf05197244b81a9414321a" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::StatisticService</scope><name>DbContext</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service_1ac5e28def240436e444e18ee7b63356dd" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::StatisticService</scope><name>GetStat</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service_1a8adb584a831686e607c34b1155f898ba" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::StatisticService</scope><name>GetTop10SearchStats</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service_1ab8af4d5434e6e50c2f94afc9ebe41a2a" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::StatisticService</scope><name>UpdateStat</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

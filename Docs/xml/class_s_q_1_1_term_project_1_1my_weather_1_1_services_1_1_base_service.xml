@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service" kind="class" language="C#" prot="public">
+    <compoundname>SQ::TermProject::myWeather::Services::BaseService</compoundname>
+    <derivedcompoundref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_settings_service" prot="public" virt="non-virtual">SQ.TermProject.myWeather.Services.SettingsService</derivedcompoundref>
+    <derivedcompoundref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service" prot="public" virt="non-virtual">SQ.TermProject.myWeather.Services.StatisticService</derivedcompoundref>
+    <derivedcompoundref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_user_service" prot="public" virt="non-virtual">SQ.TermProject.myWeather.Services.UserService</derivedcompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service_1a0396f5acafaf05197244b81a9414321a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context" kindref="compound">AppDbContext</ref></type>
+        <definition>AppDbContext SQ.TermProject.myWeather.Services.BaseService.DbContext</definition>
+        <argsstring></argsstring>
+        <name>DbContext</name>
+        <qualifiedname>SQ.TermProject.myWeather.Services.BaseService.DbContext</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the application&apos;s database context. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/BaseService.cs" line="14" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/BaseService.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service_1a7f7e88d26bf48b4f3530347bf2b67222" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SQ.TermProject.myWeather.Services.BaseService.BaseService</definition>
+        <argsstring>()</argsstring>
+        <name>BaseService</name>
+        <qualifiedname>SQ.TermProject.myWeather.Services.BaseService.BaseService</qualifiedname>
+        <briefdescription>
+<para>Initializes a new instance of the BaseService class. And sets up DbContext. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/BaseService.cs" line="19" column="16" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/BaseService.cs" bodystart="19" bodyend="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Base service providing access to the application&apos;s database context. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SQ.TermProject.myWeather.Services.BaseService</label>
+        <link refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service"/>
+      </node>
+      <node id="2">
+        <label>SQ.TermProject.myWeather.Services.SettingsService</label>
+        <link refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_settings_service"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SQ.TermProject.myWeather.Services.StatisticService</label>
+        <link refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SQ.TermProject.myWeather.Services.UserService</label>
+        <link refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_user_service"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/BaseService.cs" line="9" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/BaseService.cs" bodystart="10" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service_1a7f7e88d26bf48b4f3530347bf2b67222" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::BaseService</scope><name>BaseService</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service_1a0396f5acafaf05197244b81a9414321a" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::BaseService</scope><name>DbContext</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

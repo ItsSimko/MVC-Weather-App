@@ -9,6 +9,9 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace SQ.TermProject.myWeather.Controllers.UserAuth
 {
+    /// <summary>
+    /// Controller responsible for user login and authentication.
+    /// </summary>
     [ApiController]
     [Route("api/auth/[controller]")]
     public class Login : ControllerBase
@@ -16,12 +19,24 @@ namespace SQ.TermProject.myWeather.Controllers.UserAuth
         private static readonly string secretKey = secretKey = PasswordService.GetSha256Hash(PasswordService.GenerateSalt(32));
         private UserService userService;
 
+        /// <summary>
+        /// Initializes a new instance of the Login controller.
+        /// </summary>
         public Login()
         {
 
             userService = new UserService();
         }
 
+        /// <summary>
+        /// Validates user credentials and generates a JWT token upon successful authentication.
+        /// </summary>
+        /// <param name="username">The username of the user.</param>
+        /// <param name="password">The password of the user.</param>
+        /// <returns>
+        /// An IActionResult containing a success message and JWT token if authentication succeeds;
+        /// otherwise, returns an error message.
+        /// </returns>
         [HttpPost(Name = "LoginUser")]
         public IActionResult LoginUser(string username, string password)
         {
@@ -44,7 +59,12 @@ namespace SQ.TermProject.myWeather.Controllers.UserAuth
 
 
         [HttpGet("helper")]
-
+        /// <summary>
+        /// Generates a JWT token based on the provided username and role.
+        /// </summary>
+        /// <param name="username">The username of the user.</param>
+        /// <param name="role">The role of the user.</param>
+        /// <returns>The generated JWT token.</returns>
         public string GenerateAuthToken(string username, string role)
         {
             // https://medium.com/@vndpal/how-to-implement-jwt-token-authentication-in-net-core-6-ab7f48470f5c refrenced

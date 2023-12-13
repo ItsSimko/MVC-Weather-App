@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_828fc1b411d11aa8fc59cd6083abe6ba" kind="dir">
+    <compoundname>C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services</compoundname>
+    <innerfile refid="_base_service_8cs">BaseService.cs</innerfile>
+    <innerfile refid="_config_service_8cs">ConfigService.cs</innerfile>
+    <innerfile refid="_logger_service_8cs">LoggerService.cs</innerfile>
+    <innerfile refid="_open_weather_8cs">OpenWeather.cs</innerfile>
+    <innerfile refid="_password_service_8cs">PasswordService.cs</innerfile>
+    <innerfile refid="_settings_service_8cs">SettingsService.cs</innerfile>
+    <innerfile refid="_statistic_service_8cs">StatisticService.cs</innerfile>
+    <innerfile refid="_user_service_8cs">UserService.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/"/>
+  </compounddef>
+</doxygen>

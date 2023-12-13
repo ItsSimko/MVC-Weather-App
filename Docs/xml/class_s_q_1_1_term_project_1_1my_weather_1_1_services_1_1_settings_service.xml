@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_settings_service" kind="class" language="C#" prot="public">
+    <compoundname>SQ::TermProject::myWeather::Services::SettingsService</compoundname>
+    <basecompoundref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service" prot="public" virt="non-virtual">SQ.TermProject.myWeather.Services.BaseService</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_settings_service_1a33a0fe5a5320238a08e619b7e3514e4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SQ.TermProject.myWeather.Services.SettingsService.UpdateUser</definition>
+        <argsstring>(string name, string role)</argsstring>
+        <name>UpdateUser</name>
+        <qualifiedname>SQ.TermProject.myWeather.Services.SettingsService.UpdateUser</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>role</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/SettingsService.cs" line="8" column="21" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/SettingsService.cs" bodystart="8" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_settings_service_1afb0c449264666c6ff8d5ba1748d09dc8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SQ.TermProject.myWeather.Services.SettingsService.SetSiteHeader</definition>
+        <argsstring>(string message, string type)</argsstring>
+        <name>SetSiteHeader</name>
+        <qualifiedname>SQ.TermProject.myWeather.Services.SettingsService.SetSiteHeader</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/SettingsService.cs" line="26" column="21" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/SettingsService.cs" bodystart="26" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_settings_service_1a673261841e106482302307568379ce67" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_alert" kindref="compound">Alert</ref></type>
+        <definition>Alert SQ.TermProject.myWeather.Services.SettingsService.GetSiteHeader</definition>
+        <argsstring>()</argsstring>
+        <name>GetSiteHeader</name>
+        <qualifiedname>SQ.TermProject.myWeather.Services.SettingsService.GetSiteHeader</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/SettingsService.cs" line="58" column="22" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/SettingsService.cs" bodystart="58" bodyend="72"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BaseService</label>
+        <link refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service"/>
+      </node>
+      <node id="1">
+        <label>SQ.TermProject.myWeather.Services.SettingsService</label>
+        <link refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_settings_service"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BaseService</label>
+        <link refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service"/>
+      </node>
+      <node id="1">
+        <label>SQ.TermProject.myWeather.Services.SettingsService</label>
+        <link refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_settings_service"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/SettingsService.cs" line="6" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/SettingsService.cs" bodystart="7" bodyend="75"/>
+    <listofallmembers>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service_1a7f7e88d26bf48b4f3530347bf2b67222" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::SettingsService</scope><name>BaseService</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service_1a0396f5acafaf05197244b81a9414321a" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::SettingsService</scope><name>DbContext</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_settings_service_1a673261841e106482302307568379ce67" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::SettingsService</scope><name>GetSiteHeader</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_settings_service_1afb0c449264666c6ff8d5ba1748d09dc8" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::SettingsService</scope><name>SetSiteHeader</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_settings_service_1a33a0fe5a5320238a08e619b7e3514e4a" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::SettingsService</scope><name>UpdateUser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

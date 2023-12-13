@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_af368a46a6ebf15052ef122af6b626c3" kind="dir">
+    <compoundname>C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather</compoundname>
+    <innerdir refid="dir_256fe1bd8144d7c2b00fc0356ec9846c">C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers</innerdir>
+    <innerdir refid="dir_8dc6207daae515a244171ea70d990b60">C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Database</innerdir>
+    <innerdir refid="dir_9de81bb10a317d064294c60ca1461a66">C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models</innerdir>
+    <innerdir refid="dir_828fc1b411d11aa8fc59cd6083abe6ba">C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services</innerdir>
+    <innerfile refid="_program_8cs">Program.cs</innerfile>
+    <innerfile refid="_vite_helper_8cs">ViteHelper.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/"/>
+  </compounddef>
+</doxygen>

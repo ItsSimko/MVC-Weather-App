@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_user_role_8cs" kind="file" language="C#">
+    <compoundname>UserRole.cs</compoundname>
+    <innerclass refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role" prot="public">SQ::TermProject::myWeather::Models::UserRole</innerclass>
+    <innernamespace refid="namespace_s_q">SQ</innernamespace>
+    <innernamespace refid="namespace_s_q_1_1_term_project">SQ::TermProject</innernamespace>
+    <innernamespace refid="namespace_s_q_1_1_term_project_1_1my_weather">SQ::TermProject::myWeather</innernamespace>
+    <innernamespace refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_models">SQ::TermProject::myWeather::Models</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_models" kindref="compound">SQ.TermProject.myWeather.Models</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6" refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role" kindref="compound">UserRole</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1a6e3969f508ab31dae0693acad0871160" kindref="member">Id</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1ae72e7106d131d719aafe117190c235ca" kindref="member">Name</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1a5fbfa406546736241c5be9bb8d93a4be" kindref="member">PermissionLevel</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1ab60c5ee449fb8104b45cd5f6daf33cc2" kindref="member">UserRole</ref><sp/>()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1a6e3969f508ab31dae0693acad0871160" kindref="member">Id</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1ae72e7106d131d719aafe117190c235ca" kindref="member">Name</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;User&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1a5fbfa406546736241c5be9bb8d93a4be" kindref="member">PermissionLevel</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/UserRole.cs"/>
+  </compounddef>
+</doxygen>

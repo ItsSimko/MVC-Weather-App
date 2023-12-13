@@ -5,7 +5,7 @@ namespace SQ.TermProject.myWeather.Services
 {
     public static class LoggerService
     {
-        private static string logFilePath = "./log.txt";
+        private static string logFilePath = "./logs/log.txt";
 
         public static void Log(string message)
         {

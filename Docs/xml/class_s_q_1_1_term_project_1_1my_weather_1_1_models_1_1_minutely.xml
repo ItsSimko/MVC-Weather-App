@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_minutely" kind="class" language="C#" prot="public">
+    <compoundname>SQ::TermProject::myWeather::Models::Minutely</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_minutely_1aa5df85b84c4ccb3fa16bbfba3ef46363" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SQ.TermProject.myWeather.Models.Minutely.dt</definition>
+        <argsstring></argsstring>
+        <name>dt</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Minutely.dt</qualifiedname>
+        <briefdescription>
+<para>Time of the forecasted data, Unix, UTC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="94" column="20" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="94" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_minutely_1a7e1226df100b13fbea6a56aca6c65abb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SQ.TermProject.myWeather.Models.Minutely.precipitation</definition>
+        <argsstring></argsstring>
+        <name>precipitation</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Minutely.precipitation</qualifiedname>
+        <briefdescription>
+<para>Precipitation volume, mm. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="99" column="20" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="99" bodyend="99"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents the minutely weather forecast. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="89" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="90" bodyend="100"/>
+    <listofallmembers>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_minutely_1aa5df85b84c4ccb3fa16bbfba3ef46363" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Minutely</scope><name>dt</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_minutely_1a7e1226df100b13fbea6a56aca6c65abb" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Minutely</scope><name>precipitation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

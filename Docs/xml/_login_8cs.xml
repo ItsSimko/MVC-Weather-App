@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_login_8cs" kind="file" language="C#">
+    <compoundname>Login.cs</compoundname>
+    <innerclass refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login" prot="public">SQ::TermProject::myWeather::Controllers::UserAuth::Login</innerclass>
+    <innernamespace refid="namespace_s_q">SQ</innernamespace>
+    <innernamespace refid="namespace_s_q_1_1_term_project">SQ::TermProject</innernamespace>
+    <innernamespace refid="namespace_s_q_1_1_term_project_1_1my_weather">SQ::TermProject::myWeather</innernamespace>
+    <innernamespace refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_controllers">SQ::TermProject::myWeather::Controllers</innernamespace>
+    <innernamespace refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth">SQ::TermProject::myWeather::Controllers::UserAuth</innernamespace>
+    <innernamespace refid="namespace_system_1_1_security_1_1_claims">System::Security::Claims</innernamespace>
+    <innernamespace refid="namespace_system_1_1_text">System::Text</innernamespace>
+    <innernamespace refid="namespace_system_1_1_text_1_1_json">System::Text::Json</innernamespace>
+    <innernamespace refid="namespace_system_1_1_identity_model_1_1_tokens_1_1_jwt">System::IdentityModel::Tokens::Jwt</innernamespace>
+    <innernamespace refid="namespace_microsoft_1_1_identity_model_1_1_tokens">Microsoft::IdentityModel::Tokens</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">Microsoft.AspNetCore.Mvc;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_services" kindref="compound">SQ.TermProject.myWeather.Services</ref>;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.Security.Claims;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.Text;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.Text.Json;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.IdentityModel.Tokens.Jwt;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Microsoft.IdentityModel.Tokens;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth" kindref="compound">SQ.TermProject.myWeather.Controllers.UserAuth</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>[ApiController]</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>[Route(</highlight><highlight class="stringliteral">&quot;api/auth/[controller]&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="14" refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login" kindref="compound">Login</ref><sp/>:<sp/>ControllerBase</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>readonly<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>secretKey<sp/>=<sp/>secretKey<sp/>=<sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_password_service" kindref="compound">PasswordService</ref>.<ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_password_service_1a1b216da73c29991539aa3c111146c7d7" kindref="member">GetSha256Hash</ref>(<ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_password_service" kindref="compound">PasswordService</ref>.<ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_password_service_1aa243fc0ad0eebc182cc5df4b1529720a" kindref="member">GenerateSalt</ref>(32));</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_user_service" kindref="compound">UserService</ref><sp/>userService;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_1a5df311085a967a412ed05bcdcce1dc30" kindref="member">Login</ref>()</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>userService<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_user_service" kindref="compound">UserService</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[HttpPost(Name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;LoginUser&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>IActionResult<sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_1aee6ddc3cb87cdc30facf6e5431b0093e" kindref="member">LoginUser</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>username,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>password)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(userService.<ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_user_service_1a888a47d94dfc496d52201c47a3d794ff" kindref="member">IsValidUser</ref>(username,<sp/>password))</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>userRole<sp/>=<sp/>userService.<ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_user_service_1af46e4eec3f125e4f4184a190638913c6" kindref="member">getUserRole</ref>(username);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>authToken<sp/>=<sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_1add67392ee05a125d5b5e3f1afa183df1" kindref="member">GenerateAuthToken</ref>(username,<sp/>userRole);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>resp<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>{<sp/>success<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>token<sp/>=<sp/>authToken<sp/>};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Content(JsonSerializer.Serialize(resp),<sp/></highlight><highlight class="stringliteral">&quot;application/json&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Invalid<sp/>credentials</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>resp<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>{<sp/>success<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>message<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>username<sp/>or<sp/>password&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Content(JsonSerializer.Serialize(resp),<sp/></highlight><highlight class="stringliteral">&quot;application/json&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[HttpGet(</highlight><highlight class="stringliteral">&quot;helper&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_1add67392ee05a125d5b5e3f1afa183df1" kindref="member">GenerateAuthToken</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>username,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>role)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>https://medium.com/@vndpal/how-to-implement-jwt-token-authentication-in-net-core-6-ab7f48470f5c<sp/>refrenced</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>securityKey<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SymmetricSecurityKey(Encoding.UTF8.GetBytes(<ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_config_service" kindref="compound">ConfigService</ref>.<ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_config_service_1ac99ae8d718c6e24349c46e0eff395a9d" kindref="member">Configuration</ref>[</highlight><highlight class="stringliteral">&quot;Jwt:Key&quot;</highlight><highlight class="normal">]));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>credentials<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SigningCredentials(securityKey,<sp/>SecurityAlgorithms.HmacSha256);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>claim<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal">[]</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Claim(ClaimTypes.Name,<sp/>username),</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Claim(ClaimTypes.Role,<sp/>role),</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>more<sp/>claims<sp/>if<sp/>needed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>Sectoken<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>JwtSecurityToken(<ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_config_service" kindref="compound">ConfigService</ref>.<ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_config_service_1ac99ae8d718c6e24349c46e0eff395a9d" kindref="member">Configuration</ref>[</highlight><highlight class="stringliteral">&quot;Jwt:Issuer&quot;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_config_service" kindref="compound">ConfigService</ref>.<ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_config_service_1ac99ae8d718c6e24349c46e0eff395a9d" kindref="member">Configuration</ref>[</highlight><highlight class="stringliteral">&quot;Jwt:Issuer&quot;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>claims:<sp/>claim,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>expires:<sp/>DateTime.Now.AddMinutes(120),</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>signingCredentials:<sp/>credentials);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>token<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>JwtSecurityTokenHandler().WriteToken(Sectoken);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>token;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Login.cs"/>
+  </compounddef>
+</doxygen>

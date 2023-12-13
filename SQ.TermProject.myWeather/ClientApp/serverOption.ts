@@ -1,6 +1,6 @@
 
 
 export default {
-https: { pfx: 'devcert.pfx', passphrase: 'e68004e1606344cfaff7d1b7c2ddc16f' }
+  https: { pfx: 'devcert.pfx', passphrase: '96b46fa523d542c092859803c9b9c14f' }
 }
 

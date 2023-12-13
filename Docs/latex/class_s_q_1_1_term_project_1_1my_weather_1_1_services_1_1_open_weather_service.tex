@@ -1,13 +1,56 @@
 \doxysection{SQ.\+Term\+Project.\+my\+Weather.\+Services.\+Open\+Weather\+Service Class Reference}
 \hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service}{}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service}\index{SQ.TermProject.myWeather.Services.OpenWeatherService@{SQ.TermProject.myWeather.Services.OpenWeatherService}}
+
+
+Service to interact with Open\+Weather API for weather data retrieval.  
+
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_a10e546efc70de8afd5ae6559253405eb}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_a10e546efc70de8afd5ae6559253405eb} 
-async Task$<$ \mbox{\hyperlink{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_weather_data_1_1_weather_forecast}{Weather\+Forecast}} $>$ {\bfseries Get\+Weather\+Data\+Async} (string city\+Name)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_a92c717504ee18eb02650e47208f7b27c}{Open\+Weather\+Service}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the Open\+Weather\+Service class with an Http\+Client. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast}{Forecast}} $>$ \mbox{\hyperlink{class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_a736a782a4e152f9b2afc896244f529a7}{Get\+Weather\+Data\+Async}} (string city\+Name, string country, double lon, double lat)
+\begin{DoxyCompactList}\small\item\em Retrieves weather data asynchronously for a specified city. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service to interact with Open\+Weather API for weather data retrieval. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_a92c717504ee18eb02650e47208f7b27c}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_a92c717504ee18eb02650e47208f7b27c} 
+\index{SQ.TermProject.myWeather.Services.OpenWeatherService@{SQ.TermProject.myWeather.Services.OpenWeatherService}!OpenWeatherService@{OpenWeatherService}}
+\index{OpenWeatherService@{OpenWeatherService}!SQ.TermProject.myWeather.Services.OpenWeatherService@{SQ.TermProject.myWeather.Services.OpenWeatherService}}
+\doxysubsubsection{\texorpdfstring{OpenWeatherService()}{OpenWeatherService()}}
+{\footnotesize\ttfamily SQ.\+Term\+Project.\+my\+Weather.\+Services.\+Open\+Weather\+Service.\+Open\+Weather\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the Open\+Weather\+Service class with an Http\+Client. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_a736a782a4e152f9b2afc896244f529a7}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_a736a782a4e152f9b2afc896244f529a7} 
+\index{SQ.TermProject.myWeather.Services.OpenWeatherService@{SQ.TermProject.myWeather.Services.OpenWeatherService}!GetWeatherDataAsync@{GetWeatherDataAsync}}
+\index{GetWeatherDataAsync@{GetWeatherDataAsync}!SQ.TermProject.myWeather.Services.OpenWeatherService@{SQ.TermProject.myWeather.Services.OpenWeatherService}}
+\doxysubsubsection{\texorpdfstring{GetWeatherDataAsync()}{GetWeatherDataAsync()}}
+{\footnotesize\ttfamily async Task$<$ \mbox{\hyperlink{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast}{Forecast}} $>$ SQ.\+Term\+Project.\+my\+Weather.\+Services.\+Open\+Weather\+Service.\+Get\+Weather\+Data\+Async (\begin{DoxyParamCaption}\item[{string}]{city\+Name,  }\item[{string}]{country,  }\item[{double}]{lon,  }\item[{double}]{lat }\end{DoxyParamCaption})}
+
+
+
+Retrieves weather data asynchronously for a specified city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em city\+Name} & The name of the city for which weather data is requested.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation that yields weather forecast data.
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/alexs/source/repos/\+SQ.\+Term\+Project.\+my\+Weather/\+SQ.\+Term\+Project.\+my\+Weather/\+Services/Open\+Weather.\+cs\end{DoxyCompactItemize}
+C\+:/\+Users/alexs/source/repos/\+SQ.\+Term\+Project.\+my\+Weather/\+SQ.\+Term\+Project.\+my\+Weather/\+Services/\mbox{\hyperlink{_open_weather_8cs}{Open\+Weather.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_net6___controller___and___v_ite" kind="namespace" language="C#">
+    <compoundname>Net6_Controller_And_VIte</compoundname>
+    <innerclass refid="class_net6___controller___and___v_ite_1_1_vite_helper" prot="public">Net6_Controller_And_VIte::ViteHelper</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" line="6" column="1"/>
+  </compounddef>
+</doxygen>

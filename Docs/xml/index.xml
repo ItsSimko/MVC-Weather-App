@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_alert" kind="class"><name>SQ::TermProject::myWeather::Models::Alert</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_alert_1a8040e3feb8a58d7221a8db98451cdedc" kind="property"><name>AlertId</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_alert_1a8ed5b16ecc85251d8f3a490c8fa57620" kind="property"><name>AlertMsg</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_alert_1a56aa1bf3a136c8699d17e510110ed715" kind="property"><name>AlertType</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context" kind="class"><name>SQ::TermProject::myWeather::Database::AppDbContext</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context_1a122c941db1f0b1d0a3cd8fc597464483" kind="property"><name>Users</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context_1a18c2ba7e3c169eb3881513a94e2d628d" kind="property"><name>UserRoles</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context_1aa84c207aca8bc87c29f6b44edcc277a8" kind="property"><name>SearchStat</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context_1ae3e5ebacb12ba7443b6b410d5f47e293" kind="property"><name>Alerts</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context_1addfae42a4cc8a67a4458d52744774038" kind="function"><name>OnConfiguring</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context_1a212f0220ee5e1a0da45a7fa510c689cf" kind="function"><name>OnModelCreating</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service" kind="class"><name>SQ::TermProject::myWeather::Services::BaseService</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service_1a0396f5acafaf05197244b81a9414321a" kind="property"><name>DbContext</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service_1a7f7e88d26bf48b4f3530347bf2b67222" kind="function"><name>BaseService</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_config_service" kind="class"><name>SQ::TermProject::myWeather::Services::ConfigService</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_config_service_1a415ad6c6d90b3614931d6742be7f0140" kind="variable"><name>ConfigPath</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_config_service_1ac99ae8d718c6e24349c46e0eff395a9d" kind="variable"><name>Configuration</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current" kind="class"><name>SQ::TermProject::myWeather::Models::Current</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1aa9350db19b06891dda9737239aafba62" kind="property"><name>dt</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a967436c2899948a99a873f72361e89d0" kind="property"><name>sunrise</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a14ae5fbcde0e6c8db34cdcfaf9757b5a" kind="property"><name>sunset</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a3724ab68c1f2cfb9dea8d6f87fba6a8b" kind="property"><name>temp</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1af66d1cfeca49caad3c25eb4c4b72d557" kind="property"><name>feels_like</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1ac2eb7ea0053f3bf2a12d431f4fff3c78" kind="property"><name>pressure</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a505adbc97a0a46b8c2bde4f07bb0bddf" kind="property"><name>humidity</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a4d06057b9aabad9434d83bf0d85595da" kind="property"><name>dew_point</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a5ccaccbc2126b884346d2bbff63475eb" kind="property"><name>uvi</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1ab3a57a37648ad6eda950684ce442e72a" kind="property"><name>clouds</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a73134480398cd85f80d5053c52e6e31d" kind="property"><name>visibility</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1ab894fee329ae3c8e4af1bd29d706c0cc" kind="property"><name>wind_speed</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a6fd957af7701104edbad4db5483671aa" kind="property"><name>wind_deg</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a3e0cbc5144d4e0198b1099c223a2c1b3" kind="property"><name>wind_gust</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a453730e09d5c1038ac7ec1358ffe5575" kind="property"><name>weather</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast" kind="class"><name>SQ::TermProject::myWeather::Models::Forecast</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast_1a09ed1dad931decca2b858d00610e58a4" kind="property"><name>lat</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast_1a08f5c550645a3052b9555686289350fa" kind="property"><name>lon</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast_1a867bb9191d66126fa2c6b076f3c305fe" kind="property"><name>timezone</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast_1afc2dde8f0998d91a457e7dd2d65a8568" kind="property"><name>timezone_offset</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast_1a098683ab32e943884da58a27a76e2419" kind="property"><name>current</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast_1a6d22716de4c4cd300ea65564f20a8957" kind="property"><name>minutely</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_logger_service" kind="class"><name>SQ::TermProject::myWeather::Services::LoggerService</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_logger_service_1a7f033aa9b5b281fa39cc908ef491715d" kind="variable"><name>logFilePath</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_logger_service_1a3642b90d7c01f5dca5ff49c3ecb518a2" kind="function"><name>Log</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login" kind="class"><name>SQ::TermProject::myWeather::Controllers::UserAuth::Login</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_1a6cf9afe2cfb0a679211a8617c5a4f5b2" kind="variable"><name>secretKey</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_1acad03407026d852f19ccf84b24edfe6a" kind="variable"><name>userService</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_1a5df311085a967a412ed05bcdcce1dc30" kind="function"><name>Login</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_1aee6ddc3cb87cdc30facf6e5431b0093e" kind="function"><name>LoginUser</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_1add67392ee05a125d5b5e3f1afa183df1" kind="function"><name>GenerateAuthToken</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_minutely" kind="class"><name>SQ::TermProject::myWeather::Models::Minutely</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_minutely_1aa5df85b84c4ccb3fa16bbfba3ef46363" kind="property"><name>dt</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_minutely_1a7e1226df100b13fbea6a56aca6c65abb" kind="property"><name>precipitation</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service" kind="class"><name>SQ::TermProject::myWeather::Services::OpenWeatherService</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_1a335c4c81fce3100395fd9ee7067a2423" kind="variable"><name>_httpClient</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_1a1ef3106386ebe17943a2d0b6bbf6b9ef" kind="variable"><name>_apiKey</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_1a8791b92d32532069d4c76f32900d45f3" kind="variable"><name>expirationTime</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_1a6fc854de2c270fcca0e8e1c16737341f" kind="variable"><name>cache</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_1a92c717504ee18eb02650e47208f7b27c" kind="function"><name>OpenWeatherService</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service_1a736a782a4e152f9b2afc896244f529a7" kind="function"><name>GetWeatherDataAsync</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_password_service" kind="class"><name>SQ::TermProject::myWeather::Services::PasswordService</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_password_service_1a6d363b49c1e7f7921419e9d3f545d976" kind="variable"><name>SaltLength</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_password_service_1ab8c792f70cbda6552a099fb1f98ff883" kind="function"><name>SaltHashBytes</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_password_service_1aa243fc0ad0eebc182cc5df4b1529720a" kind="function"><name>GenerateSalt</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_password_service_1a1b216da73c29991539aa3c111146c7d7" kind="function"><name>GetSha256Hash</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_register" kind="class"><name>SQ::TermProject::myWeather::Controllers::UserAuth::Register</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_register_1a1d9879f99c3cf102a1e2347d8ecfdc04" kind="variable"><name>userService</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_register_1aedf6e8e05a3046d43a3ac2a6323fc421" kind="function"><name>RegisterUser</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_search_stat" kind="class"><name>SQ::TermProject::myWeather::Models::SearchStat</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_search_stat_1a492049b81b519a1f390dbe7f9e3484c8" kind="property"><name>Id</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_search_stat_1a08b8123fbbc906b2da7592f8a95b7b22" kind="property"><name>Location</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_search_stat_1a20e94e189a8faa112e1af2f4a68f66ad" kind="property"><name>SearchCount</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_settings_controller" kind="class"><name>SQ::TermProject::myWeather::Controllers::SettingsController</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_settings_controller_1af14e055e078eef067589089ef87942d0" kind="variable"><name>settingsService</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_settings_controller_1aae70a8554bf4e88bfcf28d3fa59ee153" kind="function"><name>GetUsers</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_settings_controller_1aef93021f898516eb3affd91fcd332fa8" kind="function"><name>SetUser</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_settings_controller_1a2d7ca7cec394be9c4d6631f40af4e288" kind="function"><name>GetHeader</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_settings_controller_1a2214b10ad30a092ddec7dbb7b5ae7bf7" kind="function"><name>SetHeader</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_settings_service" kind="class"><name>SQ::TermProject::myWeather::Services::SettingsService</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_settings_service_1a33a0fe5a5320238a08e619b7e3514e4a" kind="function"><name>UpdateUser</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_settings_service_1afb0c449264666c6ff8d5ba1748d09dc8" kind="function"><name>SetSiteHeader</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_settings_service_1a673261841e106482302307568379ce67" kind="function"><name>GetSiteHeader</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller" kind="class"><name>SQ::TermProject::myWeather::Controllers::StasticsController</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller_1a8a833b6d462b94126d206c94244f9f00" kind="variable"><name>stats</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller_1a326a01205f6534a0835df1fe8c5487d5" kind="function"><name>StasticsController</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller_1ae348e09ba20288efaa37debeb9f69d6e" kind="function"><name>GetTop10</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service" kind="class"><name>SQ::TermProject::myWeather::Services::StatisticService</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service_1ab8af4d5434e6e50c2f94afc9ebe41a2a" kind="function"><name>UpdateStat</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service_1ac5e28def240436e444e18ee7b63356dd" kind="function"><name>GetStat</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service_1a8adb584a831686e607c34b1155f898ba" kind="function"><name>GetTop10SearchStats</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user" kind="class"><name>SQ::TermProject::myWeather::Models::User</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_1a0fa3e9f287e9952a71d8b24c8716715f" kind="property"><name>Id</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_1aee52b222d13102cce8dddfa4e78e39a3" kind="property"><name>UserName</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_1a17d6696a0b01510e0d1f3c5d836d30c5" kind="property"><name>Email</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_1ab1d92507ad27e233a8b543e54ed7dfa9" kind="property"><name>Password</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_1a1ed59cee1ca5b1eadb39480b2cd078fb" kind="property"><name>Salt</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_1ae2b26fc82600acee02baff1d54e0083c" kind="property"><name>RoleId</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role" kind="class"><name>SQ::TermProject::myWeather::Models::UserRole</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1a6e3969f508ab31dae0693acad0871160" kind="property"><name>Id</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1ae72e7106d131d719aafe117190c235ca" kind="property"><name>Name</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1a5fbfa406546736241c5be9bb8d93a4be" kind="property"><name>PermissionLevel</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1ab60c5ee449fb8104b45cd5f6daf33cc2" kind="function"><name>UserRole</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_user_service" kind="class"><name>SQ::TermProject::myWeather::Services::UserService</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_user_service_1af46e4eec3f125e4f4184a190638913c6" kind="function"><name>getUserRole</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_user_service_1a888a47d94dfc496d52201c47a3d794ff" kind="function"><name>IsValidUser</name></member>
+  </compound>
+  <compound refid="class_net6___controller___and___v_ite_1_1_vite_helper" kind="class"><name>Net6_Controller_And_VIte::ViteHelper</name>
+    <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1a434eabbc1fab453a2ccc824fcddcd4d5" kind="property"><name>PlatformIsWindows</name></member>
+    <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1aefc2751ea47b4763b4adc3cf96891a99" kind="variable"><name>ViteLogger</name></member>
+    <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1a920436d9a32f597dee74f05beebaacb0" kind="function"><name>UseViteDevelopmentServer</name></member>
+    <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1a0b03f51122dbb307d52a139afc3b47b6" kind="function"><name>InjectionViteConfig</name></member>
+    <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1af176a7df0bbcfe548abe6aea939d7034" kind="function"><name>GetViteConfigFile</name></member>
+    <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1a25bb7651387db995ecb7a7e23ffcfd06" kind="function"><name>BuildServerOption</name></member>
+    <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1aeb8a9cfba483273b9ca9519077999bdb" kind="function"><name>CheckPortInUsed</name></member>
+    <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1af96de4f5a999ee32af1894d8f9822d2b" kind="function"><name>EnsureNodeModuleAlreadyInstalled</name></member>
+    <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1a091e61f88a6355541e14cb9f175137e5" kind="function"><name>EnsureNodeJSAlreadyInstalled</name></member>
+    <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1acc3f8998aa52a149bd5fd05c7c62f614" kind="function"><name>CreateCertPfxKey</name></member>
+    <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1aeb5a7ca33fc93918e4ac693b0a39e54b" kind="function"><name>RunDevServer</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_weather" kind="class"><name>SQ::TermProject::myWeather::Models::Weather</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_weather_1ab8d9186af70acbbcab726bae799f2584" kind="property"><name>id</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_weather_1a1bc9dfa48a29c2831d35ac43de4f8a9c" kind="property"><name>main</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_weather_1a97b145f670b927cb7b47942e36086339" kind="property"><name>description</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_weather_1acb16b7d4713280c6cc4a2d81aeb02f29" kind="property"><name>icon</name></member>
+  </compound>
+  <compound refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller" kind="class"><name>SQ::TermProject::myWeather::Controllers::WeatherForecastController</name>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller_1ac76fea3f31d52ecccfc226cfeba30149" kind="variable"><name>_weatherService</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller_1a3804e5afb4a82ac32f410f514964f25c" kind="variable"><name>stats</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller_1aa72928f7799308b5c58929a31c85d719" kind="variable"><name>_logger</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller_1ac8dd1503da64a592cc4cabc2e0553419" kind="function"><name>WeatherForecastController</name></member>
+    <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_weather_forecast_controller_1ad814a446e0845521373ac80a6802ac8b" kind="function"><name>GetWeatherByCity</name></member>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_asp_net_core_1_1_authentication_1_1_jwt_bearer" kind="namespace"><name>Microsoft::AspNetCore::Authentication::JwtBearer</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_asp_net_core_1_1_authorization" kind="namespace"><name>Microsoft::AspNetCore::Authorization</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_asp_net_core_1_1_hosting" kind="namespace"><name>Microsoft::AspNetCore::Hosting</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_asp_net_core_1_1_http" kind="namespace"><name>Microsoft::AspNetCore::Http</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_asp_net_core_1_1_mvc" kind="namespace"><name>Microsoft::AspNetCore::Mvc</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_asp_net_core_1_1_spa_services" kind="namespace"><name>Microsoft::AspNetCore::SpaServices</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_entity_framework_core" kind="namespace"><name>Microsoft::EntityFrameworkCore</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_extensions_1_1_configuration" kind="namespace"><name>Microsoft::Extensions::Configuration</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_extensions_1_1_hosting" kind="namespace"><name>Microsoft::Extensions::Hosting</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_extensions_1_1_logging" kind="namespace"><name>Microsoft::Extensions::Logging</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_identity_model_1_1_tokens" kind="namespace"><name>Microsoft::IdentityModel::Tokens</name>
+  </compound>
+  <compound refid="namespace_net6___controller___and___v_ite" kind="namespace"><name>Net6_Controller_And_VIte</name>
+  </compound>
+  <compound refid="namespace_newtonsoft_1_1_json" kind="namespace"><name>Newtonsoft::Json</name>
+  </compound>
+  <compound refid="namespace_pomelo_1_1_entity_framework_core_1_1_my_sql" kind="namespace"><name>Pomelo::EntityFrameworkCore::MySql</name>
+  </compound>
+  <compound refid="namespace_serilog" kind="namespace"><name>Serilog</name>
+  </compound>
+  <compound refid="namespace_s_q" kind="namespace"><name>SQ</name>
+  </compound>
+  <compound refid="namespace_s_q_1_1_term_project" kind="namespace"><name>SQ::TermProject</name>
+  </compound>
+  <compound refid="namespace_s_q_1_1_term_project_1_1my_weather" kind="namespace"><name>SQ::TermProject::myWeather</name>
+  </compound>
+  <compound refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_controllers" kind="namespace"><name>SQ::TermProject::myWeather::Controllers</name>
+  </compound>
+  <compound refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth" kind="namespace"><name>SQ::TermProject::myWeather::Controllers::UserAuth</name>
+  </compound>
+  <compound refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_database" kind="namespace"><name>SQ::TermProject::myWeather::Database</name>
+  </compound>
+  <compound refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_models" kind="namespace"><name>SQ::TermProject::myWeather::Models</name>
+  </compound>
+  <compound refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_services" kind="namespace"><name>SQ::TermProject::myWeather::Services</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_component_model" kind="namespace"><name>System::ComponentModel</name>
+  </compound>
+  <compound refid="namespace_system_1_1_data" kind="namespace"><name>System::Data</name>
+  </compound>
+  <compound refid="namespace_system_1_1_diagnostics" kind="namespace"><name>System::Diagnostics</name>
+  </compound>
+  <compound refid="namespace_system_1_1_diagnostics_1_1_metrics" kind="namespace"><name>System::Diagnostics::Metrics</name>
+  </compound>
+  <compound refid="namespace_system_1_1_identity_model_1_1_tokens_1_1_jwt" kind="namespace"><name>System::IdentityModel::Tokens::Jwt</name>
+  </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespace_system_1_1_net_1_1_http" kind="namespace"><name>System::Net::Http</name>
+  </compound>
+  <compound refid="namespace_system_1_1_net_1_1_network_information" kind="namespace"><name>System::Net::NetworkInformation</name>
+  </compound>
+  <compound refid="namespace_system_1_1_security_1_1_claims" kind="namespace"><name>System::Security::Claims</name>
+  </compound>
+  <compound refid="namespace_system_1_1_security_1_1_cryptography" kind="namespace"><name>System::Security::Cryptography</name>
+  </compound>
+  <compound refid="namespace_system_1_1_security_1_1_cryptography_1_1_x509_certificates" kind="namespace"><name>System::Security::Cryptography::X509Certificates</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text_1_1_json" kind="namespace"><name>System::Text::Json</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading_1_1_tasks" kind="namespace"><name>System::Threading::Tasks</name>
+  </compound>
+  <compound refid="namespace_system_1_1_xml_1_1_xsl" kind="namespace"><name>System::Xml::Xsl</name>
+  </compound>
+  <compound refid="_settings_controller_8cs" kind="file"><name>SettingsController.cs</name>
+  </compound>
+  <compound refid="_stastics_controller_8cs" kind="file"><name>StasticsController.cs</name>
+  </compound>
+  <compound refid="_login_8cs" kind="file"><name>Login.cs</name>
+  </compound>
+  <compound refid="_register_8cs" kind="file"><name>Register.cs</name>
+  </compound>
+  <compound refid="_weather_forecast_controller_8cs" kind="file"><name>WeatherForecastController.cs</name>
+  </compound>
+  <compound refid="_app_db_context_8cs" kind="file"><name>AppDbContext.cs</name>
+  </compound>
+  <compound refid="_alert_8cs" kind="file"><name>Alert.cs</name>
+  </compound>
+  <compound refid="_forecast_8cs" kind="file"><name>Forecast.cs</name>
+  </compound>
+  <compound refid="_search_stat_8cs" kind="file"><name>SearchStat.cs</name>
+  </compound>
+  <compound refid="_user_8cs" kind="file"><name>User.cs</name>
+  </compound>
+  <compound refid="_user_role_8cs" kind="file"><name>UserRole.cs</name>
+  </compound>
+  <compound refid="_program_8cs" kind="file"><name>Program.cs</name>
+    <member refid="_program_8cs_1a2f78352277081c620fd4cf92a5ce15e5" kind="variable"><name>builder</name></member>
+    <member refid="_program_8cs_1aaab4fe0216631d737fde3af4dfd93141" kind="variable"><name>jwtIssuer</name></member>
+    <member refid="_program_8cs_1a842e350dbe960f667f64c579ff7d2fc1" kind="variable"><name>jwtKey</name></member>
+    <member refid="_program_8cs_1a7b225fcb720e4d5ed2bbf60e28a25e6d" kind="variable"><name>app</name></member>
+    <member refid="_program_8cs_1a0b5732f3f375a64219eb918ce718100a" kind="variable"><name>DbContext</name></member>
+    <member refid="_program_8cs_1a38966837155bf091f361d55ee13bb2ae" kind="function"><name>UseSerilog</name></member>
+    <member refid="_program_8cs_1a8d1db2bf97797f0326f61c200e5a8c64" kind="function"><name>AddAuthentication</name></member>
+    <member refid="_program_8cs_1abc3694a0e15618f2499e5a540264f833" kind="function"><name>AddControllers</name></member>
+    <member refid="_program_8cs_1a0d7859f9cad50e8e9fdf015100780e07" kind="function"><name>AddEndpointsApiExplorer</name></member>
+    <member refid="_program_8cs_1ae0ce43c019a5621d731d0c622c793644" kind="function"><name>AddSwaggerGen</name></member>
+    <member refid="_program_8cs_1a9996a6aea6f85d7fccd58bd2dd635c75" kind="function"><name>AddSpaStaticFiles</name></member>
+    <member refid="_program_8cs_1a79a944c7f0e25196ca3c5a8638b919b9" kind="function"><name>if</name></member>
+    <member refid="_program_8cs_1aa4d447fc3129a3aa301d736b8bd04ae9" kind="function"><name>UseHttpsRedirection</name></member>
+    <member refid="_program_8cs_1a906a3ce545279a7a73941f1d7b64d7cf" kind="function"><name>UseStaticFiles</name></member>
+    <member refid="_program_8cs_1a2764bf1e0cc5a9e1292c141236d8b26e" kind="function"><name>UseSpaStaticFiles</name></member>
+    <member refid="_program_8cs_1a94c810d266751293a2d511a720a5625f" kind="function"><name>UseRouting</name></member>
+    <member refid="_program_8cs_1a6435d8beeff4999dc0b0c6d60a86a4e2" kind="function"><name>UseAuthentication</name></member>
+    <member refid="_program_8cs_1af6f72d752b2e73aa0292f74bd13237ab" kind="function"><name>UseAuthorization</name></member>
+    <member refid="_program_8cs_1acd8ea94c2e2f1343b761cb3919ea321e" kind="function"><name>UseEndpoints</name></member>
+    <member refid="_program_8cs_1a6c1dbf4358966118032e0ad0b277935d" kind="function"><name>UseSpa</name></member>
+    <member refid="_program_8cs_1a7fb2f329b824c02bbfd0b3837203633c" kind="function"><name>EnsureCreated</name></member>
+    <member refid="_program_8cs_1a0241af95635e9513f2a43fe3f768f6d4" kind="function"><name>Log</name></member>
+    <member refid="_program_8cs_1aaa3dbf02e269c3ef7e8546d290c6b3dd" kind="function"><name>Run</name></member>
+  </compound>
+  <compound refid="_base_service_8cs" kind="file"><name>BaseService.cs</name>
+  </compound>
+  <compound refid="_config_service_8cs" kind="file"><name>ConfigService.cs</name>
+  </compound>
+  <compound refid="_logger_service_8cs" kind="file"><name>LoggerService.cs</name>
+  </compound>
+  <compound refid="_open_weather_8cs" kind="file"><name>OpenWeather.cs</name>
+  </compound>
+  <compound refid="_password_service_8cs" kind="file"><name>PasswordService.cs</name>
+  </compound>
+  <compound refid="_settings_service_8cs" kind="file"><name>SettingsService.cs</name>
+  </compound>
+  <compound refid="_statistic_service_8cs" kind="file"><name>StatisticService.cs</name>
+  </compound>
+  <compound refid="_user_service_8cs" kind="file"><name>UserService.cs</name>
+  </compound>
+  <compound refid="_vite_helper_8cs" kind="file"><name>ViteHelper.cs</name>
+  </compound>
+  <compound refid="dir_256fe1bd8144d7c2b00fc0356ec9846c" kind="dir"><name>C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers</name>
+  </compound>
+  <compound refid="dir_8dc6207daae515a244171ea70d990b60" kind="dir"><name>C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Database</name>
+  </compound>
+  <compound refid="dir_9de81bb10a317d064294c60ca1461a66" kind="dir"><name>C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models</name>
+  </compound>
+  <compound refid="dir_828fc1b411d11aa8fc59cd6083abe6ba" kind="dir"><name>C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services</name>
+  </compound>
+  <compound refid="dir_af368a46a6ebf15052ef122af6b626c3" kind="dir"><name>C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather</name>
+  </compound>
+  <compound refid="dir_a4ab9742db1a7da5648caa871a409f8c" kind="dir"><name>C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_logger_service" kind="class" language="C#" prot="public">
+    <compoundname>SQ::TermProject::myWeather::Services::LoggerService</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_logger_service_1a7f033aa9b5b281fa39cc908ef491715d" prot="private" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string SQ.TermProject.myWeather.Services.LoggerService.logFilePath</definition>
+        <argsstring></argsstring>
+        <name>logFilePath</name>
+        <qualifiedname>SQ.TermProject.myWeather.Services.LoggerService.logFilePath</qualifiedname>
+        <initializer>= &quot;./logs/log.txt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/LoggerService.cs" line="8" column="31" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/LoggerService.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_logger_service_1a3642b90d7c01f5dca5ff49c3ecb518a2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SQ.TermProject.myWeather.Services.LoggerService.Log</definition>
+        <argsstring>(string message)</argsstring>
+        <name>Log</name>
+        <qualifiedname>SQ.TermProject.myWeather.Services.LoggerService.Log</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/LoggerService.cs" line="10" column="28" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/LoggerService.cs" bodystart="10" bodyend="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/LoggerService.cs" line="6" column="19" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/LoggerService.cs" bodystart="7" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_logger_service_1a3642b90d7c01f5dca5ff49c3ecb518a2" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::LoggerService</scope><name>Log</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_logger_service_1a7f033aa9b5b281fa39cc908ef491715d" prot="private" virt="non-virtual"><scope>SQ::TermProject::myWeather::Services::LoggerService</scope><name>logFilePath</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

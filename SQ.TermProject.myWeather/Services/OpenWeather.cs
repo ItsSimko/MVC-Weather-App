@@ -16,7 +16,7 @@ namespace SQ.TermProject.myWeather.Services
         private readonly string _apiKey;
 
         private static Dictionary<string, Tuple<Forecast, DateTime>> cache = new Dictionary<string, Tuple<Forecast, DateTime>>();
-        private TimeSpan expirationTime = TimeSpan.FromSeconds(600); // Expiration time (e.g., 60 seconds)
+        private TimeSpan expirationTime = TimeSpan.FromSeconds(600); // Expiration time (e.g., 0 minute)
 
         /// <summary>
         /// Initializes a new instance of the OpenWeatherService class with an HttpClient.
@@ -55,7 +55,6 @@ namespace SQ.TermProject.myWeather.Services
 
                 var content = await response.Content.ReadFromJsonAsync<Forecast>();
 
-                // Update the cache with the new data
                 cache[cityName] = Tuple.Create(content, DateTime.Now);
 
                 return content;

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role" kind="class" language="C#" prot="public">
+    <compoundname>SQ::TermProject::myWeather::Models::UserRole</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1a6e3969f508ab31dae0693acad0871160" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SQ.TermProject.myWeather.Models.UserRole.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.UserRole.Id</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the unique identifier for the user role. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/UserRole.cs" line="11" column="20" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/UserRole.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1ae72e7106d131d719aafe117190c235ca" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SQ.TermProject.myWeather.Models.UserRole.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.UserRole.Name</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the name of the user role. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/UserRole.cs" line="16" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/UserRole.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1a5fbfa406546736241c5be9bb8d93a4be" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SQ.TermProject.myWeather.Models.UserRole.PermissionLevel</definition>
+        <argsstring></argsstring>
+        <name>PermissionLevel</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.UserRole.PermissionLevel</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the permission level associated with the user role. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/UserRole.cs" line="21" column="20" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/UserRole.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1ab60c5ee449fb8104b45cd5f6daf33cc2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SQ.TermProject.myWeather.Models.UserRole.UserRole</definition>
+        <argsstring>()</argsstring>
+        <name>UserRole</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.UserRole.UserRole</qualifiedname>
+        <briefdescription>
+<para>Initializes a default instance of the UserRole class with predefined values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/UserRole.cs" line="26" column="16" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/UserRole.cs" bodystart="26" bodyend="31"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a user role in the system. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/UserRole.cs" line="6" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/UserRole.cs" bodystart="7" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1a6e3969f508ab31dae0693acad0871160" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::UserRole</scope><name>Id</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1ae72e7106d131d719aafe117190c235ca" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::UserRole</scope><name>Name</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1a5fbfa406546736241c5be9bb8d93a4be" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::UserRole</scope><name>PermissionLevel</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role_1ab60c5ee449fb8104b45cd5f6daf33cc2" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::UserRole</scope><name>UserRole</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

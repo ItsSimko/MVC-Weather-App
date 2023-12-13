@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current" kind="class" language="C#" prot="public">
+    <compoundname>SQ::TermProject::myWeather::Models::Current</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1aa9350db19b06891dda9737239aafba62" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SQ.TermProject.myWeather.Models.Current.dt</definition>
+        <argsstring></argsstring>
+        <name>dt</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Current.dt</qualifiedname>
+        <briefdescription>
+<para>Time of data calculation, Unix, UTC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="11" column="20" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a967436c2899948a99a873f72361e89d0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SQ.TermProject.myWeather.Models.Current.sunrise</definition>
+        <argsstring></argsstring>
+        <name>sunrise</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Current.sunrise</qualifiedname>
+        <briefdescription>
+<para>Sunrise time, Unix, UTC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="16" column="20" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a14ae5fbcde0e6c8db34cdcfaf9757b5a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SQ.TermProject.myWeather.Models.Current.sunset</definition>
+        <argsstring></argsstring>
+        <name>sunset</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Current.sunset</qualifiedname>
+        <briefdescription>
+<para>Sunset time, Unix, UTC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="21" column="20" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a3724ab68c1f2cfb9dea8d6f87fba6a8b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double SQ.TermProject.myWeather.Models.Current.temp</definition>
+        <argsstring></argsstring>
+        <name>temp</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Current.temp</qualifiedname>
+        <briefdescription>
+<para>Temperature. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="26" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1af66d1cfeca49caad3c25eb4c4b72d557" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double SQ.TermProject.myWeather.Models.Current.feels_like</definition>
+        <argsstring></argsstring>
+        <name>feels_like</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Current.feels_like</qualifiedname>
+        <briefdescription>
+<para>This temperature parameter accounts for the human perception of weather. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="32" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1ac2eb7ea0053f3bf2a12d431f4fff3c78" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SQ.TermProject.myWeather.Models.Current.pressure</definition>
+        <argsstring></argsstring>
+        <name>pressure</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Current.pressure</qualifiedname>
+        <briefdescription>
+<para>Atmospheric pressure on the sea level, hPa. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="37" column="20" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a505adbc97a0a46b8c2bde4f07bb0bddf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SQ.TermProject.myWeather.Models.Current.humidity</definition>
+        <argsstring></argsstring>
+        <name>humidity</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Current.humidity</qualifiedname>
+        <briefdescription>
+<para>Humidity, %. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="42" column="20" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a4d06057b9aabad9434d83bf0d85595da" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double SQ.TermProject.myWeather.Models.Current.dew_point</definition>
+        <argsstring></argsstring>
+        <name>dew_point</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Current.dew_point</qualifiedname>
+        <briefdescription>
+<para>Atmospheric temperature below which water droplets begin to condense and dew can form. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="48" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a5ccaccbc2126b884346d2bbff63475eb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double SQ.TermProject.myWeather.Models.Current.uvi</definition>
+        <argsstring></argsstring>
+        <name>uvi</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Current.uvi</qualifiedname>
+        <briefdescription>
+<para>The UV index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="53" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1ab3a57a37648ad6eda950684ce442e72a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SQ.TermProject.myWeather.Models.Current.clouds</definition>
+        <argsstring></argsstring>
+        <name>clouds</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Current.clouds</qualifiedname>
+        <briefdescription>
+<para>Cloudiness, %. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="58" column="20" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a73134480398cd85f80d5053c52e6e31d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SQ.TermProject.myWeather.Models.Current.visibility</definition>
+        <argsstring></argsstring>
+        <name>visibility</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Current.visibility</qualifiedname>
+        <briefdescription>
+<para>Visibility, meters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="63" column="20" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1ab894fee329ae3c8e4af1bd29d706c0cc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double SQ.TermProject.myWeather.Models.Current.wind_speed</definition>
+        <argsstring></argsstring>
+        <name>wind_speed</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Current.wind_speed</qualifiedname>
+        <briefdescription>
+<para>Wind speed. Unit Default: meter/sec, Metric: meter/sec, Imperial: miles/hour. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="68" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a6fd957af7701104edbad4db5483671aa" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SQ.TermProject.myWeather.Models.Current.wind_deg</definition>
+        <argsstring></argsstring>
+        <name>wind_deg</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Current.wind_deg</qualifiedname>
+        <briefdescription>
+<para>Wind direction, degrees (meteorological). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="73" column="20" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a3e0cbc5144d4e0198b1099c223a2c1b3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double SQ.TermProject.myWeather.Models.Current.wind_gust</definition>
+        <argsstring></argsstring>
+        <name>wind_gust</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Current.wind_gust</qualifiedname>
+        <briefdescription>
+<para>Wind gust. Unit Default: meter/sec, Metric: meter/sec, Imperial: miles/hour. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="78" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a453730e09d5c1038ac7ec1358ffe5575" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; <ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_weather" kindref="compound">Weather</ref> &gt;</type>
+        <definition>List&lt;Weather&gt; SQ.TermProject.myWeather.Models.Current.weather</definition>
+        <argsstring></argsstring>
+        <name>weather</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Current.weather</qualifiedname>
+        <briefdescription>
+<para>Weather conditions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="83" column="21" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="83" bodyend="83"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents the current weather data. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="6" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="7" bodyend="84"/>
+    <listofallmembers>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1ab3a57a37648ad6eda950684ce442e72a" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Current</scope><name>clouds</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a4d06057b9aabad9434d83bf0d85595da" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Current</scope><name>dew_point</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1aa9350db19b06891dda9737239aafba62" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Current</scope><name>dt</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1af66d1cfeca49caad3c25eb4c4b72d557" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Current</scope><name>feels_like</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a505adbc97a0a46b8c2bde4f07bb0bddf" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Current</scope><name>humidity</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1ac2eb7ea0053f3bf2a12d431f4fff3c78" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Current</scope><name>pressure</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a967436c2899948a99a873f72361e89d0" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Current</scope><name>sunrise</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a14ae5fbcde0e6c8db34cdcfaf9757b5a" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Current</scope><name>sunset</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a3724ab68c1f2cfb9dea8d6f87fba6a8b" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Current</scope><name>temp</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a5ccaccbc2126b884346d2bbff63475eb" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Current</scope><name>uvi</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a73134480398cd85f80d5053c52e6e31d" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Current</scope><name>visibility</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a453730e09d5c1038ac7ec1358ffe5575" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Current</scope><name>weather</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a6fd957af7701104edbad4db5483671aa" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Current</scope><name>wind_deg</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1a3e0cbc5144d4e0198b1099c223a2c1b3" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Current</scope><name>wind_gust</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current_1ab894fee329ae3c8e4af1bd29d706c0cc" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Current</scope><name>wind_speed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
