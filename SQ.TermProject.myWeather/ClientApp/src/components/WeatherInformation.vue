@@ -5,25 +5,25 @@
 
   let location = myLoc;
   let weather = weatherData;
+  
+
 
   let currentMetric = 'C';
 
   function changeMetric() {
     if (currentMetric === 'C') {
-      weather.data.main.temp = cToF(weather.data.main.temp)
-      weather.data.main.feels_like = cToF(weather.data.main.feels_like)
-      weather.data.main.temp_max = cToF(weather.data.main.temp_max)
-      weather.data.main.temp_min = cToF(weather.data.main.temp_min)
+      weatherData.data.current.temp = cToF(weatherData.data.current.temp)
+      weatherData.data.current.feels_like = cToF(weatherData.data.current.feels_like)
       currentMetric = "F"
     }
     else if (currentMetric === 'F') {
       currentMetric = "C"
-      weather.data.main.temp = fToC(weather.data.main.temp)
-      weather.data.main.feels_like = fToC(weather.data.main.feels_like)
-      weather.data.main.temp_max = fToC(weather.data.main.temp_max)
-      weather.data.main.temp_min = fToC(weather.data.main.temp_min)
+      weatherData.data.current.temp = fToC(weatherData.data.current.temp)
+      weatherData.data.current.feels_like = fToC(weatherData.data.current.feels_like)
 
     }
+
+    console.log(currentMetric)
   }
 
   function cToF(val: typeof weather.data.main.temp) {
@@ -38,9 +38,13 @@
 
 
 
-<template>
 
-  <v-container class="bg-blue-grey-darken-4 rounded-lg w-70 p-6" v-if="weather.data">
+<template>
+  <v-alert v-if="weather.data.found == false" density="compact"
+           type="warning"
+           title="Alert title"
+           text="The server could not find weather data for the location. Our apologies" class="my-2"></v-alert>
+  <v-container class="bg-blue-grey-darken-4 rounded-lg w-70 p-6" v-if="weather.data.current  && weather.data.found == true">
     <v-row class="bg-transparent ma-3">
       <p class="text-h3 mx-auto">{{ location.myLocationT.name }}, {{location.myLocationT.country}}</p>
     </v-row>
@@ -60,7 +64,7 @@
             </v-col>
           </v-row>
           <v-row>
-            <p class="text-h1 mx-auto my-2">{{weather.data.main.temp.toFixed(2)}}° {{currentMetric}}</p>
+            <p class="text-h1 mx-auto my-2">{{weather.data.current.temp.toFixed(2)}}° {{currentMetric}}</p>
           </v-row>
         </v-sheet>
       </v-col>
@@ -79,7 +83,7 @@
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p class="text-h4"> {{ weather.data.main.feels_like.toFixed(2) }}°{{currentMetric}}</p>
+                      <p class="text-h4"> {{ weather.data.current.feels_like.toFixed(2) }}°{{currentMetric}}</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
@@ -97,7 +101,7 @@
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p class="text-h4"> {{ weather.data.main.humidity }}%</p>
+                      <p class="text-h4"> {{ weather.data.current.humidity }}%</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
@@ -108,14 +112,14 @@
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p > Cloud Coverage:</p>
+                      <p> Cloud Coverage:</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p class="text-h4"> {{ weather.data.clouds.all }}%</p>
+                      <p class="text-h4"> {{ weather.data.current.clouds}}%</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
@@ -129,14 +133,14 @@
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p> Daily High:</p>
+                      <p> Rain:</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p class="text-h4"> {{ weather.data.main.temp_max.toFixed(2) }}° {{currentMetric}}</p>
+                      <p class="text-h4"> {{ weather.data.current.rain || 0}} mm/h</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
@@ -146,15 +150,15 @@
               <v-sheet class="bg-transparent">
                 <v-row class="mx-auto text-center">
                   <v-col>
-                    <v-sheet class="bg-transparent"> 
-                      <p> Daily Low:</p>
+                    <v-sheet class="bg-transparent">
+                      <p> Visibility:</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p class="text-h4"> {{ weather.data.main.temp_min.toFixed(2) }}° {{currentMetric}}</p>
+                      <p class="text-h4"> {{ weather.data.current.visibility }} m</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
@@ -172,7 +176,7 @@
                 <v-row class="mx-auto text-center">
                   <v-col>
                     <v-sheet class="bg-transparent">
-                      <p class="text-h4"> {{ weather.data.main.pressure }} hPa</p>
+                      <p class="text-h4"> {{ weather.data.current.pressure }} hPa</p>
                     </v-sheet>
                   </v-col>
                 </v-row>
