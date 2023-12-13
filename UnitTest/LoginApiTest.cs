@@ -17,7 +17,7 @@ namespace UnitTest
         {
             // arrange
             UserService userService = new UserService();
-            string username = "AleSimko", password = "simko123";
+            string username = "TestAcnt1", password = "Test1234";
 
             // act
             bool actual = userService.IsValidUser(username, password);
