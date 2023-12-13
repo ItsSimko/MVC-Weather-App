@@ -4,7 +4,6 @@ using System.Xml.Xsl;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using SQ.TermProject.myWeather.Models;
-using SQ.TermProject.myWeather.Models.WeatherData;
 
 namespace SQ.TermProject.myWeather.Services
 {
@@ -16,7 +15,7 @@ namespace SQ.TermProject.myWeather.Services
         private readonly HttpClient _httpClient;
         private readonly string _apiKey;
 
-        private static Dictionary<string, Tuple<WeatherForecast, DateTime>> cache = new Dictionary<string, Tuple<WeatherForecast, DateTime>>();
+        private static Dictionary<string, Tuple<Forecast, DateTime>> cache = new Dictionary<string, Tuple<Forecast, DateTime>>();
         private TimeSpan expirationTime = TimeSpan.FromSeconds(600); // Expiration time (e.g., 60 seconds)
 
         /// <summary>
@@ -33,7 +32,7 @@ namespace SQ.TermProject.myWeather.Services
         /// </summary>
         /// <param name="cityName">The name of the city for which weather data is requested.</param>
         /// <returns>A task representing the asynchronous operation that yields weather forecast data.</returns>
-        public async Task<WeatherForecast> GetWeatherDataAsync(string cityName, string country, double lon, double lat)
+        public async Task<Forecast> GetWeatherDataAsync(string cityName, string country, double lon, double lat)
         {
             try
             {
@@ -50,11 +49,11 @@ namespace SQ.TermProject.myWeather.Services
                     }
                 }
 
-                string url = $"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude=hourly,daily&appid={_apiKey}";
+                string url = $"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude=hourly,daily,minutely&appid={_apiKey}&units=metric";
                 var response = await _httpClient.GetAsync(url);
                 response.EnsureSuccessStatusCode();
 
-                var content = await response.Content.ReadFromJsonAsync<dynamic>();
+                var content = await response.Content.ReadFromJsonAsync<Forecast>();
 
                 // Update the cache with the new data
                 cache[cityName] = Tuple.Create(content, DateTime.Now);
