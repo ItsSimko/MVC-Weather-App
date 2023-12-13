@@ -8,12 +8,22 @@ using System.Text.Json;
 
 namespace SQ.TermProject.myWeather.Controllers.UserAuth
 {
+    /// <summary>
+    /// Controller for user registration/authentication.
+    /// </summary>
     [ApiController]
     [Route("api/auth/[controller]")]
     public class Register : ControllerBase
     {
         private UserService userService = new UserService();
 
+        /// <summary>
+        /// Registers a new user.
+        /// </summary>
+        /// <param name="username">The username of the new user.</param>
+        /// <param name="password">The password of the new user.</param>
+        /// <param name="email">The email of the new user.</param>
+        /// <returns>The IActionResult indicating success or failure of registration.</returns>
         [HttpPost(Name = "RegisterUser")]
         public IActionResult RegisterUser(string username, string password, string email)
         {

@@ -82,9 +82,6 @@ namespace SQ.TermProject.myWeather.Services
                 LoggerService.Log("Exception Message: " + ex.Message);
                 return false;
             }
-
-
-
         }
 
     }

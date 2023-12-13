@@ -1,28 +1,93 @@
 \doxysection{SQ.\+Term\+Project.\+my\+Weather.\+Models.\+User Class Reference}
 \hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user}{}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user}\index{SQ.TermProject.myWeather.Models.User@{SQ.TermProject.myWeather.Models.User}}
+
+
+Represents a user with authentication credentials and associated information.  
+
+
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
+int \mbox{\hyperlink{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_a0fa3e9f287e9952a71d8b24c8716715f}{Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the unique identifier for the user. \end{DoxyCompactList}\item 
+string? \mbox{\hyperlink{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_aee52b222d13102cce8dddfa4e78e39a3}{User\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the username of the user. \end{DoxyCompactList}\item 
+string? \mbox{\hyperlink{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_a17d6696a0b01510e0d1f3c5d836d30c5}{Email}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the email address of the user. \end{DoxyCompactList}\item 
+string? \mbox{\hyperlink{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_ab1d92507ad27e233a8b543e54ed7dfa9}{Password}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the hashed password of the user. \end{DoxyCompactList}\item 
+string? \mbox{\hyperlink{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_a1ed59cee1ca5b1eadb39480b2cd078fb}{Salt}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the salt used for password hashing. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_ae2b26fc82600acee02baff1d54e0083c}{Role\+Id}} = 1\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the role identifier associated with the user (defaults to 1). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a user with authentication credentials and associated information. 
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_a17d6696a0b01510e0d1f3c5d836d30c5}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_a17d6696a0b01510e0d1f3c5d836d30c5} 
+\index{SQ.TermProject.myWeather.Models.User@{SQ.TermProject.myWeather.Models.User}!Email@{Email}}
+\index{Email@{Email}!SQ.TermProject.myWeather.Models.User@{SQ.TermProject.myWeather.Models.User}}
+\doxysubsubsection{\texorpdfstring{Email}{Email}}
+{\footnotesize\ttfamily string? SQ.\+Term\+Project.\+my\+Weather.\+Models.\+User.\+Email\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the email address of the user. 
+
 \Hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_a0fa3e9f287e9952a71d8b24c8716715f}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_a0fa3e9f287e9952a71d8b24c8716715f} 
-int {\bfseries Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
-\Hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_a5c6e4f8b590d157e650c9aece3db2cc3}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_a5c6e4f8b590d157e650c9aece3db2cc3} 
-string {\bfseries User\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
-\Hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_a8ce4f0ab2d96c6fa3ff09f771c6c2556}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_a8ce4f0ab2d96c6fa3ff09f771c6c2556} 
-string {\bfseries Email}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
-\Hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_a1398125669aeef4711ea40789e60aac3}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_a1398125669aeef4711ea40789e60aac3} 
-string {\bfseries Password}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
-\Hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_ae9f66a5d54c7e3d293772748cd2c33bf}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_ae9f66a5d54c7e3d293772748cd2c33bf} 
-string {\bfseries Salt}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\index{SQ.TermProject.myWeather.Models.User@{SQ.TermProject.myWeather.Models.User}!Id@{Id}}
+\index{Id@{Id}!SQ.TermProject.myWeather.Models.User@{SQ.TermProject.myWeather.Models.User}}
+\doxysubsubsection{\texorpdfstring{Id}{Id}}
+{\footnotesize\ttfamily int SQ.\+Term\+Project.\+my\+Weather.\+Models.\+User.\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the unique identifier for the user. 
+
+\Hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_ab1d92507ad27e233a8b543e54ed7dfa9}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_ab1d92507ad27e233a8b543e54ed7dfa9} 
+\index{SQ.TermProject.myWeather.Models.User@{SQ.TermProject.myWeather.Models.User}!Password@{Password}}
+\index{Password@{Password}!SQ.TermProject.myWeather.Models.User@{SQ.TermProject.myWeather.Models.User}}
+\doxysubsubsection{\texorpdfstring{Password}{Password}}
+{\footnotesize\ttfamily string? SQ.\+Term\+Project.\+my\+Weather.\+Models.\+User.\+Password\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the hashed password of the user. 
+
 \Hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_ae2b26fc82600acee02baff1d54e0083c}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_ae2b26fc82600acee02baff1d54e0083c} 
-int {\bfseries Role\+Id} = 1\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\index{SQ.TermProject.myWeather.Models.User@{SQ.TermProject.myWeather.Models.User}!RoleId@{RoleId}}
+\index{RoleId@{RoleId}!SQ.TermProject.myWeather.Models.User@{SQ.TermProject.myWeather.Models.User}}
+\doxysubsubsection{\texorpdfstring{RoleId}{RoleId}}
+{\footnotesize\ttfamily int SQ.\+Term\+Project.\+my\+Weather.\+Models.\+User.\+Role\+Id = 1\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the role identifier associated with the user (defaults to 1). 
+
+\Hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_a1ed59cee1ca5b1eadb39480b2cd078fb}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_a1ed59cee1ca5b1eadb39480b2cd078fb} 
+\index{SQ.TermProject.myWeather.Models.User@{SQ.TermProject.myWeather.Models.User}!Salt@{Salt}}
+\index{Salt@{Salt}!SQ.TermProject.myWeather.Models.User@{SQ.TermProject.myWeather.Models.User}}
+\doxysubsubsection{\texorpdfstring{Salt}{Salt}}
+{\footnotesize\ttfamily string? SQ.\+Term\+Project.\+my\+Weather.\+Models.\+User.\+Salt\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the salt used for password hashing. 
+
+\Hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_aee52b222d13102cce8dddfa4e78e39a3}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_aee52b222d13102cce8dddfa4e78e39a3} 
+\index{SQ.TermProject.myWeather.Models.User@{SQ.TermProject.myWeather.Models.User}!UserName@{UserName}}
+\index{UserName@{UserName}!SQ.TermProject.myWeather.Models.User@{SQ.TermProject.myWeather.Models.User}}
+\doxysubsubsection{\texorpdfstring{UserName}{UserName}}
+{\footnotesize\ttfamily string? SQ.\+Term\+Project.\+my\+Weather.\+Models.\+User.\+User\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the username of the user. 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/alexs/source/repos/\+SQ.\+Term\+Project.\+my\+Weather/\+SQ.\+Term\+Project.\+my\+Weather/\+Models/User.\+cs\end{DoxyCompactItemize}
+C\+:/\+Users/alexs/source/repos/\+SQ.\+Term\+Project.\+my\+Weather/\+SQ.\+Term\+Project.\+my\+Weather/\+Models/\mbox{\hyperlink{_user_8cs}{User.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_s_q_1_1_term_project_1_1my_weather_1_1_database" kind="namespace" language="C#">
+    <compoundname>SQ::TermProject::myWeather::Database</compoundname>
+    <innerclass refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context" prot="public">SQ::TermProject::myWeather::Database::AppDbContext</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Database/AppDbContext.cs" line="8" column="1"/>
+  </compounddef>
+</doxygen>

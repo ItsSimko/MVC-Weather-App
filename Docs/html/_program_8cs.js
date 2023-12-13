@@ -1,0 +1,26 @@
+var _program_8cs =
+[
+    [ "AddAuthentication", "_program_8cs.html#a8d1db2bf97797f0326f61c200e5a8c64", null ],
+    [ "AddControllers", "_program_8cs.html#abc3694a0e15618f2499e5a540264f833", null ],
+    [ "AddEndpointsApiExplorer", "_program_8cs.html#a0d7859f9cad50e8e9fdf015100780e07", null ],
+    [ "AddSpaStaticFiles", "_program_8cs.html#a9996a6aea6f85d7fccd58bd2dd635c75", null ],
+    [ "AddSwaggerGen", "_program_8cs.html#ae0ce43c019a5621d731d0c622c793644", null ],
+    [ "EnsureCreated", "_program_8cs.html#a7fb2f329b824c02bbfd0b3837203633c", null ],
+    [ "if", "_program_8cs.html#a79a944c7f0e25196ca3c5a8638b919b9", null ],
+    [ "Log", "_program_8cs.html#a0241af95635e9513f2a43fe3f768f6d4", null ],
+    [ "Run", "_program_8cs.html#aaa3dbf02e269c3ef7e8546d290c6b3dd", null ],
+    [ "UseAuthentication", "_program_8cs.html#a6435d8beeff4999dc0b0c6d60a86a4e2", null ],
+    [ "UseAuthorization", "_program_8cs.html#af6f72d752b2e73aa0292f74bd13237ab", null ],
+    [ "UseEndpoints", "_program_8cs.html#acd8ea94c2e2f1343b761cb3919ea321e", null ],
+    [ "UseHttpsRedirection", "_program_8cs.html#aa4d447fc3129a3aa301d736b8bd04ae9", null ],
+    [ "UseRouting", "_program_8cs.html#a94c810d266751293a2d511a720a5625f", null ],
+    [ "UseSerilog", "_program_8cs.html#a38966837155bf091f361d55ee13bb2ae", null ],
+    [ "UseSpa", "_program_8cs.html#a6c1dbf4358966118032e0ad0b277935d", null ],
+    [ "UseSpaStaticFiles", "_program_8cs.html#a2764bf1e0cc5a9e1292c141236d8b26e", null ],
+    [ "UseStaticFiles", "_program_8cs.html#a906a3ce545279a7a73941f1d7b64d7cf", null ],
+    [ "app", "_program_8cs.html#a7b225fcb720e4d5ed2bbf60e28a25e6d", null ],
+    [ "builder", "_program_8cs.html#a2f78352277081c620fd4cf92a5ce15e5", null ],
+    [ "DbContext", "_program_8cs.html#a0b5732f3f375a64219eb918ce718100a", null ],
+    [ "jwtIssuer", "_program_8cs.html#aaab4fe0216631d737fde3af4dfd93141", null ],
+    [ "jwtKey", "_program_8cs.html#a842e350dbe960f667f64c579ff7d2fc1", null ]
+];

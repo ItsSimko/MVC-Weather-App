@@ -7,44 +7,67 @@ namespace SQ.TermProject.myWeather.Services
     {
         public void UpdateUser(string name, string role)
         {
-            var entityToUpdate = DbContext.Users.FirstOrDefault(e => e.UserName == name);
-            var roleDb = DbContext.UserRoles.Where(e => e.Name == role).Select(e => e.Id).FirstOrDefault();
+            try 
+            {
+                var entityToUpdate = DbContext.Users.FirstOrDefault(e => e.UserName == name);
+                var roleDb = DbContext.UserRoles.Where(e => e.Name == role).Select(e => e.Id).FirstOrDefault();
 
-            entityToUpdate.RoleId = roleDb;
+                entityToUpdate.RoleId = roleDb;
 
-            DbContext.SaveChanges();
+                DbContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                LoggerService.Log($"Exception Thrown {ex.Message}");
+            }
+
         }
 
         public void SetSiteHeader(string message, string type)
         {
-            var entityToUpdate = DbContext.Alerts.FirstOrDefault();
-
-            if (entityToUpdate == null)
+            try
             {
-                entityToUpdate = new Alert
+                var entityToUpdate = DbContext.Alerts.FirstOrDefault();
+
+                if (entityToUpdate == null)
                 {
-                    AlertId=1,
-                    AlertMsg=message,
-                    AlertType=type
-                };
+                    entityToUpdate = new Alert
+                    {
+                        AlertId = 1,
+                        AlertMsg = message,
+                        AlertType = type
+                    };
 
-                DbContext.Alerts.Add(entityToUpdate);
+                    DbContext.Alerts.Add(entityToUpdate);
+                }
+                else
+                {
+                    entityToUpdate.AlertMsg = message;
+                    entityToUpdate.AlertType = type;
+                }
+
+
+                DbContext.SaveChanges();
             }
-            else
+            catch (Exception ex)
             {
-                entityToUpdate.AlertMsg = message;
-                entityToUpdate.AlertType = type;
-            }
-
-
-            DbContext.SaveChanges();
+                LoggerService.Log($"Exception Thrown {ex.Message}");
+            } 
         }
 
         public Alert GetSiteHeader()
         {
-            var alert = DbContext.Alerts.FirstOrDefault();
+            try
+            {
+                var alert = DbContext.Alerts.FirstOrDefault();
 
-            return alert;
+                return alert;
+            }
+            catch (Exception ex)
+            {
+                LoggerService.Log($"Exception Thrown {ex.Message}");
+                return null;
+            }
 
         }
 

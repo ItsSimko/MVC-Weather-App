@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_net6___controller___and___v_ite_1_1_vite_helper" kind="class" language="C#" prot="public">
+    <compoundname>Net6_Controller_And_VIte::ViteHelper</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_net6___controller___and___v_ite_1_1_vite_helper_1a434eabbc1fab453a2ccc824fcddcd4d5" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool Net6_Controller_And_VIte.ViteHelper.PlatformIsWindows</definition>
+        <argsstring></argsstring>
+        <name>PlatformIsWindows</name>
+        <qualifiedname>Net6_Controller_And_VIte.ViteHelper.PlatformIsWindows</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" line="10" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_net6___controller___and___v_ite_1_1_vite_helper_1aefc2751ea47b4763b4adc3cf96891a99" prot="private" static="yes" mutable="no">
+        <type>ILogger</type>
+        <definition>ILogger Net6_Controller_And_VIte.ViteHelper.ViteLogger</definition>
+        <argsstring></argsstring>
+        <name>ViteLogger</name>
+        <qualifiedname>Net6_Controller_And_VIte.ViteHelper.ViteLogger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" line="12" column="32" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_net6___controller___and___v_ite_1_1_vite_helper_1a920436d9a32f597dee74f05beebaacb0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Net6_Controller_And_VIte.ViteHelper.UseViteDevelopmentServer</definition>
+        <argsstring>(this ISpaBuilder spa, int? port=null, string sourcePath=null)</argsstring>
+        <name>UseViteDevelopmentServer</name>
+        <qualifiedname>Net6_Controller_And_VIte.ViteHelper.UseViteDevelopmentServer</qualifiedname>
+        <param>
+          <type>this ISpaBuilder</type>
+          <declname>spa</declname>
+        </param>
+        <param>
+          <type>int?</type>
+          <declname>port</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>sourcePath</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Adds Connection to Vite Hosted VueApplication configured per <simplesect kind="see"><para>SpaOptions</para>
+</simplesect>
+on the <emphasis>spa</emphasis> . NOTE: (this will create devcert.pfx and vite.config.js in your Vue Application on first run) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vite hosting port</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sourcePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vite app source path</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" line="22" column="28" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" bodystart="22" bodyend="79"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_net6___controller___and___v_ite_1_1_vite_helper_1a0b03f51122dbb307d52a139afc3b47b6" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Net6_Controller_And_VIte.ViteHelper.InjectionViteConfig</definition>
+        <argsstring>(string viteConfigPath, string serverOptionFile)</argsstring>
+        <name>InjectionViteConfig</name>
+        <qualifiedname>Net6_Controller_And_VIte.ViteHelper.InjectionViteConfig</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>viteConfigPath</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>serverOptionFile</declname>
+        </param>
+        <briefdescription>
+<para>Injection vite.config file to use serverOption file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" line="84" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" bodystart="84" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net6___controller___and___v_ite_1_1_vite_helper_1af176a7df0bbcfe548abe6aea939d7034" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string Net6_Controller_And_VIte.ViteHelper.GetViteConfigFile</definition>
+        <argsstring>(string rootPath)</argsstring>
+        <name>GetViteConfigFile</name>
+        <qualifiedname>Net6_Controller_And_VIte.ViteHelper.GetViteConfigFile</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>rootPath</declname>
+        </param>
+        <briefdescription>
+<para>Get vite.config file Path (support .ts and .js) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" line="108" column="31" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" bodystart="108" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net6___controller___and___v_ite_1_1_vite_helper_1a25bb7651387db995ecb7a7e23ffcfd06" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string Net6_Controller_And_VIte.ViteHelper.BuildServerOption</definition>
+        <argsstring>(string certfile, string pass)</argsstring>
+        <name>BuildServerOption</name>
+        <qualifiedname>Net6_Controller_And_VIte.ViteHelper.BuildServerOption</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>certfile</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>pass</declname>
+        </param>
+        <briefdescription>
+<para>Build Vite https server option. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" line="126" column="31" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" bodystart="126" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net6___controller___and___v_ite_1_1_vite_helper_1aeb8a9cfba483273b9ca9519077999bdb" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Net6_Controller_And_VIte.ViteHelper.CheckPortInUsed</definition>
+        <argsstring>(int port)</argsstring>
+        <name>CheckPortInUsed</name>
+        <qualifiedname>Net6_Controller_And_VIte.ViteHelper.CheckPortInUsed</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" line="139" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net6___controller___and___v_ite_1_1_vite_helper_1af96de4f5a999ee32af1894d8f9822d2b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Net6_Controller_And_VIte.ViteHelper.EnsureNodeModuleAlreadyInstalled</definition>
+        <argsstring>(string sourcePath)</argsstring>
+        <name>EnsureNodeModuleAlreadyInstalled</name>
+        <qualifiedname>Net6_Controller_And_VIte.ViteHelper.EnsureNodeModuleAlreadyInstalled</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>sourcePath</declname>
+        </param>
+        <briefdescription>
+<para>if &apos;node_module&apos; not exist than run &apos;npm install&apos; </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" line="148" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" bodystart="148" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net6___controller___and___v_ite_1_1_vite_helper_1a091e61f88a6355541e14cb9f175137e5" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Net6_Controller_And_VIte.ViteHelper.EnsureNodeJSAlreadyInstalled</definition>
+        <argsstring>()</argsstring>
+        <name>EnsureNodeJSAlreadyInstalled</name>
+        <qualifiedname>Net6_Controller_And_VIte.ViteHelper.EnsureNodeJSAlreadyInstalled</qualifiedname>
+        <briefdescription>
+<para>Throw exception if &apos;node <ndash/>version&apos; catch error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" line="176" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" bodystart="176" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net6___controller___and___v_ite_1_1_vite_helper_1acc3f8998aa52a149bd5fd05c7c62f614" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string Net6_Controller_And_VIte.ViteHelper.CreateCertPfxKey</definition>
+        <argsstring>(string fileName)</argsstring>
+        <name>CreateCertPfxKey</name>
+        <qualifiedname>Net6_Controller_And_VIte.ViteHelper.CreateCertPfxKey</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+<para>Create pfx key and return password. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" line="201" column="31" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" bodystart="201" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net6___controller___and___v_ite_1_1_vite_helper_1aeb5a7ca33fc93918e4ac693b0a39e54b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Net6_Controller_And_VIte.ViteHelper.RunDevServer</definition>
+        <argsstring>(string sourcePath, int port, TimeSpan timeout)</argsstring>
+        <name>RunDevServer</name>
+        <qualifiedname>Net6_Controller_And_VIte.ViteHelper.RunDevServer</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>sourcePath</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>TimeSpan</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" line="226" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" bodystart="226" bodyend="290"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" line="8" column="19" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" bodystart="9" bodyend="291"/>
+    <listofallmembers>
+      <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1a25bb7651387db995ecb7a7e23ffcfd06" prot="private" virt="non-virtual"><scope>Net6_Controller_And_VIte::ViteHelper</scope><name>BuildServerOption</name></member>
+      <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1aeb8a9cfba483273b9ca9519077999bdb" prot="private" virt="non-virtual"><scope>Net6_Controller_And_VIte::ViteHelper</scope><name>CheckPortInUsed</name></member>
+      <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1acc3f8998aa52a149bd5fd05c7c62f614" prot="private" virt="non-virtual"><scope>Net6_Controller_And_VIte::ViteHelper</scope><name>CreateCertPfxKey</name></member>
+      <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1a091e61f88a6355541e14cb9f175137e5" prot="private" virt="non-virtual"><scope>Net6_Controller_And_VIte::ViteHelper</scope><name>EnsureNodeJSAlreadyInstalled</name></member>
+      <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1af96de4f5a999ee32af1894d8f9822d2b" prot="private" virt="non-virtual"><scope>Net6_Controller_And_VIte::ViteHelper</scope><name>EnsureNodeModuleAlreadyInstalled</name></member>
+      <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1af176a7df0bbcfe548abe6aea939d7034" prot="private" virt="non-virtual"><scope>Net6_Controller_And_VIte::ViteHelper</scope><name>GetViteConfigFile</name></member>
+      <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1a0b03f51122dbb307d52a139afc3b47b6" prot="private" virt="non-virtual"><scope>Net6_Controller_And_VIte::ViteHelper</scope><name>InjectionViteConfig</name></member>
+      <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1a434eabbc1fab453a2ccc824fcddcd4d5" prot="private" virt="non-virtual"><scope>Net6_Controller_And_VIte::ViteHelper</scope><name>PlatformIsWindows</name></member>
+      <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1aeb5a7ca33fc93918e4ac693b0a39e54b" prot="private" virt="non-virtual"><scope>Net6_Controller_And_VIte::ViteHelper</scope><name>RunDevServer</name></member>
+      <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1a920436d9a32f597dee74f05beebaacb0" prot="public" virt="non-virtual"><scope>Net6_Controller_And_VIte::ViteHelper</scope><name>UseViteDevelopmentServer</name></member>
+      <member refid="class_net6___controller___and___v_ite_1_1_vite_helper_1aefc2751ea47b4763b4adc3cf96891a99" prot="private" virt="non-virtual"><scope>Net6_Controller_And_VIte::ViteHelper</scope><name>ViteLogger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

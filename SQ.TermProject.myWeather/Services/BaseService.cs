@@ -18,6 +18,7 @@ namespace SQ.TermProject.myWeather.Services
         /// </summary>
         public BaseService() 
         { 
+
             DbContext = new AppDbContext();
             DbContext.Database.EnsureCreated();
         }

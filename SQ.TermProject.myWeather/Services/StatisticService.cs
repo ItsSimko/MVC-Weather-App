@@ -7,33 +7,48 @@ namespace SQ.TermProject.myWeather.Services
     {
         public void UpdateStat(string city)
         {
-            // Retrieve the entity from the database
-            var entity = DbContext.SearchStat.FirstOrDefault(e => e.Location == city);
+            try
+            {
+                // Retrieve the entity from the database
+                var entity = DbContext.SearchStat.FirstOrDefault(e => e.Location == city);
 
-            if (entity != null)
-            {
-                entity.SearchCount++;
-                DbContext.SaveChanges();
-            }
-            else
-            {
-                var newSearchStat = new SearchStat
+                if (entity != null)
                 {
-                    Location = city,
-                    SearchCount = 1
-                };
+                    entity.SearchCount++;
+                    DbContext.SaveChanges();
+                }
+                else
+                {
+                    var newSearchStat = new SearchStat
+                    {
+                        Location = city,
+                        SearchCount = 1
+                    };
 
-                // Add the new instance to the DbContext
-                DbContext.SearchStat.Add(newSearchStat);
-                DbContext.SaveChanges();
+                    // Add the new instance to the DbContext
+                    DbContext.SearchStat.Add(newSearchStat);
+                    DbContext.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggerService.Log($"Exception Throw: {ex.Message}");
             }
         }
 
 
         public int GetStat(string city)
         {
-            var result = DbContext.SearchStat.FirstOrDefault(e => e.Location == city);
-            return result.SearchCount;
+            try
+            {
+                var result = DbContext.SearchStat.FirstOrDefault(e => e.Location == city);
+                return result.SearchCount;
+            }
+            catch(Exception ex)
+            {
+                LoggerService.Log($"Exception Throw: {ex.Message}");
+                return 0;
+            }
         }
 
         public List<SearchStat> GetTop10SearchStats()

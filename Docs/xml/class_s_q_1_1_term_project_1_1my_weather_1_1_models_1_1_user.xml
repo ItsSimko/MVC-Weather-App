@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user" kind="class" language="C#" prot="public">
+    <compoundname>SQ::TermProject::myWeather::Models::User</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_1a0fa3e9f287e9952a71d8b24c8716715f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SQ.TermProject.myWeather.Models.User.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.User.Id</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the unique identifier for the user. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/User.cs" line="11" column="20" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/User.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_1aee52b222d13102cce8dddfa4e78e39a3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? SQ.TermProject.myWeather.Models.User.UserName</definition>
+        <argsstring></argsstring>
+        <name>UserName</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.User.UserName</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the username of the user. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/User.cs" line="16" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/User.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_1a17d6696a0b01510e0d1f3c5d836d30c5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? SQ.TermProject.myWeather.Models.User.Email</definition>
+        <argsstring></argsstring>
+        <name>Email</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.User.Email</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the email address of the user. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/User.cs" line="21" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/User.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_1ab1d92507ad27e233a8b543e54ed7dfa9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? SQ.TermProject.myWeather.Models.User.Password</definition>
+        <argsstring></argsstring>
+        <name>Password</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.User.Password</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the hashed password of the user. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/User.cs" line="26" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/User.cs" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_1a1ed59cee1ca5b1eadb39480b2cd078fb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? SQ.TermProject.myWeather.Models.User.Salt</definition>
+        <argsstring></argsstring>
+        <name>Salt</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.User.Salt</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the salt used for password hashing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/User.cs" line="31" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/User.cs" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_1ae2b26fc82600acee02baff1d54e0083c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SQ.TermProject.myWeather.Models.User.RoleId</definition>
+        <argsstring></argsstring>
+        <name>RoleId</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.User.RoleId</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>Gets or sets the role identifier associated with the user (defaults to 1). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/User.cs" line="36" column="20" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/User.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a user with authentication credentials and associated information. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/User.cs" line="6" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/User.cs" bodystart="7" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_1a17d6696a0b01510e0d1f3c5d836d30c5" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::User</scope><name>Email</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_1a0fa3e9f287e9952a71d8b24c8716715f" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::User</scope><name>Id</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_1ab1d92507ad27e233a8b543e54ed7dfa9" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::User</scope><name>Password</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_1ae2b26fc82600acee02baff1d54e0083c" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::User</scope><name>RoleId</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_1a1ed59cee1ca5b1eadb39480b2cd078fb" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::User</scope><name>Salt</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_1aee52b222d13102cce8dddfa4e78e39a3" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::User</scope><name>UserName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
