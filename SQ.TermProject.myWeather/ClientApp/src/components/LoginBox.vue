@@ -31,11 +31,18 @@
 <script setup lang="ts">
   import { defineComponent } from 'vue';
   import axios from 'axios';
-  import jwt_decode from 'jwt-decode';
+  import jwt_decode,{ JwtPayload } from 'jwt-decode';
   import LoadingSpinner from './Loading.vue'
 </script>
 
 <script lang="ts">
+  interface CustomPaylod extends JwtPayload {
+    "http://schemas.microsoft.com/ws/2008/06/identity/claims/role": string;
+    "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name": string;
+  }
+
+
+
   export default defineComponent({
     data() {
       return {
@@ -69,7 +76,7 @@
 
             axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
 
-            const jwt_decoded = jwt_decode(response.data.token);
+            const jwt_decoded = jwt_decode<CustomPaylod>(response.data.token);
 
             localStorage.setItem('role', jwt_decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"]);
 
