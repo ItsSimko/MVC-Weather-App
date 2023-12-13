@@ -67,3 +67,14 @@
 12/13/2023 7:39:58 AM - Web API Started.
 12/13/2023 7:50:59 AM - Web API Started.
 12/13/2023 7:52:25 AM - Web API Started.
+12/13/2023 8:31:44 AM - Web API Started.
+12/13/2023 8:31:51 AM - Api Exception Thrown: The JSON value could not be converted to System.Int32. Path: $.current.uvi | LineNumber: 0 | BytePositionInLine: 242.
+12/13/2023 8:32:43 AM - Web API Started.
+12/13/2023 8:32:51 AM - Api Exception Thrown: The JSON value could not be converted to System.Int32. Path: $.current.uvi | LineNumber: 0 | BytePositionInLine: 242.
+12/13/2023 8:33:49 AM - Web API Started.
+12/13/2023 8:34:23 AM - Api Exception Thrown: The JSON value could not be converted to System.Int32. Path: $.current.uvi | LineNumber: 0 | BytePositionInLine: 242.
+12/13/2023 8:35:07 AM - Api Exception Thrown: The JSON value could not be converted to System.Int32. Path: $.current.uvi | LineNumber: 0 | BytePositionInLine: 234.
+12/13/2023 8:35:17 AM - Api Exception Thrown: The JSON value could not be converted to System.Int32. Path: $.current.uvi | LineNumber: 0 | BytePositionInLine: 242.
+12/13/2023 8:36:52 AM - Web API Started.
+12/13/2023 8:38:47 AM - Api Exception Thrown: The JSON value could not be converted to System.Int32. Path: $.current.uvi | LineNumber: 0 | BytePositionInLine: 242.
+12/13/2023 8:39:05 AM - Web API Started.
