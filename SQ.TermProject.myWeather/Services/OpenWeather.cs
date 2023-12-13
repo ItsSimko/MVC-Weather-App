@@ -63,7 +63,7 @@ namespace SQ.TermProject.myWeather.Services
             }
             catch(Exception ex)
             {
-                LoggerService.Log("Exception Thrown: " + ex.Message);
+                LoggerService.Log("Api Exception Thrown: " + ex.Message);
                 return null;
             }
 
