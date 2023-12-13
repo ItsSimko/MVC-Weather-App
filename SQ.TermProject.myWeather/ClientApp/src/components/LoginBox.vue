@@ -88,7 +88,7 @@
           {
             this.badCredential = true;
           }
-            setInterval(() => {
+            setTimeout(() => {
 
               this.isLoading = false;
             }, 1500);
@@ -96,7 +96,7 @@
         })
           .catch(error => {
             this.servErr = true;
-            setInterval(() => {
+            setTimeout(() => {
 
               this.isLoading = false;
             }, 1500);

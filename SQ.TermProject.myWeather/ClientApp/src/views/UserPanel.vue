@@ -15,7 +15,7 @@
         </v-window-item>
 
         <v-window-item value="two" class="">
-
+          <AdminSettings />
         </v-window-item>
 
         <v-window-item value="three" class="">
@@ -36,6 +36,7 @@
   import SearchBar from '../components/SearchBar.vue';
   import ClientSettings from '../components/UserSettings.vue';
   import SuperAdminSettings from '../components/SuperAdminSetttings.vue'
+  import AdminSettings from '../components/AdminSettings.vue'
   import StatBox from '../components/Top10Box.vue'
 </script>
 
