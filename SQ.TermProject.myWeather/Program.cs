@@ -6,10 +6,18 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Text;
 using System.Diagnostics;
+using Serilog;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configure Serilog
+builder.Host.UseSerilog((ctx, lc) => lc
+    .WriteTo.Console()
+    .WriteTo.File("logs/myapp.log", rollingInterval: RollingInterval.Day)
+);
 
 //https://medium.com/@vndpal/how-to-implement-jwt-token-authentication-in-net-core-6-ab7f48470f5c most auth code refrenced from here
 //Jwt configuration starts here
