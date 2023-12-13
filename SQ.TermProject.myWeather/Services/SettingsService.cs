@@ -15,19 +15,34 @@ namespace SQ.TermProject.myWeather.Services
             DbContext.SaveChanges();
         }
 
-        public void UpdateSiteHeader(string message, string type)
+        public void SetSiteHeader(string message, string type)
         {
-            var entityToUpdate = DbContext.Alert.FirstOrDefault();
+            var entityToUpdate = DbContext.Alerts.FirstOrDefault();
 
-            entityToUpdate.AlertMsg = message;
-            entityToUpdate.AlertType = type;
+            if (entityToUpdate == null)
+            {
+                entityToUpdate = new Alert
+                {
+                    AlertId=1,
+                    AlertMsg=message,
+                    AlertType=type
+                };
+
+                DbContext.Alerts.Add(entityToUpdate);
+            }
+            else
+            {
+                entityToUpdate.AlertMsg = message;
+                entityToUpdate.AlertType = type;
+            }
+
 
             DbContext.SaveChanges();
         }
 
         public Alert GetSiteHeader()
         {
-            var alert = DbContext.Alert.FirstOrDefault();
+            var alert = DbContext.Alerts.FirstOrDefault();
 
             return alert;
 

@@ -54,9 +54,10 @@ namespace SQ.TermProject.myWeather.Controllers
 
         [HttpPost("SetHeader")]
         [Authorize(Roles = "Admin,Superadmin")]
-        public ActionResult<IEnumerable<object>> GetHeader(string username, string role)
+        public ActionResult<IEnumerable<object>> SetHeader(string msg, string type)
         {
-            return Ok(settingsService.GetSiteHeader());
+            settingsService.SetSiteHeader(msg, type);
+            return Ok();
         }
     }
 }
