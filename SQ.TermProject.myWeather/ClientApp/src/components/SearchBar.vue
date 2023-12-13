@@ -9,8 +9,7 @@
         return item.name + ", " + item.country;
   }
 
-
-  declare interface WeatherData {
+    interface WeatherData {
     ///
     "lat"?: number,
     "lon"?: number,
@@ -45,26 +44,65 @@
     ///
   }
 
-  declare interface LocData {
-    name?: string, country?: string, lat?: number, lng?: number,
+  interface LocData {
+    country: string, name: string, lat: string, lng: string,
   }
 
 </script>
 
 <script lang="ts">
+  interface WeatherData {
+    ///
+    "lat"?: number,
+    "lon"?: number,
+    "timezone"?: string,
+    "timezone_offset"?: number,
+    "found": boolean,
+    "current"?: {
+      "dt"?: number,
+      "sunrise"?: number,
+      "sunset"?: number,
+      "temp": number,
+      "feels_like": number,
+      "pressure"?: number,
+      "humidity"?: number,
+      "dew_point"?: number,
+      "uvi"?: number,
+      "clouds"?: number,
+      "visibility"?: number,
+      "wind_speed"?: number,
+      "wind_deg"?: number,
+      "wind_gust"?: number,
+      "weather"?: [
+        {
+          "id"?: number,
+          "main"?: string,
+          "description"?: string,
+          "icon"?: string
+        }
+      ],
+    },
 
-function updateWeatherData() {
-  axios.post("/api/WeatherForecast/GetWeather?cityName=" + myLoc.myLocationT.name + "&country=" + myLoc.myLocationT.country + "&lon=" + myLoc.myLocationT.lng + "&lat=" + myLoc.myLocationT.lat).then(resp => {
-    if (resp.status == 200) {
-      weatherData.data = resp.data;
-      weatherData.data.found = true;
-    }
-    else {
-      weatherData.data.found = false;
-    }
+    ///
+  }
 
-  });
-}
+  interface LocData {
+    country: string, name: string, lat: string, lng: string,
+  }
+
+  function updateWeatherData() {
+    axios.post("/api/WeatherForecast/GetWeather?cityName=" + myLoc.myLocationT.name + "&country=" + myLoc.myLocationT.country + "&lon=" + myLoc.myLocationT.lng + "&lat=" + myLoc.myLocationT.lat).then(resp => {
+      if (resp.status == 200) {
+        weatherData.data = resp.data;
+        weatherData.data.found = true;
+      }
+      else {
+        weatherData.data.found = false;
+      }
+
+    });
+  }
+
   export const myLoc = reactive({
     myLocationT: { } as LocData,
   })
