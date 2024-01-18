@@ -1,5 +1,8 @@
 # Weather Forecast Application
 
+DEMO : [https://alexsimko.dev/]
+Note, there were a few small errors ever since the redeploy onto a new host I have yet to be able to fix. One of them includes not loading on mobile. Also, top search count not loading. I am hoping to fix soon.
+
 This ASP.NET MVC application provides weather forecasts using an external API and stores user data via Entity Framework. The frontend is built using Vue.js for enhanced user interaction.
 
 ## Features
