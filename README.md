@@ -1,6 +1,6 @@
 # Weather Forecast Application
 
-DEMO : [https://alexsimko.dev/]
+DEMO : [https://alexsimko.dev/weather]
 Note, there were a few small errors ever since the redeploy onto a new host I have yet to be able to fix. One of them includes not loading on mobile. Also, top search count not loading. I am hoping to fix soon.
 
 Demo Accounts
