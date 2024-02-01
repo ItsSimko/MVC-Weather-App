@@ -58,14 +58,16 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  console.log("before")
   if (to.matched.some(record => record.meta.requiresAuth)) {
+    console.log("has required")
     // Check if the user is authenticated
     var user = null; // Implement your authentication logic here
 
     user = localStorage.getItem("token");
-    //console.log(user)
 
     if (!user) {
+      console.log("has required2")
       // If the user is not authenticated, redirect to the login page
       next({ path: '/login', query: { redirect: to.fullPath } });
     } else {

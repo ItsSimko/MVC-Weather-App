@@ -67,12 +67,10 @@ export default {
       }).then(resp => {
         //console.log(resp)
         if (resp.data.success === true) {
-          //console.log("yup")
           this.$router.push('/panel')
         }
         else
         {
-          //console.log("nope")
           this.err = true
           this.errMsg = resp.data.msg
         }

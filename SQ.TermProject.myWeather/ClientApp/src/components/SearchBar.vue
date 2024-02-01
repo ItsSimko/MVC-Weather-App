@@ -2,12 +2,9 @@
     import cities from "../assets/cities.json"
     import axios from "axios"
     import {ref, reactive, watch} from "vue";
-
+    
   //let options = ref();
 
-
-
-  function getItemText(item: { name: string, country: string }) {
         return item.name + ", " + item.country;
   }
 
@@ -47,7 +44,6 @@
   }
 
   interface LocData {
-    country?: string, name?: string, lat?: string, lng?: string,
   }
 
 </script>
@@ -112,11 +108,9 @@
   };
 
   interface LocData {
-    country: string , name: string , lat: string , lng: string,
   }
 
   export const myLoc = reactive({
-    myLocationT: { } as LocData ,
   })
 
   export const weatherData = reactive({
@@ -128,8 +122,6 @@
   })
 
   function updateWeatherData() {
-    //console.log(myLoc.myLocationT)
-    axios.post("./api/WeatherForecast/GetWeather?cityName=" + myLoc.myLocationT.name + "&country=" + myLoc.myLocationT.country + "&lon=" + myLoc.myLocationT.lng + "&lat=" + myLoc.myLocationT.lat).then(resp => {
       if (resp.status == 200) {
         weatherData.data = resp.data;
         weatherData.data.found = true;
@@ -137,10 +129,8 @@
       else {
         weatherData.data.found = false;
       }
-      //console.log(resp)
 
     }).catch((r) => {
-      //console.log(r)
     });
   }
 
@@ -155,8 +145,6 @@
                     :item-title="getItemText"
                     v-model="myLoc.myLocationT"
                     return-object
-                    hide-details="auto"
-                    >
     </v-autocomplete>
 
 
