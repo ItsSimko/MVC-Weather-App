@@ -10,7 +10,7 @@
   import WeatherContainer from '@/components/WeatherInformation.vue'
   import SearchBar from '@/components/SearchBar.vue'
   import { weatherData } from '@/components/SearchBar.vue'
- 
+
   let weather = weatherData;
   //: style = "{ 'background' : 'url(' + weather.data.current.weather.icon + ') no-repeat center center fixed !important'"
 </script>
