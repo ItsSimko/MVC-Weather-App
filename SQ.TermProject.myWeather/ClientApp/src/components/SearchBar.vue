@@ -3,9 +3,8 @@
     import axios from "axios"
     import {ref, reactive, watch} from "vue";
     
-  let options = ref(cities);
+  //let options = ref();
 
-  function getItemText(item: {name: string, country: string}) {
         return item.name + ", " + item.country;
   }
 
@@ -45,12 +44,12 @@
   }
 
   interface LocData {
-    country: string, name: string, lat: string, lng: string,
   }
 
 </script>
 
 <script lang="ts">
+
   interface WeatherData {
     ///
     "lat"?: number,
@@ -86,12 +85,32 @@
     ///
   }
 
+
+  export default {
+    data() {
+      return {
+        selectedItem: null,
+        option: {
+          "country": "ZW",
+          "name": "Filabusi",
+          "lat": "-20.53333",
+          "lng": "29.28502"
+        } as LocData,
+        options: Object.values(myLoc.myLocationT as LocData)
+      };
+    },
+    mounted() {
+      // Make an Axios request to fetch the data
+      axios.get("./cities.json").then(resp => {
+        this.options = resp.data
+      })
+    }
+  };
+
   interface LocData {
-    country: string, name: string, lat: string, lng: string,
   }
 
   export const myLoc = reactive({
-    myLocationT: {} as LocData,
   })
 
   export const weatherData = reactive({
@@ -103,8 +122,6 @@
   })
 
   function updateWeatherData() {
-    console.log(myLoc.myLocationT)
-    axios.post("/api/WeatherForecast/GetWeather?cityName=" + myLoc.myLocationT.name + "&country=" + myLoc.myLocationT.country + "&lon=" + myLoc.myLocationT.lng + "&lat=" + myLoc.myLocationT.lat).then(resp => {
       if (resp.status == 200) {
         weatherData.data = resp.data;
         weatherData.data.found = true;
@@ -112,10 +129,8 @@
       else {
         weatherData.data.found = false;
       }
-      console.log(resp)
 
     }).catch((r) => {
-      console.log(r)
     });
   }
 
@@ -130,7 +145,6 @@
                     :item-title="getItemText"
                     v-model="myLoc.myLocationT"
                     return-object
-                    hide-details="auto">
     </v-autocomplete>
 
 

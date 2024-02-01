@@ -43,7 +43,7 @@ export default {
     // call fetch every 30s to get site header
     setInterval(() =>
     {
-      axios.post("/api/Settings/GetHeader").then((r) => {
+      axios.post("./api/Settings/GetHeader").then((r) => {
         this.message = r.data.alertMsg;
         
 

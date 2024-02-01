@@ -84,7 +84,7 @@
         localStorage.removeItem('role');
         this.userName = null;
         this.token = null;
-        console.log(this.$route.path);
+        //console.log(this.$route.path);
         if (this.$route.path == "/panel") {
           this.$router.push('/login');
         }

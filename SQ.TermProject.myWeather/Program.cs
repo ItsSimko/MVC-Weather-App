@@ -89,6 +89,8 @@ app.UseStaticFiles();
 app.UseSpaStaticFiles();
 
 
+app.UsePathBase("/weather");
+
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();

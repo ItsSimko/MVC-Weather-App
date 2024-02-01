@@ -6,7 +6,9 @@
   let location = myLoc;
   let weather = weatherData;
   
+  let isMobile = window.innerWidth <= 767;
 
+  //console.log(isMobile + "I am mobile")
 
   let currentMetric = 'C';
 
@@ -66,7 +68,7 @@
           </v-row>
         </v-sheet>
       </v-col>
-      <v-col class="bg-transparent mx-1">
+      <v-col class="bg-transparent mx-1" v-if="isMobile == false">
         <v-sheet class="bg-transparent">
           <v-row>
             <v-col>

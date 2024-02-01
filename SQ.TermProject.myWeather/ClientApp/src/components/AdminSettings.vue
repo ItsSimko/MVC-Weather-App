@@ -60,7 +60,7 @@
         if (this.selectedType == 'none') {
           this.alertMessage = 'none'
         }
-        axios.post('/api/Settings/SetHeader?msg=' + this.alertMessage + '&type=' + this.selectedType, {}, config).then((r) => {
+        axios.post('./api/Settings/SetHeader?msg=' + this.alertMessage + '&type=' + this.selectedType, {}, config).then((r) => {
           this.snackbar_good = true;
         }).catch((r) => {
           this.snackbar_bad = true;

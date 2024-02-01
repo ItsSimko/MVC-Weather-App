@@ -47,13 +47,11 @@
     methods: {
       fetchData() {
         this.loading = true;
-        axios.post('/api/stats/Stastics/GetTop10Searches')
+        axios.post('./api/stats/Stastics/GetTop10Searches')
           .then(response => {
-            console.log(response)
             this.listData = response.data;
             this.loading = false;
           }).catch((e) => {
-            console.log(e)
             this.loading = false;
           });
       },

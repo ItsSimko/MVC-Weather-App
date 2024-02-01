@@ -65,7 +65,7 @@
       login() {
         this.isLoading = true;
         this.servErr = false
-        axios.post('api/auth/Login?username=' + this.username + '&password=' + this.password)
+        axios.post('./api/auth/Login?username=' + this.username + '&password=' + this.password)
           .then(response => {
           if (response.data.success == true) {
             this.badCredential = false;

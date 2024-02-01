@@ -53,7 +53,7 @@ const routes = [
 ]
 
 const router = createRouter({ 
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory("/weather/"),
   routes,
 })
 
@@ -65,7 +65,6 @@ router.beforeEach((to, from, next) => {
     var user = null; // Implement your authentication logic here
 
     user = localStorage.getItem("token");
-    console.log(user)
 
     if (!user) {
       console.log("has required2")

@@ -79,7 +79,7 @@
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
         };
 
-        axios.post('api/settings/GetUsers?username=' + this.searchQuery, {}, config).then(resp => {
+        axios.post('./api/settings/GetUsers?username=' + this.searchQuery, {}, config).then(resp => {
           setTimeout(() => {
             this.isLoading = false;
             this.searchResults = resp.data;
@@ -95,7 +95,6 @@
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
         };
 
-        axios.post("api/settings/SetUser?username=" + user.userName + "&role=" + user.name, {}, config).then(resp => {
           this.snackbar_good = true
         }).catch((r) => {
           this.snackbar_bad = true;
