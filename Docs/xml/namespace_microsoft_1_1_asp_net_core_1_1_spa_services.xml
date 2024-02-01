@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_microsoft_1_1_asp_net_core_1_1_spa_services" kind="namespace" language="C#">
+    <compoundname>Microsoft::AspNetCore::SpaServices</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/ViteHelper.cs" line="1" column="39"/>
+  </compounddef>
+</doxygen>

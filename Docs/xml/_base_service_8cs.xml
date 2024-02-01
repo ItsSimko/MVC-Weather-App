@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_base_service_8cs" kind="file" language="C#">
+    <compoundname>BaseService.cs</compoundname>
+    <innerclass refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service" prot="public">SQ::TermProject::myWeather::Services::BaseService</innerclass>
+    <innernamespace refid="namespace_s_q">SQ</innernamespace>
+    <innernamespace refid="namespace_s_q_1_1_term_project">SQ::TermProject</innernamespace>
+    <innernamespace refid="namespace_s_q_1_1_term_project_1_1my_weather">SQ::TermProject::myWeather</innernamespace>
+    <innernamespace refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_services">SQ::TermProject::myWeather::Services</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">Microsoft.EntityFrameworkCore;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_database" kindref="compound">SQ.TermProject.myWeather.Database</ref>;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_services" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_services" kindref="compound">SQ.TermProject.myWeather.Services</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9" refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service" kindref="compound">BaseService</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context" kindref="compound">AppDbContext</ref><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service_1a0396f5acafaf05197244b81a9414321a" kindref="member">DbContext</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service_1a7f7e88d26bf48b4f3530347bf2b67222" kindref="member">BaseService</ref>()<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service_1a0396f5acafaf05197244b81a9414321a" kindref="member">DbContext</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context" kindref="compound">AppDbContext</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_base_service_1a0396f5acafaf05197244b81a9414321a" kindref="member">DbContext</ref>.Database.EnsureCreated();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Services/BaseService.cs"/>
+  </compounddef>
+</doxygen>

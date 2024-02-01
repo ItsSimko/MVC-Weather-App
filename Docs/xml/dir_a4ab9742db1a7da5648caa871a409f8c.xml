@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_a4ab9742db1a7da5648caa871a409f8c" kind="dir">
+    <compoundname>C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth</compoundname>
+    <innerfile refid="_login_8cs">Login.cs</innerfile>
+    <innerfile refid="_register_8cs">Register.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/"/>
+  </compounddef>
+</doxygen>

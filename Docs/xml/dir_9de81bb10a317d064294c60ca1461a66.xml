@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_9de81bb10a317d064294c60ca1461a66" kind="dir">
+    <compoundname>C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models</compoundname>
+    <innerfile refid="_alert_8cs">Alert.cs</innerfile>
+    <innerfile refid="_forecast_8cs">Forecast.cs</innerfile>
+    <innerfile refid="_search_stat_8cs">SearchStat.cs</innerfile>
+    <innerfile refid="_user_8cs">User.cs</innerfile>
+    <innerfile refid="_user_role_8cs">UserRole.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/"/>
+  </compounddef>
+</doxygen>

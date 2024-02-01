@@ -1,0 +1,4 @@
+var _open_weather_8cs =
+[
+    [ "SQ.TermProject.myWeather.Services.OpenWeatherService", "class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service.html", "class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_open_weather_service" ]
+];

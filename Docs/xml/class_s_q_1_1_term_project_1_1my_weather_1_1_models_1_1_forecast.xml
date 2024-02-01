@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast" kind="class" language="C#" prot="public">
+    <compoundname>SQ::TermProject::myWeather::Models::Forecast</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast_1a09ed1dad931decca2b858d00610e58a4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double SQ.TermProject.myWeather.Models.Forecast.lat</definition>
+        <argsstring></argsstring>
+        <name>lat</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Forecast.lat</qualifiedname>
+        <briefdescription>
+<para>Geographic coordinates of the location (latitude). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="110" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast_1a08f5c550645a3052b9555686289350fa" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double SQ.TermProject.myWeather.Models.Forecast.lon</definition>
+        <argsstring></argsstring>
+        <name>lon</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Forecast.lon</qualifiedname>
+        <briefdescription>
+<para>Geographic coordinates of the location (longitude). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="115" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="115" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast_1a867bb9191d66126fa2c6b076f3c305fe" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SQ.TermProject.myWeather.Models.Forecast.timezone</definition>
+        <argsstring></argsstring>
+        <name>timezone</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Forecast.timezone</qualifiedname>
+        <briefdescription>
+<para>Timezone name for the requested location. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="120" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="120" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast_1afc2dde8f0998d91a457e7dd2d65a8568" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SQ.TermProject.myWeather.Models.Forecast.timezone_offset</definition>
+        <argsstring></argsstring>
+        <name>timezone_offset</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Forecast.timezone_offset</qualifiedname>
+        <briefdescription>
+<para>Shift in seconds from UTC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="125" column="20" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="125" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast_1a098683ab32e943884da58a27a76e2419" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_current" kindref="compound">Current</ref></type>
+        <definition>Current SQ.TermProject.myWeather.Models.Forecast.current</definition>
+        <argsstring></argsstring>
+        <name>current</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Forecast.current</qualifiedname>
+        <briefdescription>
+<para>Current weather data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="130" column="24" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="130" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast_1a6d22716de4c4cd300ea65564f20a8957" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; <ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_minutely" kindref="compound">Minutely</ref> &gt;</type>
+        <definition>List&lt;Minutely&gt; SQ.TermProject.myWeather.Models.Forecast.minutely</definition>
+        <argsstring></argsstring>
+        <name>minutely</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Forecast.minutely</qualifiedname>
+        <briefdescription>
+<para>Minutely forecast data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="135" column="21" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="135" bodyend="135"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents the weather forecast data. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="105" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="106" bodyend="136"/>
+    <listofallmembers>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast_1a098683ab32e943884da58a27a76e2419" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Forecast</scope><name>current</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast_1a09ed1dad931decca2b858d00610e58a4" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Forecast</scope><name>lat</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast_1a08f5c550645a3052b9555686289350fa" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Forecast</scope><name>lon</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast_1a6d22716de4c4cd300ea65564f20a8957" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Forecast</scope><name>minutely</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast_1a867bb9191d66126fa2c6b076f3c305fe" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Forecast</scope><name>timezone</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_forecast_1afc2dde8f0998d91a457e7dd2d65a8568" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Forecast</scope><name>timezone_offset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

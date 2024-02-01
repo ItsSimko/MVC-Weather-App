@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_stastics_controller_8cs" kind="file" language="C#">
+    <compoundname>StasticsController.cs</compoundname>
+    <innerclass refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller" prot="public">SQ::TermProject::myWeather::Controllers::StasticsController</innerclass>
+    <innernamespace refid="namespace_s_q">SQ</innernamespace>
+    <innernamespace refid="namespace_s_q_1_1_term_project">SQ::TermProject</innernamespace>
+    <innernamespace refid="namespace_s_q_1_1_term_project_1_1my_weather">SQ::TermProject::myWeather</innernamespace>
+    <innernamespace refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_controllers">SQ::TermProject::myWeather::Controllers</innernamespace>
+    <innernamespace refid="namespace_newtonsoft_1_1_json">Newtonsoft::Json</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">Microsoft.AspNetCore.Mvc;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Newtonsoft.Json;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_services" kindref="compound">SQ.TermProject.myWeather.Services</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_s_q_1_1_term_project_1_1my_weather_1_1_controllers" kindref="compound">SQ.TermProject.myWeather.Controllers</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>[ApiController]</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>[Route(</highlight><highlight class="stringliteral">&quot;api/stats/[controller]&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="12" refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller" kindref="compound">StasticsController</ref><sp/>:<sp/>Controller</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service" kindref="compound">StatisticService</ref><sp/>stats;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller_1a326a01205f6534a0835df1fe8c5487d5" kindref="member">StasticsController</ref>()</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stats<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service" kindref="compound">StatisticService</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[HttpPost(</highlight><highlight class="stringliteral">&quot;GetTop10Searches&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>async<sp/>Task&lt;IActionResult&gt;<sp/><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller_1ae348e09ba20288efaa37debeb9f69d6e" kindref="member">GetTop10</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>list<sp/>=<sp/>stats.<ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service_1a8adb584a831686e607c34b1155f898ba" kindref="member">GetTop10SearchStats</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Ok(JsonConvert.SerializeObject(list));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Exception<sp/>ex)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>StatusCode(500,<sp/></highlight><highlight class="stringliteral">&quot;Internal<sp/>Server<sp/>Error&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs"/>
+  </compounddef>
+</doxygen>

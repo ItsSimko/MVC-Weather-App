@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_register" kind="class" language="C#" prot="public">
+    <compoundname>SQ::TermProject::myWeather::Controllers::UserAuth::Register</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ControllerBase</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_register_1a1d9879f99c3cf102a1e2347d8ecfdc04" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_user_service" kindref="compound">UserService</ref></type>
+        <definition>UserService SQ.TermProject.myWeather.Controllers.UserAuth.Register.userService</definition>
+        <argsstring></argsstring>
+        <name>userService</name>
+        <qualifiedname>SQ.TermProject.myWeather.Controllers.UserAuth.Register.userService</qualifiedname>
+        <initializer>= new <ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_user_service" kindref="compound">UserService</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Register.cs" line="18" column="29" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Register.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_register_1aedf6e8e05a3046d43a3ac2a6323fc421" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IActionResult</type>
+        <definition>IActionResult SQ.TermProject.myWeather.Controllers.UserAuth.Register.RegisterUser</definition>
+        <argsstring>(string username, string password, string email)</argsstring>
+        <name>RegisterUser</name>
+        <qualifiedname>SQ.TermProject.myWeather.Controllers.UserAuth.Register.RegisterUser</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>password</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>email</declname>
+        </param>
+        <briefdescription>
+<para>Registers a new user. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The username of the new user.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The password of the new user.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>email</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The email of the new user.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The IActionResult indicating success or failure of registration.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Register.cs" line="28" column="30" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Register.cs" bodystart="28" bodyend="65"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Controller for user registration/authentication. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ControllerBase</label>
+      </node>
+      <node id="1">
+        <label>SQ.TermProject.myWeather.Controllers.UserAuth.Register</label>
+        <link refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_register"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ControllerBase</label>
+      </node>
+      <node id="1">
+        <label>SQ.TermProject.myWeather.Controllers.UserAuth.Register</label>
+        <link refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_register"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Register.cs" line="16" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/UserAuth/Register.cs" bodystart="17" bodyend="68"/>
+    <listofallmembers>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_register_1aedf6e8e05a3046d43a3ac2a6323fc421" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Controllers::UserAuth::Register</scope><name>RegisterUser</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_register_1a1d9879f99c3cf102a1e2347d8ecfdc04" prot="private" virt="non-virtual"><scope>SQ::TermProject::myWeather::Controllers::UserAuth::Register</scope><name>userService</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

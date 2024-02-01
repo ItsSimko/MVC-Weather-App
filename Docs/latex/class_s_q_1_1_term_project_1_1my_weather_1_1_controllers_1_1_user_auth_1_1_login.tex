@@ -1,0 +1,86 @@
+\doxysection{SQ.\+Term\+Project.\+my\+Weather.\+Controllers.\+User\+Auth.\+Login Class Reference}
+\hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login}{}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login}\index{SQ.TermProject.myWeather.Controllers.UserAuth.Login@{SQ.TermProject.myWeather.Controllers.UserAuth.Login}}
+
+
+Controller responsible for user login and authentication.  
+
+
+Inheritance diagram for SQ.\+Term\+Project.\+my\+Weather.\+Controllers.\+User\+Auth.\+Login\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_a5df311085a967a412ed05bcdcce1dc30}{Login}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the Login controller. \end{DoxyCompactList}\item 
+IAction\+Result \mbox{\hyperlink{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_aee6ddc3cb87cdc30facf6e5431b0093e}{Login\+User}} (string username, string password)
+\begin{DoxyCompactList}\small\item\em Validates user credentials and generates a JWT token upon successful authentication. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_add67392ee05a125d5b5e3f1afa183df1}{Generate\+Auth\+Token}} (string username, string role)
+\begin{DoxyCompactList}\small\item\em Generates a JWT token based on the provided username and role. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controller responsible for user login and authentication. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_a5df311085a967a412ed05bcdcce1dc30}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_a5df311085a967a412ed05bcdcce1dc30} 
+\index{SQ.TermProject.myWeather.Controllers.UserAuth.Login@{SQ.TermProject.myWeather.Controllers.UserAuth.Login}!Login@{Login}}
+\index{Login@{Login}!SQ.TermProject.myWeather.Controllers.UserAuth.Login@{SQ.TermProject.myWeather.Controllers.UserAuth.Login}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily SQ.\+Term\+Project.\+my\+Weather.\+Controllers.\+User\+Auth.\+Login.\+Login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the Login controller. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_add67392ee05a125d5b5e3f1afa183df1}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_add67392ee05a125d5b5e3f1afa183df1} 
+\index{SQ.TermProject.myWeather.Controllers.UserAuth.Login@{SQ.TermProject.myWeather.Controllers.UserAuth.Login}!GenerateAuthToken@{GenerateAuthToken}}
+\index{GenerateAuthToken@{GenerateAuthToken}!SQ.TermProject.myWeather.Controllers.UserAuth.Login@{SQ.TermProject.myWeather.Controllers.UserAuth.Login}}
+\doxysubsubsection{\texorpdfstring{GenerateAuthToken()}{GenerateAuthToken()}}
+{\footnotesize\ttfamily string SQ.\+Term\+Project.\+my\+Weather.\+Controllers.\+User\+Auth.\+Login.\+Generate\+Auth\+Token (\begin{DoxyParamCaption}\item[{string}]{username,  }\item[{string}]{role }\end{DoxyParamCaption})}
+
+
+
+Generates a JWT token based on the provided username and role. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The username of the user.\\
+\hline
+{\em role} & The role of the user.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The generated JWT token.
+\end{DoxyReturn}
+\Hypertarget{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_aee6ddc3cb87cdc30facf6e5431b0093e}\label{class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_user_auth_1_1_login_aee6ddc3cb87cdc30facf6e5431b0093e} 
+\index{SQ.TermProject.myWeather.Controllers.UserAuth.Login@{SQ.TermProject.myWeather.Controllers.UserAuth.Login}!LoginUser@{LoginUser}}
+\index{LoginUser@{LoginUser}!SQ.TermProject.myWeather.Controllers.UserAuth.Login@{SQ.TermProject.myWeather.Controllers.UserAuth.Login}}
+\doxysubsubsection{\texorpdfstring{LoginUser()}{LoginUser()}}
+{\footnotesize\ttfamily IAction\+Result SQ.\+Term\+Project.\+my\+Weather.\+Controllers.\+User\+Auth.\+Login.\+Login\+User (\begin{DoxyParamCaption}\item[{string}]{username,  }\item[{string}]{password }\end{DoxyParamCaption})}
+
+
+
+Validates user credentials and generates a JWT token upon successful authentication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The username of the user.\\
+\hline
+{\em password} & The password of the user.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An IAction\+Result containing a success message and JWT token if authentication succeeds; otherwise, returns an error message. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/alexs/source/repos/\+SQ.\+Term\+Project.\+my\+Weather/\+SQ.\+Term\+Project.\+my\+Weather/\+Controllers/\+User\+Auth/\mbox{\hyperlink{_login_8cs}{Login.\+cs}}\end{DoxyCompactItemize}

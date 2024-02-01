@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_alert" kind="class" language="C#" prot="public">
+    <compoundname>SQ::TermProject::myWeather::Models::Alert</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_alert_1a8040e3feb8a58d7221a8db98451cdedc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SQ.TermProject.myWeather.Models.Alert.AlertId</definition>
+        <argsstring></argsstring>
+        <name>AlertId</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Alert.AlertId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Alert.cs" line="5" column="20" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Alert.cs" bodystart="5" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_alert_1a8ed5b16ecc85251d8f3a490c8fa57620" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SQ.TermProject.myWeather.Models.Alert.AlertMsg</definition>
+        <argsstring></argsstring>
+        <name>AlertMsg</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Alert.AlertMsg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Alert.cs" line="6" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Alert.cs" bodystart="6" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_alert_1a56aa1bf3a136c8699d17e510110ed715" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SQ.TermProject.myWeather.Models.Alert.AlertType</definition>
+        <argsstring></argsstring>
+        <name>AlertType</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Alert.AlertType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Alert.cs" line="7" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Alert.cs" bodystart="7" bodyend="7"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Alert.cs" line="3" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Alert.cs" bodystart="4" bodyend="8"/>
+    <listofallmembers>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_alert_1a8040e3feb8a58d7221a8db98451cdedc" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Alert</scope><name>AlertId</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_alert_1a8ed5b16ecc85251d8f3a490c8fa57620" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Alert</scope><name>AlertMsg</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_alert_1a56aa1bf3a136c8699d17e510110ed715" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Alert</scope><name>AlertType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

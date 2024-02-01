@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_weather" kind="class" language="C#" prot="public">
+    <compoundname>SQ::TermProject::myWeather::Models::Weather</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_weather_1ab8d9186af70acbbcab726bae799f2584" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int SQ.TermProject.myWeather.Models.Weather.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Weather.id</qualifiedname>
+        <briefdescription>
+<para>Weather condition ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="146" column="20" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="146" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_weather_1a1bc9dfa48a29c2831d35ac43de4f8a9c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SQ.TermProject.myWeather.Models.Weather.main</definition>
+        <argsstring></argsstring>
+        <name>main</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Weather.main</qualifiedname>
+        <briefdescription>
+<para>Group of weather parameters (Rain, Snow, Extreme etc.). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="151" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="151" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_weather_1a97b145f670b927cb7b47942e36086339" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SQ.TermProject.myWeather.Models.Weather.description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Weather.description</qualifiedname>
+        <briefdescription>
+<para>Weather condition within the group. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="156" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="156" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_weather_1acb16b7d4713280c6cc4a2d81aeb02f29" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string SQ.TermProject.myWeather.Models.Weather.icon</definition>
+        <argsstring></argsstring>
+        <name>icon</name>
+        <qualifiedname>SQ.TermProject.myWeather.Models.Weather.icon</qualifiedname>
+        <briefdescription>
+<para>Weather icon ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="161" column="23" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="161" bodyend="161"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents weather information. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" line="141" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Models/Forecast.cs" bodystart="142" bodyend="162"/>
+    <listofallmembers>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_weather_1a97b145f670b927cb7b47942e36086339" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Weather</scope><name>description</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_weather_1acb16b7d4713280c6cc4a2d81aeb02f29" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Weather</scope><name>icon</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_weather_1ab8d9186af70acbbcab726bae799f2584" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Weather</scope><name>id</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_weather_1a1bc9dfa48a29c2831d35ac43de4f8a9c" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Models::Weather</scope><name>main</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

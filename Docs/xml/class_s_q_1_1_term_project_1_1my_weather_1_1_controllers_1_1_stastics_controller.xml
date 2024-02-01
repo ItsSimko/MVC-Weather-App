@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller" kind="class" language="C#" prot="public">
+    <compoundname>SQ::TermProject::myWeather::Controllers::StasticsController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Controller</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller_1a8a833b6d462b94126d206c94244f9f00" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_services_1_1_statistic_service" kindref="compound">StatisticService</ref></type>
+        <definition>StatisticService SQ.TermProject.myWeather.Controllers.StasticsController.stats</definition>
+        <argsstring></argsstring>
+        <name>stats</name>
+        <qualifiedname>SQ.TermProject.myWeather.Controllers.StasticsController.stats</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" line="14" column="34" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller_1a326a01205f6534a0835df1fe8c5487d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SQ.TermProject.myWeather.Controllers.StasticsController.StasticsController</definition>
+        <argsstring>()</argsstring>
+        <name>StasticsController</name>
+        <qualifiedname>SQ.TermProject.myWeather.Controllers.StasticsController.StasticsController</qualifiedname>
+        <briefdescription>
+<para>Initializes a new instance of the StasticsController class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" line="19" column="16" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller_1ae348e09ba20288efaa37debeb9f69d6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; IActionResult &gt;</type>
+        <definition>async Task&lt; IActionResult &gt; SQ.TermProject.myWeather.Controllers.StasticsController.GetTop10</definition>
+        <argsstring>()</argsstring>
+        <name>GetTop10</name>
+        <qualifiedname>SQ.TermProject.myWeather.Controllers.StasticsController.GetTop10</qualifiedname>
+        <briefdescription>
+<para>Retrieves the top 10 search statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The IActionResult containing the top 10 search statistics if successful; otherwise, an error response.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" line="29" column="27" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" bodystart="29" bodyend="41"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Controller for retrieving statistics related to weather searches. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Controller</label>
+      </node>
+      <node id="1">
+        <label>SQ.TermProject.myWeather.Controllers.StasticsController</label>
+        <link refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Controller</label>
+      </node>
+      <node id="1">
+        <label>SQ.TermProject.myWeather.Controllers.StasticsController</label>
+        <link refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" line="12" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Controllers/StasticsController.cs" bodystart="13" bodyend="42"/>
+    <listofallmembers>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller_1ae348e09ba20288efaa37debeb9f69d6e" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Controllers::StasticsController</scope><name>GetTop10</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller_1a326a01205f6534a0835df1fe8c5487d5" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Controllers::StasticsController</scope><name>StasticsController</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_controllers_1_1_stastics_controller_1a8a833b6d462b94126d206c94244f9f00" prot="private" virt="non-virtual"><scope>SQ::TermProject::myWeather::Controllers::StasticsController</scope><name>stats</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

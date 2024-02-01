@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context" kind="class" language="C#" prot="public">
+    <compoundname>SQ::TermProject::myWeather::Database::AppDbContext</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">DbContext</basecompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context_1a122c941db1f0b1d0a3cd8fc597464483" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user" kindref="compound">User</ref> &gt;?</type>
+        <definition>DbSet&lt;User&gt;? SQ.TermProject.myWeather.Database.AppDbContext.Users</definition>
+        <argsstring></argsstring>
+        <name>Users</name>
+        <qualifiedname>SQ.TermProject.myWeather.Database.AppDbContext.Users</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Database/AppDbContext.cs" line="12" column="22" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Database/AppDbContext.cs" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context_1a18c2ba7e3c169eb3881513a94e2d628d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_user_role" kindref="compound">UserRole</ref> &gt;</type>
+        <definition>DbSet&lt;UserRole&gt; SQ.TermProject.myWeather.Database.AppDbContext.UserRoles</definition>
+        <argsstring></argsstring>
+        <name>UserRoles</name>
+        <qualifiedname>SQ.TermProject.myWeather.Database.AppDbContext.UserRoles</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Database/AppDbContext.cs" line="13" column="22" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Database/AppDbContext.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context_1aa84c207aca8bc87c29f6b44edcc277a8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_search_stat" kindref="compound">SearchStat</ref> &gt;</type>
+        <definition>DbSet&lt;SearchStat&gt; SQ.TermProject.myWeather.Database.AppDbContext.SearchStat</definition>
+        <argsstring></argsstring>
+        <name>SearchStat</name>
+        <qualifiedname>SQ.TermProject.myWeather.Database.AppDbContext.SearchStat</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Database/AppDbContext.cs" line="14" column="22" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Database/AppDbContext.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="property" id="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context_1ae3e5ebacb12ba7443b6b410d5f47e293" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_s_q_1_1_term_project_1_1my_weather_1_1_models_1_1_alert" kindref="compound">Alert</ref> &gt;</type>
+        <definition>DbSet&lt;Alert&gt; SQ.TermProject.myWeather.Database.AppDbContext.Alerts</definition>
+        <argsstring></argsstring>
+        <name>Alerts</name>
+        <qualifiedname>SQ.TermProject.myWeather.Database.AppDbContext.Alerts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Database/AppDbContext.cs" line="15" column="22" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Database/AppDbContext.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context_1addfae42a4cc8a67a4458d52744774038" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SQ.TermProject.myWeather.Database.AppDbContext.OnConfiguring</definition>
+        <argsstring>(DbContextOptionsBuilder optionsBuilder)</argsstring>
+        <name>OnConfiguring</name>
+        <qualifiedname>SQ.TermProject.myWeather.Database.AppDbContext.OnConfiguring</qualifiedname>
+        <param>
+          <type>DbContextOptionsBuilder</type>
+          <declname>optionsBuilder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Database/AppDbContext.cs" line="17" column="33" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Database/AppDbContext.cs" bodystart="17" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context_1a212f0220ee5e1a0da45a7fa510c689cf" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SQ.TermProject.myWeather.Database.AppDbContext.OnModelCreating</definition>
+        <argsstring>(ModelBuilder modelBuilder)</argsstring>
+        <name>OnModelCreating</name>
+        <qualifiedname>SQ.TermProject.myWeather.Database.AppDbContext.OnModelCreating</qualifiedname>
+        <param>
+          <type>ModelBuilder</type>
+          <declname>modelBuilder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Database/AppDbContext.cs" line="24" column="33" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Database/AppDbContext.cs" bodystart="24" bodyend="57"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>DbContext</label>
+      </node>
+      <node id="1">
+        <label>SQ.TermProject.myWeather.Database.AppDbContext</label>
+        <link refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>DbContext</label>
+      </node>
+      <node id="1">
+        <label>SQ.TermProject.myWeather.Database.AppDbContext</label>
+        <link refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Database/AppDbContext.cs" line="10" column="11" bodyfile="C:/Users/alexs/source/repos/SQ.TermProject.myWeather/SQ.TermProject.myWeather/Database/AppDbContext.cs" bodystart="11" bodyend="58"/>
+    <listofallmembers>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context_1ae3e5ebacb12ba7443b6b410d5f47e293" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Database::AppDbContext</scope><name>Alerts</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context_1addfae42a4cc8a67a4458d52744774038" prot="protected" virt="non-virtual"><scope>SQ::TermProject::myWeather::Database::AppDbContext</scope><name>OnConfiguring</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context_1a212f0220ee5e1a0da45a7fa510c689cf" prot="protected" virt="non-virtual"><scope>SQ::TermProject::myWeather::Database::AppDbContext</scope><name>OnModelCreating</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context_1aa84c207aca8bc87c29f6b44edcc277a8" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Database::AppDbContext</scope><name>SearchStat</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context_1a18c2ba7e3c169eb3881513a94e2d628d" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Database::AppDbContext</scope><name>UserRoles</name></member>
+      <member refid="class_s_q_1_1_term_project_1_1my_weather_1_1_database_1_1_app_db_context_1a122c941db1f0b1d0a3cd8fc597464483" prot="public" virt="non-virtual"><scope>SQ::TermProject::myWeather::Database::AppDbContext</scope><name>Users</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
